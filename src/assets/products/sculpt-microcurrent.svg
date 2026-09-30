@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="75%"><stop offset="0%" stop-color="#FBF9FF"/><stop offset="100%" stop-color="#E6DCFA"/></radialGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+<radialGradient id="shadow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2A1B55" stop-opacity="0.28"/><stop offset="100%" stop-color="#2A1B55" stop-opacity="0"/></radialGradient>
+<linearGradient id="pearl" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="60%" stop-color="#F3EEFD"/><stop offset="100%" stop-color="#D9CDF6"/></linearGradient>
+<linearGradient id="pearlV" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#E4DAF9"/><stop offset="35%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#D3C6F3"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8E3CF0"/><stop offset="55%" stop-color="#761DEA"/><stop offset="100%" stop-color="#5346A7"/></linearGradient>
+<linearGradient id="brandV" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#5346A7"/><stop offset="40%" stop-color="#8E3CF0"/><stop offset="100%" stop-color="#5346A7"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#CFC8E0"/><stop offset="70%" stop-color="#F5F2FC"/><stop offset="100%" stop-color="#9F96BD"/></linearGradient>
+<radialGradient id="led" cx="40%" cy="35%" r="65%"><stop offset="0%" stop-color="#FFD0DC"/><stop offset="45%" stop-color="#F04E6E"/><stop offset="100%" stop-color="#9E1F4A"/></radialGradient>
+<radialGradient id="ledglow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F04E6E" stop-opacity="0.45"/><stop offset="100%" stop-color="#F04E6E" stop-opacity="0"/></radialGradient>
+<radialGradient id="sphere" cx="35%" cy="30%" r="70%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="40%" stop-color="#DCD4EE"/><stop offset="100%" stop-color="#7F76A3"/></radialGradient>
+<linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3A2C6B"/><stop offset="100%" stop-color="#1E1633"/></linearGradient>
+<radialGradient id="ipl" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="60%" stop-color="#E9E1FB"/><stop offset="100%" stop-color="#B9A6F0"/></radialGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#bg)"/>
+<circle cx="400" cy="470" r="330" fill="url(#glow)"/>
+<ellipse cx="400" cy="870" rx="250" ry="34" fill="url(#shadow)"/>
+<g transform="rotate(-12 400 520)"><rect x="330" y="360" width="140" height="440" rx="70" fill="url(#pearlV)" stroke="#CFC2F2" stroke-width="3"/><rect x="372" y="520" width="56" height="140" rx="28" fill="url(#brand)"/><circle cx="400" cy="560" r="10" fill="#FFFFFF"/><circle cx="400" cy="620" r="6" fill="#E9E1FB"/><path d="M335 390 Q400 300 465 390 Z" fill="url(#pearlV)" stroke="#CFC2F2" stroke-width="3"/><rect x="318" y="250" width="16" height="110" rx="8" fill="url(#chrome)"/><rect x="466" y="250" width="16" height="110" rx="8" fill="url(#chrome)"/><circle cx="326" cy="230" r="62" fill="url(#sphere)"/><circle cx="474" cy="230" r="62" fill="url(#sphere)"/><circle cx="306" cy="208" r="14" fill="#FFFFFF" fill-opacity="0.9"/><circle cx="454" cy="208" r="14" fill="#FFFFFF" fill-opacity="0.9"/></g>
+<rect x="48" y="48" rx="22" ry="22" width="208" height="44" fill="#FFFFFF" fill-opacity="0.8"/><text x="68" y="77" font-family="Manrope, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#5346A7">MICROCURRENT</text>
+</svg>

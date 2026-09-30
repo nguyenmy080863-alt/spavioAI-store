@@ -1,0 +1,173 @@
+{
+  "notFound": {
+    "title": "404",
+    "heading": "Seite nicht gefunden",
+    "message": "Leider konnten wir die gesuchte Seite nicht finden.",
+    "returnHome": "Zur Startseite"
+  },
+  "privacy": {
+    "pageTitle": "Datenschutzerklärung - Spavio AI Store",
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: 30. September 2026",
+    "introduction": {
+      "title": "Einleitung",
+      "text": "Bei Spavio AI Store („wir“, „uns“ oder „unser“) respektieren wir deine Privatsphäre und setzen uns für den Schutz deiner persönlichen Daten ein. Diese Datenschutzerklärung erläutert, wie wir deine Daten erheben, verwenden, offenlegen und schützen, wenn du unsere Website besuchst, einen Einkauf tätigst oder mit unseren Services interagierst."
+    },
+    "infoCollected": {
+      "title": "Welche Daten wir erheben",
+      "personal": {
+        "title": "Persönliche Daten",
+        "intro": "Wir können persönliche Daten erheben, die du uns direkt zur Verfügung stellst, darunter:",
+        "items": [
+          "Name, E-Mail-Adresse und Kontaktdaten",
+          "Rechnungs- und Lieferadressen",
+          "Zahlungsinformationen (sicher über Drittanbieter verarbeitet)",
+          "Kontoeinstellungen und Kommunikationspräferenzen"
+        ]
+      },
+      "usage": {
+        "title": "Nutzungsdaten",
+        "text": "Wir erfassen automatisch bestimmte Informationen über dein Gerät und dein Nutzungsverhalten, darunter IP-Adresse, Browsertyp, besuchte Seiten und Interaktionsdaten, um unsere Services und die Nutzererfahrung zu verbessern."
+      }
+    },
+    "howWeUse": {
+      "title": "Wie wir deine Daten verwenden",
+      "intro": "Wir verwenden die erhobenen Daten für verschiedene Zwecke, darunter:",
+      "items": [
+        "Bearbeitung und Ausführung deiner Bestellungen",
+        "Bereitstellung von Kundensupport und Beantwortung von Anfragen",
+        "Versand von Werbemitteilungen (mit deiner Einwilligung)",
+        "Verbesserung der Funktionalität unserer Website und der Nutzererfahrung",
+        "Vorbeugung von Betrug und Gewährleistung der Sicherheit",
+        "Erfüllung rechtlicher Verpflichtungen"
+      ]
+    },
+    "sharing": {
+      "title": "Weitergabe und Offenlegung von Daten",
+      "intro": "Wir verkaufen, handeln oder vermieten deine persönlichen Daten nicht an Dritte. Wir geben deine Daten nur in folgenden Fällen weiter:",
+      "items": [
+        "An Dienstleister, die uns bei der Führung unseres Geschäfts unterstützen",
+        "Wenn gesetzlich vorgeschrieben oder zum Schutz unserer Rechte",
+        "Im Zusammenhang mit einer Geschäftstransaktion (Fusion, Übernahme usw.)",
+        "Mit deiner ausdrücklichen Einwilligung"
+      ]
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "text": "Wir setzen angemessene technische und organisatorische Maßnahmen ein, um deine persönlichen Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen. Allerdings ist keine Übertragungsmethode im Internet oder elektronische Speicherung zu 100% sicher."
+    },
+    "rights": {
+      "title": "Deine Rechte und Wahlmöglichkeiten",
+      "intro": "Je nach deinem Standort kannst du bestimmte Rechte in Bezug auf deine persönlichen Daten haben:",
+      "items": [
+        "Zugriff auf deine persönlichen Daten",
+        "Berichtigung ungenauer oder unvollständiger Daten",
+        "Löschung deiner persönlichen Daten",
+        "Widerspruch gegen oder Einschränkung der Verarbeitung",
+        "Datenübertragbarkeit",
+        "Widerruf der Einwilligung (soweit anwendbar)"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies und Einwilligung",
+      "text": "Wir setzen nur technisch notwendige Cookies und lokale Speicher ein, ohne die der Shop nicht funktioniert – etwa für deinen Warenkorb, die Anmeldung und das Speichern deiner Cookie-Auswahl. Optionale Cookies für Präferenzen, Statistik und Marketing verwenden wir nur mit deiner ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TTDSG).",
+      "text2": "Du kannst deine Auswahl jederzeit über den Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen. Die Zahlung per PayPal wird erst auf der Kassenseite geladen und dient der Vertragserfüllung."
+    },
+    "whatsapp": {
+      "title": "Kontakt über WhatsApp",
+      "text": "Über den WhatsApp-Button kannst du uns direkt schreiben. Erst wenn du darauf klickst, wirst du zu WhatsApp (WhatsApp Ireland Ltd., Meta) weitergeleitet; vorher werden keine Daten an WhatsApp übertragen. Für die Kommunikation gelten die Datenschutzbestimmungen von WhatsApp. Alternativ erreichst du uns per E-Mail oder Telefon."
+    },
+    "changes": {
+      "title": "Änderungen dieser Richtlinie",
+      "text": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir informieren dich über wesentliche Änderungen, indem wir die neue Richtlinie auf unserer Website veröffentlichen und das Datum „Zuletzt aktualisiert“ oben anpassen."
+    },
+    "contact": {
+      "title": "Kontaktiere uns",
+      "text": "Wenn du Fragen zu dieser Datenschutzerklärung oder unseren Datenschutzpraktiken hast, kontaktiere uns bitte unter:",
+      "email": "E-Mail: info@spavioai.de",
+      "phone": "Telefon: +49 176 84941650",
+      "address": "Adresse: Glasergasse 18, 92318 Neumarkt, Deutschland"
+    }
+  },
+  "terms": {
+    "pageTitle": "Allgemeine Geschäftsbedingungen - Spavio AI Store",
+    "title": "Allgemeine Geschäftsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert: 30. September 2026",
+    "agreement": {
+      "title": "Zustimmung zu den Bedingungen",
+      "text": "Durch den Zugriff auf und die Nutzung der Spavio AI Store-Website und -Services akzeptierst du diese Nutzungsbedingungen und erklärst dich mit ihnen einverstanden. Diese Nutzungsbedingungen regeln deine Nutzung unserer Website, Produkte und Services."
+    },
+    "license": {
+      "title": "Nutzungslizenz",
+      "intro": "Es wird die Erlaubnis erteilt, vorübergehend eine Kopie der Materialien auf der Website von Spavio AI Store ausschließlich zur persönlichen, nicht-kommerziellen Betrachtung herunterzuladen. Dies ist die Gewährung einer Lizenz, keine Eigentumsübertragung, und im Rahmen dieser Lizenz darfst du nicht:",
+      "items": [
+        "Die Materialien verändern oder kopieren",
+        "Die Materialien für kommerzielle Zwecke oder öffentliche Vorführungen nutzen",
+        "Versuchen, auf der Website enthaltene Software zurückzuentwickeln",
+        "Urheberrechts- oder sonstige Eigentumsvermerke von den Materialien entfernen"
+      ]
+    },
+    "productInfo": {
+      "title": "Produktinformationen und Verfügbarkeit",
+      "text": "Wir bemühen uns, genaue Produktinformationen einschließlich Beschreibungen, Preisen und Verfügbarkeit bereitzustellen. Wir garantieren jedoch nicht, dass Produktbeschreibungen oder andere Inhalte korrekt, vollständig, zuverlässig oder fehlerfrei sind. Wir behalten uns das Recht vor, Produkte ohne vorherige Ankündigung zu ändern oder einzustellen."
+    },
+    "orders": {
+      "title": "Bestellungen und Zahlung",
+      "acceptance": {
+        "title": "Auftragsannahme",
+        "text": "Alle Bestellungen unterliegen der Annahme und Verfügbarkeit. Wir behalten uns das Recht vor, jede Bestellung aus beliebigem Grund abzulehnen oder zu stornieren, einschließlich, aber nicht beschränkt auf Produktverfügbarkeit, Fehler in den Produktinformationen oder vermuteten Betrug."
+      },
+      "payment": {
+        "title": "Zahlungsbedingungen",
+        "text": "Die Zahlung ist zum Zeitpunkt des Kaufs fällig. Wir akzeptieren gängige Kreditkarten und andere Zahlungsmethoden, die beim Checkout angezeigt werden. Alle Preise verstehen sich in USD, sofern nicht anders angegeben."
+      }
+    },
+    "shipping": {
+      "title": "Versand und Lieferung",
+      "text1": "Wir bemühen uns, Bestellungen innerhalb der angegebenen Zeiträume zu versenden. Lieferdaten sind jedoch Schätzungen, und wir übernehmen keine Verantwortung für Verzögerungen durch Versanddienstleister oder Umstände außerhalb unserer Kontrolle.",
+      "text2": "Das Risiko des Verlusts und das Eigentum an den Produkten gehen mit der Übergabe an den Versanddienstleister auf dich über. Wir übernehmen keine Verantwortung für verlorene, gestohlene oder beschädigte Pakete, sobald sie an die angegebene Adresse geliefert wurden."
+    },
+    "returns": {
+      "title": "Rückgabe und Umtausch",
+      "intro": "Teste dein Gerät 30 Tage lang. Rücksendungen sind innerhalb von 30 Tagen nach Lieferung zu folgenden Bedingungen möglich:",
+      "items": [
+        "Gerät und Zubehör werden vollständig und in der Originalverpackung zurückgesendet",
+        "Benutzte Bürstenköpfe und Aufsätze werden aus Hygienegründen ersetzt",
+        "Die Erstattung erfolgt innerhalb von 14 Tagen nach Eingang der Rücksendung über die ursprüngliche Zahlungsart",
+        "Dein gesetzliches 14-tägiges Widerrufsrecht bleibt unberührt"
+      ]
+    },
+    "warranty": {
+      "title": "Garantie und Pflege",
+      "text": "Jedes Spavio AI-Gerät hat zusätzlich zu deinen gesetzlichen Gewährleistungsrechten 2 Jahre Garantie auf Herstellungsfehler. Die Garantie umfasst keinen normalen Verschleiß von Verbrauchsteilen (z. B. Bürstenköpfen), unsachgemäße Nutzung oder Unfallschäden. Anwendungs- und Pflegehinweise liegen jedem Gerät bei und stehen auf unserer Website."
+    },
+    "intellectualProperty": {
+      "title": "Geistiges Eigentum",
+      "text": "Alle Inhalte auf dieser Website, einschließlich, aber nicht beschränkt auf Texte, Grafiken, Logos, Bilder und Software, sind Eigentum von Spavio AI Store und durch Urheberrecht, Markenrecht und andere Gesetze zum Schutz geistigen Eigentums geschützt. Unbefugte Nutzung ist untersagt."
+    },
+    "liability": {
+      "title": "Haftungsbeschränkung",
+      "text": "In keinem Fall haften Spavio AI Store oder seine Lieferanten für Schäden (einschließlich, aber nicht beschränkt auf Schäden durch Datenverlust, entgangenen Gewinn oder Geschäftsunterbrechung), die aus der Nutzung oder der Unfähigkeit zur Nutzung der Materialien auf unserer Website oder unserer Produkte entstehen, selbst wenn wir über die Möglichkeit solcher Schäden informiert wurden."
+    },
+    "privacyRef": {
+      "title": "Datenschutzerklärung",
+      "text": "Deine Privatsphäre ist uns wichtig. Bitte lies unsere Datenschutzerklärung, die ebenfalls deine Nutzung unserer Website und Services regelt, um unsere Praktiken zum Umgang mit deinen persönlichen Daten zu verstehen."
+    },
+    "governingLaw": {
+      "title": "Anwendbares Recht",
+      "text": "Diese Bedingungen unterliegen dem Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Als Verbraucherin oder Verbraucher behältst du den Schutz der zwingenden Verbraucherschutzvorschriften deines Wohnsitzlandes."
+    },
+    "changes": {
+      "title": "Änderungen der Bedingungen",
+      "text": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit ohne Vorankündigung zu ändern. Mit der Nutzung dieser Website erklärst du dich mit der jeweils aktuellen Version dieser Nutzungsbedingungen einverstanden."
+    },
+    "contact": {
+      "title": "Kontaktinformationen",
+      "text": "Wenn du Fragen zu diesen Nutzungsbedingungen hast, kontaktiere uns bitte unter:",
+      "email": "E-Mail: info@spavioai.de",
+      "phone": "Telefon: +49 176 84941650",
+      "address": "Adresse: Glasergasse 18, 92318 Neumarkt, Deutschland"
+    }
+  },
+  "impressumEyebrow": "Rechtliches"
+}

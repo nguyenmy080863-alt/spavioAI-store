@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1787999718355,
+      "tag": "0000_admin_panel_products",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1787999735447,
+      "tag": "0001_claim_first_admin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1787999786034,
+      "tag": "0002_product_images_storage_policies",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788000237565,
+      "tag": "0003_tighten_admin_role_checks",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788001846456,
+      "tag": "0004_create_fomo_campaign",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1788002944417,
+      "tag": "0005_create_hero_banner",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1788003698530,
+      "tag": "0006_create_saved_carts",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1788084504114,
+      "tag": "0007_add_hover_image_enabled",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1790755866700,
+      "tag": "0008_seed_spavioai_catalog",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1790760194006,
+      "tag": "0009_add_lumipore",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790761653266,
+      "tag": "0010_add_product_preorders",
+      "breakpoints": true
+    }
+  ]
+}

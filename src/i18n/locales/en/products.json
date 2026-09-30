@@ -1,0 +1,100 @@
+{
+  "categories": {
+    "skincare-devices": "Skincare Devices",
+    "hair-removal": "Hair Removal",
+    "hair-styling-and-care": "Hair Styling & Care",
+    "body-and-wellness": "Body & Wellness"
+  },
+  "items": {
+    "lumipore": {
+      "name": "Spavio Lumipore 4-in-1",
+      "effect": "4 Light Modes: Warmth, Serum Boost, Micro-Lifting, Glow",
+      "description": "One device, four care modes for a spa feeling at home: red light with gentle warmth for a fresh, rosy complexion; green light with microcurrent to help serums and creams absorb; blue light with EMS pulses for firmer-looking skin; and yellow light to soothe and restore radiance.",
+      "editorsNotes": "\"Four light modes in one slim wand — the easiest way to start a device routine.\""
+    },
+    "lumina-led-mask": {
+      "name": "Lumina Pro LED Face Mask",
+      "effect": "Red & Near-Infrared Light Therapy",
+      "description": "A flexible, medical-grade silicone mask with 160 LEDs delivering red (630nm) and near-infrared (830nm) light to support collagen, even tone and calm redness in just 10 minutes a day.",
+      "editorsNotes": "\"The easiest glow ritual we know — put it on, press play, and let the light do the work.\""
+    },
+    "sculpt-microcurrent": {
+      "name": "Sculpt Microcurrent Toning Device",
+      "effect": "Lift & Contour",
+      "description": "Twin rotating spheres deliver gentle microcurrent to tone facial muscles along the jawline, cheekbones and brows. Five intensity levels and a guided 5-minute routine.",
+      "editorsNotes": "\"A five-minute facial workout that visibly sharpens your contours before an event.\""
+    },
+    "thermalift-rf": {
+      "name": "ThermaLift RF Skin Tightener",
+      "effect": "Radiofrequency Firming",
+      "description": "Multipolar radiofrequency warms the deeper layers of the skin to a comfortable 40–42°C, with built-in temperature sensing that keeps every session safe and consistent.",
+      "editorsNotes": "\"Clinic-style firming, calibrated for home. The smart sensor makes it effortless.\""
+    },
+    "sonic-cleanse-brush": {
+      "name": "Sonic Cleanse Facial Brush",
+      "effect": "Deep Pore Cleansing",
+      "description": "Ultra-soft, hygienic silicone touch-points pulse at 8,000 sonic vibrations per minute to lift away makeup, SPF and impurities — gentle enough for twice-daily use.",
+      "editorsNotes": "\"Cleaner skin in 60 seconds. Waterproof, travel-ready and a single charge lasts for months.\""
+    },
+    "aqua-ion-infuser": {
+      "name": "Aqua Ion Serum Infuser",
+      "effect": "Ultrasonic Product Absorption",
+      "description": "Ultrasonic vibration and ionic modes help your favourite serums and moisturisers work into the skin, while the cool-touch stainless head soothes and de-puffs.",
+      "editorsNotes": "\"Make every drop of serum count — a quiet upgrade to your existing routine.\""
+    },
+    "eye-revive-wand": {
+      "name": "Eye Revive Heated Massager",
+      "effect": "De-Puff & Brighten",
+      "description": "A pen-sized wand with a warming 42°C tip and gentle sonic pulses that relax the delicate eye area and help eye creams absorb.",
+      "editorsNotes": "\"Our morning secret for brighter, less tired-looking eyes.\""
+    },
+    "cryo-glow-roller": {
+      "name": "Cryo Glow Ice Roller",
+      "effect": "Cooling & Soothing",
+      "description": "A stainless-steel cryo roller that stays cold for up to 20 minutes after chilling. Calms redness, tightens the look of pores and pairs perfectly with post-treatment care.",
+      "editorsNotes": "\"Keep it in the fridge — two minutes of rolling feels like a spa reset.\""
+    },
+    "silk-ipl": {
+      "name": "Silk IPL Hair Removal",
+      "effect": "Long-Lasting Smoothness",
+      "description": "Intense pulsed light with an integrated skin-tone sensor and five energy levels. Visible hair reduction in as few as four weekly sessions, with an ice-cool sapphire window for comfort.",
+      "editorsNotes": "\"Salon-level IPL at home, with the sensor doing the guesswork for you.\""
+    },
+    "precision-trimmer": {
+      "name": "Precision Face & Brow Trimmer",
+      "effect": "Painless Detailing",
+      "description": "A slim, whisper-quiet trimmer with five interchangeable heads for brows, upper lip, face and fine body hair. Hypoallergenic blades for sensitive skin.",
+      "editorsNotes": "\"The detail tool everyone should have in their vanity.\""
+    },
+    "aura-ionic-dryer": {
+      "name": "Aura Ionic Hair Dryer",
+      "effect": "Fast Dry, Frizz Control",
+      "description": "A 110,000 RPM brushless motor with 200 million negative ions per cm³ for quick, glossy blow-dries. Intelligent heat control measures air temperature 40 times per second.",
+      "editorsNotes": "\"Lightweight, powerful and quiet — a salon blow-dry without the heat damage.\""
+    },
+    "glide-straightener": {
+      "name": "Glide Infrared Straightener",
+      "effect": "Smooth & Shine",
+      "description": "Floating ceramic plates infused with infrared technology heat evenly from 150–230°C for sleek, shiny results in a single pass. Auto shut-off after 60 minutes.",
+      "editorsNotes": "\"Straightens, curls and waves — one tool for every look.\""
+    },
+    "scalp-revive": {
+      "name": "Scalp Revive Massager",
+      "effect": "Scalp Care & Relaxation",
+      "description": "Waterproof, rotating kneading nodes and red-light therapy stimulate the scalp, support circulation and turn your hair-wash into a mini head spa.",
+      "editorsNotes": "\"Ten minutes of pure relaxation — and your scalp will thank you.\""
+    },
+    "pulse-mini-massager": {
+      "name": "Pulse Mini Massage Gun",
+      "effect": "Muscle Recovery",
+      "description": "Compact percussion therapy with four speeds and four attachments. Relieves tension in neck, shoulders and legs — small enough for any handbag.",
+      "editorsNotes": "\"Powerful relief that fits in the palm of your hand.\""
+    },
+    "contour-body-sculptor": {
+      "name": "Contour Body Sculptor",
+      "effect": "EMS + RF Body Toning",
+      "description": "Combines EMS muscle stimulation with warming radiofrequency and triple rolling heads to smooth and firm the look of thighs, arms and abdomen.",
+      "editorsNotes": "\"A body-contouring ritual that feels like a warm, deep massage.\""
+    }
+  }
+}

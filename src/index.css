@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spavio AI Store Design System — "Violet Glam": modern luxe beauty-tech.
+   Brand: #761DEA (violet) -> #5346A7 (indigo). */
+
+@layer base {
+  :root {
+    /* Light lilac canvas */
+    --background: 255 80% 98%;     /* #F8F6FE */
+    --foreground: 257 40% 14%;     /* #1E1633 */
+
+    /* Status bar */
+    --status-bar: 248 41% 46%;     /* #5346A7 */
+    --status-bar-foreground: 258 63% 97%;
+
+    /* Navigation */
+    --nav-background: 255 80% 98%;
+    --nav-foreground: 257 30% 22%;
+    --nav-hover: 266 83% 52%;
+
+    /* Interactive elements */
+    --primary: 266 83% 52%;        /* #761DEA */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 248 41% 46%;  /* #5346A7 */
+
+    /* Subtle elements */
+    --secondary: 258 76% 93%;      /* #E9E1FB soft lilac */
+    --secondary-foreground: 257 40% 14%;
+
+    --muted: 258 60% 95%;
+    --muted-foreground: 252 15% 42%;
+
+    --accent: 266 83% 52%;         /* #761DEA */
+    --accent-foreground: 0 0% 100%;
+
+    --brand: 266 83% 52%;          /* #761DEA */
+    --brand-secondary: 248 41% 46%;/* #5346A7 */
+
+    --border: 258 45% 89%;
+    --input: 258 45% 89%;
+    --ring: 266 83% 52%;
+
+    /* Cards and surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 257 40% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 257 40% 14%;
+
+    --destructive: 349 84% 62%;    /* #F04E6E */
+    --destructive-foreground: 0 0% 98%;
+
+    --radius: 0.75rem;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 255 60% 97%;
+    --sidebar-foreground: 257 30% 22%;
+    --sidebar-primary: 266 83% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 258 76% 93%;
+    --sidebar-accent-foreground: 257 40% 14%;
+    --sidebar-border: 258 45% 89%;
+    --sidebar-ring: 266 83% 52%;
+  }
+
+  .dark {
+    /* Violet Glam dark palette */
+    --background: 257 41% 9%;      /* #120D1F */
+    --foreground: 258 63% 97%;     /* #F5F2FC */
+
+    --status-bar: 257 41% 6%;
+    --status-bar-foreground: 258 63% 97%;
+
+    --nav-background: 257 41% 9%;
+    --nav-foreground: 254 29% 80%;
+    --nav-hover: 266 90% 70%;
+
+    --primary: 266 83% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 248 41% 46%;
+
+    --secondary: 256 42% 17%;      /* #241A3F */
+    --secondary-foreground: 258 63% 97%;
+
+    --muted: 255 41% 13%;          /* #1B1430 */
+    --muted-foreground: 254 29% 70%; /* #A79DC9 */
+
+    --accent: 266 90% 70%;
+    --accent-foreground: 257 41% 9%;
+
+    --brand: 266 83% 52%;
+    --brand-secondary: 248 41% 46%;
+
+    --border: 262 40% 22%;
+    --input: 262 40% 22%;
+    --ring: 266 83% 52%;
+
+    --card: 255 41% 13%;
+    --card-foreground: 258 63% 97%;
+
+    --popover: 255 41% 13%;
+    --popover-foreground: 258 63% 97%;
+
+    --destructive: 349 84% 62%;
+    --destructive-foreground: 0 0% 98%;
+  }
+}
+
+@layer utilities {
+  .bg-brand-gradient {
+    background-image: linear-gradient(135deg, #761DEA, #5346A7);
+  }
+  .text-brand-gradient {
+    background-image: linear-gradient(135deg, #761DEA, #5346A7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-glow {
+    box-shadow: 0 8px 24px rgba(118, 29, 234, 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans font-light;
+  }
+
+  h1, h2 {
+    @apply font-serif;
+  }
+
+  h3, h4, h5, h6, p, span, button, input, select, textarea, a, label {
+    @apply font-sans;
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "notFound": {
+    "title": "404",
+    "heading": "Page not found",
+    "message": "Sorry, we couldn't find the page you're looking for.",
+    "returnHome": "Return to Home"
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy - Spavio AI Store",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: September 30, 2026",
+    "introduction": {
+      "title": "Introduction",
+      "text": "At Spavio AI (\"we,\" \"our,\" or \"us\"), we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, make a purchase, or interact with our services."
+    },
+    "infoCollected": {
+      "title": "Information We Collect",
+      "personal": {
+        "title": "Personal Information",
+        "intro": "We may collect personal information that you provide directly to us, including:",
+        "items": [
+          "Name, email address, and contact information",
+          "Billing and shipping addresses",
+          "Payment information (processed securely through third-party providers)",
+          "Account preferences and communication settings"
+        ]
+      },
+      "usage": {
+        "title": "Usage Information",
+        "text": "We automatically collect certain information about your device and usage patterns, including IP address, browser type, pages visited, and interaction data to improve our services and user experience."
+      }
+    },
+    "howWeUse": {
+      "title": "How We Use Your Information",
+      "intro": "We use the information we collect for various purposes, including:",
+      "items": [
+        "Processing and fulfilling your orders",
+        "Providing customer support and responding to inquiries",
+        "Sending promotional communications (with your consent)",
+        "Improving our website functionality and user experience",
+        "Preventing fraud and ensuring security",
+        "Complying with legal obligations"
+      ]
+    },
+    "sharing": {
+      "title": "Information Sharing and Disclosure",
+      "intro": "We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:",
+      "items": [
+        "With service providers who assist us in operating our business",
+        "When required by law or to protect our rights",
+        "In connection with a business transaction (merger, acquisition, etc.)",
+        "With your explicit consent"
+      ]
+    },
+    "security": {
+      "title": "Data Security",
+      "text": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure."
+    },
+    "rights": {
+      "title": "Your Rights and Choices",
+      "intro": "Depending on your location, you may have certain rights regarding your personal information:",
+      "items": [
+        "Access to your personal information",
+        "Correction of inaccurate or incomplete information",
+        "Deletion of your personal information",
+        "Objection to or restriction of processing",
+        "Data portability",
+        "Withdrawal of consent (where applicable)"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies and Consent",
+      "text": "We only use cookies and local storage that are technically necessary for the store to work – for example your shopping bag, sign-in and remembering your cookie choice. Optional cookies for preferences, statistics and marketing are only used with your explicit consent (Art. 6(1)(a) GDPR, § 25 TTDSG).",
+      "text2": "You can change or withdraw your choice at any time via the “Cookie settings” link in the footer. PayPal is only loaded on the checkout page and is used to process your payment."
+    },
+    "whatsapp": {
+      "title": "Contact via WhatsApp",
+      "text": "You can message us directly using the WhatsApp button. You are only redirected to WhatsApp (WhatsApp Ireland Ltd., Meta) when you click it; no data is sent to WhatsApp beforehand. WhatsApp's privacy policy applies to that conversation. You can also reach us by email or phone."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "text": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website and updating the \"Last updated\" date above."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "text": "If you have any questions about this Privacy Policy or our privacy practices, please contact us at:",
+      "email": "Email: info@spavioai.de",
+      "phone": "Phone: +49 176 84941650",
+      "address": "Address: Glasergasse 18, 92318 Neumarkt, Germany"
+    }
+  },
+  "terms": {
+    "pageTitle": "Terms of Service - Spavio AI Store",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: September 30, 2026",
+    "agreement": {
+      "title": "Agreement to Terms",
+      "text": "By accessing and using the Spavio AI website and services, you accept and agree to be bound by the terms and provision of this agreement. These Terms of Service govern your use of our website, products, and services."
+    },
+    "license": {
+      "title": "Use License",
+      "intro": "Permission is granted to temporarily download one copy of the materials on Spavio AI's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+      "items": [
+        "Modify or copy the materials",
+        "Use the materials for any commercial purpose or for any public display",
+        "Attempt to reverse engineer any software contained on the website",
+        "Remove any copyright or other proprietary notations from the materials"
+      ]
+    },
+    "productInfo": {
+      "title": "Product Information and Availability",
+      "text": "We strive to provide accurate product information, including descriptions, pricing, and availability. However, we do not warrant that product descriptions or other content is accurate, complete, reliable, or error-free. We reserve the right to modify or discontinue products without prior notice."
+    },
+    "orders": {
+      "title": "Orders and Payment",
+      "acceptance": {
+        "title": "Order Acceptance",
+        "text": "All orders are subject to acceptance and availability. We reserve the right to refuse or cancel any order for any reason, including but not limited to product availability, errors in product information, or suspected fraud."
+      },
+      "payment": {
+        "title": "Payment Terms",
+        "text": "Payment is due at the time of purchase. We accept major credit cards and other payment methods as displayed during checkout. All prices are in USD unless otherwise specified."
+      }
+    },
+    "shipping": {
+      "title": "Shipping and Delivery",
+      "text1": "We will make every effort to ship orders within the timeframes specified. However, delivery dates are estimates and we are not responsible for delays caused by shipping carriers or circumstances beyond our control.",
+      "text2": "Risk of loss and title for products pass to you upon delivery to the carrier. We are not responsible for lost, stolen, or damaged packages once they have been delivered to the address provided."
+    },
+    "returns": {
+      "title": "Returns and Exchanges",
+      "intro": "Try your device for 30 days. Returns are accepted within 30 days of delivery, subject to the following conditions:",
+      "items": [
+        "The device and accessories are returned complete and in their original packaging",
+        "Used brush heads and attachments are replaced for hygiene reasons",
+        "Refunds are made to the original payment method within 14 days of receiving the return",
+        "Your statutory 14-day right of withdrawal remains unaffected"
+      ]
+    },
+    "warranty": {
+      "title": "Warranty and Care",
+      "text": "Every Spavio AI device comes with a 2-year warranty against manufacturing defects, in addition to your statutory warranty rights. The warranty does not cover normal wear of consumable parts (such as brush heads), improper use or accidental damage. Usage and care instructions are included with each device and on our website."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "text": "All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Spavio AI and is protected by copyright, trademark, and other intellectual property laws. Unauthorized use is prohibited."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "text": "In no event shall Spavio AI or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website or products, even if we have been notified of the possibility of such damage."
+    },
+    "privacyRef": {
+      "title": "Privacy Policy",
+      "text": "Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our website and services, to understand our practices regarding your personal information."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "text": "These terms are governed by the laws of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer, you also retain the protection of the mandatory consumer laws of your country of residence."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "text": "We reserve the right to revise these Terms of Service at any time without notice. By using this website, you are agreeing to be bound by the current version of these Terms of Service."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "text": "If you have any questions about these Terms of Service, please contact us at:",
+      "email": "Email: info@spavioai.de",
+      "phone": "Phone: +49 176 84941650",
+      "address": "Address: Glasergasse 18, 92318 Neumarkt, Germany"
+    }
+  },
+  "impressumEyebrow": "Legal notice"
+}

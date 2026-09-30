@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "eyebrow": "Spavio AI Beauty Tech",
+    "alt": "Liệu trình làm đẹp với thiết bị chăm sóc da chuyên nghiệp",
+    "title": "Chuẩn phòng khám, ngay tại nhà",
+    "subtitle": "Thiết bị LED, vi dòng điện, RF và IPL – được tuyển chọn cùng chuyên gia làm đẹp cho hiệu quả rõ rệt.",
+    "cta": "Mua thiết bị"
+  },
+  "featured": {
+    "title": "Thiết bị bán chạy"
+  },
+  "fiftyFifty": {
+    "skincare": {
+      "alt": "Mặt nạ LED, thiết bị vi dòng điện, cọ rửa mặt sonic và cây lăn lạnh",
+      "title": "Thiết bị chăm sóc da",
+      "subtitle": "Mặt nạ LED, vi dòng điện và RF cho làn da săn chắc, rạng rỡ"
+    },
+    "hair": {
+      "alt": "Máy sấy tóc Aura Ionic",
+      "title": "Tạo kiểu & chăm sóc tóc",
+      "subtitle": "Máy sấy ion, máy duỗi hồng ngoại và chăm sóc da đầu"
+    }
+  },
+  "oneThirdTwoThirds": {
+    "hairRemoval": {
+      "alt": "Thiết bị triệt lông Silk IPL",
+      "title": "Triệt lông",
+      "subtitle": "Da mịn màng lâu dài với IPL cảm biến thông minh"
+    },
+    "clinicAtHome": {
+      "alt": "Thiết bị làm đẹp chuyên nghiệp trong phòng trị liệu",
+      "title": "Phòng trị liệu, theo cách mới",
+      "subtitle": "Công nghệ tạo đường nét cơ thể, massage và thư giãn lấy cảm hứng từ studio chuyên nghiệp"
+    }
+  },
+  "largeHero": {
+    "eyebrow": "Powered by Spavio AI",
+    "alt": "Mặt nạ LED, thiết bị vi dòng điện, IPL và máy sấy ion dưới ánh sáng tím",
+    "title": "Tìm thiết bị hoàn hảo cho bạn",
+    "subtitle": "Chia sẻ mục tiêu của bạn, chúng tôi sẽ gợi ý công nghệ phù hợp và quy trình vừa với nhịp sống của bạn.",
+    "cta": "Mở hướng dẫn chọn thiết bị"
+  },
+  "editorial": {
+    "eyebrow": "Câu chuyện của chúng tôi",
+    "title": "Từ studio đến tận nhà bạn",
+    "body": "Spavio AI khởi đầu là trợ lý kỹ thuật số cho spa và studio làm đẹp. Làm việc cùng chuyên viên thẩm mỹ mỗi ngày cho chúng tôi biết công nghệ nào thực sự hiệu quả – và Spavio AI Store mang những thiết bị đó đến bạn, kèm hướng dẫn chuyên nghiệp.",
+    "readMore": "Đọc toàn bộ câu chuyện"
+  },
+  "productCarousel": {
+    "newBadge": "MỚI",
+    "styledAlt": "{{name}} khi sử dụng",
+    "quickView": "Xem nhanh"
+  },
+  "lumipore": {
+    "eyebrow": "Mới · Spavio 4 trong 1",
+    "subtitle": "Một thiết bị, bốn chế độ chăm sóc. Cảm giác spa ngay tại nhà.",
+    "priceLabel": "Giá ra mắt",
+    "instead": "thay vì",
+    "save": "Tiết kiệm {{percent}}%",
+    "cta": "Khám phá Lumipore",
+    "secondary": "Xem tất cả thiết bị",
+    "modesLabel": "4 chế độ ánh sáng",
+    "deviceAlt": "Spavio Lumipore – thiết bị làm đẹp 4 trong 1 màu trắng với đầu LED phát sáng",
+    "modes": {
+      "warm": {
+        "name": "Làm ấm",
+        "light": "Ánh sáng đỏ · Làm ấm",
+        "text": "Hơi ấm dễ chịu cho làn da tươi tắn, hồng hào."
+      },
+      "serum": {
+        "name": "Tăng thẩm thấu",
+        "light": "Ánh sáng xanh lá · Vi dòng điện",
+        "text": "Giúp serum và kem dưỡng thẩm thấu tốt hơn."
+      },
+      "lift": {
+        "name": "Nâng cơ",
+        "light": "Ánh sáng xanh dương · Xung EMS",
+        "text": "Xung nhẹ giúp làn da trông săn chắc hơn."
+      },
+      "glow": {
+        "name": "Rạng rỡ",
+        "light": "Ánh sáng vàng",
+        "text": "Làm dịu và mang lại vẻ rạng rỡ cho làn da."
+      }
+    }
+  }
+}

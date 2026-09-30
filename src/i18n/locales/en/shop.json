@@ -1,0 +1,253 @@
+{
+  "category": {
+    "loading": "Loading products…",
+    "newIn": "New In",
+    "allProducts": "All Products",
+    "home": "Home",
+    "collections": {
+      "new-in": "New In",
+      "sale": "On Sale",
+      "best-sellers": "Best Sellers",
+      "anti-aging": "Anti-Aging Edit",
+      "under-100": "Gifts Under €100"
+    },
+    "searchResults": "Search results: \"{{query}}\""
+  },
+  "filterSort": {
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items",
+    "filters": "Filters",
+    "category": "Category",
+    "price": "Price",
+    "style": "Technology",
+    "applyFilters": "Apply Filters",
+    "clearAll": "Clear All",
+    "sort": {
+      "featured": "Featured",
+      "priceLow": "Price: Low to High",
+      "priceHigh": "Price: High to Low",
+      "newest": "Newest",
+      "name": "Name A-Z"
+    },
+    "priceRanges": {
+      "under100": "Under €100",
+      "from100to200": "€100 – €200",
+      "over200": "Over €200"
+    }
+  },
+  "productGrid": {
+    "new": "NEW",
+    "alternateView": "{{name}} – alternate view"
+  },
+  "productDetail": {
+    "loading": "Loading product…",
+    "home": "Home",
+    "youMightAlsoLike": "You might also like",
+    "moreFrom": "More from {{category}}"
+  },
+  "productInfo": {
+    "effect": "Benefit",
+    "warranty": "Warranty",
+    "warrantyDescription": "2-year warranty · 30-day trial",
+    "inTheBox": "In the box",
+    "inTheBoxDescription": "Device, USB-C charging cable, travel pouch and quick-start guide",
+    "editorsNotes": "Expert notes",
+    "quantity": "Quantity",
+    "addToBag": "Add to Bag"
+  },
+  "productDescription": {
+    "description": "Description",
+    "descriptionExtra": "Every Spavio AI device is CE-certified, dermatologist-tested and selected with beauty professionals for real-world results, comfort and safety.",
+    "productDetails": "Product Details",
+    "sku": "SKU",
+    "collection": "Collection",
+    "effect": "Effect",
+    "yes": "Yes",
+    "price": "Price",
+    "applicationAndCare": "Use & Care",
+    "careSteps": [
+      "• Charge fully before first use and start on the lowest intensity",
+      "• Apply to clean, dry skin unless the guide says otherwise",
+      "• Wipe treatment surfaces with a soft, damp cloth after each use",
+      "• Store in the travel pouch, away from heat and moisture"
+    ],
+    "careExtra": "Need help getting started? Our care team will walk you through your first session and build a routine around your goals.",
+    "customerReviews": "Customer Reviews",
+    "reviews": {
+      "sarah": "\"I was sceptical, but after six weeks with the LED mask my skin looks calmer and more even. Ten minutes while I read — easy.\"",
+      "emma": "\"Beautifully made and so easy to use. The guide and the routine the team sent me made all the difference.\"",
+      "jessica": "\"Fast delivery, great packaging and the device feels premium. Already ordered a second one as a gift!\""
+    },
+    "certified": "CE-certified"
+  },
+  "reviewProduct": {
+    "reviewProduct": "Review product",
+    "rating": "Rating",
+    "yourReview": "Your review",
+    "placeholder": "Share your thoughts about this product...",
+    "submitReview": "Submit review"
+  },
+  "shoppingBag": {
+    "title": "Shopping Bag",
+    "close": "Close",
+    "viewFavorites": "View Favorites",
+    "emptyLine1": "Your shopping bag is empty.",
+    "emptyLine2": "Continue shopping to add items to your bag.",
+    "decreaseQuantity": "Decrease quantity",
+    "increaseQuantity": "Increase quantity",
+    "subtotal": "Subtotal",
+    "shippingNote": "Shipping and taxes calculated at checkout",
+    "proceedToCheckout": "Proceed to Checkout",
+    "continueShopping": "Continue Shopping",
+    "youSave": "You save"
+  },
+  "checkoutHeader": {
+    "continueShopping": "Continue Shopping",
+    "logoAlt": "Spavio AI Store",
+    "support": "Support"
+  },
+  "statusBar": {
+    "freeShipping": "Free shipping on orders over €99",
+    "warranty": "2-year warranty on every device",
+    "happyCustomers": "30-day trial · risk-free returns"
+  },
+  "checkout": {
+    "orderSummary": "Order Summary",
+    "bagEmpty": "Your shopping bag is empty.",
+    "continueShopping": "Continue Shopping",
+    "discountCode": "Discount code",
+    "enterDiscountCode": "Enter discount code",
+    "apply": "Apply",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "customerDetails": "Customer Details",
+    "emailAddress": "Email Address *",
+    "enterYourEmail": "Enter your email",
+    "firstName": "First Name *",
+    "firstNamePlaceholder": "First name",
+    "lastName": "Last Name *",
+    "lastNamePlaceholder": "Last name",
+    "phoneNumber": "Phone Number",
+    "enterYourPhone": "Enter your phone number",
+    "shippingAddress": "Shipping Address",
+    "address": "Address *",
+    "streetAddress": "Street address",
+    "city": "City *",
+    "cityPlaceholder": "City",
+    "postalCode": "Postal Code *",
+    "postalCodePlaceholder": "Postal code",
+    "country": "Country *",
+    "countryPlaceholder": "Country",
+    "otherBillingAddress": "Other billing address",
+    "billingDetails": "Billing Details",
+    "enterBillingEmail": "Enter billing email",
+    "enterBillingPhone": "Enter billing phone number",
+    "shippingOptions": "Shipping Options",
+    "standardShipping": "Standard Shipping",
+    "standardShippingDetail": "Free • 3-5 business days",
+    "expressShipping": "Express Shipping",
+    "expressShippingDetail": "€15 • 1-2 business days",
+    "overnightDelivery": "Overnight Delivery",
+    "overnightDeliveryDetail": "€35 • Next business day",
+    "paymentDetails": "Payment Details",
+    "cardholderName": "Cardholder Name *",
+    "nameOnCard": "Name on card",
+    "cardNumber": "Card Number *",
+    "expiryDate": "Expiry Date *",
+    "cvv": "CVV *",
+    "processing": "Processing...",
+    "completeOrder": "Complete Order ({{total}})",
+    "orderComplete": "Order Complete!",
+    "orderCompleteMessage": "Thank you for your purchase. Your order confirmation has been sent to your email.",
+    "youSave": "You save",
+    "title": "Checkout",
+    "deliveryService": "Delivery Service",
+    "multiCarrier": "Multi-carrier",
+    "paymentMethod": "Payment Method",
+    "encryption": "256-bit encryption",
+    "paypalNote": "Instant transfer",
+    "creditCard": "Credit Card",
+    "cardholder": "Cardholder Name",
+    "cardNumberLabel": "Card Number",
+    "expiryLabel": "Expiry Date",
+    "cvvLabel": "CVV / CVC",
+    "processingOrder": "Processing order & shipping label...",
+    "klarnaNote": "Pay later or in instalments",
+    "payWithKlarna": "Pay with Klarna ({{total}})",
+    "thankYou": "Thank you for your purchase. We have received your payment and registered your shipment via {{carrier}}. Order details were sent to {{email}}.",
+    "yourEmail": "your email",
+    "trackingNumber": "Tracking number",
+    "returnToShop": "Return to Shop",
+    "placeholders": {
+      "email": "name@example.com",
+      "phone": "+49 176 1234567",
+      "street": "Glasergasse 18",
+      "city": "Neumarkt",
+      "postalCode": "92318",
+      "cardholder": "Name on card"
+    },
+    "methods": {
+      "sendcloud-dhl-standard": {
+        "name": "Standard Parcel",
+        "deliveryTime": "2–4 business days"
+      },
+      "sendcloud-hermes": {
+        "name": "Parcel Service",
+        "deliveryTime": "2–3 business days"
+      },
+      "sendcloud-dhl-express": {
+        "name": "Priority Air",
+        "deliveryTime": "Next business day"
+      }
+    },
+    "paypalCharge": "Complete your order with PayPal. Your account will be charged {{total}}."
+  },
+  "fomo": {
+    "endsIn": "Ends in",
+    "restarting": "Offer restarting shortly",
+    "save": "Save {{percent}}%",
+    "sold": "Sold {{sold}}/{{total}} products",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "remaining": "{{count}} remaining",
+    "soldOut": "Sold out",
+    "claimed": "{{percent}}% claimed",
+    "headlines": {
+      "local-glow-week": "Glow Week Sale"
+    }
+  },
+  "pricing": {
+    "off": "-{{percent}}% OFF",
+    "save": "Save {{amount}}"
+  },
+  "account": {
+    "loading": "Loading…",
+    "title": "Your account",
+    "adminAccess": "Admin access",
+    "openAdmin": "Open admin panel",
+    "savedBag": "Saved bag",
+    "savedSummary_one": "{{count}} item · {{total}} — saved to your account",
+    "savedSummary_other": "{{count}} items · {{total}} — saved to your account",
+    "emptyBag": "Your bag is empty. Items you add are saved for next time.",
+    "goToCheckout": "Go to checkout",
+    "signOut": "Sign out"
+  },
+  "preorder": {
+    "badge": "Preorder",
+    "ships": "Expected to ship: {{date}}",
+    "shipsSoon": "Ships as soon as available",
+    "depositToday": "Deposit today",
+    "balanceLater": "Balance at shipping",
+    "note": "You only pay the deposit today. We charge the remaining balance once your device is ready to ship – we'll email you beforehand.",
+    "cta": "Preorder now – {{deposit}} deposit",
+    "cartLine": "Preorder · {{deposit}} deposit per item",
+    "dueNow": "Due today",
+    "dueLater": "Due at shipping",
+    "depositsLabel": "Due later (preorders)",
+    "checkoutNote": "Your order includes preorders. Today we only charge the deposit; the remaining {{amount}} is due when those items ship.",
+    "confirmation": "A balance of {{amount}} for your preorder is due when it ships. We'll contact you by email in good time."
+  }
+}

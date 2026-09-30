@@ -1,0 +1,365 @@
+{
+  "sidebar": {
+    "heading": "Giới thiệu",
+    "ourStory": "Câu chuyện của chúng tôi",
+    "sustainability": "Phát triển bền vững",
+    "deviceGuide": "Hướng dẫn chọn thiết bị",
+    "customerCare": "Chăm sóc khách hàng",
+    "storeLocator": "Showroom",
+    "explore": "Khám phá Spavio AI"
+  },
+  "ourStory": {
+    "title": "Câu chuyện của chúng tôi",
+    "subtitle": "Công nghệ làm đẹp, dành riêng cho bạn",
+    "founders": {
+      "imageAlt": "Nhà sáng lập Spavio AI",
+      "title": "Dành cho chuyên gia làm đẹp – nay dành cho bạn",
+      "content": "Spavio AI khởi đầu là trợ lý AI kỹ thuật số cho spa và studio làm đẹp: đặt lịch, chăm sóc khách hàng và quản lý hằng ngày, để chủ studio tập trung vào tay nghề của mình. Làm việc cùng các chuyên viên thẩm mỹ mỗi ngày giúp chúng tôi hiểu công nghệ nào thực sự mang lại hiệu quả. Spavio AI Store mang những kinh nghiệm đó đến tận nhà bạn: các thiết bị được tuyển chọn kỹ lưỡng, lấy cảm hứng từ phòng trị liệu chuyên nghiệp, kèm hướng dẫn sử dụng rõ ràng."
+    },
+    "foundersSection": {
+      "title": "Nhà sáng lập",
+      "kris": {
+        "name": "Minh Khue (Kris) Tran",
+        "role": "Nhà sáng lập Spavio AI",
+        "education": "Thạc sĩ Hệ thống Thông tin Quốc tế, Đại học FAU Erlangen-Nürnberg",
+        "bio1": "Kris sáng lập Spavio AI để giải phóng các chủ studio – đặc biệt là những nữ doanh nhân – khỏi gánh nặng hành chính khi kinh doanh làm đẹp, để họ dành năng lượng cho điều mình yêu thích và làm tốt nhất.",
+        "bio2": "Với Spavio AI Store, Kris mở rộng sứ mệnh đó đến mọi người yêu làm đẹp: thiết bị chất lượng, trung thực, hướng dẫn minh bạch và sự tỉ mỉ mà các studio tin tưởng trên nền tảng Spavio AI.",
+        "linkedin": "Kết nối trên LinkedIn"
+      },
+      "vision": {
+        "title": "Vẻ đẹp, Đổi mới & Tầm nhìn",
+        "text": "Chúng tôi tin rằng kết quả tuyệt vời đến từ sự kết hợp giữa công nghệ đã được chứng minh và kinh nghiệm chuyên môn thực tế. Mỗi thiết bị trong cửa hàng được chọn vì lợi ích rõ ràng, an toàn và dễ sử dụng – kèm theo các quy trình lấy cảm hứng từ những studio chúng tôi đồng hành mỗi ngày."
+      }
+    },
+    "academy": {
+      "title": "Spavio AI cho Studio",
+      "text": "Bạn điều hành spa, salon hoặc studio làm đẹp? Spavio AI là trợ lý kỹ thuật số 24/7 cho đặt lịch, chăm sóc khách hàng, giao tiếp qua WhatsApp và quản lý kho – để bạn có thêm thời gian cho khách hàng.",
+      "cta": "Khám phá Spavio AI"
+    },
+    "heritage": {
+      "title": "Điều làm nên sự khác biệt",
+      "handcrafted": {
+        "title": "Được chuyên gia tuyển chọn",
+        "text": "Mỗi thiết bị đều được đánh giá cùng chuyên gia làm đẹp về hiệu quả thực tế, sự thoải mái và an toàn trước khi có mặt trong bộ sưu tập."
+      },
+      "sustainable": {
+        "title": "Bền bỉ lâu dài",
+        "text": "Chúng tôi ưu tiên thiết bị sạc lại, có thể sửa chữa với linh kiện thay thế, bảo hành 2 năm và thu hồi theo chuẩn WEEE – vì thiết bị bền vững nhất là thiết bị bạn dùng lâu dài."
+      }
+    },
+    "values": {
+      "title": "Giá trị của chúng tôi",
+      "excellence": {
+        "title": "Hiệu quả",
+        "text": "Chúng tôi chọn công nghệ có lợi ích rõ ràng, có thể thấy được – và nói thật về những gì chúng làm được và không làm được."
+      },
+      "authenticity": {
+        "title": "An toàn",
+        "text": "Thiết bị đạt chứng nhận CE, được kiểm nghiệm da liễu, có hướng dẫn rõ ràng và tính năng an toàn tích hợp."
+      },
+      "innovation": {
+        "title": "Đổi mới",
+        "text": "Chúng tôi mang những ý tưởng thông minh nhất từ studio chuyên nghiệp vào quy trình làm đẹp tại nhà của bạn."
+      }
+    }
+  },
+  "sustainability": {
+    "title": "Phát triển bền vững",
+    "subtitle": "Công nghệ làm đẹp thông minh, được thiết kế để bền lâu",
+    "commitment": {
+      "title": "Cam kết về môi trường",
+      "ethical": {
+        "title": "Sản xuất có trách nhiệm",
+        "text": "Chúng tôi hợp tác với các nhà sản xuất đáp ứng tiêu chuẩn EU về vật liệu và an toàn, và yêu cầu mọi đối tác minh bạch về linh kiện và quy trình sản xuất."
+      },
+      "recyclable": {
+        "title": "Sạc lại & sửa chữa được",
+        "text": "Thiết bị sạc qua USB-C, không dùng pin dùng một lần và có đầu thay thế – linh kiện mòn không có nghĩa là phải thay cả thiết bị."
+      },
+      "impactGoals": {
+        "title": "Mục tiêu của chúng tôi",
+        "carbonNeutral": {
+          "value": "100%",
+          "label": "Bao bì ngoài không nhựa"
+        },
+        "recycledPackaging": {
+          "value": "2 năm",
+          "label": "Bảo hành mọi thiết bị"
+        },
+        "zeroWaste": {
+          "value": "Miễn phí",
+          "label": "Thu hồi thiết bị cũ"
+        }
+      }
+    },
+    "circularEconomy": {
+      "title": "Kinh tế tuần hoàn",
+      "intro": "Một thiết bị làm đẹp nên là người bạn đồng hành lâu dài. Dịch vụ của chúng tôi giúp thiết bị được sử dụng lâu nhất có thể – và tái chế đúng cách khi hết vòng đời.",
+      "lifetimeCare": {
+        "title": "Sửa chữa & linh kiện",
+        "text": "Đầu cọ, phụ kiện và bộ sạc thay thế luôn có sẵn cho mọi thiết bị, và đội ngũ chăm sóc sẽ hỗ trợ xử lý sự cố trước khi cần thay mới."
+      },
+      "takeBack": {
+        "title": "Chương trình thu hồi",
+        "text": "Gửi cho chúng tôi thiết bị làm đẹp cũ – bất kỳ thương hiệu nào – và chúng tôi sẽ tái chế có trách nhiệm theo chỉ thị WEEE của EU."
+      }
+    },
+    "certifications": {
+      "title": "Tiêu chuẩn & Tuân thủ",
+      "intro": "Thiết bị và bao bì của chúng tôi tuân thủ tiêu chuẩn EU về an toàn, vật liệu và xử lý có trách nhiệm.",
+      "ce": "Chứng nhận CE",
+      "rohs": "Tuân thủ RoHS",
+      "weee": "Đăng ký WEEE",
+      "fscPackaging": "Bao bì giấy FSC"
+    }
+  },
+  "deviceGuide": {
+    "title": "Hướng dẫn chọn thiết bị",
+    "subtitle": "Tìm công nghệ phù hợp với mục tiêu chăm sóc da và tóc của bạn",
+    "goals": {
+      "title": "Chọn theo mục tiêu",
+      "matchTitle": "Thiết bị phù hợp với mục tiêu của bạn",
+      "antiAging": {
+        "title": "Nếp nhăn & độ săn chắc",
+        "text": "Ánh sáng LED đỏ, vi dòng điện và sóng RF giúp làn da trông săn chắc, mịn màng hơn. Bắt đầu với mặt nạ Lumina LED, sau đó thêm Sculpt Microcurrent để nâng cơ."
+      },
+      "clearSkin": {
+        "title": "Da sạch & rạng rỡ",
+        "text": "Làm sạch sâu với cọ Sonic Cleanse kết hợp Aqua Ion Infuser giúp sản phẩm dưỡng phát huy hiệu quả, cho làn da tươi và đều màu hơn."
+      },
+      "smoothSkin": {
+        "title": "Da mịn không lông",
+        "text": "Silk IPL giúp giảm lông lâu dài qua các buổi hằng tuần; Precision Trimmer xử lý nhanh vùng mặt và lông mày."
+      },
+      "hairHealth": {
+        "title": "Tóc khỏe & bóng mượt",
+        "text": "Máy sấy Aura Ionic và máy duỗi Glide tạo kiểu với nhiệt độ được kiểm soát, còn Scalp Revive giúp da đầu khỏe mạnh."
+      }
+    },
+    "table": {
+      "device": "Thiết bị",
+      "technology": "Công nghệ",
+      "session": "Thời gian",
+      "frequency": "Tần suất",
+      "rows": {
+        "ledMask": {
+          "device": "Mặt nạ Lumina Pro LED",
+          "technology": "LED đỏ & hồng ngoại gần",
+          "session": "10 phút",
+          "frequency": "3–5 lần/tuần"
+        },
+        "microcurrent": {
+          "device": "Sculpt Microcurrent",
+          "technology": "Vi dòng điện",
+          "session": "5 phút",
+          "frequency": "Hằng ngày trong 60 ngày, sau đó 2–3 lần/tuần"
+        },
+        "rf": {
+          "device": "ThermaLift RF",
+          "technology": "Sóng RF đa cực",
+          "session": "10–15 phút",
+          "frequency": "2 lần/tuần"
+        },
+        "ipl": {
+          "device": "Silk IPL",
+          "technology": "Ánh sáng xung cường độ cao",
+          "session": "8–15 phút",
+          "frequency": "Hằng tuần trong 4 tuần, sau đó hằng tháng"
+        },
+        "dryer": {
+          "device": "Máy sấy Aura Ionic",
+          "technology": "Động cơ không chổi than + ion",
+          "session": "Khi cần",
+          "frequency": "Hằng ngày"
+        },
+        "massageGun": {
+          "device": "Súng massage Pulse Mini",
+          "technology": "Liệu pháp rung",
+          "session": "1–2 phút/vùng",
+          "frequency": "Hằng ngày"
+        }
+      }
+    },
+    "routine": {
+      "title": "Xây dựng quy trình",
+      "morning": {
+        "title": "Buổi sáng",
+        "step1": {
+          "label": "Làm sạch",
+          "value": "Cọ Sonic Cleanse, 60 giây"
+        },
+        "step2": {
+          "label": "Giảm bọng",
+          "value": "Cryo Glow Roller hoặc Eye Revive"
+        },
+        "step3": {
+          "label": "Nâng cơ",
+          "value": "Sculpt Microcurrent, 5 phút"
+        }
+      },
+      "evening": {
+        "title": "Buổi tối",
+        "step1": {
+          "label": "Làm sạch",
+          "value": "Cọ Sonic Cleanse"
+        },
+        "step2": {
+          "label": "Trị liệu",
+          "value": "Mặt nạ Lumina LED, 10 phút"
+        },
+        "step3": {
+          "label": "Thẩm thấu",
+          "value": "Aqua Ion Infuser với serum"
+        }
+      }
+    },
+    "safety": {
+      "title": "An toàn là trên hết",
+      "patchTest": {
+        "title": "Luôn thử trước",
+        "text": "Bắt đầu ở mức thấp nhất và thử trên vùng da nhỏ 24 giờ trước buổi đầu tiên – đặc biệt với IPL."
+      },
+      "pregnancy": {
+        "title": "Mang thai",
+        "text": "Chúng tôi khuyên tạm ngưng vi dòng điện, RF và IPL trong thời gian mang thai và cho con bú."
+      },
+      "implants": {
+        "title": "Thiết bị cấy ghép",
+        "text": "Không sử dụng vi dòng điện, EMS hoặc RF nếu bạn có máy tạo nhịp tim hoặc thiết bị điện tử cấy ghép. Hãy hỏi ý kiến bác sĩ nếu không chắc chắn."
+      },
+      "skinConditions": {
+        "title": "Bệnh lý về da",
+        "text": "Không sử dụng trên da tổn thương, kích ứng hoặc cháy nắng, và hỏi ý kiến bác sĩ da liễu nếu bạn có bệnh về da hoặc dùng thuốc gây nhạy cảm ánh sáng."
+      }
+    },
+    "needHelp": {
+      "title": "Cần hỗ trợ?",
+      "text": "Vẫn chưa biết thiết bị nào phù hợp? Chuyên viên công nghệ làm đẹp của chúng tôi sẽ tư vấn miễn phí thiết bị và quy trình theo mục tiêu của bạn.",
+      "browse": "Xem tất cả thiết bị",
+      "consultation": "Tư vấn miễn phí"
+    }
+  },
+  "customerCare": {
+    "title": "Chăm sóc khách hàng",
+    "subtitle": "Chúng tôi luôn sẵn sàng hỗ trợ về thiết bị, đơn hàng và quy trình làm đẹp",
+    "contactInfo": {
+      "title": "Thông tin liên hệ",
+      "phone": {
+        "title": "Điện thoại",
+        "number": "+49 176 84941650",
+        "hours": "Thứ 2–6: 9:00–18:00 CET"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@spavioai.de",
+        "response": "Phản hồi trong vòng 24 giờ"
+      },
+      "liveChat": {
+        "title": "Trò chuyện trực tuyến",
+        "button": "Bắt đầu chat",
+        "availability": "Trong giờ làm việc"
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "shipping": {
+        "question": "Các lựa chọn và thời gian giao hàng?",
+        "answer": "Miễn phí giao hàng tiêu chuẩn (2–4 ngày làm việc) cho đơn từ €99 tại Đức. Có giao hàng nhanh (1–2 ngày làm việc). Mọi đơn hàng đều có mã theo dõi và được gửi đi trong vòng 24 giờ."
+      },
+      "returns": {
+        "question": "Chính sách đổi trả như thế nào?",
+        "answer": "Dùng thử mọi thiết bị trong 30 ngày. Nếu không phù hợp, hãy gửi lại trong bao bì gốc để được hoàn tiền đầy đủ. Vì lý do vệ sinh, đầu cọ và phụ kiện đã dùng sẽ được thay mới trước khi bán lại."
+      },
+      "warranty": {
+        "question": "Chế độ bảo hành ra sao?",
+        "answer": "Mọi thiết bị Spavio AI được bảo hành 2 năm cho lỗi sản xuất. Liên hệ đội ngũ chăm sóc kèm mã đơn hàng, chúng tôi sẽ sửa chữa hoặc thay thế thiết bị."
+      },
+      "sizing": {
+        "question": "Làm sao chọn đúng thiết bị?",
+        "answer": "Hãy bắt đầu từ mục tiêu chính – chống lão hóa, da sạch, triệt lông hay chăm sóc tóc. Hướng dẫn chọn thiết bị so sánh các công nghệ và quy trình, hoặc đặt lịch tư vấn miễn phí."
+      },
+      "care": {
+        "question": "Vệ sinh và bảo quản thiết bị thế nào?",
+        "answer": "Lau bề mặt tiếp xúc bằng khăn mềm ẩm sau mỗi lần dùng và để khô. Cất thiết bị trong túi đựng, tránh nhiệt và ẩm, và sạc đầy trước lần dùng đầu tiên."
+      },
+      "authentication": {
+        "question": "Thiết bị có an toàn cho da nhạy cảm không?",
+        "answer": "Có – thiết bị đạt chứng nhận CE và được kiểm nghiệm da liễu, với nhiều mức cường độ. Luôn bắt đầu ở mức thấp nhất và đọc lưu ý an toàn; nếu có bệnh lý về da, hãy hỏi bác sĩ da liễu trước."
+      }
+    },
+    "form": {
+      "title": "Biểu mẫu liên hệ",
+      "firstName": "Tên",
+      "firstNamePlaceholder": "Nhập tên của bạn",
+      "lastName": "Họ",
+      "lastNamePlaceholder": "Nhập họ của bạn",
+      "email": "Email",
+      "emailPlaceholder": "Nhập email của bạn",
+      "orderNumber": "Mã đơn hàng (không bắt buộc)",
+      "orderNumberPlaceholder": "Nhập mã đơn hàng nếu có",
+      "message": "Chúng tôi có thể giúp gì?",
+      "messagePlaceholder": "Vui lòng mô tả chi tiết yêu cầu của bạn",
+      "send": "Gửi tin nhắn",
+      "sending": "Đang gửi...",
+      "successTitle": "Đã gửi tin nhắn",
+      "successText": "Cảm ơn bạn! Tin nhắn đã được gửi đến đội ngũ của chúng tôi.",
+      "errorTitle": "Chưa gửi được tin nhắn",
+      "errorText": "Không thể gửi tin nhắn. Vui lòng kiểm tra kết nối hoặc email cho chúng tôi tại info@spavioai.de."
+    }
+  },
+  "storeLocator": {
+    "title": "Showroom",
+    "subtitle": "Trải nghiệm thiết bị trực tiếp với buổi demo cá nhân",
+    "mapSection": {
+      "title": "Tìm chúng tôi"
+    },
+    "locationsSection": {
+      "title": "Địa điểm",
+      "getDirections": "Chỉ đường",
+      "bookAppointment": "Đặt lịch demo",
+      "availableServices": "Dịch vụ"
+    },
+    "stores": {
+      "neumarktShowroom": {
+        "name": "Spavio AI Showroom Neumarkt",
+        "hours": "Theo lịch hẹn",
+        "services": [
+          "Demo thiết bị",
+          "Tư vấn mục tiêu làm đẹp",
+          "Lên quy trình",
+          "Bảo hành & sửa chữa",
+          "Hợp tác cho studio"
+        ]
+      }
+    },
+    "privateAppointments": {
+      "title": "Hẹn riêng",
+      "intro": "Đặt lịch hẹn riêng để dùng thử thiết bị trước khi mua. Chuyên viên sẽ giới thiệu từng công nghệ, giải đáp thắc mắc và cùng bạn xây dựng quy trình theo mục tiêu.",
+      "deviceDemo": {
+        "title": "Demo thiết bị",
+        "text": "Trải nghiệm trực tiếp LED, vi dòng điện, RF và IPL"
+      },
+      "customStyles": {
+        "title": "Quy trình cá nhân",
+        "text": "Quy trình từng bước theo mục tiêu da và tóc của bạn"
+      },
+      "expertServices": {
+        "title": "Dịch vụ chuyên gia",
+        "text": "Hỗ trợ cài đặt, mẹo chăm sóc và bảo hành"
+      },
+      "scheduleButton": "Đặt lịch hẹn"
+    },
+    "virtualConsultations": {
+      "title": "Tư vấn trực tuyến",
+      "cantVisit": "Không thể ghé trực tiếp?",
+      "text": "Đặt lịch tư vấn qua video với chuyên viên công nghệ làm đẹp. Chúng tôi sẽ demo thiết bị trực tiếp, giải đáp thắc mắc và giúp bạn lựa chọn ngay tại nhà.",
+      "bookButton": "Đặt lịch tư vấn trực tuyến"
+    },
+    "map": {
+      "ourLocations": "Địa điểm của chúng tôi"
+    }
+  },
+  "pageHeader": {
+    "eyebrow": "Trải nghiệm Spavio AI"
+  }
+}

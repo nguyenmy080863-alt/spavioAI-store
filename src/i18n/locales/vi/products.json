@@ -1,0 +1,100 @@
+{
+  "categories": {
+    "skincare-devices": "Thiết bị chăm sóc da",
+    "hair-removal": "Triệt lông",
+    "hair-styling-and-care": "Tạo kiểu & chăm sóc tóc",
+    "body-and-wellness": "Cơ thể & thư giãn"
+  },
+  "items": {
+    "lumipore": {
+      "name": "Spavio Lumipore 4-trong-1",
+      "effect": "4 chế độ ánh sáng: Làm ấm, Tăng thẩm thấu, Nâng cơ, Rạng rỡ",
+      "description": "Một thiết bị, bốn chế độ chăm sóc cho cảm giác spa tại nhà: ánh sáng đỏ làm ấm nhẹ cho làn da tươi tắn, hồng hào; ánh sáng xanh lá kết hợp vi dòng điện giúp serum và kem dưỡng thẩm thấu tốt hơn; ánh sáng xanh dương với xung EMS cho làn da trông săn chắc hơn; và ánh sáng vàng làm dịu, mang lại vẻ rạng rỡ.",
+      "editorsNotes": "\"Bốn chế độ ánh sáng trong một thân máy mảnh mai — cách dễ nhất để bắt đầu quy trình chăm sóc bằng thiết bị.\""
+    },
+    "lumina-led-mask": {
+      "name": "Mặt nạ LED Lumina Pro",
+      "effect": "Liệu pháp ánh sáng đỏ & hồng ngoại gần",
+      "description": "Mặt nạ silicone y tế mềm dẻo với 160 bóng LED phát ánh sáng đỏ (630nm) và hồng ngoại gần (830nm), hỗ trợ collagen, làm đều màu da và làm dịu vùng da ửng đỏ chỉ với 10 phút mỗi ngày.",
+      "editorsNotes": "\"Nghi thức làm da rạng rỡ dễ nhất mà chúng tôi biết — đeo lên, bấm nút và để ánh sáng làm phần còn lại.\""
+    },
+    "sculpt-microcurrent": {
+      "name": "Thiết bị nâng cơ vi dòng điện Sculpt",
+      "effect": "Nâng cơ & tạo đường nét",
+      "description": "Hai bi lăn xoay truyền vi dòng điện nhẹ nhàng giúp săn chắc cơ mặt dọc đường viền hàm, gò má và chân mày. Năm mức cường độ và quy trình hướng dẫn 5 phút.",
+      "editorsNotes": "\"Bài tập cho khuôn mặt chỉ 5 phút giúp đường nét gọn gàng rõ rệt trước mỗi sự kiện.\""
+    },
+    "thermalift-rf": {
+      "name": "Thiết bị săn chắc da RF ThermaLift",
+      "effect": "Săn chắc da bằng sóng RF",
+      "description": "Sóng RF đa cực làm ấm các lớp da sâu đến 40–42°C dễ chịu, với cảm biến nhiệt tích hợp giúp mỗi lần sử dụng luôn an toàn và ổn định.",
+      "editorsNotes": "\"Hiệu quả săn chắc như ở phòng khám, được tinh chỉnh cho gia đình. Cảm biến thông minh giúp mọi thứ thật dễ dàng.\""
+    },
+    "sonic-cleanse-brush": {
+      "name": "Cọ rửa mặt Sonic Cleanse",
+      "effect": "Làm sạch sâu lỗ chân lông",
+      "description": "Các đầu silicone siêu mềm, vệ sinh rung 8.000 lần mỗi phút giúp loại bỏ lớp trang điểm, kem chống nắng và bụi bẩn — đủ dịu nhẹ để dùng hai lần mỗi ngày.",
+      "editorsNotes": "\"Da sạch hơn chỉ trong 60 giây. Chống nước, tiện mang theo và một lần sạc dùng được nhiều tháng.\""
+    },
+    "aqua-ion-infuser": {
+      "name": "Máy đẩy tinh chất Aqua Ion",
+      "effect": "Tăng thẩm thấu bằng sóng siêu âm",
+      "description": "Chế độ rung siêu âm và ion giúp serum và kem dưỡng yêu thích thẩm thấu vào da, trong khi đầu thép không gỉ mát lạnh giúp làm dịu và giảm bọng.",
+      "editorsNotes": "\"Để từng giọt serum đều phát huy tác dụng — một nâng cấp nhẹ nhàng cho quy trình sẵn có của bạn.\""
+    },
+    "eye-revive-wand": {
+      "name": "Máy massage mắt làm ấm Eye Revive",
+      "effect": "Giảm bọng & làm sáng vùng mắt",
+      "description": "Cây massage nhỏ gọn như cây bút với đầu làm ấm 42°C và rung sonic nhẹ nhàng giúp thư giãn vùng da quanh mắt mỏng manh và giúp kem mắt thẩm thấu tốt hơn.",
+      "editorsNotes": "\"Bí quyết buổi sáng của chúng tôi cho đôi mắt tươi tắn, bớt mệt mỏi.\""
+    },
+    "cryo-glow-roller": {
+      "name": "Cây lăn lạnh Cryo Glow",
+      "effect": "Làm mát & làm dịu da",
+      "description": "Cây lăn lạnh bằng thép không gỉ giữ lạnh đến 20 phút sau khi làm mát. Làm dịu vùng da ửng đỏ, giúp lỗ chân lông trông se khít và rất phù hợp để chăm sóc sau liệu trình.",
+      "editorsNotes": "\"Hãy cất trong tủ lạnh — hai phút lăn nhẹ mang lại cảm giác như vừa đi spa.\""
+    },
+    "silk-ipl": {
+      "name": "Máy triệt lông IPL Silk",
+      "effect": "Da mịn màng lâu dài",
+      "description": "Công nghệ ánh sáng xung cường độ cao với cảm biến màu da tích hợp và năm mức năng lượng. Giảm lông rõ rệt chỉ sau bốn buổi mỗi tuần, cùng cửa sổ sapphire mát lạnh cho cảm giác dễ chịu.",
+      "editorsNotes": "\"IPL chuẩn salon tại nhà, với cảm biến tự động lo phần cài đặt cho bạn.\""
+    },
+    "precision-trimmer": {
+      "name": "Máy tỉa lông mặt & chân mày Precision",
+      "effect": "Tỉa gọn không đau",
+      "description": "Máy tỉa mảnh, êm ái với năm đầu thay thế cho chân mày, ria mép, mặt và lông tơ trên cơ thể. Lưỡi dao không gây kích ứng, phù hợp da nhạy cảm.",
+      "editorsNotes": "\"Dụng cụ tỉa chi tiết mà ai cũng nên có trên bàn trang điểm.\""
+    },
+    "aura-ionic-dryer": {
+      "name": "Máy sấy tóc ion Aura",
+      "effect": "Khô nhanh, giảm xơ rối",
+      "description": "Động cơ không chổi than 110.000 vòng/phút với 200 triệu ion âm mỗi cm³ cho mái tóc khô nhanh và bóng mượt. Hệ thống kiểm soát nhiệt thông minh đo nhiệt độ luồng khí 40 lần mỗi giây.",
+      "editorsNotes": "\"Nhẹ, mạnh mẽ và êm — sấy tóc chuẩn salon mà không lo hư tổn do nhiệt.\""
+    },
+    "glide-straightener": {
+      "name": "Máy duỗi tóc hồng ngoại Glide",
+      "effect": "Suôn mượt & bóng đẹp",
+      "description": "Bản ceramic nổi tích hợp công nghệ hồng ngoại làm nóng đều từ 150–230°C cho mái tóc thẳng mượt, bóng đẹp chỉ sau một lần lướt. Tự động tắt sau 60 phút.",
+      "editorsNotes": "\"Duỗi, uốn và tạo sóng — một dụng cụ cho mọi phong cách.\""
+    },
+    "scalp-revive": {
+      "name": "Máy massage da đầu Scalp Revive",
+      "effect": "Chăm sóc & thư giãn da đầu",
+      "description": "Các đầu massage xoay chống nước kết hợp liệu pháp ánh sáng đỏ giúp kích thích da đầu, hỗ trợ tuần hoàn và biến giờ gội đầu thành một buổi spa thu nhỏ.",
+      "editorsNotes": "\"Mười phút thư giãn trọn vẹn — da đầu của bạn sẽ cảm ơn bạn.\""
+    },
+    "pulse-mini-massager": {
+      "name": "Súng massage Pulse Mini",
+      "effect": "Phục hồi cơ bắp",
+      "description": "Liệu pháp rung nhỏ gọn với bốn tốc độ và bốn đầu massage. Giảm căng cứng vùng cổ, vai và chân — đủ nhỏ để bỏ vừa mọi túi xách.",
+      "editorsNotes": "\"Giảm đau mạnh mẽ, vừa trong lòng bàn tay.\""
+    },
+    "contour-body-sculptor": {
+      "name": "Máy tạo đường nét cơ thể Contour",
+      "effect": "Săn chắc cơ thể bằng EMS + RF",
+      "description": "Kết hợp kích thích cơ EMS với sóng RF làm ấm và ba đầu lăn giúp vùng đùi, cánh tay và bụng trông mịn màng, săn chắc hơn.",
+      "editorsNotes": "\"Nghi thức tạo đường nét cơ thể mang cảm giác như một buổi massage sâu, ấm áp.\""
+    }
+  }
+}

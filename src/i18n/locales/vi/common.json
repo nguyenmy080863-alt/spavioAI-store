@@ -1,0 +1,179 @@
+{
+  "language": {
+    "label": "Đổi ngôn ngữ"
+  },
+  "brand": {
+    "tagline": "Công nghệ làm đẹp thông minh, được chuyên gia tuyển chọn cho hiệu quả bạn có thể thấy và cảm nhận ngay tại nhà."
+  },
+  "nav": {
+    "shop": "Mua sắm",
+    "newIn": "Mới về",
+    "about": "Về chúng tôi",
+    "toggleMenu": "Mở menu",
+    "search": "Tìm kiếm",
+    "favorites": "Yêu thích",
+    "shoppingBag": "Giỏ hàng",
+    "close": "Đóng",
+    "submenu": {
+      "skincare-devices": "Thiết bị chăm sóc da",
+      "hair-removal": "Triệt lông",
+      "hair-styling-care": "Tạo kiểu & chăm sóc tóc",
+      "body-wellness": "Cơ thể & thư giãn",
+      "arrivals": "Hàng mới về",
+      "best-sellers": "Bán chạy",
+      "anti-aging": "Bộ sưu tập chống lão hóa",
+      "on-sale": "Đang giảm giá",
+      "under-100": "Quà tặng dưới €100",
+      "our-story": "Câu chuyện của chúng tôi",
+      "sustainability": "Phát triển bền vững",
+      "device-guide": "Hướng dẫn chọn thiết bị",
+      "customer-care": "Chăm sóc khách hàng",
+      "store-locator": "Showroom"
+    },
+    "cards": {
+      "dryer": "Máy sấy Aura Ionic",
+      "dryerAlt": "Máy sấy tóc Aura Ionic",
+      "readOurStory": "Đọc câu chuyện của chúng tôi",
+      "lumipore": "Spavio Lumipore – Mới",
+      "lumiporeAlt": "Thiết bị làm đẹp Spavio Lumipore 4 trong 1",
+      "brandAlt": "Logo Spavio AI",
+      "brandTagline": "Công nghệ làm đẹp, dành riêng cho bạn"
+    },
+    "account": "Tài khoản",
+    "signIn": "Đăng nhập"
+  },
+  "search": {
+    "placeholder": "Tìm thiết bị...",
+    "popular": "Tìm kiếm phổ biến",
+    "terms": {
+      "led": "LED",
+      "microcurrent": "Microcurrent",
+      "ipl": "IPL",
+      "hairDryer": "Máy sấy tóc",
+      "massage": "Massage",
+      "serum": "Serum"
+    },
+    "clear": "Xóa",
+    "matching": "Sản phẩm phù hợp ({{count}})",
+    "noResults": "Không tìm thấy sản phẩm phù hợp với \"{{query}}\". Nhấn Enter để xem tất cả kết quả."
+  },
+  "favorites": {
+    "title": "Danh sách yêu thích",
+    "empty": "Bạn chưa có sản phẩm yêu thích nào. Khám phá các thiết bị và nhấn biểu tượng trái tim để lưu lại."
+  },
+  "footer": {
+    "visitUs": "Showroom",
+    "contact": "Liên hệ",
+    "shop": "Cửa hàng",
+    "support": "Hỗ trợ",
+    "connect": "Kết nối",
+    "newIn": "Hàng mới",
+    "skincareDevices": "Thiết bị chăm sóc da",
+    "hairRemoval": "Triệt lông",
+    "hairStylingCare": "Tạo kiểu & chăm sóc tóc",
+    "bodyWellness": "Cơ thể & thư giãn",
+    "deviceGuide": "Hướng dẫn chọn thiết bị",
+    "warranty": "Bảo hành",
+    "returns": "Đổi trả",
+    "shipping": "Giao hàng",
+    "newsletter": "Bản tin",
+    "forStudios": "Spavio AI cho Studio",
+    "rights": "© 2026 Spavio AI. Bảo lưu mọi quyền.",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ",
+    "cookieSettings": "Cài đặt cookie"
+  },
+  "usps": {
+    "certified": {
+      "title": "Chứng nhận CE",
+      "desc": "Mọi thiết bị đều đạt chứng nhận CE và được kiểm nghiệm da liễu, an toàn khi dùng tại nhà."
+    },
+    "warranty": {
+      "title": "Bảo hành 2 năm",
+      "desc": "Bảo hành toàn diện cho mọi thiết bị, sửa chữa hoặc thay thế nhanh chóng."
+    },
+    "trial": {
+      "title": "Dùng thử 30 ngày",
+      "desc": "Dùng thử trong quy trình của bạn. Không phù hợp? Hoàn tiền đầy đủ."
+    },
+    "aiCoach": {
+      "title": "Quy trình cá nhân",
+      "desc": "Chuyên viên công nghệ làm đẹp xây dựng quy trình theo mục tiêu da và tóc của bạn."
+    }
+  },
+  "auth": {
+    "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ",
+    "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự",
+    "tooManyAttempts": "Quá nhiều lần thử. Vui lòng thử lại sau vài phút.",
+    "accountCreated": "Đã tạo tài khoản",
+    "welcomeBack": "Chào mừng bạn trở lại",
+    "signInFailed": "Đăng nhập không thành công",
+    "panel": {
+      "eyebrow": "Công nghệ làm đẹp thông minh",
+      "title": "Hiệu quả chuẩn phòng khám, ngay tại nhà",
+      "text": "Khám phá thiết bị LED, vi dòng điện, RF và IPL được thiết kế cùng chuyên gia làm đẹp — kèm quy trình cá nhân để tận dụng tối đa mỗi lần sử dụng.",
+      "warrantyTitle": "Bảo hành 2 năm",
+      "warrantyText": "Chứng nhận CE, kiểm nghiệm da liễu",
+      "bagTitle": "Lưu giỏ hàng",
+      "bagText": "Thêm sản phẩm ngay, thanh toán bất cứ lúc nào",
+      "imageAlt": "Liệu trình làm đẹp với thiết bị chăm sóc da chuyên nghiệp"
+    },
+    "backToStore": "Quay lại cửa hàng",
+    "signIn": "Đăng nhập",
+    "createAccount": "Tạo tài khoản",
+    "signInIntro": "Đăng nhập để lưu giỏ hàng, xem lịch sử đơn hàng và nhận ưu đãi độc quyền.",
+    "signUpIntro": "Tạo tài khoản để lưu sản phẩm yêu thích, theo dõi đơn hàng và thanh toán nhanh hơn.",
+    "verificationSent": "Đã gửi liên kết xác minh",
+    "checkInboxBefore": "Vui lòng kiểm tra hộp thư để xác nhận",
+    "checkInboxAfter": "Sau khi xác minh, bạn có thể quay lại đây để đăng nhập.",
+    "changeEmail": "Đổi địa chỉ email",
+    "email": "Địa chỉ email",
+    "password": "Mật khẩu",
+    "hidePassword": "Ẩn mật khẩu",
+    "showPassword": "Hiện mật khẩu",
+    "locked": "Tạm thời bị khóa. Vui lòng chờ trước khi thử lại.",
+    "processing": "Đang xử lý...",
+    "newHere": "Lần đầu đến Spavio AI?",
+    "createAnAccount": "Tạo tài khoản",
+    "haveAccount": "Đã có tài khoản?",
+    "signInLink": "Đăng nhập",
+    "continueAsGuest": "Tiếp tục mua sắm với tư cách khách",
+    "legalPrefix": "Bảo lưu mọi quyền. Khi tiếp tục, bạn đồng ý với",
+    "terms": "Điều khoản",
+    "privacy": "Chính sách bảo mật"
+  },
+  "cookies": {
+    "title": "Chúng tôi tôn trọng quyền riêng tư của bạn",
+    "text": "Chúng tôi sử dụng cookie cần thiết để cửa hàng hoạt động (ví dụ: giỏ hàng và đăng nhập). Khi được bạn đồng ý, chúng tôi cũng sử dụng cookie tùy chọn cho các tiện ích, thống kê và tiếp thị. Bạn có thể thay đổi lựa chọn bất cứ lúc nào trong phần cài đặt cookie.",
+    "privacyLink": "Chính sách bảo mật",
+    "acceptAll": "Chấp nhận tất cả",
+    "rejectAll": "Chỉ cookie cần thiết",
+    "settings": "Cài đặt",
+    "saveSelection": "Lưu lựa chọn",
+    "settingsTitle": "Cài đặt cookie",
+    "settingsText": "Chọn loại cookie chúng tôi được phép sử dụng. Cookie cần thiết là bắt buộc để cửa hàng hoạt động.",
+    "alwaysOn": "Luôn bật",
+    "categories": {
+      "necessary": {
+        "title": "Cần thiết",
+        "text": "Cần cho giỏ hàng, thanh toán, đăng nhập và ghi nhớ lựa chọn cookie của bạn. Không thể tắt các cookie này."
+      },
+      "preferences": {
+        "title": "Tùy chọn",
+        "text": "Ghi nhớ các thiết lập như sản phẩm đã xem gần đây để việc mua sắm thuận tiện hơn."
+      },
+      "analytics": {
+        "title": "Thống kê",
+        "text": "Giúp chúng tôi hiểu cách cửa hàng được sử dụng để cải thiện. Mọi dữ liệu đều được phân tích ẩn danh."
+      },
+      "marketing": {
+        "title": "Tiếp thị",
+        "text": "Cho phép ưu đãi cá nhân hóa và đo lường hiệu quả quảng cáo trên các nền tảng khác."
+      }
+    }
+  },
+  "whatsapp": {
+    "label": "Nhắn tin với chúng tôi qua WhatsApp",
+    "message": "Xin chào Spavio AI Store, tôi có một câu hỏi. (Trang: {{url}})"
+  }
+}

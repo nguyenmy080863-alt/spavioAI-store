@@ -1,0 +1,4 @@
+# Netlify: the admin panel is client-rendered; everything else is prerendered
+# (unknown URLs fall through to 404.html with a real 404 status).
+/admin     /200.html  200
+/admin/*   /200.html  200

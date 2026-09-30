@@ -1,0 +1,173 @@
+{
+  "notFound": {
+    "title": "404",
+    "heading": "Không tìm thấy trang",
+    "message": "Rất tiếc, chúng tôi không tìm thấy trang bạn đang tìm.",
+    "returnHome": "Về trang chủ"
+  },
+  "privacy": {
+    "pageTitle": "Chính sách bảo mật - Spavio AI Store",
+    "title": "Chính sách bảo mật",
+    "lastUpdated": "Cập nhật lần cuối: 30 tháng 9, 2026",
+    "introduction": {
+      "title": "Giới thiệu",
+      "text": "Tại Spavio AI (\"chúng tôi\"), chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của bạn. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, tiết lộ và bảo vệ thông tin của bạn khi bạn truy cập trang web, mua hàng hoặc tương tác với các dịch vụ của chúng tôi."
+    },
+    "infoCollected": {
+      "title": "Thông tin chúng tôi thu thập",
+      "personal": {
+        "title": "Thông tin cá nhân",
+        "intro": "Chúng tôi có thể thu thập thông tin cá nhân mà bạn cung cấp trực tiếp cho chúng tôi, bao gồm:",
+        "items": [
+          "Họ tên, địa chỉ email và thông tin liên hệ",
+          "Địa chỉ thanh toán và giao hàng",
+          "Thông tin thanh toán (được xử lý an toàn thông qua các bên thứ ba)",
+          "Tùy chọn tài khoản và cài đặt liên lạc"
+        ]
+      },
+      "usage": {
+        "title": "Thông tin sử dụng",
+        "text": "Chúng tôi tự động thu thập một số thông tin về thiết bị và hành vi sử dụng của bạn, bao gồm địa chỉ IP, loại trình duyệt, các trang đã truy cập và dữ liệu tương tác nhằm cải thiện dịch vụ và trải nghiệm người dùng."
+      }
+    },
+    "howWeUse": {
+      "title": "Cách chúng tôi sử dụng thông tin của bạn",
+      "intro": "Chúng tôi sử dụng thông tin thu thập được cho nhiều mục đích khác nhau, bao gồm:",
+      "items": [
+        "Xử lý và hoàn thành đơn hàng của bạn",
+        "Cung cấp hỗ trợ khách hàng và phản hồi các yêu cầu",
+        "Gửi thông tin khuyến mãi (khi có sự đồng ý của bạn)",
+        "Cải thiện chức năng trang web và trải nghiệm người dùng",
+        "Ngăn chặn gian lận và đảm bảo an ninh",
+        "Tuân thủ các nghĩa vụ pháp lý"
+      ]
+    },
+    "sharing": {
+      "title": "Chia sẻ và tiết lộ thông tin",
+      "intro": "Chúng tôi không bán, trao đổi hoặc cho thuê thông tin cá nhân của bạn cho bên thứ ba. Chúng tôi chỉ có thể chia sẻ thông tin của bạn trong các trường hợp sau:",
+      "items": [
+        "Với các nhà cung cấp dịch vụ hỗ trợ chúng tôi vận hành hoạt động kinh doanh",
+        "Khi pháp luật yêu cầu hoặc để bảo vệ quyền lợi của chúng tôi",
+        "Trong trường hợp giao dịch kinh doanh (sáp nhập, mua lại, v.v.)",
+        "Khi có sự đồng ý rõ ràng của bạn"
+      ]
+    },
+    "security": {
+      "title": "Bảo mật dữ liệu",
+      "text": "Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức phù hợp để bảo vệ thông tin cá nhân của bạn khỏi truy cập trái phép, thay đổi, tiết lộ hoặc phá hủy. Tuy nhiên, không có phương thức truyền tải qua internet hay lưu trữ điện tử nào an toàn tuyệt đối 100%."
+    },
+    "rights": {
+      "title": "Quyền và lựa chọn của bạn",
+      "intro": "Tùy theo khu vực của bạn, bạn có thể có một số quyền nhất định liên quan đến thông tin cá nhân của mình:",
+      "items": [
+        "Quyền truy cập thông tin cá nhân của bạn",
+        "Quyền chỉnh sửa thông tin không chính xác hoặc chưa đầy đủ",
+        "Quyền xóa thông tin cá nhân của bạn",
+        "Quyền phản đối hoặc hạn chế việc xử lý dữ liệu",
+        "Quyền di chuyển dữ liệu",
+        "Quyền rút lại sự đồng ý (nếu áp dụng)"
+      ]
+    },
+    "cookies": {
+      "title": "Cookie và sự đồng ý",
+      "text": "Chúng tôi chỉ sử dụng cookie và bộ nhớ cục bộ cần thiết về mặt kỹ thuật để cửa hàng hoạt động – ví dụ giỏ hàng, đăng nhập và ghi nhớ lựa chọn cookie của bạn. Cookie tùy chọn cho tùy chỉnh, thống kê và tiếp thị chỉ được sử dụng khi bạn đồng ý rõ ràng (Điều 6(1)(a) GDPR, § 25 TTDSG).",
+      "text2": "Bạn có thể thay đổi hoặc rút lại lựa chọn bất cứ lúc nào qua liên kết “Cài đặt cookie” ở chân trang. PayPal chỉ được tải trên trang thanh toán để xử lý thanh toán của bạn."
+    },
+    "whatsapp": {
+      "title": "Liên hệ qua WhatsApp",
+      "text": "Bạn có thể nhắn tin trực tiếp cho chúng tôi bằng nút WhatsApp. Bạn chỉ được chuyển đến WhatsApp (WhatsApp Ireland Ltd., Meta) khi nhấn vào nút; trước đó không có dữ liệu nào được gửi đến WhatsApp. Chính sách bảo mật của WhatsApp áp dụng cho cuộc trò chuyện đó. Bạn cũng có thể liên hệ qua email hoặc điện thoại."
+    },
+    "changes": {
+      "title": "Thay đổi đối với chính sách này",
+      "text": "Chúng tôi có thể cập nhật Chính sách bảo mật này theo thời gian. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi quan trọng nào bằng cách đăng chính sách mới trên trang web và cập nhật ngày \"Cập nhật lần cuối\" ở trên."
+    },
+    "contact": {
+      "title": "Liên hệ với chúng tôi",
+      "text": "Nếu bạn có bất kỳ câu hỏi nào về Chính sách bảo mật này hoặc các hoạt động bảo mật của chúng tôi, vui lòng liên hệ với chúng tôi tại:",
+      "email": "Email: info@spavioai.de",
+      "phone": "Điện thoại: +49 176 84941650",
+      "address": "Địa chỉ: Glasergasse 18, 92318 Neumarkt, Đức"
+    }
+  },
+  "terms": {
+    "pageTitle": "Điều khoản dịch vụ - Spavio AI Store",
+    "title": "Điều khoản dịch vụ",
+    "lastUpdated": "Cập nhật lần cuối: 30 tháng 9, 2026",
+    "agreement": {
+      "title": "Đồng ý với các điều khoản",
+      "text": "Khi truy cập và sử dụng trang web cũng như các dịch vụ của Spavio AI, bạn chấp nhận và đồng ý bị ràng buộc bởi các điều khoản và điều kiện của thỏa thuận này. Các Điều khoản dịch vụ này chi phối việc bạn sử dụng trang web, sản phẩm và dịch vụ của chúng tôi."
+    },
+    "license": {
+      "title": "Giấy phép sử dụng",
+      "intro": "Bạn được cấp phép tải xuống tạm thời một bản sao các tài liệu trên trang web của Spavio AI chỉ để xem cho mục đích cá nhân, phi thương mại và tạm thời. Đây là việc cấp giấy phép, không phải chuyển nhượng quyền sở hữu, và theo giấy phép này, bạn không được:",
+      "items": [
+        "Sửa đổi hoặc sao chép các tài liệu",
+        "Sử dụng các tài liệu cho mục đích thương mại hoặc trình chiếu công khai",
+        "Cố gắng dịch ngược bất kỳ phần mềm nào có trên trang web",
+        "Xóa bỏ bất kỳ ký hiệu bản quyền hoặc quyền sở hữu nào khỏi các tài liệu"
+      ]
+    },
+    "productInfo": {
+      "title": "Thông tin sản phẩm và tình trạng còn hàng",
+      "text": "Chúng tôi cố gắng cung cấp thông tin sản phẩm chính xác, bao gồm mô tả, giá cả và tình trạng còn hàng. Tuy nhiên, chúng tôi không đảm bảo rằng mô tả sản phẩm hoặc nội dung khác là chính xác, đầy đủ, đáng tin cậy hoặc không có sai sót. Chúng tôi có quyền thay đổi hoặc ngừng cung cấp sản phẩm mà không cần thông báo trước."
+    },
+    "orders": {
+      "title": "Đặt hàng và thanh toán",
+      "acceptance": {
+        "title": "Chấp nhận đơn hàng",
+        "text": "Mọi đơn hàng đều phải được chấp nhận và tùy thuộc vào tình trạng còn hàng. Chúng tôi có quyền từ chối hoặc hủy bất kỳ đơn hàng nào vì bất kỳ lý do gì, bao gồm nhưng không giới hạn ở tình trạng hết hàng, sai sót trong thông tin sản phẩm hoặc nghi ngờ gian lận."
+      },
+      "payment": {
+        "title": "Điều khoản thanh toán",
+        "text": "Thanh toán được thực hiện tại thời điểm mua hàng. Chúng tôi chấp nhận các loại thẻ tín dụng phổ biến và các phương thức thanh toán khác được hiển thị trong quá trình thanh toán. Tất cả giá đều tính bằng USD trừ khi có ghi chú khác."
+      }
+    },
+    "shipping": {
+      "title": "Vận chuyển và giao hàng",
+      "text1": "Chúng tôi sẽ nỗ lực hết sức để giao hàng trong khung thời gian đã nêu. Tuy nhiên, ngày giao hàng chỉ là ước tính và chúng tôi không chịu trách nhiệm về sự chậm trễ do đơn vị vận chuyển hoặc các trường hợp nằm ngoài tầm kiểm soát của chúng tôi.",
+      "text2": "Rủi ro mất mát và quyền sở hữu đối với sản phẩm sẽ chuyển sang bạn khi hàng được giao cho đơn vị vận chuyển. Chúng tôi không chịu trách nhiệm về các kiện hàng bị mất, bị đánh cắp hoặc hư hỏng sau khi đã được giao đến địa chỉ đã cung cấp."
+    },
+    "returns": {
+      "title": "Đổi trả hàng",
+      "intro": "Dùng thử thiết bị trong 30 ngày. Chúng tôi chấp nhận đổi trả trong vòng 30 ngày kể từ ngày giao hàng, với các điều kiện sau:",
+      "items": [
+        "Thiết bị và phụ kiện được gửi trả đầy đủ trong bao bì gốc",
+        "Đầu cọ và phụ kiện đã qua sử dụng sẽ được thay mới vì lý do vệ sinh",
+        "Tiền được hoàn về phương thức thanh toán ban đầu trong vòng 14 ngày sau khi nhận hàng trả",
+        "Quyền rút lại hợp đồng trong 14 ngày theo luật định của bạn vẫn được giữ nguyên"
+      ]
+    },
+    "warranty": {
+      "title": "Bảo hành và bảo quản",
+      "text": "Mọi thiết bị Spavio AI được bảo hành 2 năm cho lỗi sản xuất, bên cạnh quyền bảo hành theo luật định của bạn. Bảo hành không áp dụng cho hao mòn thông thường của linh kiện tiêu hao (như đầu cọ), sử dụng sai cách hoặc hư hỏng do tai nạn. Hướng dẫn sử dụng và bảo quản được kèm theo mỗi thiết bị và có trên website của chúng tôi."
+    },
+    "intellectualProperty": {
+      "title": "Sở hữu trí tuệ",
+      "text": "Toàn bộ nội dung trên trang web này, bao gồm nhưng không giới hạn ở văn bản, hình ảnh đồ họa, logo, hình ảnh và phần mềm, đều thuộc quyền sở hữu của Spavio AI và được bảo vệ bởi luật bản quyền, thương hiệu và các luật sở hữu trí tuệ khác. Nghiêm cấm sử dụng trái phép."
+    },
+    "liability": {
+      "title": "Giới hạn trách nhiệm pháp lý",
+      "text": "Trong mọi trường hợp, Spavio AI hoặc các nhà cung cấp của chúng tôi sẽ không chịu trách nhiệm về bất kỳ thiệt hại nào (bao gồm nhưng không giới hạn ở thiệt hại do mất dữ liệu, lợi nhuận hoặc gián đoạn kinh doanh) phát sinh từ việc sử dụng hoặc không thể sử dụng các tài liệu trên trang web hoặc sản phẩm của chúng tôi, ngay cả khi chúng tôi đã được thông báo về khả năng xảy ra thiệt hại đó."
+    },
+    "privacyRef": {
+      "title": "Chính sách bảo mật",
+      "text": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi. Vui lòng xem lại Chính sách bảo mật của chúng tôi, cũng chi phối việc bạn sử dụng trang web và dịch vụ, để hiểu rõ cách chúng tôi xử lý thông tin cá nhân của bạn."
+    },
+    "governingLaw": {
+      "title": "Luật điều chỉnh",
+      "text": "Các điều khoản này được điều chỉnh bởi pháp luật của Cộng hòa Liên bang Đức, không áp dụng Công ước Liên Hợp Quốc về Hợp đồng Mua bán Hàng hóa Quốc tế. Nếu bạn là người tiêu dùng, bạn vẫn được bảo vệ bởi các quy định bắt buộc về bảo vệ người tiêu dùng tại quốc gia bạn cư trú."
+    },
+    "changes": {
+      "title": "Thay đổi đối với điều khoản",
+      "text": "Chúng tôi có quyền sửa đổi các Điều khoản dịch vụ này bất kỳ lúc nào mà không cần thông báo trước. Khi sử dụng trang web này, bạn đồng ý bị ràng buộc bởi phiên bản hiện hành của các Điều khoản dịch vụ này."
+    },
+    "contact": {
+      "title": "Thông tin liên hệ",
+      "text": "Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản dịch vụ này, vui lòng liên hệ với chúng tôi tại:",
+      "email": "Email: info@spavioai.de",
+      "phone": "Điện thoại: +49 176 84941650",
+      "address": "Địa chỉ: Glasergasse 18, 92318 Neumarkt, Đức"
+    }
+  },
+  "impressumEyebrow": "Thông tin pháp lý"
+}

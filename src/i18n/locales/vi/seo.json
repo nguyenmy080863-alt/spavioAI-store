@@ -1,0 +1,76 @@
+{
+  "ogImageAlt": "Spavio AI Store – Thiết bị làm đẹp & chăm sóc cá nhân thông minh",
+  "organizationDescription": "Cửa hàng trực tuyến thiết bị làm đẹp và chăm sóc cá nhân thông minh: mặt nạ LED, thiết bị vi dòng điện, RF và IPL, dụng cụ tạo kiểu tóc ion và công nghệ chăm sóc cơ thể.",
+  "home": {
+    "title": "Spavio AI Store | Thiết bị làm đẹp & chăm sóc cá nhân thông minh",
+    "description": "Mua sắm tại Spavio AI Store — mặt nạ ánh sáng LED, thiết bị vi dòng điện và RF cho da, máy triệt lông IPL, máy sấy tóc ion và thiết bị chăm sóc cơ thể. Công nghệ làm đẹp chuẩn phòng khám tại nhà."
+  },
+  "category": {
+    "title": "{{name}} – Thiết bị làm đẹp",
+    "description": "Mua {{name}} tại Spavio AI Store — thiết bị LED, vi dòng điện, RF và IPL đạt chứng nhận CE, dụng cụ tạo kiểu tóc ion và công nghệ chăm sóc cơ thể, bảo hành 2 năm, dùng thử 30 ngày."
+  },
+  "shop": {
+    "title": "Tất cả thiết bị làm đẹp",
+    "description": "Khám phá toàn bộ thiết bị làm đẹp và chăm sóc cá nhân Spavio AI — thiết bị chăm sóc da, triệt lông IPL, dụng cụ tạo kiểu tóc và công nghệ chăm sóc cơ thể. Miễn phí giao hàng cho đơn từ €99."
+  },
+  "search": {
+    "title": "Tìm kiếm: \"{{query}}\"",
+    "description": "Kết quả tìm kiếm \"{{query}}\" tại Spavio AI Store — thiết bị làm đẹp và chăm sóc cá nhân thông minh."
+  },
+  "product": {
+    "title": "{{name}} – {{effect}}",
+    "description": "{{description}}"
+  },
+  "ourStory": {
+    "title": "Câu chuyện của chúng tôi",
+    "description": "Gặp gỡ nhà sáng lập Spavio AI — Minh Khue (Kris) Tran. Khám phá tầm nhìn phía sau Spavio AI Store: công nghệ làm đẹp chuẩn phòng khám, dành riêng cho bạn."
+  },
+  "sustainability": {
+    "title": "Phát triển bền vững",
+    "description": "Spavio AI Store cam kết thiết bị bền lâu, có thể sửa chữa, bao bì tái chế và thu hồi thiết bị làm đẹp cũ theo chuẩn WEEE."
+  },
+  "deviceGuide": {
+    "title": "Hướng dẫn chọn thiết bị làm đẹp phù hợp",
+    "description": "Tìm thiết bị Spavio AI phù hợp với mục tiêu chăm sóc da và tóc. So sánh công nghệ LED, vi dòng điện, sóng RF và IPL, thời gian sử dụng, quy trình và lưu ý an toàn."
+  },
+  "customerCare": {
+    "title": "Chăm sóc khách hàng",
+    "description": "Liên hệ Spavio AI Store. Câu hỏi thường gặp về giao hàng, đổi trả, bảo hành và bảo quản thiết bị — liên hệ qua điện thoại, email hoặc biểu mẫu."
+  },
+  "storeLocator": {
+    "title": "Showroom Spavio AI tại Neumarkt",
+    "description": "Ghé thăm showroom Spavio AI tại Neumarkt — Glasergasse 18, 92318 Neumarkt. Đặt lịch demo thiết bị hoặc tư vấn trực tuyến."
+  },
+  "privacy": {
+    "title": "Chính sách bảo mật",
+    "description": "Cách Spavio AI Store thu thập, sử dụng và bảo vệ dữ liệu cá nhân của bạn theo GDPR."
+  },
+  "terms": {
+    "title": "Điều khoản dịch vụ",
+    "description": "Điều khoản mua hàng và sử dụng website Spavio AI Store, bao gồm đặt hàng, giao hàng, đổi trả và bảo hành."
+  },
+  "impressum": {
+    "title": "Impressum (Thông tin pháp lý)",
+    "description": "Thông tin pháp lý (Impressum) của Spavio AI Store — Minh Khue (Kris) Tran, Glasergasse 18, 92318 Neumarkt, Đức."
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "description": "Đăng nhập tài khoản Spavio AI Store để quản lý đơn hàng, lưu giỏ hàng và nhận ưu đãi thành viên."
+  },
+  "signup": {
+    "title": "Tạo tài khoản",
+    "description": "Tạo tài khoản Spavio AI Store miễn phí để theo dõi đơn hàng, lưu giỏ hàng và sớm tiếp cận thiết bị mới."
+  },
+  "account": {
+    "title": "Tài khoản của tôi",
+    "description": "Quản lý tài khoản Spavio AI Store của bạn."
+  },
+  "checkout": {
+    "title": "Thanh toán",
+    "description": "Hoàn tất đơn hàng Spavio AI Store một cách an toàn."
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn tìm không tồn tại. Khám phá thiết bị làm đẹp thông minh tại Spavio AI Store."
+  }
+}

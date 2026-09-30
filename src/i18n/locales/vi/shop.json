@@ -1,0 +1,251 @@
+{
+  "category": {
+    "loading": "Đang tải sản phẩm…",
+    "newIn": "Hàng Mới",
+    "allProducts": "Tất Cả Sản Phẩm",
+    "home": "Trang chủ",
+    "collections": {
+      "new-in": "Hàng mới về",
+      "sale": "Đang giảm giá",
+      "best-sellers": "Bán chạy",
+      "anti-aging": "Bộ sưu tập chống lão hóa",
+      "under-100": "Quà tặng dưới €100"
+    },
+    "searchResults": "Kết quả tìm kiếm: \"{{query}}\""
+  },
+  "filterSort": {
+    "itemCount_other": "{{count}} sản phẩm",
+    "filters": "Bộ lọc",
+    "category": "Danh mục",
+    "price": "Giá",
+    "style": "Công nghệ",
+    "applyFilters": "Áp dụng bộ lọc",
+    "clearAll": "Xóa tất cả",
+    "sort": {
+      "featured": "Nổi bật",
+      "priceLow": "Giá: Thấp đến Cao",
+      "priceHigh": "Giá: Cao đến Thấp",
+      "newest": "Mới nhất",
+      "name": "Tên A-Z"
+    },
+    "priceRanges": {
+      "under100": "Dưới €100",
+      "from100to200": "€100 – €200",
+      "over200": "Trên €200"
+    }
+  },
+  "productGrid": {
+    "new": "MỚI",
+    "alternateView": "{{name}} – góc nhìn khác"
+  },
+  "productDetail": {
+    "loading": "Đang tải sản phẩm…",
+    "home": "Trang chủ",
+    "youMightAlsoLike": "Có thể bạn cũng thích",
+    "moreFrom": "Xem thêm từ {{category}}"
+  },
+  "productInfo": {
+    "effect": "Công dụng",
+    "warranty": "Bảo hành",
+    "warrantyDescription": "Bảo hành 2 năm · dùng thử 30 ngày",
+    "inTheBox": "Trong hộp",
+    "inTheBoxDescription": "Thiết bị, cáp sạc USB-C, túi du lịch và hướng dẫn nhanh",
+    "editorsNotes": "Ghi chú chuyên gia",
+    "quantity": "Số lượng",
+    "addToBag": "Thêm vào giỏ"
+  },
+  "productDescription": {
+    "description": "Mô tả",
+    "descriptionExtra": "Mọi thiết bị Spavio AI đều đạt chứng nhận CE, được kiểm nghiệm da liễu và tuyển chọn cùng chuyên gia làm đẹp về hiệu quả, sự thoải mái và an toàn.",
+    "productDetails": "Chi Tiết Sản Phẩm",
+    "sku": "Mã sản phẩm",
+    "collection": "Bộ sưu tập",
+    "effect": "Hiệu ứng",
+    "yes": "Có",
+    "price": "Giá",
+    "applicationAndCare": "Sử dụng & bảo quản",
+    "careSteps": [
+      "• Sạc đầy trước lần dùng đầu tiên và bắt đầu ở mức thấp nhất",
+      "• Dùng trên da sạch, khô trừ khi hướng dẫn có yêu cầu khác",
+      "• Lau bề mặt tiếp xúc bằng khăn mềm ẩm sau mỗi lần dùng",
+      "• Cất trong túi du lịch, tránh nhiệt và độ ẩm"
+    ],
+    "careExtra": "Cần hỗ trợ khi bắt đầu? Đội ngũ chăm sóc sẽ hướng dẫn bạn buổi đầu tiên và xây dựng quy trình theo mục tiêu của bạn.",
+    "customerReviews": "Đánh Giá Từ Khách Hàng",
+    "reviews": {
+      "sarah": "\"Lúc đầu mình hơi nghi ngờ, nhưng sau sáu tuần dùng mặt nạ LED, da mình dịu và đều màu hơn hẳn. Chỉ mười phút trong lúc đọc sách.\"",
+      "emma": "\"Thiết kế đẹp và rất dễ dùng. Hướng dẫn và quy trình đội ngũ gửi thật sự tạo nên khác biệt.\"",
+      "jessica": "\"Giao hàng nhanh, đóng gói đẹp và thiết bị cầm rất cao cấp. Mình đã đặt thêm một chiếc để làm quà!\""
+    },
+    "certified": "Chứng nhận CE"
+  },
+  "reviewProduct": {
+    "reviewProduct": "Đánh giá sản phẩm",
+    "rating": "Đánh giá",
+    "yourReview": "Nhận xét của bạn",
+    "placeholder": "Chia sẻ cảm nhận của bạn về sản phẩm này...",
+    "submitReview": "Gửi đánh giá"
+  },
+  "shoppingBag": {
+    "title": "Giỏ Hàng",
+    "close": "Đóng",
+    "viewFavorites": "Xem Yêu Thích",
+    "emptyLine1": "Giỏ hàng của bạn đang trống.",
+    "emptyLine2": "Tiếp tục mua sắm để thêm sản phẩm vào giỏ.",
+    "decreaseQuantity": "Giảm số lượng",
+    "increaseQuantity": "Tăng số lượng",
+    "subtotal": "Tạm tính",
+    "shippingNote": "Phí vận chuyển và thuế sẽ được tính khi thanh toán",
+    "proceedToCheckout": "Tiến Hành Thanh Toán",
+    "continueShopping": "Tiếp Tục Mua Sắm",
+    "youSave": "Bạn tiết kiệm"
+  },
+  "checkoutHeader": {
+    "continueShopping": "Tiếp Tục Mua Sắm",
+    "logoAlt": "Spavio AI Store",
+    "support": "Hỗ trợ"
+  },
+  "statusBar": {
+    "freeShipping": "Miễn phí giao hàng cho đơn từ €99",
+    "warranty": "Bảo hành 2 năm cho mọi thiết bị",
+    "happyCustomers": "Dùng thử 30 ngày · đổi trả không rủi ro"
+  },
+  "checkout": {
+    "orderSummary": "Tóm Tắt Đơn Hàng",
+    "bagEmpty": "Giỏ hàng của bạn đang trống.",
+    "continueShopping": "Tiếp Tục Mua Sắm",
+    "discountCode": "Mã giảm giá",
+    "enterDiscountCode": "Nhập mã giảm giá",
+    "apply": "Áp dụng",
+    "subtotal": "Tạm tính",
+    "shipping": "Phí vận chuyển",
+    "free": "Miễn phí",
+    "total": "Tổng cộng",
+    "customerDetails": "Thông Tin Khách Hàng",
+    "emailAddress": "Địa chỉ Email *",
+    "enterYourEmail": "Nhập địa chỉ email của bạn",
+    "firstName": "Tên *",
+    "firstNamePlaceholder": "Tên",
+    "lastName": "Họ *",
+    "lastNamePlaceholder": "Họ",
+    "phoneNumber": "Số điện thoại",
+    "enterYourPhone": "Nhập số điện thoại của bạn",
+    "shippingAddress": "Địa Chỉ Giao Hàng",
+    "address": "Địa chỉ *",
+    "streetAddress": "Địa chỉ đường phố",
+    "city": "Thành phố *",
+    "cityPlaceholder": "Thành phố",
+    "postalCode": "Mã bưu điện *",
+    "postalCodePlaceholder": "Mã bưu điện",
+    "country": "Quốc gia *",
+    "countryPlaceholder": "Quốc gia",
+    "otherBillingAddress": "Địa chỉ thanh toán khác",
+    "billingDetails": "Thông Tin Thanh Toán",
+    "enterBillingEmail": "Nhập email thanh toán",
+    "enterBillingPhone": "Nhập số điện thoại thanh toán",
+    "shippingOptions": "Hình Thức Vận Chuyển",
+    "standardShipping": "Vận Chuyển Tiêu Chuẩn",
+    "standardShippingDetail": "Miễn phí • 3-5 ngày làm việc",
+    "expressShipping": "Vận Chuyển Nhanh",
+    "expressShippingDetail": "€15 • 1-2 ngày làm việc",
+    "overnightDelivery": "Giao Hàng Hỏa Tốc",
+    "overnightDeliveryDetail": "€35 • Ngày làm việc kế tiếp",
+    "paymentDetails": "Thông Tin Thanh Toán",
+    "cardholderName": "Tên Chủ Thẻ *",
+    "nameOnCard": "Tên trên thẻ",
+    "cardNumber": "Số Thẻ *",
+    "expiryDate": "Ngày Hết Hạn *",
+    "cvv": "CVV *",
+    "processing": "Đang xử lý...",
+    "completeOrder": "Hoàn tất đơn hàng ({{total}})",
+    "orderComplete": "Đặt Hàng Thành Công!",
+    "orderCompleteMessage": "Cảm ơn bạn đã mua hàng. Xác nhận đơn hàng đã được gửi đến email của bạn.",
+    "youSave": "Bạn tiết kiệm",
+    "title": "Thanh toán",
+    "deliveryService": "Dịch vụ giao hàng",
+    "multiCarrier": "Nhiều đơn vị vận chuyển",
+    "paymentMethod": "Phương thức thanh toán",
+    "encryption": "Mã hóa 256-bit",
+    "paypalNote": "Chuyển khoản tức thì",
+    "creditCard": "Thẻ tín dụng",
+    "cardholder": "Tên chủ thẻ",
+    "cardNumberLabel": "Số thẻ",
+    "expiryLabel": "Ngày hết hạn",
+    "cvvLabel": "CVV / CVC",
+    "processingOrder": "Đang xử lý đơn hàng & nhãn vận chuyển...",
+    "klarnaNote": "Trả sau hoặc trả góp",
+    "payWithKlarna": "Thanh toán với Klarna ({{total}})",
+    "thankYou": "Cảm ơn bạn đã mua hàng. Chúng tôi đã nhận được thanh toán và đăng ký vận chuyển qua {{carrier}}. Chi tiết đơn hàng đã được gửi đến {{email}}.",
+    "yourEmail": "email của bạn",
+    "trackingNumber": "Mã vận đơn",
+    "returnToShop": "Quay lại cửa hàng",
+    "placeholders": {
+      "email": "ten@example.com",
+      "phone": "+49 176 1234567",
+      "street": "Glasergasse 18",
+      "city": "Neumarkt",
+      "postalCode": "92318",
+      "cardholder": "Tên trên thẻ"
+    },
+    "methods": {
+      "sendcloud-dhl-standard": {
+        "name": "Gói tiêu chuẩn",
+        "deliveryTime": "2–4 ngày làm việc"
+      },
+      "sendcloud-hermes": {
+        "name": "Giao hàng tiêu chuẩn",
+        "deliveryTime": "2–3 ngày làm việc"
+      },
+      "sendcloud-dhl-express": {
+        "name": "Hỏa tốc",
+        "deliveryTime": "Ngày làm việc tiếp theo"
+      }
+    },
+    "paypalCharge": "Hoàn tất đơn hàng với PayPal. Tài khoản của bạn sẽ bị trừ {{total}}."
+  },
+  "fomo": {
+    "endsIn": "Kết thúc sau",
+    "restarting": "Ưu đãi sẽ bắt đầu lại ngay",
+    "save": "Tiết kiệm {{percent}}%",
+    "sold": "Đã bán {{sold}}/{{total}} sản phẩm",
+    "hours": "Giờ",
+    "minutes": "Phút",
+    "seconds": "Giây",
+    "remaining": "Còn lại {{count}}",
+    "soldOut": "Đã bán hết",
+    "claimed": "Đã bán {{percent}}%",
+    "headlines": {
+      "local-glow-week": "Glow Week – Ưu đãi"
+    }
+  },
+  "pricing": {
+    "off": "GIẢM {{percent}}%",
+    "save": "Tiết kiệm {{amount}}"
+  },
+  "account": {
+    "loading": "Đang tải…",
+    "title": "Tài khoản của bạn",
+    "adminAccess": "Quyền quản trị",
+    "openAdmin": "Mở trang quản trị",
+    "savedBag": "Giỏ hàng đã lưu",
+    "savedSummary_other": "{{count}} sản phẩm · {{total}} — đã lưu vào tài khoản",
+    "emptyBag": "Giỏ hàng trống. Sản phẩm bạn thêm sẽ được lưu cho lần sau.",
+    "goToCheckout": "Đến trang thanh toán",
+    "signOut": "Đăng xuất"
+  },
+  "preorder": {
+    "badge": "Đặt trước",
+    "ships": "Dự kiến giao hàng: {{date}}",
+    "shipsSoon": "Giao hàng ngay khi có hàng",
+    "depositToday": "Đặt cọc hôm nay",
+    "balanceLater": "Số tiền còn lại khi giao",
+    "note": "Hôm nay bạn chỉ thanh toán tiền đặt cọc. Số tiền còn lại được thu khi thiết bị sẵn sàng giao – chúng tôi sẽ gửi email thông báo trước.",
+    "cta": "Đặt trước ngay – cọc {{deposit}}",
+    "cartLine": "Đặt trước · cọc {{deposit}} mỗi sản phẩm",
+    "dueNow": "Thanh toán hôm nay",
+    "dueLater": "Thanh toán khi giao hàng",
+    "depositsLabel": "Thanh toán sau (đặt trước)",
+    "checkoutNote": "Đơn hàng của bạn có sản phẩm đặt trước. Hôm nay chúng tôi chỉ thu tiền cọc; số tiền còn lại {{amount}} sẽ được thanh toán khi giao các sản phẩm đó.",
+    "confirmation": "Số tiền còn lại {{amount}} cho sản phẩm đặt trước sẽ được thanh toán khi giao hàng. Chúng tôi sẽ liên hệ với bạn qua email."
+  }
+}

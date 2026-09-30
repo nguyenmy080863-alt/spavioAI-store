@@ -1,0 +1,100 @@
+{
+  "categories": {
+    "skincare-devices": "Hautpflege-Geräte",
+    "hair-removal": "Haarentfernung",
+    "hair-styling-and-care": "Haarstyling & Pflege",
+    "body-and-wellness": "Körper & Wellness"
+  },
+  "items": {
+    "lumipore": {
+      "name": "Spavio Lumipore 4-in-1",
+      "effect": "4 Lichtmodi: Wärme, Serum-Boost, Mikro-Lifting, Glow",
+      "description": "Ein Gerät, vier Pflegemodi – Spa-Gefühl für zu Hause: Rotlicht mit wohliger Wärme für einen frischen, rosigen Teint; Grünlicht mit Mikrostrom, das Seren und Cremes besser einziehen lässt; Blaulicht mit sanften EMS-Impulsen für ein straffer wirkendes Hautbild; und Gelblicht, das beruhigt und der Haut frische Strahlkraft schenkt.",
+      "editorsNotes": "„Vier Lichtmodi in einem schlanken Stab – der einfachste Einstieg in eine Geräte-Routine.“"
+    },
+    "lumina-led-mask": {
+      "name": "Lumina Pro LED-Gesichtsmaske",
+      "effect": "Rot- & Nahinfrarot-Lichttherapie",
+      "description": "Eine flexible Maske aus medizinischem Silikon mit 160 LEDs, die rotes (630 nm) und nahinfrarotes (830 nm) Licht abgeben – unterstützt Kollagen, einen ebenmäßigen Teint und beruhigt Rötungen in nur 10 Minuten täglich.",
+      "editorsNotes": "„Das einfachste Glow-Ritual, das wir kennen – aufsetzen, starten und das Licht arbeiten lassen.“"
+    },
+    "sculpt-microcurrent": {
+      "name": "Sculpt Microcurrent-Straffungsgerät",
+      "effect": "Lifting & Konturierung",
+      "description": "Zwei rotierende Kugeln geben sanften Mikrostrom ab, der die Gesichtsmuskulatur entlang von Kieferlinie, Wangenknochen und Brauen trainiert. Fünf Intensitätsstufen und eine geführte 5-Minuten-Routine.",
+      "editorsNotes": "„Ein 5-Minuten-Workout fürs Gesicht, das die Konturen vor jedem Anlass sichtbar schärft.“"
+    },
+    "thermalift-rf": {
+      "name": "ThermaLift RF-Hautstraffer",
+      "effect": "Straffung durch Radiofrequenz",
+      "description": "Multipolare Radiofrequenz erwärmt tiefere Hautschichten auf angenehme 40–42 °C – mit integriertem Temperatursensor für jede Anwendung sicher und gleichmäßig.",
+      "editorsNotes": "„Straffung wie in der Klinik, abgestimmt für zu Hause. Der smarte Sensor macht es mühelos.“"
+    },
+    "sonic-cleanse-brush": {
+      "name": "Sonic Cleanse Gesichtsbürste",
+      "effect": "Porentiefe Reinigung",
+      "description": "Ultraweiche, hygienische Silikonnoppen pulsieren mit 8.000 Schallschwingungen pro Minute und entfernen Make-up, Sonnenschutz und Unreinheiten – sanft genug für die zweimal tägliche Anwendung.",
+      "editorsNotes": "„Sauberere Haut in 60 Sekunden. Wasserdicht, reisetauglich und eine Akkuladung hält monatelang.“"
+    },
+    "aqua-ion-infuser": {
+      "name": "Aqua Ion Serum-Infuser",
+      "effect": "Wirkstoffeinschleusung per Ultraschall",
+      "description": "Ultraschall- und Ionen-Modi helfen deinen Lieblingsseren und Cremes, in die Haut einzuziehen, während der kühle Edelstahlkopf beruhigt und abschwellt.",
+      "editorsNotes": "„Damit jeder Tropfen Serum zählt – ein dezentes Upgrade für deine bestehende Routine.“"
+    },
+    "eye-revive-wand": {
+      "name": "Eye Revive Wärme-Augenmassagestab",
+      "effect": "Abschwellen & Aufhellen",
+      "description": "Ein Stab im Stiftformat mit wärmender 42 °C-Spitze und sanften Schallimpulsen, der die zarte Augenpartie entspannt und Augencremes besser einziehen lässt.",
+      "editorsNotes": "„Unser Morgengeheimnis für frischere, weniger müde wirkende Augen.“"
+    },
+    "cryo-glow-roller": {
+      "name": "Cryo Glow Eisroller",
+      "effect": "Kühlen & Beruhigen",
+      "description": "Ein Kryo-Roller aus Edelstahl, der nach dem Kühlen bis zu 20 Minuten kalt bleibt. Beruhigt Rötungen, verfeinert optisch die Poren und ergänzt die Pflege nach Behandlungen perfekt.",
+      "editorsNotes": "„Im Kühlschrank aufbewahren – zwei Minuten Rollen fühlen sich an wie ein Spa-Reset.“"
+    },
+    "silk-ipl": {
+      "name": "Silk IPL-Haarentfernung",
+      "effect": "Langanhaltend glatte Haut",
+      "description": "Intense Pulsed Light mit integriertem Hauttonsensor und fünf Energiestufen. Sichtbare Haarreduktion schon nach vier wöchentlichen Anwendungen – mit eiskühlem Saphirfenster für mehr Komfort.",
+      "editorsNotes": "„IPL auf Salon-Niveau für zu Hause – der Sensor übernimmt die Einstellung für dich.“"
+    },
+    "precision-trimmer": {
+      "name": "Precision Gesichts- & Augenbrauentrimmer",
+      "effect": "Schmerzfreies Feintuning",
+      "description": "Ein schlanker, flüsterleiser Trimmer mit fünf Wechselaufsätzen für Brauen, Oberlippe, Gesicht und feine Körperhärchen. Hypoallergene Klingen für empfindliche Haut.",
+      "editorsNotes": "„Das Detail-Tool, das auf keinem Schminktisch fehlen sollte.“"
+    },
+    "aura-ionic-dryer": {
+      "name": "Aura Ionen-Haartrockner",
+      "effect": "Schnell trocken, weniger Frizz",
+      "description": "Ein bürstenloser Motor mit 110.000 U/min und 200 Millionen negativen Ionen pro cm³ für schnelles, glänzendes Föhnen. Die intelligente Hitzesteuerung misst die Lufttemperatur 40-mal pro Sekunde.",
+      "editorsNotes": "„Leicht, kraftvoll und leise – ein Salon-Föhnergebnis ohne Hitzeschäden.“"
+    },
+    "glide-straightener": {
+      "name": "Glide Infrarot-Glätteisen",
+      "effect": "Glatt & glänzend",
+      "description": "Schwebende Keramikplatten mit Infrarottechnologie heizen gleichmäßig von 150–230 °C für glattes, glänzendes Haar in einem Zug. Automatische Abschaltung nach 60 Minuten.",
+      "editorsNotes": "„Glätten, Locken und Wellen – ein Tool für jeden Look.“"
+    },
+    "scalp-revive": {
+      "name": "Scalp Revive Kopfhautmassagegerät",
+      "effect": "Kopfhautpflege & Entspannung",
+      "description": "Wasserdichte, rotierende Knetnoppen und Rotlichttherapie stimulieren die Kopfhaut, unterstützen die Durchblutung und machen die Haarwäsche zum Mini-Head-Spa.",
+      "editorsNotes": "„Zehn Minuten pure Entspannung – deine Kopfhaut wird es dir danken.“"
+    },
+    "pulse-mini-massager": {
+      "name": "Pulse Mini Massagepistole",
+      "effect": "Muskelregeneration",
+      "description": "Kompakte Perkussionstherapie mit vier Stufen und vier Aufsätzen. Löst Verspannungen in Nacken, Schultern und Beinen – klein genug für jede Handtasche.",
+      "editorsNotes": "„Kraftvolle Entlastung, die in deine Handfläche passt.“"
+    },
+    "contour-body-sculptor": {
+      "name": "Contour Body Sculptor",
+      "effect": "Körperstraffung mit EMS + RF",
+      "description": "Kombiniert EMS-Muskelstimulation mit wärmender Radiofrequenz und drei Rollköpfen für ein glatteres, strafferes Erscheinungsbild von Oberschenkeln, Armen und Bauch.",
+      "editorsNotes": "„Ein Body-Contouring-Ritual, das sich wie eine warme, tiefe Massage anfühlt.“"
+    }
+  }
+}

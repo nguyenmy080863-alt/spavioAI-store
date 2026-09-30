@@ -1,0 +1,179 @@
+{
+  "language": {
+    "label": "Change language"
+  },
+  "brand": {
+    "tagline": "Smart beauty technology, curated by professionals, for results you can see and feel at home."
+  },
+  "nav": {
+    "shop": "Shop",
+    "newIn": "New in",
+    "about": "About",
+    "toggleMenu": "Toggle menu",
+    "search": "Search",
+    "favorites": "Favorites",
+    "shoppingBag": "Shopping bag",
+    "close": "Close",
+    "submenu": {
+      "skincare-devices": "Skincare Devices",
+      "hair-removal": "Hair Removal",
+      "hair-styling-care": "Hair Styling & Care",
+      "body-wellness": "Body & Wellness",
+      "arrivals": "New Arrivals",
+      "best-sellers": "Best Sellers",
+      "anti-aging": "Anti-Aging Edit",
+      "on-sale": "On Sale",
+      "under-100": "Gifts Under €100",
+      "our-story": "Our Story",
+      "sustainability": "Sustainability",
+      "device-guide": "Device Guide",
+      "customer-care": "Customer Care",
+      "store-locator": "Showroom"
+    },
+    "cards": {
+      "dryer": "Aura Ionic Dryer",
+      "dryerAlt": "Aura ionic hair dryer",
+      "readOurStory": "Read our story",
+      "lumipore": "Spavio Lumipore – New",
+      "lumiporeAlt": "Spavio Lumipore 4-in-1 beauty device",
+      "brandAlt": "Spavio AI logo",
+      "brandTagline": "Beauty technology, made personal"
+    },
+    "account": "Account",
+    "signIn": "Sign in"
+  },
+  "search": {
+    "placeholder": "Search for devices...",
+    "popular": "Popular Searches",
+    "terms": {
+      "led": "LED",
+      "microcurrent": "Microcurrent",
+      "ipl": "IPL",
+      "hairDryer": "Hair Dryer",
+      "massage": "Massage",
+      "serum": "Serum"
+    },
+    "clear": "Clear",
+    "matching": "Matching products ({{count}})",
+    "noResults": "No products found matching \"{{query}}\". Press Enter to view all results."
+  },
+  "favorites": {
+    "title": "Your Favorites",
+    "empty": "You haven't added any favorites yet. Browse our devices and tap the heart icon to save the ones you love."
+  },
+  "footer": {
+    "visitUs": "Showroom",
+    "contact": "Contact",
+    "shop": "Shop",
+    "support": "Support",
+    "connect": "Connect",
+    "newIn": "New In",
+    "skincareDevices": "Skincare Devices",
+    "hairRemoval": "Hair Removal",
+    "hairStylingCare": "Hair Styling & Care",
+    "bodyWellness": "Body & Wellness",
+    "deviceGuide": "Device Guide",
+    "warranty": "Warranty",
+    "returns": "Returns",
+    "shipping": "Shipping",
+    "newsletter": "Newsletter",
+    "forStudios": "Spavio AI for Studios",
+    "rights": "© 2026 Spavio AI. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookieSettings": "Cookie settings"
+  },
+  "usps": {
+    "certified": {
+      "title": "CE-Certified & Tested",
+      "desc": "Every device is CE-certified and dermatologist-tested for safe use at home."
+    },
+    "warranty": {
+      "title": "2-Year Warranty",
+      "desc": "Comprehensive coverage on every device, with fast repair or replacement."
+    },
+    "trial": {
+      "title": "30-Day Trial",
+      "desc": "Try it in your routine. Not the right fit? Return it for a full refund."
+    },
+    "aiCoach": {
+      "title": "Personal Routine",
+      "desc": "Get a device routine tailored to your skin and hair goals by our beauty-tech advisors."
+    }
+  },
+  "auth": {
+    "invalidEmail": "Enter a valid email address",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "tooManyAttempts": "Too many attempts. Try again in a few minutes.",
+    "accountCreated": "Account created",
+    "welcomeBack": "Welcome back",
+    "signInFailed": "Sign in failed",
+    "panel": {
+      "eyebrow": "Smart Beauty Technology",
+      "title": "Clinic-Grade Results, At Home",
+      "text": "Discover LED, microcurrent, RF and IPL devices designed with beauty professionals — and a personalised routine to get the most from every session.",
+      "warrantyTitle": "2-Year Warranty",
+      "warrantyText": "CE-certified, dermatologist-tested",
+      "bagTitle": "Saves Your Bag",
+      "bagText": "Add items now, checkout anytime",
+      "imageAlt": "A beauty treatment with a professional skincare device"
+    },
+    "backToStore": "Back to store",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "signInIntro": "Sign in to save your bag, view order history, and access exclusive privileges.",
+    "signUpIntro": "Create an account to save your favorites, track shipments, and check out faster.",
+    "verificationSent": "Verification link sent",
+    "checkInboxBefore": "Please check your inbox to confirm",
+    "checkInboxAfter": "Once verified, you can return here to sign in.",
+    "changeEmail": "Change email address",
+    "email": "Email Address",
+    "password": "Password",
+    "hidePassword": "Hide password",
+    "showPassword": "Show password",
+    "locked": "Temporarily locked. Please wait before trying again.",
+    "processing": "Processing...",
+    "newHere": "New to Spavio AI?",
+    "createAnAccount": "Create an account",
+    "haveAccount": "Already have an account?",
+    "signInLink": "Sign in",
+    "continueAsGuest": "Continue shopping as a guest",
+    "legalPrefix": "All rights reserved. By continuing, you agree to our",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "cookies": {
+    "title": "We respect your privacy",
+    "text": "We use necessary cookies to make the store work (e.g. your bag and sign-in). With your consent, we also use optional cookies for convenience features, statistics and marketing. You can change your choice at any time in the cookie settings.",
+    "privacyLink": "Privacy Policy",
+    "acceptAll": "Accept all",
+    "rejectAll": "Only necessary",
+    "settings": "Settings",
+    "saveSelection": "Save selection",
+    "settingsTitle": "Cookie settings",
+    "settingsText": "Choose which cookies we may use. Necessary cookies are required for the store to work.",
+    "alwaysOn": "Always on",
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "text": "Required for your bag, checkout, sign-in and remembering your cookie choice. These cookies cannot be switched off."
+      },
+      "preferences": {
+        "title": "Preferences",
+        "text": "Remember settings such as recently viewed products to make your visit more convenient."
+      },
+      "analytics": {
+        "title": "Statistics",
+        "text": "Help us understand how the store is used so we can improve it. All data is analysed anonymously."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "text": "Enable personalised offers and measuring our advertising on other platforms."
+      }
+    }
+  },
+  "whatsapp": {
+    "label": "Chat with us on WhatsApp",
+    "message": "Hello Spavio AI Store, I have a question. (Page: {{url}})"
+  }
+}

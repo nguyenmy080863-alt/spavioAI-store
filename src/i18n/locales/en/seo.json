@@ -1,0 +1,76 @@
+{
+  "ogImageAlt": "Spavio AI Store – Smart Beauty & Personal Care Devices",
+  "organizationDescription": "Online store for smart beauty and personal care devices: LED masks, microcurrent, RF and IPL devices, ionic hair tools and body wellness technology.",
+  "home": {
+    "title": "Spavio AI Store | Smart Beauty & Personal Care Devices",
+    "description": "Shop Spavio AI Store — LED light therapy masks, microcurrent and RF skin devices, IPL hair removal, ionic hair tools and body wellness devices. Clinic-grade beauty tech for your home."
+  },
+  "category": {
+    "title": "{{name}} – Beauty Devices",
+    "description": "Shop {{name}} at Spavio AI Store — CE-certified LED, microcurrent, RF and IPL devices, ionic hair tools and wellness tech with a 2-year warranty and 30-day trial."
+  },
+  "shop": {
+    "title": "Shop All Beauty Devices",
+    "description": "Browse all Spavio AI beauty and personal care devices — skincare devices, IPL hair removal, hair styling tools and body wellness tech. Free shipping over €99."
+  },
+  "search": {
+    "title": "Search: \"{{query}}\"",
+    "description": "Spavio AI Store search results for \"{{query}}\" — smart beauty and personal care devices."
+  },
+  "product": {
+    "title": "{{name}} – {{effect}}",
+    "description": "{{description}}"
+  },
+  "ourStory": {
+    "title": "Our Story",
+    "description": "Meet the founder of Spavio AI — Minh Khue (Kris) Tran. Discover the vision behind Spavio AI Store: clinic-grade beauty technology, made personal."
+  },
+  "sustainability": {
+    "title": "Sustainability",
+    "description": "Spavio AI Store is committed to long-lasting devices, repairability, recyclable packaging and WEEE-compliant take-back of old beauty devices."
+  },
+  "deviceGuide": {
+    "title": "Device Guide – Find the Right Beauty Device",
+    "description": "Find the right Spavio AI device for your skin and hair goals. Compare LED, microcurrent, radiofrequency and IPL technologies, session times, routines and safety advice."
+  },
+  "customerCare": {
+    "title": "Customer Care",
+    "description": "Get in touch with Spavio AI Store. FAQs on shipping, returns, warranty and device care — contact us by phone, email or the contact form."
+  },
+  "storeLocator": {
+    "title": "Showroom Neumarkt",
+    "description": "Visit the Spavio AI showroom in Neumarkt — Glasergasse 18, 92318 Neumarkt. Book a device demo or a virtual consultation."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "How Spavio AI Store collects, uses and protects your personal data in compliance with the GDPR."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Terms of service for purchases and use of the Spavio AI Store website, including orders, shipping, returns and warranty."
+  },
+  "impressum": {
+    "title": "Legal Notice (Impressum)",
+    "description": "Legal notice (Impressum) of Spavio AI Store — Minh Khue (Kris) Tran, Glasergasse 18, 92318 Neumarkt, Germany."
+  },
+  "login": {
+    "title": "Sign In",
+    "description": "Sign in to your Spavio AI Store account to manage orders, save your bag and access member offers."
+  },
+  "signup": {
+    "title": "Create Account",
+    "description": "Create a free Spavio AI Store account to track orders, save your bag and get early access to new devices."
+  },
+  "account": {
+    "title": "My Account",
+    "description": "Manage your Spavio AI Store account."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "description": "Complete your Spavio AI Store order securely."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist. Explore smart beauty devices at Spavio AI Store."
+  }
+}

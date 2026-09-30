@@ -1,0 +1,237 @@
+{
+  "sidebar": {
+    "heading": "Über uns",
+    "ourStory": "Unsere Geschichte",
+    "sustainability": "Nachhaltigkeit",
+    "deviceGuide": "Geräte-Guide",
+    "customerCare": "Kundenservice",
+    "storeLocator": "Showroom",
+    "explore": "Spavio AI entdecken"
+  },
+  "pageHeader": {
+    "eyebrow": "Das Spavio AI-Erlebnis"
+  },
+  "ourStory": {
+    "title": "Unsere Geschichte",
+    "subtitle": "Beauty-Technologie, ganz persönlich",
+    "founders": {
+      "imageAlt": "Die Gründerin von Spavio AI",
+      "title": "Entwickelt für Beauty-Profis – jetzt für dich",
+      "content": "Spavio AI begann als digitaler KI-Assistent für Spas und Beauty-Studios: Terminbuchungen, Follow-ups und tägliche Verwaltung, damit sich Studioinhaberinnen auf ihr Handwerk konzentrieren können. Die enge Zusammenarbeit mit Kosmetikerinnen hat uns gezeigt, welche Technologien wirklich Ergebnisse liefern. Der Spavio AI Store bringt dieses Wissen zu dir nach Hause: sorgfältig ausgewählte, klinisch inspirierte Geräte mit klarer Anleitung zur Anwendung."
+    },
+    "foundersSection": {
+      "title": "Die Gründerin",
+      "kris": {
+        "name": "Minh Khue (Kris) Tran",
+        "role": "Gründerin von Spavio AI",
+        "education": "M.Sc. International Information Systems, FAU Erlangen-Nürnberg",
+        "bio1": "Kris gründete Spavio AI, um Studioinhaberinnen – insbesondere Unternehmerinnen – vom Verwaltungsaufwand ihres Beauty-Business zu entlasten und ihnen Energie für das zurückzugeben, was sie am besten können.",
+        "bio2": "Mit dem Spavio AI Store erweitert Kris diese Mission auf alle Beauty-Liebhaberinnen: ehrliche, hochwertig konstruierte Geräte, transparente Beratung und dieselbe Liebe zum Detail, der Studios auf der Spavio AI-Plattform vertrauen.",
+        "linkedin": "Auf LinkedIn vernetzen"
+      },
+      "vision": {
+        "title": "Schönheit, Innovation & Vision",
+        "text": "Wir glauben, dass großartige Ergebnisse aus der Verbindung von bewährter Technologie und echtem Profi-Wissen entstehen. Jedes Gerät in unserem Store wird nach messbarem Nutzen, Sicherheit und einfacher Anwendung ausgewählt – und mit Routinen kombiniert, die von den Studios inspiriert sind, mit denen wir täglich arbeiten."
+      }
+    },
+    "academy": {
+      "title": "Spavio AI für Studios",
+      "text": "Du führst ein Spa, einen Salon oder ein Beauty-Studio? Spavio AI ist dein digitaler Assistent rund um die Uhr für Buchungen, Kunden-Follow-ups, WhatsApp-Kommunikation und Lagerverwaltung – damit du mehr Zeit für deine Kundinnen hast.",
+      "cta": "Spavio AI entdecken"
+    },
+    "heritage": {
+      "title": "Was uns auszeichnet",
+      "handcrafted": {
+        "title": "Von Profis kuratiert",
+        "text": "Jedes Gerät wird gemeinsam mit Beauty-Profis auf Ergebnisse, Komfort und Sicherheit geprüft, bevor es in unsere Kollektion aufgenommen wird."
+      },
+      "sustainable": {
+        "title": "Gemacht, um zu bleiben",
+        "text": "Wir setzen auf wiederaufladbare, reparierbare Geräte mit austauschbaren Teilen, 2 Jahren Garantie und WEEE-konformer Rücknahme – denn das nachhaltigste Gerät ist das, das du lange nutzt."
+      }
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "excellence": {
+        "title": "Ergebnisse",
+        "text": "Wir wählen Technologien mit nachweisbarem, sichtbarem Nutzen – und erklären ehrlich, was sie können und was nicht."
+      },
+      "authenticity": {
+        "title": "Sicherheit",
+        "text": "CE-zertifizierte, dermatologisch getestete Geräte mit klarer Anleitung und integrierten Sicherheitsfunktionen."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Wir bringen die besten Ideen aus dem professionellen Studio in deine Routine zu Hause."
+      }
+    }
+  },
+  "sustainability": {
+    "title": "Nachhaltigkeit",
+    "subtitle": "Smarte Beauty-Technologie, gemacht für die Langlebigkeit",
+    "commitment": {
+      "title": "Unser Umweltversprechen",
+      "ethical": {
+        "title": "Verantwortungsvolle Herstellung",
+        "text": "Wir arbeiten mit Herstellern, die EU-Standards für Materialien und Sicherheit erfüllen, und verlangen von jedem Partner volle Transparenz über Komponenten und Produktion."
+      },
+      "recyclable": {
+        "title": "Wiederaufladbar & reparierbar",
+        "text": "Unsere Geräte laden per USB-C, verzichten auf Einwegbatterien und haben austauschbare Aufsätze – ein abgenutztes Teil bedeutet nie, das ganze Gerät zu ersetzen."
+      },
+      "impactGoals": {
+        "title": "Unsere Ziele",
+        "carbonNeutral": { "value": "100%", "label": "Plastikfreie Umverpackung" },
+        "recycledPackaging": { "value": "2 J.", "label": "Garantie auf jedes Gerät" },
+        "zeroWaste": { "value": "Gratis", "label": "Rücknahme alter Geräte" }
+      }
+    },
+    "circularEconomy": {
+      "title": "Kreislaufwirtschaft",
+      "intro": "Ein Beauty-Gerät sollte ein langjähriger Begleiter sein. Unser Service ist darauf ausgelegt, Geräte in Gebrauch zu halten – und sie am Ende ihrer Lebensdauer richtig zu recyceln.",
+      "lifetimeCare": {
+        "title": "Reparatur & Ersatzteile",
+        "text": "Ersatzbürstenköpfe, Aufsätze und Ladegeräte gibt es für jedes Gerät, und unser Service-Team hilft bei der Fehlersuche, bevor etwas ersetzt wird."
+      },
+      "takeBack": {
+        "title": "Rücknahmeprogramm",
+        "text": "Schick uns dein altes Beauty-Gerät – egal welcher Marke – und wir recyceln es verantwortungsvoll gemäß der EU-WEEE-Richtlinie."
+      }
+    },
+    "certifications": {
+      "title": "Standards & Konformität",
+      "intro": "Unsere Geräte und Verpackungen erfüllen EU-Standards für Sicherheit, Materialien und verantwortungsvolle Entsorgung.",
+      "ce": "CE-zertifiziert",
+      "rohs": "RoHS-konform",
+      "weee": "WEEE-registriert",
+      "fscPackaging": "FSC-Papierverpackung"
+    }
+  },
+  "deviceGuide": {
+    "title": "Geräte-Guide",
+    "subtitle": "Finde die richtige Technologie für deine Haut- und Haarziele",
+    "goals": {
+      "title": "Nach Ziel wählen",
+      "matchTitle": "Das passende Gerät für dein Ziel",
+      "antiAging": { "title": "Fältchen & Festigkeit", "text": "LED-Rotlicht, Microcurrent und Radiofrequenz unterstützen ein festeres, glatteres Hautbild. Starte mit der Lumina LED-Maske und ergänze Sculpt Microcurrent für mehr Lift." },
+      "clearSkin": { "title": "Klarere, strahlendere Haut", "text": "Tiefenreinigung mit der Sonic Cleanse Bürste plus dem Aqua Ion Infuser lässt deine Pflege besser wirken – für einen frischeren, ebenmäßigeren Teint." },
+      "smoothSkin": { "title": "Glatte, haarfreie Haut", "text": "Silk IPL sorgt mit wöchentlichen Anwendungen für langanhaltende Haarreduktion; der Precision Trimmer übernimmt schnelle Korrekturen an Gesicht und Brauen." },
+      "hairHealth": { "title": "Gesundes, glänzendes Haar", "text": "Der Aura Ionic Föhn und der Glide Glätter stylen mit kontrollierter Hitze, während Scalp Revive eine gesunde Kopfhaut unterstützt." }
+    },
+    "table": {
+      "device": "Gerät",
+      "technology": "Technologie",
+      "session": "Anwendung",
+      "frequency": "Häufigkeit",
+      "rows": {
+        "ledMask": { "device": "Lumina Pro LED-Maske", "technology": "Rot- & Nahinfrarot-LED", "session": "10 Min.", "frequency": "3–5× pro Woche" },
+        "microcurrent": { "device": "Sculpt Microcurrent", "technology": "Mikrostrom", "session": "5 Min.", "frequency": "60 Tage täglich, dann 2–3× pro Woche" },
+        "rf": { "device": "ThermaLift RF", "technology": "Multipolare Radiofrequenz", "session": "10–15 Min.", "frequency": "2× pro Woche" },
+        "ipl": { "device": "Silk IPL", "technology": "Intense Pulsed Light", "session": "8–15 Min.", "frequency": "4 Wochen wöchentlich, dann monatlich" },
+        "dryer": { "device": "Aura Ionic Föhn", "technology": "Bürstenloser Motor + Ionen", "session": "Nach Bedarf", "frequency": "Täglich" },
+        "massageGun": { "device": "Pulse Mini Massagepistole", "technology": "Perkussionstherapie", "session": "1–2 Min. pro Zone", "frequency": "Täglich" }
+      }
+    },
+    "routine": {
+      "title": "Deine Routine",
+      "morning": {
+        "title": "Morgens",
+        "step1": { "label": "Reinigen", "value": "Sonic Cleanse Bürste, 60 Sek." },
+        "step2": { "label": "Abschwellen", "value": "Cryo Glow Roller oder Eye Revive" },
+        "step3": { "label": "Liften", "value": "Sculpt Microcurrent, 5 Min." }
+      },
+      "evening": {
+        "title": "Abends",
+        "step1": { "label": "Reinigen", "value": "Sonic Cleanse Bürste" },
+        "step2": { "label": "Behandeln", "value": "Lumina LED-Maske, 10 Min." },
+        "step3": { "label": "Einschleusen", "value": "Aqua Ion Infuser mit Serum" }
+      }
+    },
+    "safety": {
+      "title": "Sicherheit zuerst",
+      "patchTest": { "title": "Immer zuerst testen", "text": "Beginne mit der niedrigsten Stufe und teste 24 Stunden vor der ersten vollständigen Anwendung eine kleine Stelle – besonders bei IPL." },
+      "pregnancy": { "title": "Schwangerschaft", "text": "Wir empfehlen, Microcurrent-, RF- und IPL-Anwendungen während Schwangerschaft und Stillzeit zu pausieren." },
+      "implants": { "title": "Implantate & Medizingeräte", "text": "Verwende kein Microcurrent, EMS oder RF mit Herzschrittmacher oder elektronischem Implantat. Frage im Zweifel deine Ärztin oder deinen Arzt." },
+      "skinConditions": { "title": "Hauterkrankungen", "text": "Behandle keine verletzte, gereizte oder sonnenverbrannte Haut und sprich bei Hauterkrankungen oder lichtempfindlich machenden Medikamenten mit einer Dermatologin." }
+    },
+    "needHelp": {
+      "title": "Brauchst du Hilfe?",
+      "text": "Noch unsicher, welches Gerät zu dir passt? Unsere Beauty-Tech-Beraterinnen empfehlen dir kostenlos ein Gerät und eine Routine für deine Ziele.",
+      "browse": "Alle Geräte ansehen",
+      "consultation": "Kostenlose Beratung"
+    }
+  },
+  "customerCare": {
+    "title": "Kundenservice",
+    "subtitle": "Wir helfen dir gern bei Geräten, Bestellungen und Routinen",
+    "contactInfo": {
+      "title": "Kontaktinformationen",
+      "phone": { "title": "Telefon", "number": "+49 176 84941650", "hours": "Mo–Fr: 9–18 Uhr MEZ" },
+      "email": { "title": "E-Mail", "address": "info@spavioai.de", "response": "Antwort innerhalb von 24 Stunden" },
+      "liveChat": { "title": "Live-Chat", "button": "Chat starten", "availability": "Während der Geschäftszeiten verfügbar" }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "shipping": { "question": "Welche Versandoptionen und Lieferzeiten gibt es?", "answer": "Innerhalb Deutschlands versenden wir ab €99 Bestellwert kostenlos (2–4 Werktage). Expressversand (1–2 Werktage) ist verfügbar. Alle Bestellungen werden mit Sendungsverfolgung innerhalb von 24 Stunden verschickt." },
+      "returns": { "question": "Wie funktioniert die Rückgabe?", "answer": "Teste jedes Gerät 30 Tage lang. Wenn es nicht passt, sende es in der Originalverpackung zurück und erhalte den vollen Kaufpreis. Aus Hygienegründen werden benutzte Bürstenköpfe und Aufsätze vor dem Wiederverkauf ersetzt." },
+      "warranty": { "question": "Welche Garantie bietet ihr?", "answer": "Jedes Spavio AI-Gerät hat 2 Jahre Garantie auf Herstellungsfehler. Kontaktiere unser Service-Team mit deiner Bestellnummer und wir reparieren oder ersetzen dein Gerät." },
+      "sizing": { "question": "Wie finde ich das richtige Gerät?", "answer": "Starte mit deinem Hauptziel – Anti-Aging, klare Haut, Haarentfernung oder Haarpflege. Unser Geräte-Guide vergleicht Technologien und Routinen, oder buche eine kostenlose Beratung." },
+      "care": { "question": "Wie reinige und lagere ich mein Gerät?", "answer": "Wische die Behandlungsflächen nach jeder Anwendung mit einem weichen, feuchten Tuch ab und lass sie trocknen. Bewahre Geräte im Etui auf, fern von Hitze und Feuchtigkeit, und lade sie vor der ersten Nutzung vollständig auf." },
+      "authentication": { "question": "Sind eure Geräte für empfindliche Haut geeignet?", "answer": "Ja – unsere Geräte sind CE-zertifiziert und dermatologisch getestet, mit einstellbaren Intensitätsstufen. Beginne immer mit der niedrigsten Stufe und lies die Sicherheitshinweise; bei Hauterkrankungen frage zuerst deine Dermatologin." }
+    },
+    "form": {
+      "title": "Kontaktformular",
+      "firstName": "Vorname",
+      "firstNamePlaceholder": "Vorname eingeben",
+      "lastName": "Nachname",
+      "lastNamePlaceholder": "Nachname eingeben",
+      "email": "E-Mail",
+      "emailPlaceholder": "E-Mail-Adresse eingeben",
+      "orderNumber": "Bestellnummer (optional)",
+      "orderNumberPlaceholder": "Bestellnummer, falls vorhanden",
+      "message": "Wie können wir helfen?",
+      "messagePlaceholder": "Bitte beschreibe dein Anliegen",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "successTitle": "Nachricht gesendet",
+      "successText": "Danke! Deine Nachricht wurde an unser Team gesendet.",
+      "errorTitle": "Nachricht nicht gesendet",
+      "errorText": "Deine Nachricht konnte nicht gesendet werden. Bitte prüfe deine Verbindung oder schreib uns an info@spavioai.de."
+    }
+  },
+  "storeLocator": {
+    "title": "Showroom",
+    "subtitle": "Teste unsere Geräte persönlich bei einer Demo",
+    "mapSection": { "title": "So findest du uns" },
+    "locationsSection": {
+      "title": "Unser Standort",
+      "getDirections": "Route planen",
+      "bookAppointment": "Demo buchen",
+      "availableServices": "Leistungen"
+    },
+    "stores": {
+      "neumarktShowroom": {
+        "name": "Spavio AI Showroom Neumarkt",
+        "hours": "Nach Vereinbarung",
+        "services": ["Geräte-Demos", "Hautziel-Beratung", "Routine-Planung", "Garantie & Reparatur", "Anfragen für Studio-Partner"]
+      }
+    },
+    "privateAppointments": {
+      "title": "Private Termine",
+      "intro": "Buche einen privaten Termin und teste unsere Geräte vor dem Kauf. Unsere Beraterinnen erklären jede Technologie, beantworten deine Fragen und stellen mit dir eine Routine für deine Ziele zusammen.",
+      "deviceDemo": { "title": "Geräte-Demo", "text": "LED-, Microcurrent-, RF- und IPL-Geräte selbst ausprobieren" },
+      "customStyles": { "title": "Persönliche Routine", "text": "Eine Schritt-für-Schritt-Routine für deine Haut- und Haarziele" },
+      "expertServices": { "title": "Experten-Service", "text": "Einrichtungshilfe, Pflegetipps und Garantie-Support" },
+      "scheduleButton": "Termin vereinbaren"
+    },
+    "virtualConsultations": {
+      "title": "Virtuelle Beratung",
+      "cantVisit": "Du kannst nicht vorbeikommen?",
+      "text": "Buche eine Video-Beratung mit einer unserer Beauty-Tech-Beraterinnen. Wir zeigen dir die Geräte live, beantworten deine Fragen und helfen dir bequem von zu Hause bei der Auswahl.",
+      "bookButton": "Virtuelle Beratung buchen"
+    },
+    "map": {
+      "ourLocations": "Unser Standort"
+    }
+  }
+}

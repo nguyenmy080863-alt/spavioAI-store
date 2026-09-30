@@ -1,0 +1,1 @@
+ALTER TABLE public.products ADD COLUMN IF NOT EXISTS hover_image_enabled boolean NOT NULL DEFAULT true;

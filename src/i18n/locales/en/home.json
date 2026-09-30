@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "eyebrow": "Spavio AI Beauty Tech",
+    "alt": "A beauty treatment with a professional skincare device",
+    "title": "Clinic-Grade Beauty, At Home",
+    "subtitle": "LED, microcurrent, RF and IPL devices — curated with beauty professionals for results you can see.",
+    "cta": "Shop Devices"
+  },
+  "featured": {
+    "title": "Bestselling Devices"
+  },
+  "fiftyFifty": {
+    "skincare": {
+      "alt": "LED mask, microcurrent device, sonic facial brush and ice roller",
+      "title": "Skincare Devices",
+      "subtitle": "LED masks, microcurrent and RF for firmer, brighter skin"
+    },
+    "hair": {
+      "alt": "Aura ionic hair dryer",
+      "title": "Hair Styling & Care",
+      "subtitle": "Ionic dryers, infrared straighteners and scalp care"
+    }
+  },
+  "oneThirdTwoThirds": {
+    "hairRemoval": {
+      "alt": "Silk IPL hair removal device",
+      "title": "Hair Removal",
+      "subtitle": "Long-lasting smoothness with smart-sensor IPL"
+    },
+    "clinicAtHome": {
+      "alt": "Professional beauty devices in a treatment room",
+      "title": "The Treatment Room, Reimagined",
+      "subtitle": "Body sculpting, massage and wellness tech inspired by professional studios"
+    }
+  },
+  "largeHero": {
+    "eyebrow": "Powered by Spavio AI",
+    "alt": "LED mask, microcurrent device, IPL and ionic hair dryer in violet light",
+    "title": "Find Your Perfect Device",
+    "subtitle": "Tell us your goals and we'll match you with the right technology and a routine that fits your day.",
+    "cta": "Open the Device Guide"
+  },
+  "editorial": {
+    "eyebrow": "Our Story",
+    "title": "From the Studio to Your Home",
+    "body": "Spavio AI started as a digital assistant for spas and beauty studios. Working alongside aestheticians every day showed us which technologies truly deliver — and Spavio AI Store brings those devices home, paired with the professional guidance to use them well.",
+    "readMore": "Read our full story"
+  },
+  "productCarousel": {
+    "newBadge": "NEW",
+    "styledAlt": "{{name}} styled",
+    "quickView": "Quick View"
+  },
+  "lumipore": {
+    "eyebrow": "New · Spavio 4 in 1",
+    "subtitle": "One device, four care modes. A spa feeling at home.",
+    "priceLabel": "Introductory price",
+    "instead": "instead of",
+    "save": "You save {{percent}}%",
+    "cta": "Discover Lumipore",
+    "secondary": "Shop all devices",
+    "modesLabel": "4 light modes",
+    "deviceAlt": "Spavio Lumipore – white 4-in-1 beauty device with a glowing LED tip",
+    "modes": {
+      "warm": {
+        "name": "Warmth",
+        "light": "Red light · Warmth",
+        "text": "Gentle warmth for a fresh, rosy complexion."
+      },
+      "serum": {
+        "name": "Serum Boost",
+        "light": "Green light · Microcurrent",
+        "text": "Helps serums and creams absorb better."
+      },
+      "lift": {
+        "name": "Micro-Lifting",
+        "light": "Blue light · EMS pulses",
+        "text": "Gentle pulses for firmer-looking skin."
+      },
+      "glow": {
+        "name": "Glow Care",
+        "light": "Yellow light",
+        "text": "Soothes and restores the skin's radiance."
+      }
+    }
+  }
+}

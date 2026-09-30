@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /checkout
+Disallow: /en/account
+Disallow: /en/checkout
+Disallow: /vi/account
+Disallow: /vi/checkout
+
+Sitemap: https://spavioai.store/sitemap.xml

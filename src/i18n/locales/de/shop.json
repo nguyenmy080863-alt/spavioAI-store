@@ -1,0 +1,253 @@
+{
+  "category": {
+    "loading": "Produkte werden geladen…",
+    "newIn": "Neu",
+    "allProducts": "Alle Produkte",
+    "home": "Start",
+    "collections": {
+      "new-in": "Neuheiten",
+      "sale": "Im Angebot",
+      "best-sellers": "Bestseller",
+      "anti-aging": "Anti-Aging-Auswahl",
+      "under-100": "Geschenke unter €100"
+    },
+    "searchResults": "Suchergebnisse: „{{query}}“"
+  },
+  "filterSort": {
+    "itemCount_one": "{{count}} Artikel",
+    "itemCount_other": "{{count}} Artikel",
+    "filters": "Filter",
+    "category": "Kategorie",
+    "price": "Preis",
+    "style": "Technologie",
+    "applyFilters": "Filter anwenden",
+    "clearAll": "Alle zurücksetzen",
+    "sort": {
+      "featured": "Empfohlen",
+      "priceLow": "Preis: aufsteigend",
+      "priceHigh": "Preis: absteigend",
+      "newest": "Neuheiten",
+      "name": "Name A-Z"
+    },
+    "priceRanges": {
+      "under100": "Unter €100",
+      "from100to200": "€100 – €200",
+      "over200": "Über €200"
+    }
+  },
+  "productGrid": {
+    "new": "NEU",
+    "alternateView": "{{name}} – alternative Ansicht"
+  },
+  "productDetail": {
+    "loading": "Produkt wird geladen…",
+    "home": "Start",
+    "youMightAlsoLike": "Das könnte dir auch gefallen",
+    "moreFrom": "Mehr aus {{category}}"
+  },
+  "productInfo": {
+    "effect": "Nutzen",
+    "warranty": "Garantie",
+    "warrantyDescription": "2 Jahre Garantie · 30 Tage testen",
+    "inTheBox": "Lieferumfang",
+    "inTheBoxDescription": "Gerät, USB-C-Ladekabel, Reiseetui und Kurzanleitung",
+    "editorsNotes": "Experten-Notiz",
+    "quantity": "Menge",
+    "addToBag": "In den Warenkorb"
+  },
+  "productDescription": {
+    "description": "Beschreibung",
+    "descriptionExtra": "Jedes Spavio AI-Gerät ist CE-zertifiziert, dermatologisch getestet und gemeinsam mit Beauty-Profis auf Ergebnisse, Komfort und Sicherheit ausgewählt.",
+    "productDetails": "Produktdetails",
+    "sku": "Artikelnummer",
+    "collection": "Kollektion",
+    "effect": "Effekt",
+    "yes": "Ja",
+    "price": "Preis",
+    "applicationAndCare": "Anwendung & Pflege",
+    "careSteps": [
+      "• Vor der ersten Nutzung vollständig laden und mit der niedrigsten Stufe beginnen",
+      "• Auf saubere, trockene Haut anwenden, sofern nicht anders angegeben",
+      "• Behandlungsflächen nach jeder Anwendung mit einem weichen, feuchten Tuch abwischen",
+      "• Im Reiseetui aufbewahren, fern von Hitze und Feuchtigkeit"
+    ],
+    "careExtra": "Brauchst du Hilfe beim Start? Unser Service-Team begleitet dich durch die erste Anwendung und stellt eine Routine für deine Ziele zusammen.",
+    "customerReviews": "Kundenbewertungen",
+    "reviews": {
+      "sarah": "„Ich war skeptisch, aber nach sechs Wochen mit der LED-Maske wirkt meine Haut ruhiger und ebenmäßiger. Zehn Minuten beim Lesen – ganz einfach.“",
+      "emma": "„Wunderschön verarbeitet und kinderleicht zu bedienen. Der Guide und die Routine vom Team haben den Unterschied gemacht.“",
+      "jessica": "„Schnelle Lieferung, tolle Verpackung und das Gerät fühlt sich hochwertig an. Habe gleich ein zweites als Geschenk bestellt!“"
+    },
+    "certified": "CE-zertifiziert"
+  },
+  "reviewProduct": {
+    "reviewProduct": "Produkt bewerten",
+    "rating": "Bewertung",
+    "yourReview": "Deine Bewertung",
+    "placeholder": "Teile deine Erfahrung mit diesem Produkt...",
+    "submitReview": "Bewertung abschicken"
+  },
+  "shoppingBag": {
+    "title": "Warenkorb",
+    "close": "Schließen",
+    "viewFavorites": "Favoriten ansehen",
+    "emptyLine1": "Dein Warenkorb ist leer.",
+    "emptyLine2": "Stöbere weiter, um Artikel hinzuzufügen.",
+    "decreaseQuantity": "Menge verringern",
+    "increaseQuantity": "Menge erhöhen",
+    "subtotal": "Zwischensumme",
+    "shippingNote": "Versand und Steuern werden an der Kasse berechnet",
+    "proceedToCheckout": "Zur Kasse",
+    "continueShopping": "Weiter shoppen",
+    "youSave": "Du sparst"
+  },
+  "checkoutHeader": {
+    "continueShopping": "Weiter shoppen",
+    "logoAlt": "Spavio AI Store",
+    "support": "Support"
+  },
+  "statusBar": {
+    "freeShipping": "Kostenloser Versand ab €99",
+    "warranty": "2 Jahre Garantie auf jedes Gerät",
+    "happyCustomers": "30 Tage testen · risikofreie Rückgabe"
+  },
+  "checkout": {
+    "orderSummary": "Bestellübersicht",
+    "bagEmpty": "Dein Warenkorb ist leer.",
+    "continueShopping": "Weiter shoppen",
+    "discountCode": "Rabattcode",
+    "enterDiscountCode": "Rabattcode eingeben",
+    "apply": "Anwenden",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "free": "Kostenlos",
+    "total": "Gesamt",
+    "customerDetails": "Kundendaten",
+    "emailAddress": "E-Mail-Adresse *",
+    "enterYourEmail": "E-Mail-Adresse eingeben",
+    "firstName": "Vorname *",
+    "firstNamePlaceholder": "Vorname",
+    "lastName": "Nachname *",
+    "lastNamePlaceholder": "Nachname",
+    "phoneNumber": "Telefonnummer",
+    "enterYourPhone": "Telefonnummer eingeben",
+    "shippingAddress": "Lieferadresse",
+    "address": "Adresse *",
+    "streetAddress": "Straße und Hausnummer",
+    "city": "Stadt *",
+    "cityPlaceholder": "Stadt",
+    "postalCode": "Postleitzahl *",
+    "postalCodePlaceholder": "Postleitzahl",
+    "country": "Land *",
+    "countryPlaceholder": "Land",
+    "otherBillingAddress": "Abweichende Rechnungsadresse",
+    "billingDetails": "Rechnungsdaten",
+    "enterBillingEmail": "Rechnungs-E-Mail eingeben",
+    "enterBillingPhone": "Rechnungstelefonnummer eingeben",
+    "shippingOptions": "Versandoptionen",
+    "standardShipping": "Standardversand",
+    "standardShippingDetail": "Kostenlos • 3-5 Werktage",
+    "expressShipping": "Expressversand",
+    "expressShippingDetail": "€15 • 1-2 Werktage",
+    "overnightDelivery": "Über-Nacht-Lieferung",
+    "overnightDeliveryDetail": "€35 • Nächster Werktag",
+    "paymentDetails": "Zahlungsdetails",
+    "cardholderName": "Karteninhaber *",
+    "nameOnCard": "Name auf der Karte",
+    "cardNumber": "Kartennummer *",
+    "expiryDate": "Ablaufdatum *",
+    "cvv": "CVV *",
+    "processing": "Wird verarbeitet...",
+    "completeOrder": "Bestellung abschließen ({{total}})",
+    "orderComplete": "Bestellung abgeschlossen!",
+    "orderCompleteMessage": "Vielen Dank für deinen Einkauf. Deine Bestellbestätigung wurde an deine E-Mail-Adresse gesendet.",
+    "youSave": "Du sparst",
+    "title": "Kasse",
+    "deliveryService": "Versandart",
+    "multiCarrier": "Mehrere Versanddienstleister",
+    "paymentMethod": "Zahlungsart",
+    "encryption": "256-Bit-Verschlüsselung",
+    "paypalNote": "Sofortige Überweisung",
+    "creditCard": "Kreditkarte",
+    "cardholder": "Name des Karteninhabers",
+    "cardNumberLabel": "Kartennummer",
+    "expiryLabel": "Ablaufdatum",
+    "cvvLabel": "CVV / CVC",
+    "processingOrder": "Bestellung & Versandetikett werden erstellt...",
+    "klarnaNote": "Später oder in Raten bezahlen",
+    "payWithKlarna": "Mit Klarna bezahlen ({{total}})",
+    "thankYou": "Vielen Dank für deinen Einkauf. Wir haben deine Zahlung erhalten und deine Sendung über {{carrier}} angemeldet. Die Bestelldetails wurden an {{email}} gesendet.",
+    "yourEmail": "deine E-Mail-Adresse",
+    "trackingNumber": "Sendungsnummer",
+    "returnToShop": "Zurück zum Shop",
+    "placeholders": {
+      "email": "name@beispiel.de",
+      "phone": "+49 176 1234567",
+      "street": "Glasergasse 18",
+      "city": "Neumarkt",
+      "postalCode": "92318",
+      "cardholder": "Name auf der Karte"
+    },
+    "methods": {
+      "sendcloud-dhl-standard": {
+        "name": "Standard Paket",
+        "deliveryTime": "2–4 Werktage"
+      },
+      "sendcloud-hermes": {
+        "name": "Paketversand",
+        "deliveryTime": "2–3 Werktage"
+      },
+      "sendcloud-dhl-express": {
+        "name": "Priority Air",
+        "deliveryTime": "Nächster Werktag"
+      }
+    },
+    "paypalCharge": "Schließe deine Bestellung direkt mit PayPal ab. Dein Konto wird mit {{total}} belastet."
+  },
+  "fomo": {
+    "endsIn": "Endet in",
+    "restarting": "Angebot startet in Kürze neu",
+    "save": "{{percent}}% sparen",
+    "sold": "{{sold}}/{{total}} Produkte verkauft",
+    "hours": "Stunden",
+    "minutes": "Minuten",
+    "seconds": "Sekunden",
+    "remaining": "Noch {{count}} verfügbar",
+    "soldOut": "Ausverkauft",
+    "claimed": "{{percent}}% verkauft",
+    "headlines": {
+      "local-glow-week": "Glow Week Sale"
+    }
+  },
+  "pricing": {
+    "off": "-{{percent}} % RABATT",
+    "save": "{{amount}} sparen"
+  },
+  "account": {
+    "loading": "Wird geladen…",
+    "title": "Dein Konto",
+    "adminAccess": "Admin-Zugang",
+    "openAdmin": "Admin-Bereich öffnen",
+    "savedBag": "Gespeicherter Warenkorb",
+    "savedSummary_one": "{{count}} Artikel · {{total}} – in deinem Konto gespeichert",
+    "savedSummary_other": "{{count}} Artikel · {{total}} – in deinem Konto gespeichert",
+    "emptyBag": "Dein Warenkorb ist leer. Hinzugefügte Artikel werden für später gespeichert.",
+    "goToCheckout": "Zur Kasse",
+    "signOut": "Abmelden"
+  },
+  "preorder": {
+    "badge": "Vorbestellung",
+    "ships": "Voraussichtlicher Versand: {{date}}",
+    "shipsSoon": "Versand, sobald verfügbar",
+    "depositToday": "Anzahlung heute",
+    "balanceLater": "Restbetrag bei Versand",
+    "note": "Du zahlst heute nur die Anzahlung. Den Restbetrag berechnen wir erst, wenn dein Gerät versandbereit ist – wir informieren dich vorher per E-Mail.",
+    "cta": "Jetzt vorbestellen – {{deposit}} Anzahlung",
+    "cartLine": "Vorbestellung · Anzahlung {{deposit}} pro Stück",
+    "dueNow": "Heute fällig",
+    "dueLater": "Bei Versand fällig",
+    "depositsLabel": "Später fällig (Vorbestellungen)",
+    "checkoutNote": "Deine Bestellung enthält Vorbestellungen. Heute berechnen wir nur die Anzahlung; der Restbetrag von {{amount}} wird fällig, sobald die Artikel versandt werden.",
+    "confirmation": "Für deine Vorbestellung ist bei Versand noch ein Restbetrag von {{amount}} fällig. Wir melden uns rechtzeitig per E-Mail."
+  }
+}

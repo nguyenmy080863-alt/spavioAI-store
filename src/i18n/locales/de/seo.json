@@ -1,0 +1,76 @@
+{
+  "ogImageAlt": "Spavio AI Store – Smarte Beauty- & Körperpflege-Geräte",
+  "organizationDescription": "Onlineshop für smarte Beauty- und Körperpflege-Geräte: LED-Masken, Microcurrent-, RF- und IPL-Geräte, Ionen-Haarstyling und Wellness-Technologie.",
+  "home": {
+    "title": "Spavio AI Store | Smarte Beauty- & Körperpflege-Geräte",
+    "description": "Entdecke den Spavio AI Store – LED-Lichttherapie-Masken, Microcurrent- und RF-Geräte für die Haut, IPL-Haarentfernung, Ionen-Haarstyling und Wellness-Geräte. Beauty-Technologie in Klinik-Qualität für zu Hause."
+  },
+  "category": {
+    "title": "{{name}} – Beauty-Geräte",
+    "description": "{{name}} im Spavio AI Store kaufen – CE-zertifizierte LED-, Microcurrent-, RF- und IPL-Geräte, Ionen-Haarstyling und Wellness-Technologie mit 2 Jahren Garantie und 30 Tagen Testzeit."
+  },
+  "shop": {
+    "title": "Alle Beauty-Geräte",
+    "description": "Alle Spavio AI Beauty- und Körperpflege-Geräte entdecken – Hautpflege-Geräte, IPL-Haarentfernung, Haarstyling und Wellness-Technologie. Kostenloser Versand ab €99."
+  },
+  "search": {
+    "title": "Suche: „{{query}}“",
+    "description": "Suchergebnisse für „{{query}}“ im Spavio AI Store – smarte Beauty- und Körperpflege-Geräte."
+  },
+  "product": {
+    "title": "{{name}} – {{effect}}",
+    "description": "{{description}}"
+  },
+  "ourStory": {
+    "title": "Unsere Geschichte",
+    "description": "Lerne die Gründerin von Spavio AI kennen – Minh Khue (Kris) Tran. Die Vision hinter dem Spavio AI Store: Beauty-Technologie in Klinik-Qualität, ganz persönlich."
+  },
+  "sustainability": {
+    "title": "Nachhaltigkeit",
+    "description": "Der Spavio AI Store setzt auf langlebige, reparierbare Geräte, recycelbare Verpackung und WEEE-konforme Rücknahme alter Beauty-Geräte."
+  },
+  "deviceGuide": {
+    "title": "Geräte-Guide – das passende Beauty-Gerät finden",
+    "description": "Finde das richtige Spavio AI-Gerät für deine Haut- und Haarziele. Vergleiche LED, Microcurrent, Radiofrequenz und IPL – mit Anwendungszeiten, Routinen und Sicherheitshinweisen."
+  },
+  "customerCare": {
+    "title": "Kundenservice",
+    "description": "Kontakt zum Spavio AI Store. FAQ zu Versand, Rückgabe, Garantie und Gerätepflege – per Telefon, E-Mail oder Kontaktformular."
+  },
+  "storeLocator": {
+    "title": "Spavio AI Showroom in Neumarkt",
+    "description": "Besuche den Spavio AI Showroom in Neumarkt – Glasergasse 18, 92318 Neumarkt. Buche eine Geräte-Demo oder eine virtuelle Beratung."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "description": "Wie der Spavio AI Store deine personenbezogenen Daten gemäß DSGVO erhebt, nutzt und schützt."
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "description": "AGB für Einkäufe im Spavio AI Store und die Nutzung der Website – Bestellung, Versand, Rückgabe und Garantie."
+  },
+  "impressum": {
+    "title": "Impressum",
+    "description": "Impressum des Spavio AI Store – Minh Khue (Kris) Tran, Glasergasse 18, 92318 Neumarkt. Angaben gemäß § 5 TMG."
+  },
+  "login": {
+    "title": "Anmelden",
+    "description": "Melde dich bei deinem Spavio AI Store Konto an, um Bestellungen zu verwalten, deinen Warenkorb zu speichern und Mitgliedervorteile zu nutzen."
+  },
+  "signup": {
+    "title": "Konto erstellen",
+    "description": "Erstelle kostenlos ein Spavio AI Store Konto, um Bestellungen zu verfolgen, deinen Warenkorb zu speichern und neue Geräte früher zu entdecken."
+  },
+  "account": {
+    "title": "Mein Konto",
+    "description": "Verwalte dein Spavio AI Store Konto."
+  },
+  "checkout": {
+    "title": "Kasse",
+    "description": "Schließe deine Bestellung im Spavio AI Store sicher ab."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht. Entdecke smarte Beauty-Geräte im Spavio AI Store."
+  }
+}
