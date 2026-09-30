@@ -61,6 +61,8 @@
     "secondary": "Shop all devices",
     "modesLabel": "4 light modes",
     "deviceAlt": "Spavio Lumipore – white 4-in-1 beauty device with a glowing LED tip",
+    "rotateHint": "Drag to rotate",
+    "rotateLabel": "Rotate Lumipore – use the left and right arrow keys",
     "modes": {
       "warm": {
         "name": "Warmth",

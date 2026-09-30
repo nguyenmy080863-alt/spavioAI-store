@@ -61,6 +61,8 @@
     "secondary": "Alle Geräte ansehen",
     "modesLabel": "4 Lichtmodi",
     "deviceAlt": "Spavio Lumipore – weißes 4-in-1-Beauty-Gerät mit leuchtender LED-Spitze",
+    "rotateHint": "Ziehen zum Drehen",
+    "rotateLabel": "Lumipore drehen – mit den Pfeiltasten links und rechts",
     "modes": {
       "warm": {
         "name": "Wärme",

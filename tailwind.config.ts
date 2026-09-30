@@ -119,6 +119,12 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
         },
+        "spin-in": {
+          "0%": { transform: "perspective(1200px) rotateY(-80deg)", opacity: "0" },
+          "55%": { transform: "perspective(1200px) rotateY(14deg)", opacity: "1" },
+          "80%": { transform: "perspective(1200px) rotateY(-5deg)" },
+          "100%": { transform: "perspective(1200px) rotateY(0)" },
+        },
         "fade-in": {
           from: {
             opacity: "0",
@@ -135,6 +141,7 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "fade-in": "fade-in 0.2s ease-out",
         float: "float 6s ease-in-out infinite",
+        "spin-in": "spin-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
       transitionTimingFunction: {
         "smooth": "cubic-bezier(0.4, 0, 0.2, 1)",

@@ -7,7 +7,7 @@ const CheckoutHeader = () => {
   const { t } = useTranslation("shop");
   return (
     <header className="w-full bg-background border-b border-muted-foreground/20">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
         <div className="relative flex items-center justify-between">
           {/* Left side - Continue Shopping */}
           <Link 
@@ -20,11 +20,11 @@ const CheckoutHeader = () => {
 
           {/* Center - Logo - Absolutely positioned to ensure perfect centering */}
           <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <StoreLogo heightClass="h-7" alt={t("checkoutHeader.logoAlt")} />
+            <StoreLogo heightClass="h-6 sm:h-7" badgeClassName="hidden min-[375px]:inline-block" alt={t("checkoutHeader.logoAlt")} />
           </Link>
 
           {/* Right side - Support */}
-          <div className="text-sm font-light text-foreground">
+          <div className="text-xs sm:text-sm font-light text-foreground">
             {t("checkoutHeader.support")}
           </div>
         </div>

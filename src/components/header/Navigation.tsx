@@ -200,10 +200,10 @@ const Navigation = () => {
           : "bg-background/85 backdrop-blur-sm border-b border-transparent"
       }`}
     >
-      <div className={`flex items-center justify-between px-6 transition-all duration-300 ${isScrolled ? "h-14" : "h-20"}`}>
+      <div className={`flex items-center justify-between gap-1 px-4 sm:px-6 transition-all duration-300 ${isScrolled ? "h-14" : "h-16 sm:h-20"}`}>
         {/* Mobile hamburger button */}
         <button
-          className="lg:hidden p-2 mt-0.5 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
+          className="lg:hidden shrink-0 -ml-2 p-2 text-nav-foreground hover:text-nav-hover transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={t("nav.toggleMenu")}
         >
@@ -219,6 +219,16 @@ const Navigation = () => {
             }`}></span>
           </div>
         </button>
+
+        {/* Logo: next to the menu button on mobile, centered on desktop */}
+        <div className="flex min-w-0 flex-1 items-center lg:flex-none lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+          <Link to="/" className="flex items-center">
+            <StoreLogo
+              heightClass={isScrolled ? "h-5 sm:h-6" : "h-5 sm:h-8"}
+              badgeClassName="hidden min-[375px]:inline-block px-1.5 py-1 text-[7px] sm:px-2 sm:py-1.5 sm:text-[9px]"
+            />
+          </Link>
+        </div>
 
         {/* Left navigation */}
         <div className="hidden lg:flex space-x-8">
@@ -241,15 +251,8 @@ const Navigation = () => {
           ))}
         </div>
 
-        {/* Center logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Link to="/" className="block">
-            <StoreLogo heightClass={isScrolled ? "h-5 sm:h-6" : "h-6 sm:h-8"} badgeClassName="hidden sm:inline-block" />
-          </Link>
-        </div>
-
         {/* Right icons */}
-        <div className="flex items-center space-x-2">
+        <div className="flex shrink-0 items-center -mr-2 sm:mr-0 sm:space-x-2">
           <LanguageSwitcher className="hidden sm:block" />
 
           <button
@@ -448,7 +451,7 @@ const Navigation = () => {
 
       {/* Mobile navigation menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-nav border-b border-border z-50">
+        <div className="lg:hidden absolute top-full left-0 right-0 max-h-[calc(100dvh-6rem)] overflow-y-auto bg-nav border-b border-border z-50">
           <div className="px-6 py-8">
             <div className="space-y-6">
               {navItems.map((item) => (
@@ -511,7 +514,7 @@ const Navigation = () => {
             className="absolute inset-0 bg-black/50 h-screen"
             onClick={() => setOffCanvasType(null)}
           />
-          <div className="absolute right-0 top-0 h-screen w-96 bg-background border-l border-border animate-slide-in-right flex flex-col">
+          <div className="absolute right-0 top-0 h-screen w-full sm:w-96 bg-background border-l border-border animate-slide-in-right flex flex-col">
             <div className="flex items-center justify-between p-6 border-b border-border">
               <h2 className="text-lg font-light text-foreground">{t("favorites.title")}</h2>
               <button

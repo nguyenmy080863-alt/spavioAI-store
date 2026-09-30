@@ -28,7 +28,7 @@ const ShoppingBag = ({ isOpen, onClose, onViewFavorites }: ShoppingBagProps) => 
       />
 
       {/* Off-canvas panel */}
-      <div className="absolute right-0 top-0 h-screen w-96 bg-background border-l border-border animate-slide-in-right flex flex-col">
+      <div className="absolute right-0 top-0 h-screen w-full sm:w-96 bg-background border-l border-border animate-slide-in-right flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border">
           <h2 className="text-lg font-light text-foreground">{t("shoppingBag.title")}</h2>

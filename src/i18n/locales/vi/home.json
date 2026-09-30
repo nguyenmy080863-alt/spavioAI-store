@@ -61,6 +61,8 @@
     "secondary": "Xem tất cả thiết bị",
     "modesLabel": "4 chế độ ánh sáng",
     "deviceAlt": "Spavio Lumipore – thiết bị làm đẹp 4 trong 1 màu trắng với đầu LED phát sáng",
+    "rotateHint": "Kéo để xoay",
+    "rotateLabel": "Xoay Lumipore – dùng phím mũi tên trái và phải",
     "modes": {
       "warm": {
         "name": "Làm ấm",
