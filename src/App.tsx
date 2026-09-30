@@ -16,6 +16,8 @@ import Sustainability from "./pages/about/Sustainability";
 import DeviceGuide from "./pages/about/DeviceGuide";
 import CustomerCare from "./pages/about/CustomerCare";
 import StoreLocator from "./pages/about/StoreLocator";
+import JournalIndex from "./pages/journal/JournalIndex";
+import JournalArticle from "./pages/journal/JournalArticle";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import { AdminAuthProvider } from "./context/AdminAuthContext";
@@ -71,6 +73,8 @@ const storefrontRoutes = (
     <Route path="about/size-guide" element={<LocaleRedirect to="/about/device-guide" />} />
     <Route path="about/customer-care" element={<CustomerCare />} />
     <Route path="about/store-locator" element={<StoreLocator />} />
+    <Route path="journal" element={<JournalIndex />} />
+    <Route path="journal/:slug" element={<JournalArticle />} />
     <Route path="privacy-policy" element={<PrivacyPolicy />} />
     <Route path="terms-of-service" element={<TermsOfService />} />
     <Route path="impressum" element={<Impressum />} />

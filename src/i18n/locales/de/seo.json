@@ -72,5 +72,9 @@
   "notFound": {
     "title": "Seite nicht gefunden",
     "description": "Die gesuchte Seite existiert nicht. Entdecke smarte Beauty-Geräte im Spavio AI Store."
+  },
+  "journal": {
+    "title": "Beauty-Tech Ratgeber – Anleitungen für Beauty-Geräte zu Hause",
+    "description": "Praktische Ratgeber zu LED-Lichttherapie, IPL-Haarentfernung, Mikrostrom, RF-Hautstraffung, Ionen-Föhn und Massagepistole – wie sie wirken und wie du sie zu Hause sicher anwendest."
   }
 }

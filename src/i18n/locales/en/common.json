@@ -28,7 +28,8 @@
       "sustainability": "Sustainability",
       "device-guide": "Device Guide",
       "customer-care": "Customer Care",
-      "store-locator": "Showroom"
+      "store-locator": "Showroom",
+      "journal": "Journal"
     },
     "cards": {
       "dryer": "Aura Ionic Dryer",
@@ -81,7 +82,8 @@
     "rights": "© 2026 Spavio AI. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "journal": "Journal"
   },
   "usps": {
     "certified": {

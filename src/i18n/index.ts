@@ -8,6 +8,7 @@ import enAbout from "./locales/en/about.json";
 import enLegal from "./locales/en/legal.json";
 import enSeo from "./locales/en/seo.json";
 import enProducts from "./locales/en/products.json";
+import enJournal from "./locales/en/journal.json";
 
 import deCommon from "./locales/de/common.json";
 import deHome from "./locales/de/home.json";
@@ -16,6 +17,7 @@ import deAbout from "./locales/de/about.json";
 import deLegal from "./locales/de/legal.json";
 import deSeo from "./locales/de/seo.json";
 import deProducts from "./locales/de/products.json";
+import deJournal from "./locales/de/journal.json";
 
 import viCommon from "./locales/vi/common.json";
 import viHome from "./locales/vi/home.json";
@@ -24,6 +26,7 @@ import viAbout from "./locales/vi/about.json";
 import viLegal from "./locales/vi/legal.json";
 import viSeo from "./locales/vi/seo.json";
 import viProducts from "./locales/vi/products.json";
+import viJournal from "./locales/vi/journal.json";
 
 export const SUPPORTED_LANGUAGES = [
   { code: "de", label: "Deutsch", short: "DE", ogLocale: "de_DE" },
@@ -67,9 +70,9 @@ export const localizePath = (path: string, lang: LanguageCode): string => {
 };
 
 export const resources = {
-  en: { common: enCommon, home: enHome, shop: enShop, about: enAbout, legal: enLegal, seo: enSeo, products: enProducts },
-  de: { common: deCommon, home: deHome, shop: deShop, about: deAbout, legal: deLegal, seo: deSeo, products: deProducts },
-  vi: { common: viCommon, home: viHome, shop: viShop, about: viAbout, legal: viLegal, seo: viSeo, products: viProducts },
+  en: { common: enCommon, home: enHome, shop: enShop, about: enAbout, legal: enLegal, seo: enSeo, products: enProducts, journal: enJournal },
+  de: { common: deCommon, home: deHome, shop: deShop, about: deAbout, legal: deLegal, seo: deSeo, products: deProducts, journal: deJournal },
+  vi: { common: viCommon, home: viHome, shop: viShop, about: viAbout, legal: viLegal, seo: viSeo, products: viProducts, journal: viJournal },
 } as const;
 
 const initialLanguage =
@@ -81,7 +84,7 @@ void i18n.use(initReactI18next).init({
   fallbackLng: DEFAULT_LANGUAGE,
   supportedLngs: LANGUAGE_CODES,
   defaultNS: "common",
-  ns: ["common", "home", "shop", "about", "legal", "seo", "products"],
+  ns: ["common", "home", "shop", "about", "legal", "seo", "products", "journal"],
   interpolation: { escapeValue: false },
   initAsync: false,
   react: { useSuspense: false },

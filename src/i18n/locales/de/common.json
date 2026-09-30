@@ -28,7 +28,8 @@
       "sustainability": "Nachhaltigkeit",
       "device-guide": "Geräte-Guide",
       "customer-care": "Kundenservice",
-      "store-locator": "Showroom"
+      "store-locator": "Showroom",
+      "journal": "Ratgeber"
     },
     "cards": {
       "dryer": "Aura Ionic Föhn",
@@ -81,7 +82,8 @@
     "rights": "© 2026 Spavio AI. Alle Rechte vorbehalten.",
     "privacyPolicy": "Datenschutz",
     "termsOfService": "AGB",
-    "cookieSettings": "Cookie-Einstellungen"
+    "cookieSettings": "Cookie-Einstellungen",
+    "journal": "Ratgeber"
   },
   "usps": {
     "certified": {

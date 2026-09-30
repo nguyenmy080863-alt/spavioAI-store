@@ -13,6 +13,7 @@ import { fetchStorefrontProducts } from "./lib/catalog";
 import { fetchHeroBanner } from "./lib/hero";
 import { fetchActiveFomoCampaign } from "./lib/fomo";
 import { CATEGORIES, COLLECTIONS, categoryToSlug } from "./data/products";
+import { JOURNAL_ARTICLES, JOURNAL_PATH, journalArticlePath } from "./data/journal";
 
 export interface RenderResult {
   html: string;
@@ -36,6 +37,8 @@ export const getIndexablePaths = async (): Promise<string[]> => {
     "/about/device-guide",
     "/about/customer-care",
     "/about/store-locator",
+    JOURNAL_PATH,
+    ...JOURNAL_ARTICLES.map((a) => journalArticlePath(a.slug)),
     "/privacy-policy",
     "/terms-of-service",
     "/impressum",

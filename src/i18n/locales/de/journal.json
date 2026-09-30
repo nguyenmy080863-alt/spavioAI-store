@@ -1,0 +1,544 @@
+{
+  "nav": "Ratgeber",
+  "hub": {
+    "eyebrow": "Spavio AI Ratgeber",
+    "title": "Beauty-Tech Ratgeber",
+    "subtitle": "Klare, praktische Anleitungen zu Beauty-Geräten für zu Hause – wie die Technologie funktioniert, wie du sie sicher anwendest und wie du eine Routine aufbaust, die zu deinem Alltag passt.",
+    "readGuide": "Zum Ratgeber",
+    "minRead": "{{count}} Min. Lesezeit",
+    "latest": "Alle Ratgeber",
+    "topics": {
+      "skincare": "Hautpflege",
+      "hair-removal": "Haarentfernung",
+      "hair": "Haarpflege",
+      "body": "Körper & Wellness"
+    },
+    "ctaTitle": "Du weißt nicht, wo du anfangen sollst?",
+    "ctaText": "Unser Geräte-Guide findet in weniger als einer Minute das passende Gerät für deine Haut- und Haarziele.",
+    "ctaButton": "Zum Geräte-Guide"
+  },
+  "article": {
+    "home": "Startseite",
+    "journal": "Ratgeber",
+    "published": "Veröffentlicht am {{date}}",
+    "updated": "Aktualisiert am {{date}}",
+    "inThisGuide": "In diesem Ratgeber",
+    "featuredDevices": "Geräte aus diesem Ratgeber",
+    "faqTitle": "Häufige Fragen",
+    "moreGuides": "Weitere Ratgeber",
+    "backToJournal": "Alle Ratgeber",
+    "disclaimer": "Dieser Ratgeber dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Beachte immer die Gebrauchsanweisung deines Geräts. Wenn du eine Hauterkrankung hast, schwanger bist, lichtempfindlich machende Medikamente nimmst oder ein Implantat wie einen Herzschrittmacher trägst, sprich vor der Anwendung von Beauty-Geräten mit deiner Ärztin oder deinem Arzt.",
+    "author": "Spavio AI Redaktion",
+    "relatedGuides": "Ratgeber zu diesem Gerät"
+  },
+  "articles": {
+    "led-light-therapy-colours": {
+      "title": "LED-Lichttherapie: Rotlicht, Blaulicht, Grünlicht und Gelblicht erklärt",
+      "description": "Was bewirken rotes, blaues, grünes und gelbes LED-Licht auf der Haut? Ein klarer Ratgeber zu LED-Farben, Wellenlängen, Anwendungsdauer und LED-Geräten für zu Hause.",
+      "excerpt": "Rot für Festigkeit, Blau für unreine Haut, Grün und Gelb für Teint und Ruhe – was jede LED-Farbe bewirkt und wie du sie zu Hause anwendest.",
+      "intro": "LED-Lichttherapie ist aus der Hautarztpraxis ins heimische Badezimmer gezogen. Doch was bewirkt jede Farbe wirklich, und wie erzielst du zu Hause sichtbare Ergebnisse? Dieser Ratgeber erklärt die Wissenschaft verständlich, zeigt realistische Erwartungen und wie sich LED in deine Routine einfügt.",
+      "sections": [
+        {
+          "heading": "So funktioniert LED-Lichttherapie",
+          "paragraphs": [
+            "LED-Geräte bestrahlen die Haut mit energiearmem Licht in bestimmten Wellenlängen, gemessen in Nanometern (nm). Anders als Sonnenlicht oder Solarien geben sie kein UV-Licht ab und erhitzen oder schädigen die Haut nicht.",
+            "Unterschiedliche Wellenlängen dringen unterschiedlich tief ein: Kurzwelliges blaues Licht wirkt nahe der Oberfläche, langwelliges Rot- und Nahinfrarotlicht reicht tiefer. Die Hautzellen nehmen das Licht als sanftes Signal auf – deshalb bauen sich Ergebnisse bei regelmäßiger Anwendung schrittweise auf und nicht über Nacht."
+          ]
+        },
+        {
+          "heading": "Rotlicht (ca. 630 nm)",
+          "paragraphs": [
+            "Rotlicht ist die am besten erforschte Farbe für die Haut. Es wird damit in Verbindung gebracht, die hauteigene Kollagenbildung zu unterstützen – gut für feine Linien, Spannkraft und einen ebenmäßigen, rosigen Teint.",
+            "Nahinfrarotlicht (ca. 830 nm) ist für das Auge unsichtbar und reicht etwas tiefer. Viele Masken, darunter die Lumina Pro LED-Gesichtsmaske, kombinieren deshalb Rot- und Nahinfrarotlicht. Beim Spavio Lumipore wird Rotlicht im Modus „Wärme“ mit sanfter Wärme kombiniert."
+          ]
+        },
+        {
+          "heading": "Blaulicht (ca. 415 nm)",
+          "paragraphs": [
+            "Blaulicht wirkt an der Hautoberfläche. Es ist beliebt in Routinen für ölige und zu Unreinheiten neigende Haut, weil die an Pickeln beteiligten Bakterien empfindlich darauf reagieren.",
+            "Beim Lumipore ist Blaulicht im Modus „Mikro-Lifting“ mit EMS-Impulsen kombiniert – für eine straffer und definierter wirkende Haut."
+          ]
+        },
+        {
+          "heading": "Grün- und Gelblicht",
+          "paragraphs": [
+            "Grünlicht (ca. 520 nm) und Gelblicht (ca. 590 nm) sind weniger erforscht als Rot und Blau, werden in Kosmetikstudios aber häufig eingesetzt: Grünlicht bei ungleichmäßig wirkendem Teint, Gelblicht zur Beruhigung von Rötungen und für mehr Strahlkraft.",
+            "Der Lumipore kombiniert Grünlicht im Modus „Serum-Boost“ mit Mikrostrom, damit Seren und Cremes besser einziehen, während der Modus „Glow-Pflege“ mit Gelblicht beruhigt."
+          ]
+        },
+        {
+          "heading": "So wendest du LED zu Hause an",
+          "paragraphs": [
+            "Regelmäßigkeit ist viel wichtiger als Intensität. Mit diesen Gewohnheiten holst du das Beste aus jeder Anwendung:"
+          ],
+          "bullets": [
+            "Starte auf sauberer, trockener Haut ohne Make-up oder Sonnenschutz, die das Licht abschirmen können.",
+            "Plane 3–5 Anwendungen pro Woche von etwa 10 Minuten ein oder nutze den Timer deines Geräts.",
+            "Schließe die Augen oder nutze den mitgelieferten Augenschutz, besonders bei hellem Blaulicht.",
+            "Trage Serum und Feuchtigkeitspflege nach der Anwendung auf (oder währenddessen, wenn dein Gerät dafür gemacht ist).",
+            "Gib der Haut 4–8 Wochen regelmäßige Anwendung, bevor du Bilanz ziehst, und vergleiche Fotos im gleichen Licht."
+          ]
+        },
+        {
+          "heading": "Welches LED-Gerät passt zu dir?",
+          "paragraphs": [
+            "Wenn du eine freihändige Anwendung für das ganze Gesicht möchtest, ist eine Maske wie die Lumina Pro der einfachste Weg, dranzubleiben: aufsetzen, zehn Minuten entspannen, fertig.",
+            "Wenn du gezielte Pflege und mehr als eine Technologie bevorzugst, vereint der Spavio Lumipore vier Lichtmodi mit Wärme, Mikrostrom und EMS in einem Handgerät – ideal für Kinnlinie, Wangen und Mundpartie."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kann ich LED-Lichttherapie jeden Tag anwenden?",
+          "answer": "Kosmetische LED-Geräte arbeiten mit energiearmem Licht ohne UV, daher ist die tägliche Anwendung bei gesunder Haut in der Regel unbedenklich. Die meisten erzielen mit 3–5 Anwendungen pro Woche gute Ergebnisse. Wenn du Medikamente nimmst, die lichtempfindlich machen, sprich vorher mit deiner Ärztin oder deinem Arzt."
+        },
+        {
+          "question": "Kann ich LED mit Retinol oder Säuren kombinieren?",
+          "answer": "Ja, bei den meisten Menschen schon. Nutze LED zuerst auf sauberer Haut und trage Retinol oder Säuren danach auf. Wenn deine Haut gereizt reagiert, wende beides an unterschiedlichen Abenden an."
+        },
+        {
+          "question": "Wann sehe ich erste Ergebnisse?",
+          "answer": "Manche bemerken schon nach wenigen Anwendungen einen frischeren, ebenmäßigeren Teint. Veränderungen bei Spannkraft und feinen Linien brauchen meist 4–8 Wochen regelmäßiger Anwendung."
+        },
+        {
+          "question": "Bräunt LED-Licht die Haut?",
+          "answer": "Nein. LED-Beauty-Geräte geben kein UV-Licht ab – sie bräunen die Haut also nicht und verursachen keinen Sonnenbrand."
+        }
+      ]
+    },
+    "ipl-hair-removal-at-home": {
+      "title": "IPL-Haarentfernung zu Hause: So funktioniert sie und so gelingt sie",
+      "description": "Wie funktioniert IPL-Haarentfernung, für wen eignet sie sich und wie oft solltest du sie anwenden? Vorbereitung, Behandlungsplan, Sicherheitstipps und Nachpflege.",
+      "excerpt": "Für wen IPL funktioniert, wie du deine Haut vorbereitest, der richtige Behandlungsplan und die wichtigsten Sicherheitsregeln.",
+      "intro": "IPL (intensiv gepulstes Licht) ist eine der beliebtesten Methoden, um unerwünschte Haare zu Hause zu reduzieren. Richtig angewendet bedeutet sie wochenlang glatte Haut zwischen den Auffrischungen. Falsch angewendet wirkt sie einfach nicht. Das solltest du vor dem ersten Lichtimpuls wissen.",
+      "sections": [
+        {
+          "heading": "So funktioniert IPL",
+          "paragraphs": [
+            "IPL-Geräte geben kurze Lichtimpulse mit breitem Spektrum ab. Das Pigment im Haar (Melanin) nimmt das Licht auf und wandelt es in Wärme um. Diese gelangt bis zum Haarfollikel und bremst dessen Fähigkeit, neue Haare zu bilden.",
+            "IPL wirkt nur auf Haare in der aktiven Wachstumsphase. Da Haare in Zyklen wachsen, brauchst du eine Behandlungsserie, um jeden Follikel im richtigen Moment zu erreichen – deshalb folgen die ersten Wochen einem festen Plan."
+          ]
+        },
+        {
+          "heading": "Für wen eignet sich IPL?",
+          "paragraphs": [
+            "IPL wirkt am besten bei deutlichem Kontrast zwischen Haut und Haar: helle bis mittlere Haut mit dunkleren Haaren liefert die besten Ergebnisse.",
+            "Bei weißen, grauen, hellblonden oder roten Haaren wirkt IPL nicht, weil sie zu wenig Pigment enthalten, um das Licht aufzunehmen. Auch für sehr dunkle Haut ist IPL nicht geeignet, da die Haut selbst zu viel Licht aufnehmen würde. Der integrierte Hauttonsensor des Silk IPL prüft deine Haut vor jedem Impuls und sperrt das Gerät, wenn dein Hautton zu dunkel ist."
+          ]
+        },
+        {
+          "heading": "So bereitest du deine Haut vor",
+          "bullets": [
+            "Rasiere die Stelle am Vortag oder am Behandlungstag – nicht wachsen, epilieren oder zupfen, denn IPL braucht die Haarwurzel im Follikel.",
+            "Die Haut muss sauber, trocken und frei von Lotion, Deo und Selbstbräuner sein.",
+            "Verzichte zwei Wochen vor und nach der Behandlung auf Sonnenbäder und Solarium.",
+            "Mache an jeder neuen Stelle einen Hauttest und warte 24 Stunden ab, wie deine Haut reagiert.",
+            "Feine Gesichtshärchen kürzt du vorher mit einem Trimmer wie dem Precision Gesichts- & Augenbrauentrimmer."
+          ]
+        },
+        {
+          "heading": "Der Behandlungsplan",
+          "paragraphs": [
+            "Behandle jede Zone in den ersten 4 bis 12 Wochen einmal pro Woche. Viele sehen nach etwa vier Anwendungen eine sichtbare Reduktion, die besten Ergebnisse gibt es nach der vollständigen Anfangsphase.",
+            "Danach reichen Auffrischungen alle 4 bis 8 Wochen oder sobald du Nachwuchs bemerkst. Hormone, Medikamente und Haarfarbe beeinflussen, wie schnell Haare nachwachsen."
+          ]
+        },
+        {
+          "heading": "Diese Stellen solltest du aussparen",
+          "bullets": [
+            "Die Augenpartie inklusive Augenbrauen sowie die Lippen.",
+            "Tattoos, Permanent-Make-up, dunkle Muttermale, Leberflecke und Sommersprossen-Ansammlungen.",
+            "Verletzte, sonnenverbrannte oder gereizte Haut sowie Stellen mit akutem Ekzem oder Infektionen.",
+            "Brustwarzen, Genital- und Analbereich – für die Bikinizone gilt die Gebrauchsanweisung deines Geräts."
+          ]
+        },
+        {
+          "heading": "Nachpflege",
+          "paragraphs": [
+            "Leichte Wärme oder Rötung direkt nach der Anwendung ist normal und klingt meist nach wenigen Stunden ab. Kühle die Haut mit einem Kühlroller wie dem Cryo Glow, trage eine parfümfreie Feuchtigkeitspflege auf und verzichte 24 Stunden auf heiße Duschen, Sauna und intensiven Sport. Schütze behandelte Stellen mit LSF 30 oder höher."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ist IPL-Haarentfernung dauerhaft?",
+          "answer": "IPL sorgt für eine langanhaltende Haarreduktion, aber keine dauerhafte Entfernung. Nach der Anfangsphase halten gelegentliche Auffrischungen die Haut glatt."
+        },
+        {
+          "question": "Tut IPL weh?",
+          "answer": "Die meisten spüren ein warmes Schnalzen, ähnlich wie bei einem Gummiband. Starte auf der niedrigsten Stufe und steigere dich langsam. Ein kühlendes Saphirfenster wie beim Silk IPL macht die Anwendung angenehmer."
+        },
+        {
+          "question": "Kann ich IPL im Gesicht anwenden?",
+          "answer": "Viele IPL-Geräte dürfen im Gesicht unterhalb der Wangenknochen verwendet werden, etwa an Oberlippe und Kinn. Verwende IPL niemals im Augenbereich und beachte immer die Gebrauchsanweisung."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen IPL und Laser?",
+          "answer": "Laser arbeiten mit einer einzigen, gebündelten Wellenlänge und werden von Fachleuten bedient. IPL nutzt ein breiteres Lichtspektrum mit geringerer Intensität und eignet sich dadurch für die sichere Anwendung zu Hause in mehreren Sitzungen."
+        }
+      ]
+    },
+    "microcurrent-facial-toning": {
+      "title": "Mikrostrom-Facial zu Hause: Was Mikrostrom bewirkt und wie du ihn anwendest",
+      "description": "Was ist Mikrostrom, welche Ergebnisse sind realistisch und wie wendest du ein Mikrostromgerät zu Hause an? Technik, Routine, Sicherheit und der Unterschied zu EMS.",
+      "excerpt": "Ein „Workout fürs Gesicht“: wie Mikrostrom wirkt, die richtige Technik und wer darauf verzichten sollte.",
+      "intro": "Mikrostrom ist bei Kosmetikerinnen vor großen Auftritten beliebt – und Geräte für zu Hause machen ihn zum Teil der täglichen Routine. Oft wird er als Workout fürs Gesicht beschrieben. So funktioniert er, das kannst du realistisch erwarten und so wendest du ihn sicher an.",
+      "sections": [
+        {
+          "heading": "Was ist Mikrostrom?",
+          "paragraphs": [
+            "Mikrostromgeräte leiten einen sehr schwachen elektrischen Strom – gemessen in Mikroampere – durch die Haut. Der Strom ist so sanft, dass ihn die meisten kaum spüren.",
+            "Er soll die Gesichtsmuskulatur und den Energiestoffwechsel der Hautzellen anregen. Ziel der regelmäßigen Anwendung ist ein gelifteter, straffer und definierter wirkender Look an Kinnlinie, Wangenknochen und Augenbrauen."
+          ]
+        },
+        {
+          "heading": "Welche Ergebnisse du erwarten kannst",
+          "paragraphs": [
+            "Viele bemerken direkt nach der Anwendung einen dezent gelifteten, frischeren Look, der einige Stunden bis wenige Tage anhält. Länger anhaltende Veränderungen entstehen durch Regelmäßigkeit – typischerweise fünf Anwendungen pro Woche in den ersten 60 Tagen, danach zwei bis drei Anwendungen pro Woche zur Erhaltung.",
+            "Mikrostrom ist eine kosmetische Anwendung: Er ersetzt kein Facelift, kann deine Konturen als Teil einer festen Routine aber sichtbar verfeinern."
+          ]
+        },
+        {
+          "heading": "So wendest du ein Mikrostromgerät an",
+          "bullets": [
+            "Reinige dein Gesicht und entferne Make-up, Öl und Sonnenschutz.",
+            "Trage großzügig leitfähiges Gel auf – ohne Gel kann der Strom nicht richtig fließen.",
+            "Gleite langsam nach oben und außen: vom Kinn entlang der Kinnlinie zum Ohr, vom Mundwinkel zum Wangenknochen und von der Augenbraue zum Haaransatz.",
+            "Halte am Ende jeder Bewegung ein bis drei Sekunden, setze ab und wiederhole das dreimal pro Zone.",
+            "Beschränke die Anwendung auf etwa fünf Minuten, entferne dann das Gel und fahre mit deiner Pflege fort."
+          ]
+        },
+        {
+          "heading": "Mikrostrom vs. EMS",
+          "paragraphs": [
+            "Mikrostrom arbeitet im Mikroampere-Bereich und bleibt unterhalb der Wahrnehmungsschwelle. EMS (elektrische Muskelstimulation) nutzt einen stärkeren Strom im Milliampere-Bereich, durch den sich die Muskeln sichtbar anspannen. Beides soll straffen, EMS fühlt sich aber eher wie ein Pulsieren oder Zucken an.",
+            "Das Sculpt Microcurrent-Straffungsgerät arbeitet mit zwei rotierenden Kugeln und fünf Intensitätsstufen. Der Spavio Lumipore kombiniert Mikrostrom im Modus „Serum-Boost“ mit Grünlicht und EMS im Modus „Mikro-Lifting“ mit Blaulicht."
+          ]
+        },
+        {
+          "heading": "Wer auf Mikrostrom verzichten sollte",
+          "bullets": [
+            "Menschen mit Herzschrittmacher oder anderen elektronischen Implantaten.",
+            "Schwangere.",
+            "Menschen mit Epilepsie oder Krampfanfällen in der Vorgeschichte.",
+            "Auf akuter Akne, offenen Wunden, Infektionen oder verletzter Haut.",
+            "Direkt nach Injektionen – warte nach Botox oder Fillern mindestens zwei Wochen und frage deine behandelnde Praxis."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Tut Mikrostrom weh?",
+          "answer": "Nein. Die meisten spüren nichts oder nur ein leichtes Kribbeln. Manche bemerken kurz einen metallischen Geschmack oder sehen Lichtblitze in Augennähe – dann einfach die Intensität senken."
+        },
+        {
+          "question": "Warum brauche ich leitfähiges Gel?",
+          "answer": "Das Gel sorgt dafür, dass der Strom gleichmäßig zwischen Gerät und Haut fließt. Ohne genug Gel wirkt das Gerät schlechter und kann piksen."
+        },
+        {
+          "question": "Kann ich Mikrostrom nach Botox oder Fillern verwenden?",
+          "answer": "Warte mindestens zwei Wochen nach der Behandlung und frage vorher deine behandelnde Praxis. Danach können die meisten Mikrostrom wie gewohnt anwenden."
+        },
+        {
+          "question": "Wie oft sollte ich Mikrostrom anwenden?",
+          "answer": "In den ersten 60 Tagen etwa fünfmal pro Woche, danach zwei- bis dreimal pro Woche, um die Ergebnisse zu erhalten."
+        }
+      ]
+    },
+    "radiofrequency-skin-tightening": {
+      "title": "RF-Hautstraffung zu Hause: So wirkt Radiofrequenz für straffer wirkende Haut",
+      "description": "Wie funktioniert Hautstraffung mit Radiofrequenz (RF), wie oft solltest du sie anwenden und wer sollte darauf verzichten? Ein praktischer Ratgeber zu RF-Geräten für zu Hause.",
+      "excerpt": "Sanfte Wärme für straffer wirkende Haut: wie RF funktioniert, wie du es sicher anwendest und wie es sich von LED und Mikrostrom unterscheidet.",
+      "intro": "Radiofrequenz, kurz RF, ist fester Bestandteil professioneller Straffungsbehandlungen. RF-Geräte für zu Hause nutzen dasselbe Prinzip in sanfterer Form. Das bewirkt RF, so wendest du es richtig an und so passt es zu anderen Technologien.",
+      "sections": [
+        {
+          "heading": "So funktioniert Radiofrequenz",
+          "paragraphs": [
+            "RF-Geräte leiten Radiofrequenzenergie in die Haut. Dort entsteht in der tieferen Hautschicht (Dermis) eine sanfte, kontrollierte Wärme, während die Oberfläche angenehm bleibt.",
+            "Eine Erwärmung der Dermis auf etwa 40–42 °C wird mit dem Kollagen-Umbau in Verbindung gebracht – dem natürlichen Prozess, mit dem die Haut ihr Stützgerüst erneuert. Mit der Zeit kann das eine straffer und glatter wirkende Haut unterstützen. Der ThermaLift RF-Hautstraffer hält jede Anwendung per integrierter Temperaturmessung in diesem angenehmen Bereich."
+          ]
+        },
+        {
+          "heading": "Welche Ergebnisse du erwarten kannst",
+          "paragraphs": [
+            "RF-Ergebnisse stellen sich schrittweise und dezent ein. Die meisten spüren kurz nach der Anwendung eine glattere Haut, eine sichtbare Straffung baut sich über 6–8 Wochen regelmäßiger Anwendung auf.",
+            "RF zu Hause eignet sich ideal, um Ergebnisse zwischen professionellen Behandlungen zu erhalten, oder als sanfte Alternative dazu – ein Ersatz für Operationen oder klinische Verfahren ist es nicht."
+          ]
+        },
+        {
+          "heading": "So wendest du ein RF-Gerät an",
+          "bullets": [
+            "Starte mit sauberer, trockener Haut und trage das für dein Gerät empfohlene Gel auf.",
+            "Bewege das Gerät ständig in langsamen Kreisen oder Aufwärtsbewegungen – halte es nie an einer Stelle still.",
+            "Behandle jede Zone (Stirn, beide Wangen, Kinnlinie, Hals) 3–5 Minuten lang.",
+            "Wende RF zwei- bis dreimal pro Woche an, nicht täglich, damit deine Haut Zeit zum Reagieren hat.",
+            "Brich sofort ab, wenn sich etwas heiß statt angenehm warm anfühlt."
+          ]
+        },
+        {
+          "heading": "Nachpflege",
+          "paragraphs": [
+            "Leichte Wärme und eine zarte Rötung danach sind normal. Ein Kühlroller wie der Cryo Glow beruhigt die Haut, eine feuchtigkeitsspendende Pflege unterstützt die Regeneration. Trage jeden Morgen Sonnenschutz auf."
+          ]
+        },
+        {
+          "heading": "Wer auf RF verzichten sollte",
+          "bullets": [
+            "Menschen mit Herzschrittmacher oder anderen elektronischen Implantaten.",
+            "Alle mit Metallimplantaten im Behandlungsbereich.",
+            "Schwangere.",
+            "Über frischen Fillern oder Fäden – frage deine Praxis, wie lange du warten solltest.",
+            "Auf entzündeter Haut, akuter Akne, Rosazea-Schüben, Sonnenbrand oder offenen Wunden."
+          ]
+        },
+        {
+          "heading": "RF, Mikrostrom oder LED?",
+          "bullets": [
+            "RF: sanfte Wärme in tieferen Hautschichten für straffer und glatter wirkende Haut – 2–3 Mal pro Woche.",
+            "Mikrostrom: schwacher Strom für die Gesichtsmuskeln für einen gelifteten, definierten Look – bis zu 5 Mal pro Woche.",
+            "LED: Licht für Teint, Klarheit und Ausstrahlung – 3–5 Mal pro Woche, leicht mit beidem kombinierbar."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Wie oft sollte ich ein RF-Gerät anwenden?",
+          "answer": "Zwei- bis dreimal pro Woche ist ideal. Deine Haut braucht zwischen den Anwendungen Zeit, um auf die Wärme zu reagieren."
+        },
+        {
+          "question": "Kann ich RF mit Mikrostrom kombinieren?",
+          "answer": "Ja – am besten an unterschiedlichen Tagen, zum Beispiel RF am Montag und Donnerstag und Mikrostrom an den anderen Tagen. LED passt zu beiden Tagen."
+        },
+        {
+          "question": "Ist RF zu Hause mit Fillern sicher?",
+          "answer": "Wärme kann manche Filler beeinflussen. Spare behandelte Stellen aus und frage deine Praxis, bevor du RF dort anwendest."
+        },
+        {
+          "question": "Tut RF weh?",
+          "answer": "Nein. Es sollte sich wie eine warme Massage anfühlen. Wird es heiß oder unangenehm, bewege das Gerät schneller oder senke die Stufe."
+        }
+      ]
+    },
+    "skincare-device-routine": {
+      "title": "Deine Beauty-Geräte-Routine für zu Hause: morgens, abends und wöchentlich",
+      "description": "Die richtige Reihenfolge für Reinigungsbürste, LED, Mikrostrom, RF und Serum-Infuser – plus Wochenplan, Reinigungstipps und typische Fehler, die du vermeiden solltest.",
+      "excerpt": "Die richtige Reihenfolge, ein Beispiel-Wochenplan und die Fehler, die Ergebnisse bremsen.",
+      "intro": "Beauty-Geräte wirken am besten als Teil einer Routine, die du wirklich durchhältst. Die gute Nachricht: Du musst nicht jeden Tag alles verwenden. Dieser Ratgeber zeigt dir die richtige Reihenfolge, eine einfache Morgen- und Abendroutine und einen Wochenplan, der Ergebnisse und Pausen ausbalanciert.",
+      "sections": [
+        {
+          "heading": "Die goldenen Regeln",
+          "bullets": [
+            "Starte mit ein oder zwei Geräten und nimm weitere dazu, sobald sie zur Gewohnheit geworden sind.",
+            "Beginne immer mit sauberer Haut – die meisten Geräte wirken am besten ohne Make-up, Öl oder Sonnenschutz.",
+            "Reihenfolge: Reinigen → Energiegerät (LED, Mikrostrom oder RF) → Serum → Infusionsgerät → Feuchtigkeitspflege → morgens Sonnenschutz.",
+            "Kombiniere nicht mehrere wärmebasierte Anwendungen in einer Sitzung.",
+            "Teste jedes neue Gerät und Produkt zuerst an einer kleinen Stelle."
+          ]
+        },
+        {
+          "heading": "Morgenroutine (5–10 Minuten)",
+          "bullets": [
+            "Sanft reinigen – ein kurzer Durchgang mit der Sonic Cleanse Gesichtsbürste auf niedrigster Stufe genügt.",
+            "Schwellungen mit dem gekühlten Cryo Glow Eisroller mindern, von der Gesichtsmitte nach außen.",
+            "Augencreme mit der wärmenden Spitze des Eye Revive Wärme-Augenmassagestabs einarbeiten.",
+            "Mit Feuchtigkeitspflege und LSF 30 oder höher abschließen."
+          ]
+        },
+        {
+          "heading": "Abendroutine (15–20 Minuten)",
+          "bullets": [
+            "Make-up und Sonnenschutz entfernen, dann mit der Schallbürste doppelt reinigen.",
+            "Dein Hauptgerät anwenden: 10 Minuten LED, 5 Minuten Mikrostrom oder eine RF-Anwendung.",
+            "Serum auftragen und mit dem Aqua Ion Serum-Infuser einarbeiten.",
+            "Alles mit einer Feuchtigkeits- oder Nachtcreme versiegeln."
+          ]
+        },
+        {
+          "heading": "Ein Beispiel-Wochenplan",
+          "paragraphs": [
+            "Wenn du mehrere Technologien nutzt, verteile sie über die Woche:"
+          ],
+          "bullets": [
+            "Montag: LED + Mikrostrom",
+            "Dienstag: RF",
+            "Mittwoch: LED",
+            "Donnerstag: Mikrostrom",
+            "Freitag: RF",
+            "Samstag: LED",
+            "Sonntag: Pause – nur reinigen und pflegen"
+          ]
+        },
+        {
+          "heading": "Reinigung und Pflege deiner Geräte",
+          "paragraphs": [
+            "Wische die Behandlungsköpfe nach jeder Anwendung mit einem feuchten Tuch und milder Seife ab oder mit einem alkoholfreien Reiniger, wenn die Anleitung das erlaubt. Lass Silikonbürsten an der Luft trocknen, bewahre Geräte trocken und ohne direkte Sonne auf und lade sie auf, bevor der Akku leer ist. Ein sauberes Gerät ist hygienischer und hält länger."
+          ]
+        },
+        {
+          "heading": "Typische Fehler",
+          "bullets": [
+            "Zu viel auf einmal – gereizte Haut braucht eine Pause, keine zusätzlichen Anwendungen.",
+            "Kein leitfähiges Gel bei Mikrostrom- oder RF-Geräten.",
+            "Unregelmäßige Anwendung und die Erwartung schneller Ergebnisse.",
+            "Sonnenschutz vergessen – das macht einen Großteil deiner Mühe zunichte."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Kann ich alle Beauty-Geräte am selben Tag verwenden?",
+          "answer": "Reinigungsbürste, LED und Infuser kannst du täglich nutzen. Mikrostrom und RF solltest du auf unterschiedliche Tage legen und nicht mehrere Wärmeanwendungen in einer Sitzung kombinieren."
+        },
+        {
+          "question": "Wo passen Retinol und Säuren hinein?",
+          "answer": "Wende deine Geräte zuerst auf sauberer Haut an und trage danach Retinol oder Säuren auf. An RF-Abenden verzichtest du besser auf starke Wirkstoffe, wenn deine Haut empfindlich ist."
+        },
+        {
+          "question": "Wann sehe ich Ergebnisse meiner Geräte-Routine?",
+          "answer": "Reinigung und Abschwellen wirken sofort. LED, Mikrostrom und RF bauen ihre Wirkung über 4–8 Wochen regelmäßiger Anwendung auf."
+        }
+      ]
+    },
+    "ionic-hair-dryer-guide": {
+      "title": "Ionen-Föhn erklärt: weniger Frizz, schneller trocken und schonender stylen",
+      "description": "Was macht ein Ionen-Föhn und ist er besser für dein Haar? So föhnst du schonender, die richtige Glätteisen-Temperatur und Tipps für jeden Haartyp.",
+      "excerpt": "Was negative Ionen wirklich bewirken, wie du mit weniger Hitzeschäden föhnst und die richtigen Temperaturen für deinen Haartyp.",
+      "intro": "Hitzestyling muss nicht strapaziertes Haar bedeuten. Moderne Ionen-Föhne und Infrarot-Glätteisen trocknen und stylen schneller bei kontrollierten Temperaturen. So funktioniert die Technologie und so nutzt du sie für glattes, gesund aussehendes Haar.",
+      "sections": [
+        {
+          "heading": "Was „ionisch“ wirklich bedeutet",
+          "paragraphs": [
+            "Ionen-Föhne geben negative Ionen in den Luftstrom ab. Diese spalten Wassertropfen im Haar in kleinere Partikel auf, die schneller verdunsten – dein Haar ist also kürzer der Hitze ausgesetzt.",
+            "Negative Ionen neutralisieren außerdem die positive statische Aufladung, die Haare fliegen lässt, und helfen der äußeren Haarschicht (der Schuppenschicht), sich glatt anzulegen. Das Ergebnis: glatteres, glänzenderes Haar. Der Aura Ionen-Haartrockner gibt rund 200 Millionen negative Ionen pro cm³ ab."
+          ]
+        },
+        {
+          "heading": "Luftstrom und Temperaturkontrolle",
+          "paragraphs": [
+            "Ein kraftvoller Motor trocknet das Haar mit Luftstrom statt mit extremer Hitze. Der bürstenlose Motor des Aura mit 110.000 U/min und die intelligente Temperaturkontrolle, die die Lufttemperatur 40-mal pro Sekunde misst, verhindern Hitzespitzen, die das Haar mit der Zeit schädigen."
+          ]
+        },
+        {
+          "heading": "So föhnst du schonender",
+          "bullets": [
+            "Tupfe das Haar mit einem Mikrofaserhandtuch trocken, statt zu rubbeln.",
+            "Trage einen Hitzeschutz ins handtuchtrockene Haar auf.",
+            "Föhne das Haar auf mittlerer Stufe vor, bis es zu etwa 80 % trocken ist.",
+            "Style Strähne für Strähne mit der Düse in Wuchsrichtung nach unten, damit sich die Schuppenschicht glättet.",
+            "Halte etwa 15 cm Abstand und bewege den Föhn ständig.",
+            "Schließe mit der Kaltstufe ab, um den Look zu fixieren und Glanz zu erzeugen."
+          ]
+        },
+        {
+          "heading": "Tipps für jeden Haartyp",
+          "bullets": [
+            "Feines Haar: niedrige Temperatur und eine Rundbürste am Ansatz für Volumen.",
+            "Dickes Haar: in kleineren Partien mit mittlerer Temperatur und starkem Luftstrom arbeiten.",
+            "Lockiges Haar: Diffusor auf niedriger Stufe nutzen und die Locken beim Trocknen nicht anfassen.",
+            "Gefärbtes oder blondiertes Haar: bei niedrigeren Temperaturen bleiben und nie auf Hitzeschutz verzichten."
+          ]
+        },
+        {
+          "heading": "Die richtige Glätteisen-Temperatur",
+          "paragraphs": [
+            "Heißer ist nicht besser. Wähle die niedrigste Temperatur, mit der sich dein Haar in einem Zug stylen lässt:"
+          ],
+          "bullets": [
+            "Feines, geschädigtes oder blondiertes Haar: 150–180 °C",
+            "Normales Haar: 180–200 °C",
+            "Dickes oder kräftiges Haar: 200–230 °C",
+            "Glätte niemals feuchtes Haar – das eingeschlossene Wasser wird zu Dampf und schädigt das Haar."
+          ]
+        },
+        {
+          "heading": "Vergiss die Kopfhaut nicht",
+          "paragraphs": [
+            "Gesund aussehendes Haar beginnt an der Kopfhaut. Ein paar Minuten Kopfhautmassage beim Haarewaschen entspannen und lösen Rückstände. Das wasserdichte Scalp Revive Kopfhautmassagegerät kombiniert Knetnoppen mit Rotlicht und macht deine Haarwäsche zum Mini-Head-Spa."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ist ein Ionen-Föhn besser für lockiges Haar?",
+          "answer": "Für viele ja. Ionen-Föhne reduzieren Frizz und trocknen schneller. Nutze einen Diffusor auf niedriger Stufe, damit deine Locken definiert bleiben."
+        },
+        {
+          "question": "Schadet ein Ionen-Föhn den Haaren?",
+          "answer": "Jede Hitze kann Haare schädigen, wenn sie zu hoch ist oder zu lange einwirkt. Ionen-Föhne trocknen schneller, sodass das Haar kürzer der Hitze ausgesetzt ist – besonders mit Temperaturkontrolle und Hitzeschutz."
+        },
+        {
+          "question": "Wie oft darf ich ein Glätteisen benutzen?",
+          "answer": "Am besten nicht öfter als zwei- bis dreimal pro Woche, bei der niedrigsten wirksamen Temperatur und immer mit Hitzeschutz."
+        }
+      ]
+    },
+    "massage-gun-guide": {
+      "title": "Massagepistole richtig anwenden: Technik, Dauer und Sicherheit",
+      "description": "So nutzt du eine Massagepistole richtig: welcher Aufsatz passt, wie lange du jeden Muskel massierst, wo du sie nicht verwenden solltest und der Unterschied zu EMS-Geräten.",
+      "excerpt": "Der richtige Aufsatz, die Dauer pro Muskel, der beste Zeitpunkt und Stellen, die du meiden solltest.",
+      "intro": "Massagepistolen bringen die Perkussionstherapie – ein fester Bestandteil der Sportphysiotherapie – in deine Sporttasche. Richtig eingesetzt sind sie ein schneller Weg, dich aufzuwärmen und Verspannungen zu lösen. So wendest du sie korrekt und sicher an.",
+      "sections": [
+        {
+          "heading": "Was Perkussionstherapie bewirkt",
+          "paragraphs": [
+            "Eine Massagepistole gibt schnelle, kurze Impulse in den Muskel ab. Das kann Muskelverspannungen und Muskelkater lindern, das Beweglichkeitsgefühl verbessern und die Entspannung nach dem Sport oder langen Tagen am Schreibtisch unterstützen."
+          ]
+        },
+        {
+          "heading": "So wendest du eine Massagepistole an",
+          "bullets": [
+            "Starte auf der niedrigsten Stufe und steigere nur, wenn es sich angenehm anfühlt.",
+            "Lass das Gerät über den Muskel gleiten – nicht fest aufdrücken.",
+            "Massiere jede Muskelgruppe 30–60 Sekunden und keine Stelle länger als zwei Minuten.",
+            "Bewege den Kopf langsam entlang des Muskels und atme ruhig weiter.",
+            "Hör auf, wenn du stechende Schmerzen, Taubheit oder Kribbeln spürst."
+          ]
+        },
+        {
+          "heading": "Welcher Aufsatz wofür?",
+          "bullets": [
+            "Kugel: große Muskelgruppen wie Oberschenkel, Po und Waden.",
+            "Flacher Kopf: feste Muskeln und eine Ganzkörpermassage.",
+            "Kegel: kleine, gezielte Punkte – sanft und nur kurz anwenden.",
+            "Gabel: neben der Wirbelsäule und an der Achillessehne, nie direkt auf Knochen."
+          ]
+        },
+        {
+          "heading": "Vor und nach dem Training",
+          "paragraphs": [
+            "Vor dem Training helfen 30 Sekunden pro Muskelgruppe auf niedriger Stufe beim Aufwärmen. Nach dem Sport unterstützen 1–2 Minuten pro Muskelgruppe auf mittlerer Stufe das Cool-down und die Entspannung. Die kompakte Pulse Mini Massagepistole bietet dafür vier Stufen und vier Aufsätze."
+          ]
+        },
+        {
+          "heading": "Wo du keine Massagepistole verwenden solltest",
+          "bullets": [
+            "Auf Knochen, Gelenken oder direkt auf der Wirbelsäule.",
+            "Vorne am Hals, am Kehlkopf oder am Kopf.",
+            "Auf Verletzungen, Blutergüssen, Schwellungen, Krampfadern oder entzündeter Haut.",
+            "In der Schwangerschaft oder bei Einnahme von Blutverdünnern bzw. Gerinnungsstörungen nur nach ärztlicher Rücksprache."
+          ]
+        },
+        {
+          "heading": "Massagepistole vs. EMS-Körpergeräte",
+          "paragraphs": [
+            "Eine Massagepistole wirkt mechanisch von außen. EMS-Körpergeräte wie der Contour Body Sculptor bringen Muskeln mit elektrischen Impulsen zum Anspannen, kombiniert mit wärmender Radiofrequenz und Rollköpfen, damit Oberschenkel, Arme und Bauch glatter und straffer wirken. Viele nutzen Perkussion für die Regeneration und EMS für die Körperstraffung."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Wie oft darf ich eine Massagepistole benutzen?",
+          "answer": "Die tägliche Anwendung ist für die meisten unbedenklich, solange die Einheiten kurz bleiben – bis zu zwei Minuten pro Stelle – und du schmerzende oder verletzte Stellen auslässt."
+        },
+        {
+          "question": "Darf ich eine Massagepistole am Nacken verwenden?",
+          "answer": "Nur an den Muskeln hinten und seitlich am Nacken, auf der niedrigsten Stufe und mit einem weichen Aufsatz. Niemals vorne am Hals oder direkt auf der Wirbelsäule."
+        },
+        {
+          "question": "Hilft eine Massagepistole gegen Cellulite?",
+          "answer": "Es gibt keine verlässlichen Belege, dass sie Cellulite reduziert. Durch die angeregte Durchblutung kann das Hautbild vorübergehend glatter wirken, die Struktur darunter verändert sich aber nicht."
+        }
+      ]
+    }
+  }
+}

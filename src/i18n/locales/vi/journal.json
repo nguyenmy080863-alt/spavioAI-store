@@ -1,0 +1,544 @@
+{
+  "nav": "Cẩm nang",
+  "hub": {
+    "eyebrow": "Cẩm nang Spavio AI",
+    "title": "Cẩm nang công nghệ làm đẹp",
+    "subtitle": "Hướng dẫn rõ ràng, thiết thực về thiết bị làm đẹp tại nhà – công nghệ hoạt động ra sao, cách dùng an toàn và cách xây dựng quy trình phù hợp với cuộc sống của bạn.",
+    "readGuide": "Đọc hướng dẫn",
+    "minRead": "{{count}} phút đọc",
+    "latest": "Tất cả hướng dẫn",
+    "topics": {
+      "skincare": "Chăm sóc da",
+      "hair-removal": "Triệt lông",
+      "hair": "Chăm sóc tóc",
+      "body": "Cơ thể & Thư giãn"
+    },
+    "ctaTitle": "Chưa biết bắt đầu từ đâu?",
+    "ctaText": "Hướng dẫn chọn thiết bị của chúng tôi giúp bạn tìm thiết bị phù hợp với mục tiêu chăm sóc da và tóc trong chưa đầy một phút.",
+    "ctaButton": "Mở hướng dẫn chọn thiết bị"
+  },
+  "article": {
+    "home": "Trang chủ",
+    "journal": "Cẩm nang",
+    "published": "Đăng ngày {{date}}",
+    "updated": "Cập nhật ngày {{date}}",
+    "inThisGuide": "Trong bài này",
+    "featuredDevices": "Thiết bị trong bài",
+    "faqTitle": "Câu hỏi thường gặp",
+    "moreGuides": "Hướng dẫn khác",
+    "backToJournal": "Tất cả hướng dẫn",
+    "disclaimer": "Bài viết này chỉ mang tính thông tin chung, không thay thế tư vấn y tế. Luôn làm theo hướng dẫn sử dụng của thiết bị. Nếu bạn có bệnh về da, đang mang thai, dùng thuốc gây nhạy cảm với ánh sáng hoặc có thiết bị cấy ghép như máy tạo nhịp tim, hãy hỏi ý kiến bác sĩ trước khi dùng thiết bị làm đẹp.",
+    "author": "Ban biên tập Spavio AI",
+    "relatedGuides": "Hướng dẫn cho thiết bị này"
+  },
+  "articles": {
+    "led-light-therapy-colours": {
+      "title": "Các màu ánh sáng LED: ánh sáng đỏ, xanh dương, xanh lá và vàng có tác dụng gì?",
+      "description": "Ánh sáng LED đỏ, xanh dương, xanh lá và vàng có tác dụng gì với làn da? Hướng dẫn về màu LED, bước sóng, thời gian mỗi lần dùng và cách dùng thiết bị LED tại nhà.",
+      "excerpt": "Đỏ cho độ săn chắc, xanh dương cho da dễ nổi mụn, xanh lá và vàng cho sắc da và làm dịu – tác dụng của từng màu và cách dùng tại nhà.",
+      "intro": "Liệu pháp ánh sáng LED đã đi từ phòng khám da liễu vào phòng tắm của rất nhiều người. Nhưng từng màu ánh sáng thực sự có tác dụng gì, và làm sao để thấy hiệu quả khi dùng tại nhà? Bài viết này giải thích cơ chế một cách dễ hiểu, những gì bạn có thể kỳ vọng và cách đưa LED vào quy trình chăm sóc da.",
+      "sections": [
+        {
+          "heading": "Liệu pháp ánh sáng LED hoạt động thế nào",
+          "paragraphs": [
+            "Thiết bị LED chiếu ánh sáng năng lượng thấp lên da ở những bước sóng nhất định, đo bằng nanomet (nm). Khác với ánh nắng hay giường tắm nắng, LED không phát tia UV và không làm nóng hay gây tổn thương da.",
+            "Mỗi bước sóng đi vào da ở độ sâu khác nhau: ánh sáng xanh dương có bước sóng ngắn tác động gần bề mặt, còn ánh sáng đỏ và cận hồng ngoại có bước sóng dài đi sâu hơn. Tế bào da tiếp nhận ánh sáng như một tín hiệu nhẹ nhàng, vì vậy hiệu quả đến dần khi dùng đều đặn chứ không phải sau một đêm."
+          ]
+        },
+        {
+          "heading": "Ánh sáng đỏ (khoảng 630 nm)",
+          "paragraphs": [
+            "Ánh sáng đỏ là màu được nghiên cứu nhiều nhất cho da. Nó được cho là hỗ trợ quá trình sản sinh collagen tự nhiên của da, giúp nếp nhăn nhỏ trông mờ hơn, da săn chắc hơn và sắc da đều, hồng hào hơn.",
+            "Ánh sáng cận hồng ngoại (khoảng 830 nm) mắt thường không nhìn thấy và đi sâu hơn một chút. Vì vậy nhiều mặt nạ, trong đó có Mặt nạ LED Lumina Pro, kết hợp cả ánh sáng đỏ và cận hồng ngoại. Trên Spavio Lumipore, ánh sáng đỏ đi cùng hơi ấm nhẹ ở chế độ Làm ấm."
+          ]
+        },
+        {
+          "heading": "Ánh sáng xanh dương (khoảng 415 nm)",
+          "paragraphs": [
+            "Ánh sáng xanh dương tác động lên bề mặt da. Nó được ưa chuộng trong quy trình cho da dầu và da dễ nổi mụn, vì vi khuẩn liên quan đến mụn nhạy cảm với loại ánh sáng này.",
+            "Trên Lumipore, ánh sáng xanh dương được kết hợp với xung EMS ở chế độ Nâng cơ, giúp da trông săn chắc và thon gọn hơn."
+          ]
+        },
+        {
+          "heading": "Ánh sáng xanh lá và vàng",
+          "paragraphs": [
+            "Ánh sáng xanh lá (khoảng 520 nm) và vàng (khoảng 590 nm) ít được nghiên cứu hơn đỏ và xanh dương, nhưng được dùng rộng rãi trong các spa và thẩm mỹ viện. Ánh sáng xanh lá thường dùng cho sắc da không đều, còn ánh sáng vàng giúp làm dịu vùng da ửng đỏ và mang lại vẻ rạng rỡ.",
+            "Lumipore kết hợp ánh sáng xanh lá với vi dòng điện ở chế độ Tăng thẩm thấu để serum và kem dưỡng thấm tốt hơn, còn chế độ Rạng rỡ dùng ánh sáng vàng để làm dịu da."
+          ]
+        },
+        {
+          "heading": "Cách dùng LED tại nhà",
+          "paragraphs": [
+            "Sự đều đặn quan trọng hơn cường độ rất nhiều. Những thói quen sau giúp bạn tận dụng tối đa mỗi lần dùng:"
+          ],
+          "bullets": [
+            "Bắt đầu trên da sạch, khô, không trang điểm hay kem chống nắng vì chúng có thể cản ánh sáng.",
+            "Dùng 3–5 lần mỗi tuần, mỗi lần khoảng 10 phút, hoặc theo hẹn giờ của thiết bị.",
+            "Nhắm mắt hoặc dùng kính bảo vệ đi kèm, nhất là với ánh sáng xanh dương mạnh.",
+            "Thoa serum và kem dưỡng sau khi dùng (hoặc trong khi dùng nếu thiết bị được thiết kế như vậy).",
+            "Kiên trì 4–8 tuần trước khi đánh giá kết quả, và chụp ảnh dưới cùng điều kiện ánh sáng để so sánh."
+          ]
+        },
+        {
+          "heading": "Thiết bị LED nào phù hợp với bạn?",
+          "paragraphs": [
+            "Nếu bạn muốn chăm sóc toàn bộ khuôn mặt mà không cần cầm tay, mặt nạ như Lumina Pro là cách dễ duy trì nhất: đeo lên, thư giãn mười phút là xong.",
+            "Nếu bạn thích chăm sóc từng vùng và muốn nhiều công nghệ hơn, Spavio Lumipore kết hợp bốn chế độ ánh sáng với hơi ấm, vi dòng điện và EMS trong một thiết bị cầm tay – lý tưởng cho đường viền hàm, má và quanh miệng."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Có thể dùng liệu pháp ánh sáng LED mỗi ngày không?",
+          "answer": "Thiết bị LED làm đẹp dùng ánh sáng năng lượng thấp, không có UV, nên dùng hằng ngày thường an toàn với da khỏe. Phần lớn mọi người đạt kết quả tốt với 3–5 lần mỗi tuần. Nếu bạn dùng thuốc gây nhạy cảm với ánh sáng, hãy hỏi bác sĩ trước."
+        },
+        {
+          "question": "Có thể dùng LED cùng retinol hoặc axit không?",
+          "answer": "Với đa số người thì có. Dùng LED trước trên da sạch, sau đó mới thoa retinol hoặc axit. Nếu da bị kích ứng, hãy dùng chúng vào các buổi tối khác nhau."
+        },
+        {
+          "question": "Bao lâu thì thấy kết quả?",
+          "answer": "Một số người thấy da tươi tắn, đều màu hơn sau vài lần dùng, nhưng thay đổi về độ săn chắc và nếp nhăn nhỏ thường cần 4–8 tuần dùng đều đặn."
+        },
+        {
+          "question": "Ánh sáng LED có làm da sạm màu không?",
+          "answer": "Không. Thiết bị LED làm đẹp không phát tia UV nên không làm da sạm hay cháy nắng."
+        }
+      ]
+    },
+    "ipl-hair-removal-at-home": {
+      "title": "Triệt lông IPL tại nhà: cơ chế hoạt động và cách đạt hiệu quả",
+      "description": "Triệt lông IPL hoạt động thế nào, phù hợp với ai và nên dùng bao lâu một lần? Chuẩn bị da, lịch triệt, lưu ý an toàn và chăm sóc sau khi triệt.",
+      "excerpt": "IPL phù hợp với ai, cách chuẩn bị da, lịch triệt đúng và những quy tắc an toàn quan trọng.",
+      "intro": "IPL (ánh sáng xung cường độ cao) là một trong những cách phổ biến nhất để giảm lông không mong muốn tại nhà. Dùng đúng cách, bạn có làn da mịn màng nhiều tuần giữa các lần triệt duy trì. Dùng sai cách, nó đơn giản là không hiệu quả. Đây là những điều bạn cần biết trước lần chiếu đầu tiên.",
+      "sections": [
+        {
+          "heading": "IPL hoạt động thế nào",
+          "paragraphs": [
+            "Thiết bị IPL phát ra những xung ánh sáng ngắn có phổ rộng. Sắc tố trong sợi lông (melanin) hấp thụ ánh sáng và chuyển thành nhiệt, nhiệt truyền xuống nang lông và làm nang lông khó mọc lông mới hơn.",
+            "IPL chỉ tác động lên những sợi lông đang ở giai đoạn phát triển. Vì lông mọc theo chu kỳ, bạn cần một liệu trình nhiều lần để tác động tới từng nang lông đúng thời điểm – đó là lý do những tuần đầu cần theo lịch cố định."
+          ]
+        },
+        {
+          "heading": "IPL phù hợp với ai",
+          "paragraphs": [
+            "IPL hiệu quả nhất khi màu da và màu lông tương phản rõ: da sáng đến trung bình với lông sẫm màu cho kết quả tốt nhất.",
+            "IPL không hiệu quả với lông trắng, bạc, vàng nhạt hoặc đỏ vì những sợi lông này có quá ít sắc tố để hấp thụ ánh sáng. IPL cũng không phù hợp với da rất sẫm màu vì chính làn da sẽ hấp thụ quá nhiều ánh sáng. Cảm biến màu da tích hợp trên Silk IPL kiểm tra da trước mỗi lần chiếu và khóa thiết bị nếu màu da quá tối."
+          ]
+        },
+        {
+          "heading": "Cách chuẩn bị da",
+          "bullets": [
+            "Cạo lông vùng cần triệt vào hôm trước hoặc ngay hôm triệt – không wax, nhổ hay dùng máy nhổ lông, vì IPL cần chân lông còn trong nang.",
+            "Da phải sạch, khô, không có kem dưỡng, lăn khử mùi hay kem tự nhuộm da.",
+            "Tránh tắm nắng và giường tắm nắng hai tuần trước và sau khi triệt.",
+            "Thử trên một vùng nhỏ ở mỗi khu vực mới và chờ 24 giờ để xem phản ứng của da.",
+            "Với vùng mặt, hãy tỉa lông tơ trước bằng máy tỉa như Máy tỉa lông mặt & chân mày Precision."
+          ]
+        },
+        {
+          "heading": "Lịch triệt lông",
+          "paragraphs": [
+            "Triệt mỗi vùng một lần mỗi tuần trong 4 đến 12 tuần đầu. Nhiều người thấy lông giảm rõ sau khoảng bốn lần, và kết quả tốt nhất đến sau khi hoàn tất giai đoạn đầu.",
+            "Sau đó chỉ cần triệt duy trì mỗi 4 đến 8 tuần hoặc khi thấy lông mọc lại. Nội tiết tố, thuốc và màu lông đều ảnh hưởng đến tốc độ lông mọc lại."
+          ]
+        },
+        {
+          "heading": "Những vùng cần tránh",
+          "bullets": [
+            "Vùng quanh mắt, kể cả lông mày, và môi.",
+            "Hình xăm, phun xăm thẩm mỹ, nốt ruồi sẫm màu, vết bớt và vùng có nhiều tàn nhang.",
+            "Da bị trầy xước, cháy nắng hoặc kích ứng, và vùng đang bị chàm hay nhiễm trùng.",
+            "Núm vú, vùng sinh dục và hậu môn – với vùng bikini, hãy làm theo hướng dẫn của thiết bị."
+          ]
+        },
+        {
+          "heading": "Chăm sóc sau khi triệt",
+          "paragraphs": [
+            "Cảm giác hơi ấm hoặc ửng đỏ ngay sau khi triệt là bình thường và thường hết sau vài giờ. Làm mát da bằng thanh lăn lạnh như Cryo Glow, thoa kem dưỡng không mùi và tránh tắm nước nóng, xông hơi hay vận động mạnh trong 24 giờ. Bảo vệ vùng da đã triệt bằng kem chống nắng SPF 30 trở lên."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Triệt lông IPL có vĩnh viễn không?",
+          "answer": "IPL giúp giảm lông lâu dài chứ không loại bỏ vĩnh viễn. Sau giai đoạn đầu, thỉnh thoảng triệt duy trì sẽ giữ da luôn mịn."
+        },
+        {
+          "question": "Triệt lông IPL có đau không?",
+          "answer": "Hầu hết mọi người chỉ cảm thấy như bị búng dây thun nhẹ và hơi ấm. Hãy bắt đầu ở mức năng lượng thấp nhất rồi tăng dần. Cửa sổ sapphire làm mát như trên Silk IPL giúp việc triệt dễ chịu hơn."
+        },
+        {
+          "question": "Có thể dùng IPL trên mặt không?",
+          "answer": "Nhiều thiết bị IPL dùng được trên mặt ở vùng dưới gò má, ví dụ ria mép và cằm. Tuyệt đối không dùng IPL quanh mắt và luôn đọc hướng dẫn của thiết bị."
+        },
+        {
+          "question": "IPL khác triệt lông laser thế nào?",
+          "answer": "Laser dùng một bước sóng duy nhất, tập trung cao và do chuyên gia thực hiện. IPL dùng phổ ánh sáng rộng hơn với cường độ thấp hơn, nên phù hợp để dùng an toàn tại nhà qua nhiều lần triệt."
+        }
+      ]
+    },
+    "microcurrent-facial-toning": {
+      "title": "Chăm sóc da bằng vi dòng điện tại nhà: tác dụng và cách sử dụng",
+      "description": "Vi dòng điện là gì, kết quả thực tế ra sao và cách dùng máy vi dòng điện tại nhà thế nào? Kỹ thuật, quy trình, lưu ý an toàn và khác biệt với EMS.",
+      "excerpt": "Một bài “tập thể dục cho khuôn mặt”: vi dòng điện hoạt động ra sao, kỹ thuật đúng và ai không nên dùng.",
+      "intro": "Vi dòng điện là liệu pháp yêu thích của các chuyên viên chăm sóc da trước những sự kiện lớn, và thiết bị tại nhà giờ đây đưa nó vào quy trình hằng ngày. Nó thường được ví như một bài tập thể dục cho khuôn mặt. Dưới đây là cách nó hoạt động, những gì bạn có thể kỳ vọng và cách dùng an toàn.",
+      "sections": [
+        {
+          "heading": "Vi dòng điện là gì?",
+          "paragraphs": [
+            "Thiết bị vi dòng điện truyền một dòng điện rất yếu – đo bằng microampe – qua da. Dòng điện nhẹ đến mức hầu hết mọi người gần như không cảm nhận được.",
+            "Nó được thiết kế để kích thích cơ mặt và năng lượng của tế bào da. Khi dùng đều đặn, mục tiêu là đường viền hàm, gò má và chân mày trông nâng cao, săn chắc và rõ nét hơn."
+          ]
+        },
+        {
+          "heading": "Kết quả bạn có thể kỳ vọng",
+          "paragraphs": [
+            "Nhiều người thấy khuôn mặt trông nâng nhẹ, tươi tắn hơn ngay sau khi dùng, hiệu ứng kéo dài từ vài giờ đến vài ngày. Thay đổi lâu dài hơn đến từ sự đều đặn – thường là năm lần mỗi tuần trong 60 ngày đầu, sau đó hai đến ba lần mỗi tuần để duy trì.",
+            "Vi dòng điện là liệu pháp thẩm mỹ: nó không thay thế phẫu thuật căng da, nhưng có thể giúp đường nét khuôn mặt trông gọn gàng hơn khi là một phần của quy trình đều đặn."
+          ]
+        },
+        {
+          "heading": "Cách dùng thiết bị vi dòng điện",
+          "bullets": [
+            "Làm sạch mặt, tẩy trang và loại bỏ dầu, kem chống nắng.",
+            "Thoa một lớp gel dẫn điện dày – thiếu gel, dòng điện không thể truyền đúng cách.",
+            "Di chuyển chậm theo hướng lên trên và ra ngoài: từ cằm dọc đường viền hàm đến tai, từ khóe miệng lên gò má, và từ chân mày lên chân tóc.",
+            "Giữ yên một đến ba giây ở cuối mỗi đường, nhấc lên và lặp lại ba lần cho mỗi vùng.",
+            "Mỗi lần dùng khoảng năm phút, sau đó lau sạch gel và tiếp tục các bước dưỡng da."
+          ]
+        },
+        {
+          "heading": "Vi dòng điện và EMS khác nhau thế nào",
+          "paragraphs": [
+            "Vi dòng điện hoạt động ở mức microampe, dưới ngưỡng cảm nhận. EMS (kích thích cơ bằng điện) dùng dòng điện mạnh hơn ở mức miliampe, khiến cơ co lại rõ rệt. Cả hai đều nhằm làm săn chắc, nhưng EMS cho cảm giác giật nhẹ hoặc nhịp đập.",
+            "Thiết bị nâng cơ vi dòng điện Sculpt có hai bi xoay với năm mức cường độ. Spavio Lumipore kết hợp vi dòng điện với ánh sáng xanh lá ở chế độ Tăng thẩm thấu, và EMS với ánh sáng xanh dương ở chế độ Nâng cơ."
+          ]
+        },
+        {
+          "heading": "Ai không nên dùng vi dòng điện",
+          "bullets": [
+            "Người có máy tạo nhịp tim hoặc bất kỳ thiết bị điện tử cấy ghép nào.",
+            "Phụ nữ đang mang thai.",
+            "Người bị động kinh hoặc từng bị co giật.",
+            "Trên vùng da đang bị mụn viêm, vết thương hở, nhiễm trùng hoặc trầy xước.",
+            "Ngay sau khi tiêm – hãy chờ ít nhất hai tuần sau khi tiêm Botox hoặc filler và hỏi ý kiến cơ sở thẩm mỹ."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Vi dòng điện có đau không?",
+          "answer": "Không. Hầu hết mọi người không cảm thấy gì hoặc chỉ hơi tê nhẹ. Một số người thoáng thấy vị kim loại trong miệng hoặc thấy chớp sáng khi dùng gần mắt – khi đó hãy giảm cường độ."
+        },
+        {
+          "question": "Vì sao cần gel dẫn điện?",
+          "answer": "Gel giúp dòng điện truyền đều giữa thiết bị và da. Thiếu gel, thiết bị kém hiệu quả hơn và có thể gây cảm giác châm chích."
+        },
+        {
+          "question": "Có thể dùng vi dòng điện sau khi tiêm Botox hoặc filler không?",
+          "answer": "Hãy chờ ít nhất hai tuần sau khi tiêm và hỏi ý kiến cơ sở thẩm mỹ trước. Sau đó, đa số mọi người có thể dùng vi dòng điện bình thường."
+        },
+        {
+          "question": "Nên dùng vi dòng điện bao lâu một lần?",
+          "answer": "Khoảng năm lần mỗi tuần trong 60 ngày đầu, sau đó hai đến ba lần mỗi tuần để duy trì kết quả."
+        }
+      ]
+    },
+    "radiofrequency-skin-tightening": {
+      "title": "Làm săn chắc da bằng sóng RF tại nhà: sóng cao tần hoạt động thế nào",
+      "description": "Làm săn chắc da bằng sóng cao tần (RF) hoạt động ra sao, nên dùng bao lâu một lần và ai không nên dùng? Hướng dẫn thực tế về thiết bị RF tại nhà.",
+      "excerpt": "Hơi ấm nhẹ nhàng cho làn da trông săn chắc: RF hoạt động ra sao, cách dùng an toàn và so sánh với LED và vi dòng điện.",
+      "intro": "Sóng cao tần, hay RF, là liệu pháp quen thuộc trong các dịch vụ làm săn chắc da chuyên nghiệp. Thiết bị RF tại nhà dùng cùng nguyên lý ở mức nhẹ nhàng hơn. Dưới đây là tác dụng của RF, cách dùng hiệu quả và cách kết hợp với các công nghệ khác.",
+      "sections": [
+        {
+          "heading": "Sóng cao tần hoạt động thế nào",
+          "paragraphs": [
+            "Thiết bị RF truyền năng lượng sóng cao tần vào da, tạo ra hơi ấm nhẹ nhàng, có kiểm soát ở lớp da sâu (lớp bì) trong khi bề mặt da vẫn dễ chịu.",
+            "Làm ấm lớp bì lên khoảng 40–42 °C được cho là có liên quan đến quá trình tái tạo collagen – cách da tự làm mới cấu trúc nâng đỡ của mình. Theo thời gian, điều này có thể giúp da trông săn chắc và mịn màng hơn. Thiết bị săn chắc da RF ThermaLift có cảm biến nhiệt tích hợp để giữ mỗi lần dùng trong khoảng nhiệt dễ chịu này."
+          ]
+        },
+        {
+          "heading": "Kết quả bạn có thể kỳ vọng",
+          "paragraphs": [
+            "Hiệu quả của RF đến từ từ và tinh tế. Đa số mọi người thấy da mịn hơn ngay sau khi dùng, còn độ săn chắc rõ rệt hình thành sau 6–8 tuần dùng đều đặn.",
+            "RF tại nhà là cách tuyệt vời để duy trì kết quả giữa các lần chăm sóc chuyên nghiệp, hoặc là lựa chọn nhẹ nhàng thay thế – nó không thay thế phẫu thuật hay các thủ thuật tại phòng khám."
+          ]
+        },
+        {
+          "heading": "Cách dùng thiết bị RF",
+          "bullets": [
+            "Bắt đầu với da sạch, khô và thoa gel được khuyến nghị cho thiết bị của bạn.",
+            "Luôn di chuyển thiết bị theo vòng tròn chậm hoặc hướng lên trên – không bao giờ giữ yên một chỗ.",
+            "Mỗi vùng (trán, hai bên má, đường viền hàm, cổ) dùng 3–5 phút.",
+            "Dùng RF hai đến ba lần mỗi tuần, không dùng hằng ngày, để da có thời gian phản hồi.",
+            "Dừng ngay nếu cảm thấy nóng thay vì ấm dễ chịu."
+          ]
+        },
+        {
+          "heading": "Chăm sóc sau khi dùng",
+          "paragraphs": [
+            "Cảm giác hơi ấm và ửng hồng nhẹ sau khi dùng là bình thường. Thanh lăn lạnh như Cryo Glow giúp làm dịu da, kem dưỡng ẩm giúp da phục hồi. Hãy dùng kem chống nắng mỗi sáng."
+          ]
+        },
+        {
+          "heading": "Ai không nên dùng RF",
+          "bullets": [
+            "Người có máy tạo nhịp tim hoặc thiết bị điện tử cấy ghép khác.",
+            "Người có kim loại cấy ghép trong vùng điều trị.",
+            "Phụ nữ đang mang thai.",
+            "Trên vùng vừa tiêm filler hoặc căng chỉ – hãy hỏi cơ sở thẩm mỹ cần chờ bao lâu.",
+            "Trên da đang viêm, mụn viêm, rosacea bùng phát, cháy nắng hoặc vết thương hở."
+          ]
+        },
+        {
+          "heading": "RF, vi dòng điện hay LED?",
+          "bullets": [
+            "RF: hơi ấm nhẹ ở lớp da sâu cho làn da trông săn chắc, mịn màng – 2–3 lần mỗi tuần.",
+            "Vi dòng điện: dòng điện yếu giúp săn chắc cơ mặt cho đường nét nâng cao, rõ ràng – tối đa 5 lần mỗi tuần.",
+            "LED: ánh sáng hỗ trợ sắc da, độ trong và vẻ rạng rỡ – 3–5 lần mỗi tuần, dễ kết hợp với cả hai."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Nên dùng thiết bị RF bao lâu một lần?",
+          "answer": "Hai đến ba lần mỗi tuần là lý tưởng. Da cần thời gian giữa các lần dùng để phản hồi với hơi ấm."
+        },
+        {
+          "question": "Có thể kết hợp RF với vi dòng điện không?",
+          "answer": "Có – tốt nhất là vào các ngày khác nhau, ví dụ RF vào thứ Hai và thứ Năm, vi dòng điện vào những ngày còn lại. LED có thể dùng vào ngày nào cũng được."
+        },
+        {
+          "question": "RF tại nhà có an toàn với filler không?",
+          "answer": "Nhiệt có thể ảnh hưởng đến một số loại filler. Hãy tránh vùng đã tiêm và hỏi cơ sở thẩm mỹ trước khi dùng RF ở đó."
+        },
+        {
+          "question": "Dùng RF có đau không?",
+          "answer": "Không. Cảm giác giống như được massage ấm. Nếu thấy nóng hoặc khó chịu, hãy di chuyển nhanh hơn hoặc giảm mức."
+        }
+      ]
+    },
+    "skincare-device-routine": {
+      "title": "Xây dựng quy trình dùng thiết bị làm đẹp tại nhà: sáng, tối và hằng tuần",
+      "description": "Thứ tự đúng cho máy rửa mặt, LED, vi dòng điện, RF và máy đẩy tinh chất – kèm lịch mẫu hằng tuần, mẹo vệ sinh và những lỗi thường gặp cần tránh.",
+      "excerpt": "Thứ tự đúng, lịch mẫu hằng tuần và những lỗi khiến kết quả chậm lại.",
+      "intro": "Thiết bị làm đẹp hiệu quả nhất khi là một phần của quy trình bạn thực sự duy trì được. Tin vui là bạn không cần dùng mọi thứ mỗi ngày. Bài viết này hướng dẫn thứ tự đúng, quy trình sáng và tối đơn giản, cùng lịch hằng tuần cân bằng giữa hiệu quả và thời gian nghỉ.",
+      "sections": [
+        {
+          "heading": "Những nguyên tắc vàng",
+          "bullets": [
+            "Bắt đầu với một hoặc hai thiết bị và thêm dần khi chúng đã thành thói quen.",
+            "Luôn bắt đầu với da sạch – phần lớn thiết bị hoạt động tốt nhất khi không có lớp trang điểm, dầu hay kem chống nắng.",
+            "Thứ tự: làm sạch → thiết bị năng lượng (LED, vi dòng điện hoặc RF) → serum → thiết bị đẩy tinh chất → kem dưỡng → kem chống nắng vào buổi sáng.",
+            "Không dùng nhiều liệu pháp nhiệt trong cùng một lần.",
+            "Thử mọi thiết bị và sản phẩm mới trên một vùng da nhỏ trước."
+          ]
+        },
+        {
+          "heading": "Quy trình buổi sáng (5–10 phút)",
+          "bullets": [
+            "Làm sạch nhẹ nhàng – chỉ cần lướt nhanh bằng Cọ rửa mặt Sonic Cleanse ở mức thấp nhất.",
+            "Giảm bọng bằng Cây lăn lạnh Cryo Glow đã làm lạnh, lăn từ giữa mặt ra ngoài.",
+            "Thoa kem mắt bằng đầu làm ấm của Máy massage mắt làm ấm Eye Revive.",
+            "Kết thúc với kem dưỡng và kem chống nắng SPF 30 trở lên."
+          ]
+        },
+        {
+          "heading": "Quy trình buổi tối (15–20 phút)",
+          "bullets": [
+            "Tẩy trang, loại bỏ kem chống nắng, sau đó làm sạch lần hai bằng máy rửa mặt.",
+            "Dùng thiết bị chính: 10 phút LED, 5 phút vi dòng điện hoặc một lần RF.",
+            "Thoa serum và đẩy tinh chất bằng Máy đẩy tinh chất Aqua Ion.",
+            "Khóa ẩm bằng kem dưỡng hoặc kem ban đêm."
+          ]
+        },
+        {
+          "heading": "Lịch mẫu hằng tuần",
+          "paragraphs": [
+            "Nếu bạn dùng nhiều công nghệ, hãy phân bổ chúng trong tuần:"
+          ],
+          "bullets": [
+            "Thứ Hai: LED + vi dòng điện",
+            "Thứ Ba: RF",
+            "Thứ Tư: LED",
+            "Thứ Năm: vi dòng điện",
+            "Thứ Sáu: RF",
+            "Thứ Bảy: LED",
+            "Chủ Nhật: nghỉ – chỉ làm sạch và dưỡng ẩm"
+          ]
+        },
+        {
+          "heading": "Vệ sinh và bảo quản thiết bị",
+          "paragraphs": [
+            "Lau đầu thiết bị sau mỗi lần dùng bằng khăn ẩm và xà phòng dịu nhẹ, hoặc dung dịch vệ sinh không cồn nếu hướng dẫn cho phép. Để đầu cọ silicone khô tự nhiên, cất thiết bị ở nơi khô ráo, tránh ánh nắng trực tiếp và sạc trước khi pin cạn. Thiết bị sạch sẽ vệ sinh hơn và bền hơn."
+          ]
+        },
+        {
+          "heading": "Những lỗi thường gặp",
+          "bullets": [
+            "Làm quá nhiều quá sớm – da bị kích ứng cần nghỉ ngơi, không cần thêm liệu trình.",
+            "Bỏ qua gel dẫn điện khi dùng thiết bị vi dòng điện hoặc RF.",
+            "Dùng không đều đặn nhưng lại mong kết quả nhanh.",
+            "Quên kem chống nắng – điều này làm mất đi phần lớn công sức của bạn."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Có thể dùng tất cả thiết bị làm đẹp trong cùng một ngày không?",
+          "answer": "Máy rửa mặt, LED và máy đẩy tinh chất có thể dùng hằng ngày, nhưng nên dùng vi dòng điện và RF vào các ngày khác nhau và không kết hợp nhiều liệu pháp nhiệt trong một lần."
+        },
+        {
+          "question": "Retinol và axit nên dùng ở bước nào?",
+          "answer": "Dùng thiết bị trước trên da sạch, sau đó mới thoa retinol hoặc axit. Vào những tối dùng RF, nên bỏ các hoạt chất mạnh nếu da đang nhạy cảm."
+        },
+        {
+          "question": "Bao lâu thì thấy kết quả từ quy trình dùng thiết bị?",
+          "answer": "Hiệu quả làm sạch và giảm bọng thấy ngay. LED, vi dòng điện và RF cần 4–8 tuần dùng đều đặn."
+        }
+      ]
+    },
+    "ionic-hair-dryer-guide": {
+      "title": "Máy sấy tóc ion: giảm xơ rối, khô nhanh hơn và tạo kiểu ít hư tổn hơn",
+      "description": "Máy sấy tóc ion có tác dụng gì và có tốt hơn cho tóc không? Cách sấy tóc ít hư tổn, nhiệt độ máy duỗi phù hợp và mẹo cho từng loại tóc.",
+      "excerpt": "Ion âm thực sự làm gì, cách sấy tóc ít hư tổn do nhiệt và nhiệt độ phù hợp với loại tóc của bạn.",
+      "intro": "Tạo kiểu bằng nhiệt không có nghĩa là tóc phải hư tổn. Máy sấy ion và máy duỗi hồng ngoại hiện đại giúp sấy và tạo kiểu nhanh hơn ở nhiệt độ được kiểm soát. Dưới đây là cách công nghệ hoạt động và cách dùng để có mái tóc mượt mà, trông khỏe mạnh.",
+      "sections": [
+        {
+          "heading": "“Ion” thực sự có nghĩa là gì",
+          "paragraphs": [
+            "Máy sấy ion giải phóng ion âm vào luồng gió. Các ion này chia nhỏ những giọt nước trên tóc thành các hạt nhỏ hơn và bay hơi nhanh hơn, nên tóc tiếp xúc với nhiệt trong thời gian ngắn hơn.",
+            "Ion âm còn trung hòa điện tích dương gây xơ rối, giúp lớp ngoài cùng của sợi tóc (lớp biểu bì) nằm xuôi. Kết quả là mái tóc mượt và bóng hơn. Máy sấy tóc ion Aura giải phóng khoảng 200 triệu ion âm trên mỗi cm³."
+          ]
+        },
+        {
+          "heading": "Luồng gió và kiểm soát nhiệt",
+          "paragraphs": [
+            "Động cơ mạnh làm khô tóc bằng luồng gió thay vì nhiệt độ quá cao. Động cơ không chổi than 110.000 vòng/phút của Aura cùng hệ thống kiểm soát nhiệt thông minh đo nhiệt độ gió 40 lần mỗi giây, giúp tránh những đợt nhiệt tăng đột ngột gây hại cho tóc theo thời gian."
+          ]
+        },
+        {
+          "heading": "Cách sấy tóc ít hư tổn hơn",
+          "bullets": [
+            "Thấm tóc bằng khăn microfiber thay vì chà xát.",
+            "Xịt sản phẩm bảo vệ nhiệt lên tóc còn ẩm.",
+            "Sấy sơ ở mức nhiệt trung bình đến khi tóc khô khoảng 80%.",
+            "Tạo kiểu từng phần tóc, hướng đầu sấy xuôi theo sợi tóc để làm mượt lớp biểu bì.",
+            "Giữ máy sấy cách tóc khoảng 15 cm và di chuyển liên tục.",
+            "Kết thúc bằng chế độ gió mát để giữ nếp và tăng độ bóng."
+          ]
+        },
+        {
+          "heading": "Mẹo cho từng loại tóc",
+          "bullets": [
+            "Tóc mỏng: dùng nhiệt thấp và lược tròn ở chân tóc để tạo độ phồng.",
+            "Tóc dày: chia tóc thành phần nhỏ, dùng nhiệt trung bình và gió mạnh.",
+            "Tóc xoăn: dùng đầu khuếch tán ở tốc độ thấp và tránh chạm vào lọn xoăn khi đang sấy.",
+            "Tóc nhuộm hoặc tẩy: dùng nhiệt thấp hơn và luôn dùng sản phẩm bảo vệ nhiệt."
+          ]
+        },
+        {
+          "heading": "Nhiệt độ máy duỗi phù hợp",
+          "paragraphs": [
+            "Nóng hơn không có nghĩa là tốt hơn. Hãy chọn nhiệt độ thấp nhất giúp tạo kiểu chỉ với một lần vuốt:"
+          ],
+          "bullets": [
+            "Tóc mỏng, hư tổn hoặc đã tẩy: 150–180 °C",
+            "Tóc thường: 180–200 °C",
+            "Tóc dày hoặc cứng: 200–230 °C",
+            "Không bao giờ duỗi tóc còn ẩm – nước bị giữ lại sẽ biến thành hơi nóng và làm hỏng tóc."
+          ]
+        },
+        {
+          "heading": "Đừng quên da đầu",
+          "paragraphs": [
+            "Mái tóc trông khỏe mạnh bắt đầu từ da đầu. Vài phút massage da đầu khi gội giúp thư giãn và làm sạch cặn bẩn. Máy massage da đầu Scalp Revive chống nước kết hợp các núm massage với ánh sáng đỏ, biến việc gội đầu thành một buổi spa nhỏ tại nhà."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Máy sấy ion có tốt hơn cho tóc xoăn không?",
+          "answer": "Với nhiều người thì có. Máy sấy ion giúp giảm xơ rối và khô nhanh hơn. Hãy dùng đầu khuếch tán ở tốc độ thấp để giữ lọn xoăn rõ nét."
+        },
+        {
+          "question": "Máy sấy ion có làm hư tóc không?",
+          "answer": "Bất kỳ nguồn nhiệt nào cũng có thể làm hư tóc nếu quá nóng hoặc dùng quá lâu. Máy sấy ion làm khô nhanh hơn nên tóc tiếp xúc với nhiệt ít hơn – nhất là khi có kiểm soát nhiệt và dùng sản phẩm bảo vệ nhiệt."
+        },
+        {
+          "question": "Có thể dùng máy duỗi tóc bao lâu một lần?",
+          "answer": "Tốt nhất không quá hai đến ba lần mỗi tuần, ở nhiệt độ thấp nhất có hiệu quả và luôn dùng sản phẩm bảo vệ nhiệt."
+        }
+      ]
+    },
+    "massage-gun-guide": {
+      "title": "Cách dùng súng massage đúng cách: kỹ thuật, thời gian và an toàn",
+      "description": "Cách dùng súng massage đúng: chọn đầu massage nào, massage mỗi nhóm cơ bao lâu, vùng nào không nên dùng và khác biệt so với thiết bị EMS cho cơ thể.",
+      "excerpt": "Đầu massage phù hợp, thời gian cho mỗi nhóm cơ, thời điểm nên dùng và những vùng cần tránh.",
+      "intro": "Súng massage đưa liệu pháp rung gõ – vốn quen thuộc với các chuyên viên vật lý trị liệu thể thao – vào túi tập của bạn. Dùng đúng cách, đây là cách nhanh để khởi động và giảm căng cơ. Dưới đây là cách dùng đúng và an toàn.",
+      "sections": [
+        {
+          "heading": "Liệu pháp rung gõ có tác dụng gì",
+          "paragraphs": [
+            "Súng massage truyền những xung ngắn, nhanh vào cơ. Điều này có thể giúp giảm căng cơ và đau nhức, cải thiện cảm giác linh hoạt và hỗ trợ thư giãn sau khi tập luyện hoặc sau những ngày dài ngồi làm việc."
+          ]
+        },
+        {
+          "heading": "Cách dùng súng massage",
+          "bullets": [
+            "Bắt đầu ở tốc độ thấp nhất và chỉ tăng khi thấy dễ chịu.",
+            "Để thiết bị lướt nhẹ trên cơ – không ấn mạnh.",
+            "Massage mỗi nhóm cơ 30–60 giây và không quá hai phút cho một vùng.",
+            "Di chuyển đầu massage chậm dọc theo thớ cơ và hít thở đều.",
+            "Dừng lại nếu thấy đau nhói, tê hoặc ngứa ran."
+          ]
+        },
+        {
+          "heading": "Chọn đầu massage nào",
+          "bullets": [
+            "Đầu tròn: các nhóm cơ lớn như đùi, mông và bắp chân.",
+            "Đầu phẳng: cơ săn chắc và massage toàn thân.",
+            "Đầu nhọn: những điểm nhỏ cần tập trung – dùng nhẹ nhàng và ngắn.",
+            "Đầu chữ U: hai bên cột sống và vùng gân gót chân, không bao giờ dùng trực tiếp lên xương."
+          ]
+        },
+        {
+          "heading": "Trước và sau khi tập",
+          "paragraphs": [
+            "Trước khi tập, 30 giây cho mỗi nhóm cơ ở tốc độ thấp giúp khởi động. Sau khi tập, 1–2 phút cho mỗi nhóm cơ ở tốc độ trung bình hỗ trợ thả lỏng và thư giãn. Súng massage Pulse Mini nhỏ gọn có bốn tốc độ và bốn đầu massage cho cả hai mục đích."
+          ]
+        },
+        {
+          "heading": "Những vùng không nên dùng súng massage",
+          "bullets": [
+            "Trên xương, khớp hoặc trực tiếp lên cột sống.",
+            "Phía trước cổ, vùng họng hoặc đầu.",
+            "Trên vết thương, vết bầm, chỗ sưng, giãn tĩnh mạch hoặc da đang viêm.",
+            "Khi mang thai, dùng thuốc chống đông máu hoặc có rối loạn đông máu – chỉ dùng khi bác sĩ đồng ý."
+          ]
+        },
+        {
+          "heading": "Súng massage và thiết bị EMS cho cơ thể",
+          "paragraphs": [
+            "Súng massage tác động cơ học từ bên ngoài. Thiết bị EMS cho cơ thể như Máy tạo đường nét cơ thể Contour dùng xung điện để làm cơ co lại, kết hợp sóng cao tần làm ấm và đầu lăn để đùi, bắp tay và bụng trông mịn và săn chắc hơn. Nhiều người dùng súng massage để phục hồi và EMS để làm săn chắc cơ thể."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Có thể dùng súng massage bao lâu một lần?",
+          "answer": "Đa số mọi người có thể dùng hằng ngày, miễn là mỗi lần ngắn – tối đa hai phút cho mỗi vùng – và tránh những chỗ đang đau hoặc bị thương."
+        },
+        {
+          "question": "Có thể dùng súng massage cho cổ không?",
+          "answer": "Chỉ dùng cho các cơ phía sau và hai bên cổ, ở tốc độ thấp nhất và với đầu massage mềm. Không bao giờ dùng ở phía trước cổ hoặc trực tiếp lên cột sống."
+        },
+        {
+          "question": "Súng massage có giúp giảm cellulite không?",
+          "answer": "Không có bằng chứng đáng tin cậy rằng nó làm giảm cellulite. Nó có thể giúp da trông mịn hơn tạm thời nhờ tăng tuần hoàn máu, nhưng không thay đổi cấu trúc bên dưới."
+        }
+      ]
+    }
+  }
+}

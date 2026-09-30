@@ -72,5 +72,9 @@
   "notFound": {
     "title": "Page Not Found",
     "description": "The page you're looking for doesn't exist. Explore smart beauty devices at Spavio AI Store."
+  },
+  "journal": {
+    "title": "Beauty Tech Journal – Guides to At-Home Beauty Devices",
+    "description": "Practical guides to LED light therapy, IPL hair removal, microcurrent, RF skin tightening, ionic hair dryers and massage guns — how they work and how to use them safely at home."
   }
 }

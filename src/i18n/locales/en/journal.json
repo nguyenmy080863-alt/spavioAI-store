@@ -1,0 +1,544 @@
+{
+  "nav": "Journal",
+  "hub": {
+    "eyebrow": "Spavio AI Journal",
+    "title": "Beauty Tech Journal",
+    "subtitle": "Clear, practical guides to at-home beauty devices — how the technology works, how to use it safely and how to build a routine that fits your life.",
+    "readGuide": "Read the guide",
+    "minRead": "{{count}} min read",
+    "latest": "All guides",
+    "topics": {
+      "skincare": "Skincare",
+      "hair-removal": "Hair Removal",
+      "hair": "Hair Care",
+      "body": "Body & Wellness"
+    },
+    "ctaTitle": "Not sure where to start?",
+    "ctaText": "Our Device Guide matches devices to your skin and hair goals in under a minute.",
+    "ctaButton": "Open the Device Guide"
+  },
+  "article": {
+    "home": "Home",
+    "journal": "Journal",
+    "published": "Published {{date}}",
+    "updated": "Updated {{date}}",
+    "inThisGuide": "In this guide",
+    "featuredDevices": "Devices from this guide",
+    "faqTitle": "Frequently asked questions",
+    "moreGuides": "More guides",
+    "backToJournal": "All guides",
+    "disclaimer": "This guide is general information, not medical advice. Always follow your device's instructions. If you have a skin condition, are pregnant, take photosensitising medication or have an implant such as a pacemaker, talk to your doctor before using beauty devices.",
+    "author": "Spavio AI editorial team",
+    "relatedGuides": "Guides for this device"
+  },
+  "articles": {
+    "led-light-therapy-colours": {
+      "title": "LED Light Therapy Colours Explained: Red, Blue, Green and Yellow Light",
+      "description": "What do red, blue, green and yellow LED light do for your skin? A clear guide to LED colours, wavelengths, session length and using LED devices at home.",
+      "excerpt": "Red for firmness, blue for blemish-prone skin, green and yellow for tone and calm — what each LED colour does and how to use it at home.",
+      "intro": "LED light therapy has moved from dermatology clinics into bathrooms around the world. But what does each colour actually do, and how do you get results at home? This guide explains the science in plain language, what you can realistically expect and how to fit LED into your routine.",
+      "sections": [
+        {
+          "heading": "How LED light therapy works",
+          "paragraphs": [
+            "LED devices shine low-energy light onto the skin at specific wavelengths, measured in nanometres (nm). Unlike sunlight or tanning lamps they emit no UV light, and they don't heat or damage the skin.",
+            "Different wavelengths reach different depths: shorter wavelengths such as blue act near the surface, while longer red and near-infrared wavelengths travel deeper. Skin cells absorb this light and use it as a gentle signal, which is why results build gradually with regular use rather than overnight."
+          ]
+        },
+        {
+          "heading": "Red light (around 630 nm)",
+          "paragraphs": [
+            "Red light is the most researched colour for skin. It is associated with supporting the skin's own collagen production, which helps the look of fine lines, firmness and an even, rosy tone.",
+            "Near-infrared light (around 830 nm) is invisible to the eye and reaches a little deeper. Many masks, including the Lumina Pro LED Face Mask, combine red and near-infrared for this reason. In the Spavio Lumipore, red light is paired with gentle warmth in the Warmth mode."
+          ]
+        },
+        {
+          "heading": "Blue light (around 415 nm)",
+          "paragraphs": [
+            "Blue light works at the surface of the skin. It is popular in routines for oily and blemish-prone skin because the bacteria involved in breakouts are sensitive to it.",
+            "In the Lumipore, blue light is combined with EMS pulses in the Micro-Lifting mode, for skin that looks firmer and more toned."
+          ]
+        },
+        {
+          "heading": "Green and yellow light",
+          "paragraphs": [
+            "Green light (around 520 nm) and yellow light (around 590 nm) are less studied than red and blue, but they are widely used in aesthetic studios. Green light is used for uneven-looking tone, and yellow light for calming the look of redness and restoring radiance.",
+            "The Lumipore pairs green light with microcurrent in its Serum Boost mode to help serums and creams absorb, while its Glow mode uses yellow light to soothe."
+          ]
+        },
+        {
+          "heading": "How to use LED at home",
+          "paragraphs": [
+            "Consistency matters far more than intensity. These habits help you get the most from every session:"
+          ],
+          "bullets": [
+            "Start on clean, dry skin without makeup or SPF, which can block light.",
+            "Aim for 3–5 sessions a week of around 10 minutes, or follow your device's timer.",
+            "Close your eyes or use the supplied eye protection, especially with bright blue light.",
+            "Apply serum and moisturiser after your session (or during it, if your device is designed for that).",
+            "Give it 4–8 weeks of regular use before judging results, and take photos in the same light to compare."
+          ]
+        },
+        {
+          "heading": "Which LED device is right for you?",
+          "paragraphs": [
+            "If you want a hands-free treatment for the whole face, a mask like the Lumina Pro is the easiest way to stay consistent: put it on, relax for ten minutes, done.",
+            "If you prefer targeted care and more than one technology, the Spavio Lumipore combines four light modes with warmth, microcurrent and EMS in a single handheld device — ideal for the jawline, cheeks and around the mouth."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is LED light therapy safe to use every day?",
+          "answer": "Cosmetic LED devices use low-energy light without UV, so daily use is generally fine for healthy skin. Most people get good results with 3–5 sessions a week. If you take medication that makes you sensitive to light, check with your doctor first."
+        },
+        {
+          "question": "Can I use LED light with retinol or acids?",
+          "answer": "Yes, for most people. Use LED on clean skin first and apply retinol or acid products afterwards. If your skin feels irritated, space them out and use LED on alternate evenings."
+        },
+        {
+          "question": "How long does it take to see results?",
+          "answer": "Some people notice a fresher, more even look after a few sessions, but changes in firmness and fine lines usually take 4–8 weeks of regular use."
+        },
+        {
+          "question": "Does LED light tan the skin?",
+          "answer": "No. LED beauty devices do not emit UV light, so they don't tan or burn the skin."
+        }
+      ]
+    },
+    "ipl-hair-removal-at-home": {
+      "title": "IPL Hair Removal at Home: How It Works and How to Get Results",
+      "description": "How does IPL hair removal work, who is it for and how often should you use it? Step-by-step preparation, treatment schedule, safety tips and aftercare.",
+      "excerpt": "Who IPL works for, how to prepare your skin, the right treatment schedule and the safety rules that matter.",
+      "intro": "IPL (intense pulsed light) is one of the most popular ways to reduce unwanted hair at home. Used correctly, it can mean weeks of smooth skin between touch-ups. Used incorrectly, it simply won't work. Here's what you need to know before your first flash.",
+      "sections": [
+        {
+          "heading": "How IPL works",
+          "paragraphs": [
+            "IPL devices release short flashes of broad-spectrum light. The pigment (melanin) in the hair absorbs the light and turns it into heat, which travels down to the follicle and makes it less able to grow new hair.",
+            "IPL only affects hairs that are in their active growth phase. Because hairs grow in cycles, you need a series of treatments to catch every follicle at the right moment — that's why the first weeks follow a fixed schedule."
+          ]
+        },
+        {
+          "heading": "Who IPL is suitable for",
+          "paragraphs": [
+            "IPL works best when there's a clear contrast between skin and hair: light to medium skin with darker hair gives the best results.",
+            "It does not work on white, grey, light blonde or red hair, because those hairs contain too little pigment to absorb the light. It is also not suitable for very dark skin, where the skin itself would absorb too much light. The Silk IPL's integrated skin-tone sensor checks your skin before every flash and blocks the device if your skin tone is too dark."
+          ]
+        },
+        {
+          "heading": "How to prepare your skin",
+          "bullets": [
+            "Shave the area the day before or on the day — don't wax, epilate or pluck, because IPL needs the hair root in the follicle.",
+            "Make sure skin is clean, dry and free of lotion, deodorant and self-tanner.",
+            "Avoid sunbathing and tanning beds for two weeks before and after treatment.",
+            "Do a patch test on each new area and wait 24 hours to check your skin's response.",
+            "For the face, tidy fine hairs with a trimmer such as the Precision Face & Brow Trimmer."
+          ]
+        },
+        {
+          "heading": "The treatment schedule",
+          "paragraphs": [
+            "Treat each area once a week for the first 4 to 12 weeks. Many people see visible reduction after about four sessions, with the best results after the full initial phase.",
+            "After that, switch to touch-ups every 4 to 8 weeks, or whenever you notice regrowth. Hormones, medication and hair colour all influence how quickly hair returns."
+          ]
+        },
+        {
+          "heading": "Areas to avoid",
+          "bullets": [
+            "Around the eyes, including eyebrows, and on the lips.",
+            "Tattoos, permanent makeup, dark moles, birthmarks and freckle clusters.",
+            "Broken, sunburnt or irritated skin, and areas with active eczema or infections.",
+            "Nipples, genitals and anal area — follow your device's manual for the bikini line."
+          ]
+        },
+        {
+          "heading": "Aftercare",
+          "paragraphs": [
+            "Mild warmth or redness right after a session is normal and usually fades within a few hours. Cool the skin with a cold roller such as the Cryo Glow, apply a fragrance-free moisturiser and avoid hot showers, saunas and heavy exercise for 24 hours. Protect treated areas with SPF 30 or higher."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is IPL hair removal permanent?",
+          "answer": "IPL gives long-lasting hair reduction rather than permanent removal. After the initial treatment phase, occasional touch-up sessions keep skin smooth."
+        },
+        {
+          "question": "Does IPL hurt?",
+          "answer": "Most people feel a warm snap, like a rubber band. Start on the lowest energy level and increase gradually. A cooling sapphire window, like the one on the Silk IPL, makes sessions more comfortable."
+        },
+        {
+          "question": "Can I use IPL on my face?",
+          "answer": "Many IPL devices can be used on the face below the cheekbones, for example on the upper lip and chin. Never use IPL around the eyes, and always check your device's manual."
+        },
+        {
+          "question": "What's the difference between IPL and laser hair removal?",
+          "answer": "Lasers use a single, concentrated wavelength and are operated by professionals. IPL uses a broader spectrum of light at a lower intensity, which makes it suitable for safe use at home over a series of sessions."
+        }
+      ]
+    },
+    "microcurrent-facial-toning": {
+      "title": "Microcurrent Facials at Home: What Microcurrent Does and How to Use It",
+      "description": "What is microcurrent, what results can you expect and how do you use a microcurrent device at home? Technique, routine, safety and the difference from EMS.",
+      "excerpt": "A 'workout for your face': how microcurrent works, the right technique and who should avoid it.",
+      "intro": "Microcurrent is a favourite of facialists before red-carpet events, and at-home devices now make it part of everyday routines. It is often described as a workout for the face. Here's how it works, what you can realistically expect and how to use it safely.",
+      "sections": [
+        {
+          "heading": "What is microcurrent?",
+          "paragraphs": [
+            "Microcurrent devices send a very low electrical current — measured in microamperes — through the skin. The current is so gentle that most people barely feel it.",
+            "It is designed to stimulate the facial muscles and the skin's cellular energy. With repeated use, the aim is a more lifted, toned and defined look along the jawline, cheekbones and brows."
+          ]
+        },
+        {
+          "heading": "What results to expect",
+          "paragraphs": [
+            "Many people notice a subtle lifted, fresher look straight after a session, which lasts from a few hours to a couple of days. Longer-lasting changes come from consistency — typically five sessions a week for the first 60 days, followed by two or three maintenance sessions a week.",
+            "Microcurrent is a cosmetic treatment: it won't replace a facelift, but it can visibly refine your contours as part of a regular routine."
+          ]
+        },
+        {
+          "heading": "How to use a microcurrent device",
+          "bullets": [
+            "Cleanse your face and remove makeup, oil and SPF.",
+            "Apply a generous layer of conductive gel — without it, the current can't flow properly.",
+            "Glide slowly upwards and outwards: from the chin along the jawline to the ear, from the corner of the mouth to the cheekbone, and from the brow up to the hairline.",
+            "At the end of each stroke, hold for one to three seconds, then lift and repeat three times per zone.",
+            "Keep sessions to about five minutes, then remove the gel and continue with your skincare."
+          ]
+        },
+        {
+          "heading": "Microcurrent vs. EMS",
+          "paragraphs": [
+            "Microcurrent works in the microampere range and stays below what you can feel. EMS (electrical muscle stimulation) uses a stronger current in the milliampere range, which makes the muscles visibly contract. Both aim to tone, but EMS feels more like a pulse or twitch.",
+            "The Sculpt Microcurrent Toning Device uses twin rotating spheres with five intensity levels. The Spavio Lumipore combines microcurrent with green light in its Serum Boost mode, and EMS with blue light in its Micro-Lifting mode."
+          ]
+        },
+        {
+          "heading": "Who should not use microcurrent",
+          "bullets": [
+            "People with a pacemaker or any other electronic implant.",
+            "During pregnancy.",
+            "People with epilepsy or a history of seizures.",
+            "On active acne, open wounds, infections or broken skin.",
+            "Directly after injectables — wait at least two weeks after Botox or fillers and ask your practitioner."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Does microcurrent hurt?",
+          "answer": "No. Most people feel nothing or a light tingle. Some notice a brief metallic taste or see flashes when working near the eyes — lower the intensity if that happens."
+        },
+        {
+          "question": "Why do I need conductive gel?",
+          "answer": "Gel lets the current flow evenly between the device and your skin. Without enough gel, the device works less effectively and may feel prickly."
+        },
+        {
+          "question": "Can I use microcurrent after Botox or fillers?",
+          "answer": "Wait at least two weeks after treatment and ask your practitioner first. After that, most people can use microcurrent as normal."
+        },
+        {
+          "question": "How often should I use microcurrent?",
+          "answer": "About five times a week for the first 60 days, then two or three times a week to maintain the results."
+        }
+      ]
+    },
+    "radiofrequency-skin-tightening": {
+      "title": "RF Skin Tightening at Home: How Radiofrequency Works for Firmer-Looking Skin",
+      "description": "How does radiofrequency (RF) skin tightening work, how often should you use it and who should avoid it? A practical guide to at-home RF devices.",
+      "excerpt": "Gentle warmth for firmer-looking skin: how RF works, how to use it safely and how it compares to LED and microcurrent.",
+      "intro": "Radiofrequency, or RF, is a staple of professional skin-tightening treatments. At-home RF devices use the same principle at a gentler level. Here's what RF does, how to use it well and how it fits alongside other technologies.",
+      "sections": [
+        {
+          "heading": "How radiofrequency works",
+          "paragraphs": [
+            "RF devices send radiofrequency energy into the skin, where it creates gentle, controlled heat in the deeper layer (the dermis) while the surface stays comfortable.",
+            "Warming the dermis to around 40–42 °C is associated with collagen remodelling — the skin's natural process of renewing its support structure. Over time this can support skin that looks firmer and smoother. The ThermaLift RF Skin Tightener uses built-in temperature sensing to keep every session in this comfortable range."
+          ]
+        },
+        {
+          "heading": "What results to expect",
+          "paragraphs": [
+            "RF results are gradual and subtle. Most people notice skin that feels smoother soon after a session, while visible firming builds over 6–8 weeks of regular use.",
+            "At-home RF is a great way to maintain your skin between professional treatments, or as a gentle alternative to them — it isn't a replacement for surgery or clinic-strength procedures."
+          ]
+        },
+        {
+          "heading": "How to use an RF device",
+          "bullets": [
+            "Start with clean, dry skin and apply the gel or conductive medium recommended for your device.",
+            "Keep the device moving at all times in slow circles or upward strokes — never hold it still in one spot.",
+            "Treat each zone (forehead, each cheek, jawline, neck) for 3–5 minutes.",
+            "Use RF two to three times a week, not daily, to give your skin time to respond.",
+            "Stop immediately if anything feels hot rather than pleasantly warm."
+          ]
+        },
+        {
+          "heading": "Aftercare",
+          "paragraphs": [
+            "Mild warmth and a slight flush afterwards are normal. A cold roller such as the Cryo Glow calms the skin, and a hydrating moisturiser helps it recover. Use SPF every morning."
+          ]
+        },
+        {
+          "heading": "Who should not use RF",
+          "bullets": [
+            "People with a pacemaker or other electronic implants.",
+            "Anyone with metal implants in the treatment area.",
+            "During pregnancy.",
+            "Over recent fillers or threads — ask your practitioner how long to wait.",
+            "On inflamed skin, active acne, rosacea flare-ups, sunburn or open wounds."
+          ]
+        },
+        {
+          "heading": "RF, microcurrent or LED?",
+          "bullets": [
+            "RF: gentle heat in deeper skin layers for a firmer, smoother look — 2–3 times a week.",
+            "Microcurrent: low current to tone facial muscles for a lifted, defined look — up to 5 times a week.",
+            "LED: light to support tone, clarity and radiance — 3–5 times a week, easy to combine with both."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "How often should I use an RF device?",
+          "answer": "Two to three times a week is ideal. Your skin needs time between sessions to respond to the warmth."
+        },
+        {
+          "question": "Can I combine RF with microcurrent?",
+          "answer": "Yes — ideally on alternate days, for example RF on Monday and Thursday and microcurrent on the other days. LED can be used on either day."
+        },
+        {
+          "question": "Is at-home RF safe with fillers?",
+          "answer": "Heat may affect some fillers. Avoid treating filled areas and ask your practitioner before using RF over them."
+        },
+        {
+          "question": "Does RF hurt?",
+          "answer": "No. It should feel like a warm massage. If it ever feels hot or uncomfortable, move faster or lower the level."
+        }
+      ]
+    },
+    "skincare-device-routine": {
+      "title": "How to Build an At-Home Beauty Device Routine (Morning, Evening and Weekly)",
+      "description": "The right order for cleansing brushes, LED, microcurrent, RF and serum infusers — plus a sample weekly plan, cleaning tips and common mistakes to avoid.",
+      "excerpt": "The right order, a sample weekly plan and the mistakes that hold results back.",
+      "intro": "Beauty devices work best when they're part of a routine you can actually keep. The good news: you don't need to use everything every day. This guide shows you the right order, a simple morning and evening routine, and a weekly plan that balances results with rest.",
+      "sections": [
+        {
+          "heading": "The golden rules",
+          "bullets": [
+            "Start with one or two devices and add more once they're a habit.",
+            "Always begin with clean skin — most devices work best without makeup, oil or SPF in the way.",
+            "Order: cleanse → energy device (LED, microcurrent or RF) → serum → infusion device → moisturiser → SPF in the morning.",
+            "Don't stack several heat-based treatments in one session.",
+            "Patch-test every new device and product."
+          ]
+        },
+        {
+          "heading": "Morning routine (5–10 minutes)",
+          "bullets": [
+            "Cleanse gently — a quick pass with the Sonic Cleanse Facial Brush on its lowest setting is enough.",
+            "De-puff with a chilled Cryo Glow Ice Roller, working from the centre of the face outwards.",
+            "Apply eye cream with the warming tip of the Eye Revive Heated Massager.",
+            "Finish with moisturiser and SPF 30 or higher."
+          ]
+        },
+        {
+          "heading": "Evening routine (15–20 minutes)",
+          "bullets": [
+            "Remove makeup and SPF, then double-cleanse with your sonic brush.",
+            "Use your main treatment device: 10 minutes of LED, a 5-minute microcurrent session or an RF session.",
+            "Apply your serum and press it in with the Aqua Ion Serum Infuser.",
+            "Seal everything in with a moisturiser or night cream."
+          ]
+        },
+        {
+          "heading": "A sample weekly plan",
+          "paragraphs": [
+            "If you use several technologies, spread them across the week:"
+          ],
+          "bullets": [
+            "Monday: LED + microcurrent",
+            "Tuesday: RF",
+            "Wednesday: LED",
+            "Thursday: microcurrent",
+            "Friday: RF",
+            "Saturday: LED",
+            "Sunday: rest — cleanse and moisturise only"
+          ]
+        },
+        {
+          "heading": "Cleaning and caring for your devices",
+          "paragraphs": [
+            "Wipe treatment heads after every use with a damp cloth and mild soap, or an alcohol-free cleanser if the manual allows. Let silicone brushes air-dry, store devices dry and away from direct sunlight, and recharge before the battery runs flat. A clean device is more hygienic and lasts longer."
+          ]
+        },
+        {
+          "heading": "Common mistakes",
+          "bullets": [
+            "Doing too much too soon — irritated skin needs a break, not more treatments.",
+            "Skipping conductive gel with microcurrent or RF devices.",
+            "Using devices irregularly and expecting fast results.",
+            "Forgetting SPF, which undoes much of your hard work."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I use all my beauty devices on the same day?",
+          "answer": "You can use a cleansing brush, LED and an infuser daily, but keep microcurrent and RF to separate days and avoid combining several heat treatments in one session."
+        },
+        {
+          "question": "Where do retinol and acids fit in?",
+          "answer": "Use your devices first on clean skin, then apply retinol or acids. On RF evenings, skip strong actives if your skin feels sensitive."
+        },
+        {
+          "question": "How long until I see results from a device routine?",
+          "answer": "Cleansing and de-puffing results are immediate. LED, microcurrent and RF build over 4–8 weeks of consistent use."
+        }
+      ]
+    },
+    "ionic-hair-dryer-guide": {
+      "title": "Ionic Hair Dryers Explained: Less Frizz, Faster Drying and Healthier Styling",
+      "description": "What does an ionic hair dryer do and is it better for your hair? How to blow-dry with less damage, the right straightener temperature and tips by hair type.",
+      "excerpt": "What negative ions really do, how to blow-dry with less heat damage and the right temperatures for your hair type.",
+      "intro": "Heat styling doesn't have to mean damaged hair. Modern ionic dryers and infrared straighteners dry and style faster at controlled temperatures. Here's how the technology works and how to use it for smooth, healthy-looking hair.",
+      "sections": [
+        {
+          "heading": "What 'ionic' actually means",
+          "paragraphs": [
+            "Ionic dryers release negative ions into the airflow. These ions break water droplets on the hair into smaller particles that evaporate faster, so your hair spends less time under heat.",
+            "Negative ions also neutralise the positive static charge that makes hair frizzy, helping the outer layer of the hair (the cuticle) lie flat. The result is smoother, shinier hair. The Aura Ionic Hair Dryer releases around 200 million negative ions per cm³."
+          ]
+        },
+        {
+          "heading": "Airflow and heat control",
+          "paragraphs": [
+            "A powerful motor dries hair with airflow rather than extreme heat. The Aura's 110,000 RPM brushless motor and intelligent heat control, which measures air temperature 40 times per second, prevent the heat spikes that damage hair over time."
+          ]
+        },
+        {
+          "heading": "How to blow-dry with less damage",
+          "bullets": [
+            "Blot hair with a microfibre towel instead of rubbing.",
+            "Apply a heat protectant to damp hair.",
+            "Rough-dry on medium heat until your hair is about 80% dry.",
+            "Style section by section with the nozzle pointing down the hair shaft to smooth the cuticle.",
+            "Keep the dryer about 15 cm from your hair and keep it moving.",
+            "Finish with a cool shot to set the style and add shine."
+          ]
+        },
+        {
+          "heading": "Tips by hair type",
+          "bullets": [
+            "Fine hair: low heat and a round brush at the roots for volume.",
+            "Thick hair: work in smaller sections with medium heat and high airflow.",
+            "Curly hair: use a diffuser on low speed and avoid touching curls while they dry.",
+            "Coloured or bleached hair: stay on lower heat and never skip heat protection."
+          ]
+        },
+        {
+          "heading": "The right straightener temperature",
+          "paragraphs": [
+            "Hotter isn't better. Choose the lowest temperature that styles your hair in a single pass:"
+          ],
+          "bullets": [
+            "Fine, damaged or bleached hair: 150–180 °C",
+            "Normal hair: 180–200 °C",
+            "Thick or coarse hair: 200–230 °C",
+            "Never straighten damp hair — the trapped water turns to steam and damages the hair."
+          ]
+        },
+        {
+          "heading": "Don't forget the scalp",
+          "paragraphs": [
+            "Healthy-looking hair starts at the scalp. A few minutes of scalp massage while washing your hair helps you relax and removes buildup. The waterproof Scalp Revive Massager combines kneading nodes with red light to turn your hair wash into a mini head spa."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is an ionic hair dryer better for curly hair?",
+          "answer": "Yes, for many people. Ionic dryers reduce frizz and dry faster. Use a diffuser on low speed to keep your curl pattern defined."
+        },
+        {
+          "question": "Does an ionic hair dryer damage hair?",
+          "answer": "Any heat can damage hair if it's too hot or used too long. Ionic dryers dry faster, so hair spends less time under heat — especially with heat control and a heat protectant."
+        },
+        {
+          "question": "How often can I use a straightener?",
+          "answer": "Ideally no more than two or three times a week, at the lowest effective temperature and always with a heat protectant."
+        }
+      ]
+    },
+    "massage-gun-guide": {
+      "title": "How to Use a Massage Gun: Techniques, Timing and Safety",
+      "description": "How to use a massage gun correctly: which attachment to choose, how long to massage each muscle, where not to use it and how it differs from EMS body devices.",
+      "excerpt": "The right attachment, how long per muscle, when to use it and the areas to avoid.",
+      "intro": "Massage guns bring percussion therapy — a staple of sports physios — into your gym bag. Used well, they're a quick way to warm up and ease tension. Here's how to use one correctly and safely.",
+      "sections": [
+        {
+          "heading": "What percussion therapy does",
+          "paragraphs": [
+            "A massage gun delivers rapid, short pulses into the muscle. This can help ease muscle tension and soreness, improve how mobile you feel and support relaxation after exercise or long days at a desk."
+          ]
+        },
+        {
+          "heading": "How to use a massage gun",
+          "bullets": [
+            "Start on the lowest speed and increase only if it feels comfortable.",
+            "Let the device float over the muscle — don't press hard.",
+            "Spend 30–60 seconds on each muscle group and no more than two minutes on any one area.",
+            "Keep the head moving slowly along the muscle and breathe calmly.",
+            "Stop if you feel sharp pain, numbness or tingling."
+          ]
+        },
+        {
+          "heading": "Which attachment to use",
+          "bullets": [
+            "Ball: large muscle groups such as thighs, glutes and calves.",
+            "Flat head: dense muscles and an all-over massage.",
+            "Bullet: small, targeted spots — use gently and briefly.",
+            "Fork: either side of the spine and the Achilles area, never directly on bone."
+          ]
+        },
+        {
+          "heading": "Before and after exercise",
+          "paragraphs": [
+            "Before a workout, 30 seconds per muscle group on a low speed helps you warm up. After exercise, 1–2 minutes per muscle group on a medium speed supports cool-down and relaxation. The compact Pulse Mini Massage Gun offers four speeds and four attachments for both."
+          ]
+        },
+        {
+          "heading": "Where not to use a massage gun",
+          "bullets": [
+            "On bones, joints or directly on the spine.",
+            "On the front of the neck, the throat or the head.",
+            "On injuries, bruises, swelling, varicose veins or inflamed skin.",
+            "During pregnancy, or if you take blood thinners or have a clotting disorder, without your doctor's approval."
+          ]
+        },
+        {
+          "heading": "Massage gun vs. EMS body devices",
+          "paragraphs": [
+            "A massage gun works mechanically from the outside. EMS body devices such as the Contour Body Sculptor use electrical pulses to make muscles contract, combined with warming radiofrequency and rolling heads to smooth and firm the look of thighs, arms and abdomen. Many people use percussion for recovery and EMS for body toning."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "How often can I use a massage gun?",
+          "answer": "Daily use is fine for most people, as long as you keep sessions short — up to two minutes per area — and avoid sore or injured spots."
+        },
+        {
+          "question": "Can I use a massage gun on my neck?",
+          "answer": "Only on the muscles at the back and sides of the neck, on the lowest speed and with a soft attachment. Never use it on the front of the neck or directly on the spine."
+        },
+        {
+          "question": "Does a massage gun help with cellulite?",
+          "answer": "There's no reliable evidence that it reduces cellulite. It can temporarily improve the look of skin by boosting circulation, but it won't change the underlying structure."
+        }
+      ]
+    }
+  }
+}

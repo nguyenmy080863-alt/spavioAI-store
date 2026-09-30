@@ -74,7 +74,7 @@ for (const lang of languages) {
 // Sitemap with hreflang alternates for every indexable page.
 const lastmod = new Date().toISOString().slice(0, 10);
 const priorityOf = (p) =>
-  p === "/" ? "1.0" : p.startsWith("/product/") || p.startsWith("/category/") ? "0.8" : "0.5";
+  p === "/" ? "1.0" : p.startsWith("/product/") || p.startsWith("/category/") ? "0.8" : p.startsWith("/journal") ? "0.7" : "0.5";
 const alternates = (p) =>
   [
     ...languages.map(

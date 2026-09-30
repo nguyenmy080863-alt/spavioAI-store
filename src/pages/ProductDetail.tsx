@@ -21,10 +21,13 @@ import SEO, { SITE_URL, absoluteUrl } from "../components/SEO";
 import { LOCAL_ASSETS, categoryToSlug } from "@/data/products";
 import { useLocale } from "@/i18n/LocaleLink";
 import { useProductText } from "@/i18n/useProductText";
+import { articlesForProduct } from "@/data/journal";
+import ArticleCard from "@/components/journal/ArticleCard";
 
 const ProductDetail = () => {
   const { t } = useTranslation("shop");
   const { t: tSeo } = useTranslation("seo");
+  const { t: tJournal } = useTranslation("journal");
   const lang = useLocale();
   const { localize } = useProductText();
   const { productId } = useParams();
@@ -55,6 +58,7 @@ const ProductDetail = () => {
     .slice(0, 4);
 
   const text = localize(product);
+  const guides = articlesForProduct(product.id).slice(0, 3);
   const categoryPath = `/category/${categoryToSlug(product.category)}`;
   const productPath = `/product/${product.id}`;
   const toAbsolute = (src: string) => (src.startsWith("http") ? src : `${SITE_URL}${src.startsWith("/") ? "" : "/"}${src}`);
@@ -147,6 +151,17 @@ const ProductDetail = () => {
             </div>
           </div>
         </section>
+
+        {guides.length > 0 && (
+          <section className="w-full mt-16 lg:mt-24 px-6">
+            <h2 className="mb-4 text-sm font-light text-foreground">{tJournal("article.relatedGuides")}</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {guides.map((guide) => (
+                <ArticleCard key={guide.slug} article={guide} />
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="w-full mt-16 lg:mt-24">
           <div className="mb-4 px-6">

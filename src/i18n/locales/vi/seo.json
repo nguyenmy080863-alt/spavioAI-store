@@ -72,5 +72,9 @@
   "notFound": {
     "title": "Không tìm thấy trang",
     "description": "Trang bạn tìm không tồn tại. Khám phá thiết bị làm đẹp thông minh tại Spavio AI Store."
+  },
+  "journal": {
+    "title": "Cẩm nang công nghệ làm đẹp – Hướng dẫn dùng thiết bị tại nhà",
+    "description": "Hướng dẫn thực tế về liệu pháp ánh sáng LED, triệt lông IPL, vi dòng điện, săn chắc da RF, máy sấy tóc ion và súng massage – cơ chế hoạt động và cách dùng an toàn tại nhà."
   }
 }

@@ -183,6 +183,7 @@ const Navigation = () => {
         { key: "our-story", to: "/about/our-story" },
         { key: "sustainability", to: "/about/sustainability" },
         { key: "device-guide", to: "/about/device-guide" },
+        { key: "journal", to: "/journal" },
         { key: "customer-care", to: "/about/customer-care" },
         { key: "store-locator", to: "/about/store-locator" },
       ],
