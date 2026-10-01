@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { fetchAdminProducts } from "@/lib/catalog";
 import { supabase } from "@/integrations/supabase/client";
 import { formatPrice } from "@/data/products";
-import { Button } from "@/components/ui/button";
 
 const AdminDashboard = () => {
   const { data: products = [], isLoading } = useQuery({
@@ -40,12 +39,9 @@ const AdminDashboard = () => {
     <div className="space-y-12">
       <div className="flex items-end justify-between">
         <div>
-          <h1 className="text-xl font-light text-foreground">Overview</h1>
+          <h1 className="text-xl font-light text-foreground">Live view</h1>
           <p className="text-sm text-muted-foreground mt-1">Catalogue health at a glance.</p>
         </div>
-        <Button asChild size="sm">
-          <Link to="/admin/products/new">New product</Link>
-        </Button>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

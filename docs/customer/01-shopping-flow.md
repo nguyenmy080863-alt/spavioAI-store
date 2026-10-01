@@ -1,0 +1,24 @@
+# Shopping flow
+
+## Browsing
+- The shop is available in **German** (default, `/`), **English** (`/en/`) and **Vietnamese** (`/vi/`). The language switcher in the header keeps you on the same page.
+- Products are grouped by category (Skincare Devices, Hair Removal, Hair Styling & Care, Body & Wellness). Each category has its own page at `/category/<name>`.
+- A product page shows images, description, price, and the add-to-bag button.
+
+## The bag
+1. Press **Add to bag** on a product. The bag opens from the side and the header badge updates.
+2. Change quantities or remove items in the bag.
+3. The bag is kept in the browser, so it survives a page reload.
+4. If you are signed in, the bag is also **saved to your account**. When you sign in, the guest bag and the saved bag are merged.
+
+## Checkout
+1. Open the bag and go to **Checkout**.
+2. Enter your contact and delivery details.
+3. Choose a **shipping method**. Methods and prices come from Sendcloud.
+4. Choose a **payment method** (PayPal, card or Klarna) and pay.
+5. On success the bag is cleared and a confirmation screen is shown.
+
+> Status: checkout does not yet create an order record in the database. See the roadmap item "Orders".
+
+## Help and policies
+Customer care, device guide, privacy policy, terms and impressum are linked in the footer. A WhatsApp button is available on every page.

@@ -25,10 +25,19 @@ import AdminLayout from "./components/admin/AdminLayout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
+import AdminOverview from "./pages/admin/AdminOverview";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
 import AdminProductForm from "./pages/admin/AdminProductForm";
 import AdminTeam from "./pages/admin/AdminTeam";
+import AdminCollections from "./pages/admin/AdminCollections";
+import AdminInventory from "./pages/admin/AdminInventory";
+import AdminDocs from "./pages/admin/AdminDocs";
+import AdminPurchaseOrders from "./pages/admin/AdminPurchaseOrders";
+import AdminPurchaseOrderDetail from "./pages/admin/AdminPurchaseOrderDetail";
+import AdminSalesOrders from "./pages/admin/AdminSalesOrders";
+import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
+import AdminPlaceholder from "./pages/admin/AdminPlaceholder";
 import AdminAuditLog from "./pages/admin/AdminAuditLog";
 import AdminFomo from "./pages/admin/AdminFomo";
 import AdminHero from "./pages/admin/AdminHero";
@@ -98,14 +107,36 @@ export const AppRoutes = () => (
     ))}
     <Route path="/admin/login" element={<Navigate to="/login" replace />} />
     <Route path="/admin" element={<AdminLayout />}>
-      <Route index element={<AdminDashboard />} />
+      <Route index element={<AdminOverview />} />
       <Route path="products" element={<AdminProducts />} />
       <Route path="products/new" element={<AdminProductForm />} />
       <Route path="products/:productId" element={<AdminProductForm />} />
-      <Route path="fomo" element={<AdminFomo />} />
+      <Route path="fomo" element={<Navigate to="/admin/discounts/flash-sale" replace />} />
+      <Route path="discounts/flash-sale" element={<AdminFomo />} />
       <Route path="hero" element={<AdminHero />} />
       <Route path="team" element={<AdminTeam />} />
       <Route path="audit-log" element={<AdminAuditLog />} />
+      <Route path="docs" element={<AdminDocs />} />
+      <Route path="docs/:group" element={<AdminDocs />} />
+      <Route path="docs/:group/:slug" element={<AdminDocs />} />
+      <Route path="orders" element={<AdminSalesOrders />} />
+      <Route path="orders/:orderId" element={<AdminSalesOrderDetail />} />
+      <Route path="orders/drafts" element={<AdminPlaceholder />} />
+      <Route path="orders/shipping-labels" element={<AdminPlaceholder />} />
+      <Route path="products/categories" element={<AdminCollections />} />
+      <Route path="products/inventory" element={<AdminInventory />} />
+      <Route path="products/purchase-orders" element={<AdminPurchaseOrders />} />
+      <Route path="products/purchase-orders/:poId" element={<AdminPurchaseOrderDetail />} />
+      <Route path="products/transfers" element={<AdminPlaceholder />} />
+      <Route path="products/gift-cards" element={<AdminPlaceholder />} />
+      <Route path="customers" element={<AdminPlaceholder />} />
+      <Route path="discounts" element={<AdminPlaceholder />} />
+      <Route path="warranty" element={<AdminPlaceholder />} />
+      <Route path="returns" element={<AdminPlaceholder />} />
+      <Route path="finance" element={<AdminPlaceholder />} />
+      <Route path="analytics" element={<AdminPlaceholder />} />
+      <Route path="analytics/reports" element={<AdminPlaceholder />} />
+      <Route path="analytics/live-view" element={<AdminDashboard />} />
     </Route>
   </Routes>
 );

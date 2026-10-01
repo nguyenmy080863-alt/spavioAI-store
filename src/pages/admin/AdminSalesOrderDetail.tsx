@@ -1,0 +1,382 @@
+import { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
+import { fetchAdminProducts } from "@/lib/catalog";
+import {
+  db,
+  fetchSalesOrder,
+  formatDate,
+  run,
+  type DeliveryOrder,
+  type DeliveryStatus,
+  type SalesOrder,
+} from "@/lib/orders";
+import { formatPrice } from "@/data/products";
+import { logAudit } from "@/lib/audit";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import StatusBadge from "@/components/admin/StatusBadge";
+import LineItemsEditor, { parseLines, type Line } from "@/components/admin/LineItemsEditor";
+
+/** How much of each line is still not planned in an active delivery. */
+const remainingByItem = (order: SalesOrder) =>
+  Object.fromEntries(
+    order.sales_order_items.map((item) => {
+      const planned = order.delivery_orders
+        .filter((d) => d.status !== "cancelled")
+        .flatMap((d) => d.delivery_order_items)
+        .filter((di) => di.sales_order_item_id === item.id)
+        .reduce((sum, di) => sum + di.quantity, 0);
+      return [item.id, item.quantity - planned];
+    }),
+  );
+
+const NewOrderForm = () => {
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const { data: products = [] } = useQuery({ queryKey: ["admin-products"], queryFn: fetchAdminProducts });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [lines, setLines] = useState<Line[]>([{ product_id: "", quantity: "1", price: "0" }]);
+
+  const total = lines.reduce((sum, line) => sum + (Number(line.quantity) || 0) * (Number(line.price) || 0), 0);
+
+  const create = useMutation({
+    mutationFn: async () => {
+      if (!name.trim() && !email.trim()) throw new Error("Enter a customer name or email");
+      const result = parseLines(lines);
+      if ("error" in result) throw new Error(result.error);
+      const { data, error } = await db
+        .from("sales_orders")
+        .insert({ customer_name: name.trim(), customer_email: email.trim(), total })
+        .select("id")
+        .single();
+      if (error) throw new Error(error.message);
+      await run(
+        db.from("sales_order_items").insert(
+          result.lines.map((line) => ({
+            sales_order_id: data.id,
+            product_id: line.product_id,
+            quantity: line.quantity,
+            unit_price: line.price,
+          })),
+        ),
+      );
+      await logAudit("create", "sales_order", data.id, { customer: name || email });
+      return data.id as string;
+    },
+    onSuccess: (id) => {
+      toast.success("Order created");
+      void queryClient.invalidateQueries({ queryKey: ["sales-orders"] });
+      navigate(`/admin/orders/${id}`, { replace: true });
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  return (
+    <div className="space-y-8 max-w-4xl">
+      <div>
+        <p className="text-xs text-muted-foreground mb-1">
+          <Link to="/admin/orders">Orders</Link>
+        </p>
+        <h1 className="text-xl font-light text-foreground">New order</h1>
+      </div>
+      <section className="space-y-3">
+        <h2 className="text-sm text-foreground">Customer</h2>
+        <div className="flex flex-wrap gap-3">
+          <Input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="max-w-xs" maxLength={120} />
+          <Input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="max-w-xs" maxLength={255} />
+        </div>
+      </section>
+      <section className="space-y-3">
+        <h2 className="text-sm text-foreground">Products</h2>
+        <LineItemsEditor
+          products={products.filter((p) => !p.archived_at)}
+          lines={lines}
+          onChange={setLines}
+          priceLabel="Unit price"
+          defaultPrice={(p) => Number(p.sale_price ?? p.price)}
+        />
+        <p className="text-xs text-muted-foreground">Total: {formatPrice(total)}</p>
+      </section>
+      <Button size="sm" disabled={create.isPending} onClick={() => create.mutate()}>
+        Create order
+      </Button>
+    </div>
+  );
+};
+
+const DeliveryCard = ({
+  delivery,
+  order,
+  onStatus,
+  busy,
+}: {
+  delivery: DeliveryOrder;
+  order: SalesOrder;
+  onStatus: (delivery: DeliveryOrder, status: DeliveryStatus) => void;
+  busy: boolean;
+}) => (
+  <div className="border border-border p-4 space-y-2">
+    <div className="flex flex-wrap items-center justify-between gap-2">
+      <div className="flex items-center gap-3">
+        <span className="text-sm text-foreground">{delivery.delivery_number}</span>
+        <StatusBadge status={delivery.status} />
+      </div>
+      <div className="flex gap-2">
+        {delivery.status === "preparing" && (
+          <>
+            <Button size="sm" disabled={busy} onClick={() => onStatus(delivery, "on_delivery")}>
+              Picked up by carrier
+            </Button>
+            <Button size="sm" variant="ghost" disabled={busy} onClick={() => onStatus(delivery, "cancelled")}>
+              Cancel
+            </Button>
+          </>
+        )}
+        {delivery.status === "on_delivery" && (
+          <Button size="sm" disabled={busy} onClick={() => onStatus(delivery, "delivered")}>
+            Mark delivered
+          </Button>
+        )}
+      </div>
+    </div>
+    <p className="text-xs text-muted-foreground">
+      {delivery.carrier || "No carrier"}
+      {delivery.tracking_number ? ` · ${delivery.tracking_number}` : ""} · Shipped {formatDate(delivery.shipped_at)} ·
+      Delivered {formatDate(delivery.delivered_at)}
+    </p>
+    <ul className="text-xs text-muted-foreground">
+      {delivery.delivery_order_items.map((di) => {
+        const item = order.sales_order_items.find((i) => i.id === di.sales_order_item_id);
+        return (
+          <li key={di.id}>
+            {di.quantity} × {item?.products?.name ?? "Item"}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+);
+
+const AdminSalesOrderDetail = () => {
+  const { orderId = "" } = useParams();
+  const queryClient = useQueryClient();
+  const [carrier, setCarrier] = useState("");
+  const [tracking, setTracking] = useState("");
+  const [qty, setQty] = useState<Record<string, string>>({});
+
+  const isNew = orderId === "new";
+  const { data: order, isLoading, error } = useQuery({
+    queryKey: ["sales-order", orderId],
+    queryFn: () => fetchSalesOrder(orderId),
+    enabled: !isNew,
+  });
+
+  const refresh = () => {
+    void queryClient.invalidateQueries({ queryKey: ["sales-orders"] });
+    void queryClient.invalidateQueries({ queryKey: ["sales-order", orderId] });
+    void queryClient.invalidateQueries({ queryKey: ["inventory"] });
+    void queryClient.invalidateQueries({ queryKey: ["admin-products"] });
+  };
+
+  const updateOrder = useMutation({
+    mutationFn: async (patch: Partial<Pick<SalesOrder, "payment_status" | "status">>) => {
+      await run(db.from("sales_orders").update(patch).eq("id", orderId));
+      await logAudit("status_change", "sales_order", orderId, patch);
+    },
+    onSuccess: () => {
+      toast.success("Order updated");
+      refresh();
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const updateDelivery = useMutation({
+    mutationFn: async ({ delivery, status }: { delivery: DeliveryOrder; status: DeliveryStatus }) => {
+      await run(db.from("delivery_orders").update({ status }).eq("id", delivery.id));
+      await logAudit("status_change", "delivery_order", delivery.id, { from: delivery.status, to: status });
+    },
+    onSuccess: () => {
+      toast.success("Delivery updated");
+      refresh();
+    },
+    onError: (e: Error) => {
+      toast.error(e.message);
+      refresh();
+    },
+  });
+
+  const createDelivery = useMutation({
+    mutationFn: async () => {
+      if (!order) return;
+      const items = order.sales_order_items
+        .map((item) => ({ id: item.id, quantity: Number(qty[item.id] ?? 0) }))
+        .filter((item) => item.quantity > 0);
+      if (items.length === 0) throw new Error("Enter a quantity for at least one product");
+      if (items.some((item) => !Number.isInteger(item.quantity))) throw new Error("Quantities must be whole numbers");
+
+      const { data, error: insertError } = await db
+        .from("delivery_orders")
+        .insert({ sales_order_id: order.id, carrier: carrier.trim() || null, tracking_number: tracking.trim() || null })
+        .select("id")
+        .single();
+      if (insertError) throw new Error(insertError.message);
+      const { error: itemError } = await db
+        .from("delivery_order_items")
+        .insert(items.map((item) => ({ delivery_order_id: data.id, sales_order_item_id: item.id, quantity: item.quantity })));
+      if (itemError) {
+        // Do not leave an empty delivery behind.
+        await db.from("delivery_orders").update({ status: "cancelled" }).eq("id", data.id);
+        throw new Error(itemError.message);
+      }
+      await logAudit("create", "delivery_order", data.id, { order: order.order_number });
+    },
+    onSuccess: () => {
+      toast.success("Delivery created");
+      setQty({});
+      setCarrier("");
+      setTracking("");
+      refresh();
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  if (isNew) return <NewOrderForm />;
+  if (isLoading) return <p className="text-sm text-muted-foreground">Loading…</p>;
+  if (error || !order) return <p className="text-sm text-destructive">{error?.message ?? "Order not found"}</p>;
+
+  const remaining = remainingByItem(order);
+  const canDeliver = order.payment_status === "paid" && order.status === "open";
+  const hasRemaining = Object.values(remaining).some((value) => value > 0);
+  const busy = updateOrder.isPending || updateDelivery.isPending || createDelivery.isPending;
+
+  return (
+    <div className="space-y-8 max-w-4xl">
+      <div>
+        <p className="text-xs text-muted-foreground mb-1">
+          <Link to="/admin/orders">Orders</Link>
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <h1 className="text-xl font-light text-foreground">{order.order_number}</h1>
+          <StatusBadge status={order.payment_status} />
+          <StatusBadge status={order.status} />
+        </div>
+        <p className="text-xs text-muted-foreground mt-1">
+          {order.customer_name || "—"} {order.customer_email && `· ${order.customer_email}`} · Created{" "}
+          {formatDate(order.created_at)}
+          {order.paid_at ? ` · Paid ${formatDate(order.paid_at)}` : ""}
+        </p>
+      </div>
+
+      <div className="flex flex-wrap gap-3">
+        {order.payment_status === "unpaid" && order.status === "open" && (
+          <Button size="sm" disabled={busy} onClick={() => updateOrder.mutate({ payment_status: "paid" })}>
+            Mark as paid
+          </Button>
+        )}
+        {order.status === "open" && (
+          <Button
+            size="sm"
+            variant="destructive"
+            disabled={busy}
+            onClick={() => {
+              if (window.confirm("Cancel this order? Reserved stock will be released.")) {
+                updateOrder.mutate({ status: "cancelled" });
+              }
+            }}
+          >
+            Cancel order
+          </Button>
+        )}
+        {order.payment_status === "paid" && order.status === "cancelled" && (
+          <Button size="sm" variant="outline" disabled={busy} onClick={() => updateOrder.mutate({ payment_status: "refunded" })}>
+            Mark as refunded
+          </Button>
+        )}
+      </div>
+
+      <section className="space-y-3">
+        <h2 className="text-sm text-foreground">Items</h2>
+        <div className="border border-border overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border text-left text-xs font-light text-muted-foreground">
+                <th className="p-3">Product</th>
+                <th className="p-3">Qty</th>
+                <th className="p-3">Unit price</th>
+                <th className="p-3">Not in a delivery</th>
+              </tr>
+            </thead>
+            <tbody>
+              {order.sales_order_items.map((item) => (
+                <tr key={item.id} className="border-b border-border last:border-0">
+                  <td className="p-3 text-foreground">
+                    {item.products?.name} <span className="text-muted-foreground">({item.products?.sku})</span>
+                  </td>
+                  <td className="p-3 text-muted-foreground">{item.quantity}</td>
+                  <td className="p-3 text-muted-foreground">{formatPrice(Number(item.unit_price))}</td>
+                  <td className="p-3 text-muted-foreground">{remaining[item.id]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-foreground text-right">Total {formatPrice(Number(order.total))}</p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-sm text-foreground">Deliveries</h2>
+        {order.delivery_orders.length === 0 && (
+          <p className="text-xs text-muted-foreground">
+            {canDeliver ? "No deliveries yet." : "Deliveries can be created once the order is paid."}
+          </p>
+        )}
+        {order.delivery_orders.map((delivery) => (
+          <DeliveryCard
+            key={delivery.id}
+            delivery={delivery}
+            order={order}
+            busy={busy}
+            onStatus={(d, status) => updateDelivery.mutate({ delivery: d, status })}
+          />
+        ))}
+
+        {canDeliver && hasRemaining && (
+          <div className="border border-border p-4 space-y-3">
+            <p className="text-sm text-foreground">Create delivery</p>
+            {order.sales_order_items
+              .filter((item) => remaining[item.id] > 0)
+              .map((item) => (
+                <div key={item.id} className="flex items-center gap-3 text-sm">
+                  <Input
+                    type="number"
+                    min={0}
+                    max={remaining[item.id]}
+                    value={qty[item.id] ?? ""}
+                    placeholder="0"
+                    onChange={(e) => setQty((prev) => ({ ...prev, [item.id]: e.target.value }))}
+                    className="h-8 w-20"
+                    aria-label={`Quantity ${item.products?.name}`}
+                  />
+                  <span className="text-muted-foreground">
+                    of {remaining[item.id]} × {item.products?.name}
+                  </span>
+                </div>
+              ))}
+            <div className="flex flex-wrap gap-3">
+              <Input placeholder="Carrier" value={carrier} onChange={(e) => setCarrier(e.target.value)} className="w-44" maxLength={80} />
+              <Input placeholder="Tracking number" value={tracking} onChange={(e) => setTracking(e.target.value)} className="w-56" maxLength={80} />
+            </div>
+            <Button size="sm" disabled={busy} onClick={() => createDelivery.mutate()}>
+              Create delivery
+            </Button>
+          </div>
+        )}
+      </section>
+    </div>
+  );
+};
+
+export default AdminSalesOrderDetail;

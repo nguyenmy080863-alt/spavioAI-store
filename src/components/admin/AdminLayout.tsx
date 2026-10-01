@@ -1,16 +1,25 @@
-import { Link, NavLink, Navigate, Outlet, useLocation } from "react-router-dom";
+import { Link, Navigate, Outlet, useLocation } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import { useAdminAuth, ROLE_LABELS } from "@/context/AdminAuthContext";
 import { Button } from "@/components/ui/button";
 import StoreLogo from "@/components/StoreLogo";
-
-const links = [
-  { to: "/admin", label: "Overview", end: true },
-  { to: "/admin/products", label: "Products", end: false },
-  { to: "/admin/hero", label: "Hero banner", end: false },
-  { to: "/admin/fomo", label: "Spavio AI Flash Sale", end: false },
-  { to: "/admin/team", label: "Team & roles", end: false },
-  { to: "/admin/audit-log", label: "Audit log", end: false },
-];
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarHeader,
+  SidebarInset,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+import { adminDocsNav, adminNav, adminOverview, adminSettingsNav, type AdminNavSection } from "./adminNav";
 
 const AdminLayout = () => {
   const { user, isAdmin, loading, roles, signOut } = useAdminAuth();
@@ -47,64 +56,108 @@ const AdminLayout = () => {
   }
 
 
+  const path = location.pathname.replace(/\/$/, "");
+  const isIn = (to: string) => path === to || path.startsWith(`${to}/`);
+  // Settings has no page of its own, so it is active only through its children.
+  const sectionActive = (section: AdminNavSection) =>
+    isIn(section.to) || (section.children ?? []).some((child) => isIn(child.to));
+
+  const renderSection = (section: AdminNavSection) => {
+    const Icon = section.icon;
+    const active = sectionActive(section);
+
+    if (!section.children) {
+      return (
+        <SidebarMenuItem key={section.to}>
+          <SidebarMenuButton asChild isActive={active} tooltip={section.title}>
+            <Link to={section.to}>
+              <Icon />
+              <span>{section.title}</span>
+            </Link>
+          </SidebarMenuButton>
+        </SidebarMenuItem>
+      );
+    }
+
+    return (
+      <Collapsible key={section.to} asChild open={active} className="group/collapsible">
+        <SidebarMenuItem>
+          <SidebarMenuButton asChild isActive={path === section.to} tooltip={section.title}>
+            <Link to={section.to}>
+              <Icon />
+              <span>{section.title}</span>
+            </Link>
+          </SidebarMenuButton>
+          <ChevronRight className="pointer-events-none absolute right-2 top-2.5 h-4 w-4 text-muted-foreground transition-transform group-data-[state=open]/collapsible:rotate-90" />
+          <CollapsibleContent>
+            <SidebarMenuSub>
+              {section.children.map((child) => (
+                <SidebarMenuSubItem key={child.to}>
+                  <SidebarMenuSubButton asChild isActive={isIn(child.to)}>
+                    <Link to={child.to}>
+                      <span>{child.title}</span>
+                    </Link>
+                  </SidebarMenuSubButton>
+                </SidebarMenuSubItem>
+              ))}
+            </SidebarMenuSub>
+          </CollapsibleContent>
+        </SidebarMenuItem>
+      </Collapsible>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-background">
-      <header className="flex items-center justify-between px-6 h-16 border-b border-border">
-        <div className="flex items-center gap-8">
+    <SidebarProvider>
+      <Sidebar>
+        <SidebarHeader className="h-16 justify-center px-4 border-b border-sidebar-border">
           <Link to="/">
             <StoreLogo heightClass="h-6" />
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            {links.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.end}
-                className={({ isActive }) =>
-                  `text-sm font-light transition-colors ${
-                    isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="hidden sm:block text-right">
-            <p className="text-xs text-foreground">{user.email}</p>
-            <p className="text-[0.65rem] text-muted-foreground">
-              {roles.map((role) => ROLE_LABELS[role]).join(" · ")}
-            </p>
+        </SidebarHeader>
+        <SidebarContent>
+          <SidebarGroup>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={path === adminOverview.to} tooltip={adminOverview.title}>
+                  <Link to={adminOverview.to}>
+                    <adminOverview.icon />
+                    <span>{adminOverview.title}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              {adminNav.map(renderSection)}
+            </SidebarMenu>
+          </SidebarGroup>
+          <SidebarGroup className="mt-auto">
+            <SidebarMenu>
+              {renderSection(adminDocsNav)}
+              {renderSection(adminSettingsNav)}
+            </SidebarMenu>
+          </SidebarGroup>
+        </SidebarContent>
+      </Sidebar>
+
+      <SidebarInset className="bg-background">
+        <header className="flex items-center justify-between px-6 h-16 border-b border-border">
+          <SidebarTrigger />
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:block text-right">
+              <p className="text-xs text-foreground">{user.email}</p>
+              <p className="text-[0.65rem] text-muted-foreground">
+                {roles.map((role) => ROLE_LABELS[role]).join(" · ")}
+              </p>
+            </div>
+            <Button variant="outline" size="sm" onClick={() => void signOut()}>
+              Sign out
+            </Button>
           </div>
-          <Button variant="outline" size="sm" onClick={() => void signOut()}>
-            Sign out
-          </Button>
-        </div>
-      </header>
-
-      <nav className="md:hidden flex gap-4 px-6 py-3 border-b border-border overflow-x-auto">
-        {links.map((link) => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            end={link.end}
-            className={({ isActive }) =>
-              `text-xs whitespace-nowrap font-light ${
-                isActive ? "text-foreground" : "text-muted-foreground"
-              }`
-            }
-          >
-            {link.label}
-          </NavLink>
-        ))}
-      </nav>
-
-      <main className="px-6 py-10 max-w-6xl mx-auto">
-        <Outlet />
-      </main>
-    </div>
+        </header>
+        <main className="px-6 py-10 max-w-6xl w-full mx-auto">
+          <Outlet />
+        </main>
+      </SidebarInset>
+    </SidebarProvider>
   );
 };
 
