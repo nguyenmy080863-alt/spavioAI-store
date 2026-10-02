@@ -74,8 +74,9 @@ export const adminDocsNav: AdminNavSection = {
   to: "/admin/docs",
   icon: BookOpen,
   children: [
-    { title: "For customers", to: "/admin/docs/customer" },
     { title: "For admins", to: "/admin/docs/admin" },
+    { title: "For customers", to: "/admin/docs/customer" },
+    { title: "Testing", to: "/admin/docs/testing" },
   ],
 };
 
