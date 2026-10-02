@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import StatusBadge from "@/components/admin/StatusBadge";
 import OrderEmails from "@/components/admin/OrderEmails";
+import DeliveryLabel, { hasActiveLabel } from "@/components/admin/DeliveryLabel";
 
 /** How much of each line is still not planned in an active delivery. */
 const remainingByItem = (order: SalesOrder) =>
@@ -35,11 +36,13 @@ const DeliveryCard = ({
   delivery,
   order,
   onStatus,
+  onChanged,
   busy,
 }: {
   delivery: DeliveryOrder;
   order: SalesOrder;
   onStatus: (delivery: DeliveryOrder, status: DeliveryStatus) => void;
+  onChanged: () => void;
   busy: boolean;
 }) => (
   <div className="border border-border p-4 space-y-2">
@@ -54,7 +57,13 @@ const DeliveryCard = ({
             <Button size="sm" disabled={busy} onClick={() => onStatus(delivery, "on_delivery")}>
               Picked up by carrier
             </Button>
-            <Button size="sm" variant="ghost" disabled={busy} onClick={() => onStatus(delivery, "cancelled")}>
+            <Button
+              size="sm"
+              variant="ghost"
+              disabled={busy || hasActiveLabel(delivery)}
+              title={hasActiveLabel(delivery) ? "Cancel the shipping label first" : undefined}
+              onClick={() => onStatus(delivery, "cancelled")}
+            >
               Cancel
             </Button>
           </>
@@ -81,6 +90,7 @@ const DeliveryCard = ({
         );
       })}
     </ul>
+    <DeliveryLabel delivery={delivery} order={order} onChanged={onChanged} />
   </div>
 );
 
@@ -301,6 +311,7 @@ const AdminSalesOrderDetail = () => {
             order={order}
             busy={busy}
             onStatus={(d, status) => updateDelivery.mutate({ delivery: d, status })}
+            onChanged={refresh}
           />
         ))}
 

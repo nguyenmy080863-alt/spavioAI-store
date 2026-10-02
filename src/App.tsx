@@ -46,6 +46,7 @@ import AdminSalesOrders from "./pages/admin/AdminSalesOrders";
 import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
 import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
+import AdminShippingLabels from "./pages/admin/AdminShippingLabels";
 import AdminDrafts from "./pages/admin/AdminDrafts";
 import AdminDraftDetail from "./pages/admin/AdminDraftDetail";
 import PayDraft from "./pages/PayDraft";
@@ -152,7 +153,7 @@ export const AppRoutes = () => (
       <Route path="orders/:orderId" element={<AdminSalesOrderDetail />} />
       <Route path="orders/drafts" element={<AdminDrafts />} />
       <Route path="orders/drafts/:draftId" element={<AdminDraftDetail />} />
-      <Route path="orders/shipping-labels" element={<AdminPlaceholder />} />
+      <Route path="orders/shipping-labels" element={<AdminShippingLabels />} />
       <Route path="products/categories" element={<AdminCollections />} />
       <Route path="products/inventory" element={<AdminInventory />} />
       <Route path="products/purchase-orders" element={<AdminPurchaseOrders />} />

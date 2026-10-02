@@ -8,6 +8,8 @@ import { fetchAdminProduct, resolveImages, slugify } from "@/lib/catalog";
 import { CATEGORIES, formatPrice } from "@/data/products";
 import { depositPerUnit, validatePreorder, type DepositType } from "@/lib/preorder";
 import { logAudit } from "@/lib/audit";
+import { fetchProductWeights } from "@/lib/shipping";
+import { db } from "@/lib/orders";
 import { useAdminAuth } from "@/context/AdminAuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -70,6 +72,9 @@ const AdminProductForm = () => {
 
   const [form, setForm] = useState(emptyForm);
   const [images, setImages] = useState<DraftImage[]>([]);
+  // Parcel weight is kept apart from the main product query so the form still works before migration 0022.
+  const [weight, setWeight] = useState("");
+  const [weightTouched, setWeightTouched] = useState(false);
 
   const { data: product, isLoading } = useQuery({
     queryKey: ["admin-product", productId],
@@ -79,6 +84,10 @@ const AdminProductForm = () => {
 
   useEffect(() => {
     if (!product) return;
+    void fetchProductWeights([product.id]).then((weights) => {
+      const value = weights[product.id];
+      setWeight(value ? String(value) : "");
+    });
     setForm({
       name: product.name,
       sku: product.sku,
@@ -177,6 +186,13 @@ const AdminProductForm = () => {
       } else {
         const { error } = await supabase.from("products").update(payload).eq("id", id);
         if (error) throw error;
+      }
+
+      if (weightTouched) {
+        const grams = weight.trim() === "" ? null : Math.round(Number(weight));
+        if (grams !== null && !(grams > 0 && grams <= 30000)) throw new Error("Weight must be between 1 and 30000 grams");
+        const { error: weightError } = await db.from("products").update({ weight_grams: grams }).eq("id", id);
+        if (weightError) throw new Error(`Weight not saved: ${weightError.message}. Has migration 0022 been applied?`);
       }
 
       // Replace the image set with the current draft order.
@@ -304,6 +320,22 @@ const AdminProductForm = () => {
         <div className="space-y-2">
           <Label htmlFor="stock">Stock quantity</Label>
           <Input id="stock" type="number" min="0" step="1" required {...field("stock")} />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="weightGrams">Weight with packaging (grams, optional)</Label>
+          <Input
+            id="weightGrams"
+            type="number"
+            min="1"
+            max="30000"
+            step="1"
+            value={weight}
+            onChange={(e) => {
+              setWeight(e.target.value);
+              setWeightTouched(true);
+            }}
+          />
+          <p className="text-xs text-muted-foreground">Used to estimate parcel weight when buying shipping labels.</p>
         </div>
         <div className="space-y-2">
           <Label htmlFor="lowStockThreshold">Low stock alert at</Label>

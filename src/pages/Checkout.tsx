@@ -15,7 +15,6 @@ import { formatPrice, LOCAL_ASSETS, collectionImage } from "@/data/products";
 import { useTranslation } from "react-i18next";
 import {
   getSendcloudShippingMethods,
-  createSendcloudParcel,
   DEFAULT_SENDCLOUD_SHIPPING_METHODS,
   type SendcloudShippingMethod
 } from "@/lib/sendcloud";
@@ -50,7 +49,6 @@ const Checkout = () => {
   // Sendcloud Shipping Methods State
   const [shippingMethods, setShippingMethods] = useState<SendcloudShippingMethod[]>(DEFAULT_SENDCLOUD_SHIPPING_METHODS);
   const [selectedShippingId, setSelectedShippingId] = useState<string | number>(DEFAULT_SENDCLOUD_SHIPPING_METHODS[0].id);
-  const [trackingNumber, setTrackingNumber] = useState<string | null>(null);
 
   // Payment methods: paypal, card, klarna
   const [paymentMethod, setPaymentMethod] = useState("paypal");
@@ -170,32 +168,6 @@ const Checkout = () => {
     setPaymentDetails(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleRegisterSendcloudParcel = async () => {
-    try {
-      const result = await createSendcloudParcel({
-        name: `${customerDetails.firstName} ${customerDetails.lastName}`.trim() || "Customer",
-        email: customerDetails.email || "customer@example.de",
-        telephone: customerDetails.phone,
-        address: shippingAddress.address || "Main Street 1",
-        city: shippingAddress.city || "Berlin",
-        postal_code: shippingAddress.postalCode || "10115",
-        country: "DE",
-        shipment: {
-          id: selectedShippingId,
-          name: `${selectedShippingMethod.carrierName} ${selectedShippingMethod.name}`
-        },
-        order_number: orderNumberRef.current ?? `ORD-${Math.floor(100000 + Math.random() * 900000)}`,
-        total_order_value: total
-      });
-
-      if (result.trackingNumber) {
-        setTrackingNumber(result.trackingNumber);
-      }
-    } catch (err) {
-      console.error("Error creating Sendcloud parcel:", err);
-    }
-  };
-
   /** Stores the order (unpaid) before any payment is taken; returns null in demo mode (no Supabase). */
   const createStoredOrder = async (method: "paypal" | "card" | "klarna"): Promise<PlacedOrder | null> => {
     const missing =
@@ -248,9 +220,8 @@ const Checkout = () => {
       setIsProcessing(false);
       return;
     }
-    // Simulate payment processing & Sendcloud parcel registration
+    // Simulate payment processing
     await new Promise(resolve => setTimeout(resolve, 1800));
-    await handleRegisterSendcloudParcel();
     setIsProcessing(false);
     setConfirmedBalance(dueLater);
     setPaymentComplete(true);
@@ -721,8 +692,7 @@ const Checkout = () => {
                                           console.error("Could not store the PayPal reference:", err);
                                         }
                                       }
-                                      await handleRegisterSendcloudParcel();
-                                      setConfirmedBalance(dueLater);
+                                                                        setConfirmedBalance(dueLater);
                                       setPaymentComplete(true);
                                       clearCart();
     clearStoredCode();
@@ -919,12 +889,6 @@ const Checkout = () => {
                         <p className="text-sm text-foreground max-w-md mx-auto">
                           {t("preorder.confirmation", { amount: formatPrice(confirmedBalance) })}
                         </p>
-                      )}
-                      {trackingNumber && (
-                        <div className="p-3 bg-accent/10 border border-accent/30 rounded-sm inline-block text-xs font-mono text-foreground">
-                          <span className="font-semibold text-accent block mb-1">{t("checkout.trackingNumber")}</span>
-                          {trackingNumber}
-                        </div>
                       )}
                       <div>
                         <Button asChild className="rounded-full bg-brand-gradient text-white mt-4">

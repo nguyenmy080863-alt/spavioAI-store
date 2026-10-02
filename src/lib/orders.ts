@@ -68,6 +68,16 @@ export interface DeliveryOrder {
   shipped_at: string | null;
   delivered_at: string | null;
   created_at: string;
+  // Shipping label (migration 0022); missing before it is applied.
+  label_parcel_id?: string;
+  label_service?: string;
+  label_tracking_url?: string;
+  label_cost?: number;
+  label_weight_grams?: number | null;
+  label_a6_path?: string;
+  label_a4_path?: string;
+  label_created_at?: string | null;
+  label_cancelled_at?: string | null;
   delivery_order_items: DeliveryOrderItem[];
 }
 

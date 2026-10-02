@@ -1,7 +1,7 @@
 /**
  * Sendcloud Shipping Service Module
- * Handles carrier methods (DHL, Hermes, DHL Express), dynamic shipping rates,
- * and automated parcel dispatch via Sendcloud REST API.
+ * Shipping methods and rates shown at checkout. Labels are NOT created here: staff buy them in the
+ * admin panel through the shipping-labels Edge Function (the Sendcloud keys must stay on the server).
  */
 
 export interface SendcloudShippingMethod {
@@ -13,22 +13,6 @@ export interface SendcloudShippingMethod {
   deliveryTime: string;
   brandColor: string;
   carrierName: string;
-}
-
-export interface SendcloudParcelData {
-  name: string;
-  email: string;
-  telephone?: string;
-  address: string;
-  city: string;
-  postal_code: string;
-  country: string;
-  shipment: {
-    id: number | string;
-    name?: string;
-  };
-  order_number?: string;
-  total_order_value?: number;
 }
 
 const PUBLIC_KEY = import.meta.env.VITE_SENDCLOUD_PUBLIC_KEY || "";
@@ -113,69 +97,4 @@ export async function getSendcloudShippingMethods(countryCode: string = "DE"): P
   }
 
   return DEFAULT_SENDCLOUD_SHIPPING_METHODS;
-}
-
-/**
- * Creates a parcel/shipment record in Sendcloud upon order checkout completion
- */
-export async function createSendcloudParcel(parcelData: SendcloudParcelData): Promise<{ success: boolean; parcelId?: number; trackingNumber?: string; message?: string }> {
-  console.log("Dispatching parcel to Sendcloud:", parcelData);
-
-  if (!PUBLIC_KEY || !SECRET_KEY) {
-    return {
-      success: true,
-      parcelId: Math.floor(Math.random() * 1000000),
-      trackingNumber: `SC-${Math.floor(Math.random() * 90000000 + 10000000)}DE`,
-      message: "Sendcloud Parcel created (Development Demo Mode)"
-    };
-  }
-
-  try {
-    const authHeader = `Basic ${btoa(`${PUBLIC_KEY}:${SECRET_KEY}`)}`;
-    const response = await fetch("https://panel.sendcloud.sc/api/v2/parcels", {
-      method: "POST",
-      headers: {
-        Authorization: authHeader,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        parcel: {
-          name: parcelData.name,
-          email: parcelData.email,
-          telephone: parcelData.telephone,
-          address: parcelData.address,
-          city: parcelData.city,
-          postal_code: parcelData.postal_code,
-          country: parcelData.country || "DE",
-          shipment: {
-            id: typeof parcelData.shipment.id === "number" ? parcelData.shipment.id : 8
-          },
-          order_number: parcelData.order_number,
-          total_order_value: parcelData.total_order_value
-        }
-      })
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      return {
-        success: true,
-        parcelId: data.parcel?.id,
-        trackingNumber: data.parcel?.tracking_number,
-        message: "Sendcloud parcel registered successfully"
-      };
-    } else {
-      const errData = await response.json().catch(() => ({}));
-      console.warn("Sendcloud Parcel creation response error:", errData);
-    }
-  } catch (err) {
-    console.error("Error connecting to Sendcloud API:", err);
-  }
-
-  return {
-    success: true,
-    parcelId: Math.floor(Math.random() * 1000000),
-    trackingNumber: `SC-${Math.floor(Math.random() * 90000000 + 10000000)}DE`,
-    message: "Sendcloud Parcel simulated successfully"
-  };
 }

@@ -92,6 +92,13 @@
 - [x] Replaces the old New order form
 - [ ] Stock reservation for drafts, preorders in drafts, emailing the payment link, invoices (needs tax advisor input)
 
+## 5j. Shipping labels — done (Sendcloud not connected)
+- [x] Buy, download and cancel labels per delivery; bulk page for several at once; EU destinations only
+- [x] Product weights, packaging allowance and default parcel weight
+- [x] Parcel creation removed from checkout (it ran before payment was confirmed and invented tracking numbers)
+- [ ] Connect Sendcloud (account, keys, deploy `shipping-labels`)
+- [ ] Carrier webhook to set On delivery / Delivered automatically; customs and non-EU shipping; live rates at checkout
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically

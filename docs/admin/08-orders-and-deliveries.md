@@ -5,7 +5,7 @@ Open **Orders**.
 ## Order flow
 1. **Create draft** starts an order by hand (phone, in person, quote); the draft becomes an order unpaid or already paid, or the customer pays through a payment link (see *Draft orders*). Orders placed at checkout use the same tables (see *Orders from checkout*).
 2. **Mark as paid:** stock is **committed** (reserved). Shop availability = on hand − committed.
-3. **Create delivery:** choose the quantity per product (a delivery can cover only part of the order), carrier and tracking number. The delivery starts as **Preparing**; stock does not move yet.
+3. **Create delivery:** choose the quantity per product (a delivery can cover only part of the order), carrier and tracking number. The delivery starts as **Preparing**; stock does not move yet. Then **Create shipping label** buys a carrier label for it (see *Shipping labels*), or you type the carrier and tracking number by hand.
 4. **Picked up by carrier** → *On delivery*. Stock leaves the warehouse: On hand and Committed both go down.
 5. **Mark delivered** → *Delivered*. When every product is fully delivered the order becomes **Completed**.
 

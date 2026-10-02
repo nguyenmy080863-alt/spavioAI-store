@@ -218,7 +218,7 @@ export const downloadReturnLabel = async (returnNumber: string, email: string) =
 // --- Staff: Edge Functions and exchange completion ---
 
 /** Calls a staff Edge Function and turns its JSON error into a readable Error. */
-const invokeStaffFunction = async <T,>(name: string, body: Record<string, unknown>): Promise<T> => {
+export const invokeStaffFunction = async <T,>(name: string, body: Record<string, unknown>): Promise<T> => {
   const { data, error } = await supabase.functions.invoke(name, { body });
   if (error) {
     const context = (error as { context?: Response }).context;
