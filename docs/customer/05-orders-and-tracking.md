@@ -6,6 +6,7 @@ Sign in and open **Your orders** on `/account` (`/account/orders`). For every or
 - the items, shipping, and any preorder balance still due at shipping,
 - the **delivery** with carrier and **tracking number** once it ships,
 - the **warranty end date** (2 years from delivery),
+- **Return items** while the 30-day trial runs (see Returns), with your returns and their status,
 - **Buy again**, **Report a problem** (opens a warranty ticket with the order and product already filled in) and a general help link.
 
 Orders you placed earlier as a guest with the same email show up too, once that email is confirmed on your account.

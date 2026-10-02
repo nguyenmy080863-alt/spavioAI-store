@@ -156,7 +156,6 @@ DECLARE
 BEGIN
   SELECT * INTO v_order FROM public.sales_orders
   WHERE upper(order_number) = upper(trim(COALESCE(p_order_number, '')))
-    AND v_order.customer_email IS NOT DISTINCT FROM v_order.customer_email
     AND customer_email <> '' AND lower(customer_email) = lower(trim(COALESCE(p_email, '')));
   IF NOT FOUND THEN RETURN NULL; END IF;
 

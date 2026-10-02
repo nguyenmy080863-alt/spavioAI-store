@@ -92,5 +92,13 @@
   "orderTrack": {
     "title": "Theo dõi đơn hàng",
     "description": "Tra cứu đơn hàng Spavio AI Store bằng mã đơn hàng và email."
+  },
+  "returnRequest": {
+    "title": "Trả lại thiết bị",
+    "description": "Bắt đầu trả hàng trong 30 ngày dùng thử thiết bị Spavio AI của bạn."
+  },
+  "returnTrack": {
+    "title": "Theo dõi yêu cầu trả hàng",
+    "description": "Theo dõi tiến độ trả hàng và hoàn tiền Spavio AI của bạn."
   }
 }

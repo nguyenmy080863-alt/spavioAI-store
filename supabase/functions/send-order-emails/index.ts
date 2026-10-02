@@ -8,6 +8,7 @@
 
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { normaliseLang, renderEmail, type EmailKind } from "./templates.ts";
+import { renderReturnEmail, RETURN_KINDS, type ReturnEmailKind } from "./return-templates.ts";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -45,41 +46,81 @@ Deno.serve(async (request) => {
 
   for (const row of rows ?? []) {
     try {
-      const { data: order, error: orderError } = await supabase
-        .from("sales_orders")
-        .select("*, sales_order_items(quantity, unit_price, products(name))")
-        .eq("id", row.sales_order_id)
-        .single();
-      if (orderError || !order) throw new Error(orderError?.message ?? "Order not found");
-
-      let delivery = null;
-      if (row.delivery_order_id) {
-        const { data } = await supabase
-          .from("delivery_orders")
-          .select("carrier, tracking_number")
-          .eq("id", row.delivery_order_id)
-          .single();
-        delivery = data;
-      }
-
       const lang = normaliseLang(row.language);
-      const email = renderEmail({
-        kind: row.kind as EmailKind,
-        lang,
-        siteUrl: SITE_URL,
-        to: row.to_email,
-        delivery,
-        order: {
-          ...order,
-          items: order.sales_order_items.map(
-            (i: { quantity: number; unit_price: number; products: { name: string } | null }) => ({
-              name: i.products?.name ?? "",
-              quantity: i.quantity,
-              unit_price: i.unit_price,
-            }),
-          ),
-        },
-      });
+      let email: { subject: string; html: string; text: string };
+
+      if (row.return_request_id && RETURN_KINDS.includes(row.kind as ReturnEmailKind)) {
+        // Return and exchange emails.
+        const { data: ret, error: returnError } = await supabase
+          .from("return_requests")
+          .select("*, sales_orders!return_requests_sales_order_id_fkey(order_number), return_items(quantity, unit_price, exchange_unit_price, products!return_items_product_id_fkey(name), exchange:products!return_items_exchange_product_id_fkey(name))")
+          .eq("id", row.return_request_id)
+          .single();
+        if (returnError || !ret) throw new Error(returnError?.message ?? "Return not found");
+
+        email = renderReturnEmail({
+          kind: row.kind as ReturnEmailKind,
+          lang,
+          siteUrl: SITE_URL,
+          to: row.to_email,
+          ret: {
+            ...ret,
+            order_number: ret.sales_orders?.order_number ?? "",
+            has_label: !!ret.label_created_at,
+            items: ret.return_items.map(
+              (i: {
+                quantity: number;
+                unit_price: number;
+                exchange_unit_price: number | null;
+                products: { name: string } | null;
+                exchange: { name: string } | null;
+              }) => ({
+                name: i.products?.name ?? "",
+                quantity: i.quantity,
+                unit_price: i.unit_price,
+                exchange_name: i.exchange?.name ?? null,
+                exchange_unit_price: i.exchange_unit_price,
+              }),
+            ),
+          },
+        });
+      } else {
+        // Order emails.
+        const { data: order, error: orderError } = await supabase
+          .from("sales_orders")
+          .select("*, sales_order_items(quantity, unit_price, products(name))")
+          .eq("id", row.sales_order_id)
+          .single();
+        if (orderError || !order) throw new Error(orderError?.message ?? "Order not found");
+
+        let delivery = null;
+        if (row.delivery_order_id) {
+          const { data } = await supabase
+            .from("delivery_orders")
+            .select("carrier, tracking_number")
+            .eq("id", row.delivery_order_id)
+            .single();
+          delivery = data;
+        }
+
+        email = renderEmail({
+          kind: row.kind as EmailKind,
+          lang,
+          siteUrl: SITE_URL,
+          to: row.to_email,
+          delivery,
+          order: {
+            ...order,
+            items: order.sales_order_items.map(
+              (i: { quantity: number; unit_price: number; products: { name: string } | null }) => ({
+                name: i.products?.name ?? "",
+                quantity: i.quantity,
+                unit_price: i.unit_price,
+              }),
+            ),
+          },
+        });
+      }
 
       const response = await fetch("https://api.resend.com/emails", {
         method: "POST",

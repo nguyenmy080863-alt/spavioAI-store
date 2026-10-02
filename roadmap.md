@@ -61,6 +61,13 @@
 - [x] `/account/orders` for signed-in customers and `/orders/track` for guests: status, tracking, warranty date, buy again, report a problem
 - [ ] Emails for cancellation and refund
 
+## 5e. Returns — done
+- [x] Customers and guests start a return within the 30-day trial (items, quantities, reason, condition check); track it by return number + email
+- [x] Admin: review, approve / reject, receive, record refund, restock; refunds reduce customer total spent
+- [x] Return emails (queued), prepaid Sendcloud return labels with optional cost deduction, PayPal refund function, exchanges with price settlement
+- [ ] Connect PayPal refunds, Sendcloud labels and the email provider (pending, see docs/admin/14-returns.md)
+- [ ] Collect exchange price differences automatically; move outgoing Sendcloud calls to the server
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically

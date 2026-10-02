@@ -20,5 +20,8 @@
 
 > Card and Klarna payments are still simulated. Order emails are prepared but not sent yet; follow your order under Orders and tracking.
 
+## Returns
+Every device has a 30-day trial from delivery. Start a return at `/returns`; see Returns.
+
 ## Help and policies
 Customer care, device guide, privacy policy, terms and impressum are linked in the footer. A WhatsApp button is available on every page.

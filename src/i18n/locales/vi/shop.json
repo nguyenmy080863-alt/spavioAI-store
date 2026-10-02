@@ -396,6 +396,134 @@
       "notFound": "Không tìm thấy đơn hàng với thông tin này. Hãy kiểm tra mã và email rồi thử lại.",
       "another": "Tra cứu đơn hàng khác",
       "warrantyLink": "Cần hỗ trợ bảo hành?"
+    },
+    "returns": "Trả hàng",
+    "returnItems": "Trả lại sản phẩm",
+    "returnUntil": "Có thể trả hàng đến {{date}}."
+  },
+  "returns": {
+    "title": "Trả lại thiết bị",
+    "intro": "Dùng thử thiết bị trong {{days}} ngày. Nếu không phù hợp, hãy bắt đầu trả hàng tại đây. Bạn không cần tài khoản.",
+    "trackLink": "Đã yêu cầu trả hàng? Theo dõi tại đây",
+    "policy": {
+      "condition": "Gửi lại thiết bị và phụ kiện đầy đủ, trong bao bì gốc.",
+      "hygiene": "Đầu bàn chải và phụ kiện đã dùng sẽ được thay mới trước khi bán lại vì lý do vệ sinh.",
+      "refund": "Tiền hoàn lại được chuyển về phương thức thanh toán ban đầu trong vòng 14 ngày sau khi chúng tôi nhận được hàng trả.",
+      "withdrawal": "Quyền hủy hợp đồng 14 ngày theo luật của bạn không bị ảnh hưởng.",
+      "labelFree": "Nếu chúng tôi gửi nhãn trả hàng trả trước cho bạn, chúng tôi chịu chi phí đó.",
+      "labelDeducted": "Chi phí nhãn trả hàng trả trước được trừ vào số tiền hoàn lại (không áp dụng với thiết bị lỗi hoặc giao sai)."
+    },
+    "form": {
+      "orderNumber": "Mã đơn hàng",
+      "email": "Địa chỉ email",
+      "lookupHint": "Email bạn đã dùng để đặt hàng. Mã đơn hàng có trong email đặt hàng và trang đơn hàng của bạn.",
+      "lookup": "Tìm đơn hàng",
+      "looking": "Đang tìm…",
+      "notFound": "Không tìm thấy đơn hàng với thông tin này. Hãy kiểm tra mã và email rồi thử lại.",
+      "back": "Quay lại",
+      "itemsTitle": "Sản phẩm trong đơn hàng {{number}}",
+      "notDelivered": "chưa được giao",
+      "alreadyReturned": "đã trả lại",
+      "until": "có thể trả đến {{date}}",
+      "windowEnded": "hết hạn trả hàng vào {{date}}",
+      "quantity": "Số lượng trả lại",
+      "nothingToReturn": "Hiện không có sản phẩm nào trong đơn hàng này có thể trả lại.",
+      "reason": "Vì sao bạn trả lại?",
+      "reasonPlaceholder": "Chọn lý do",
+      "defectiveHint": "Nếu thiết bị bị lỗi, bạn cũng có thể dùng bảo hành.",
+      "defectiveLink": "Tạo yêu cầu bảo hành thay thế",
+      "note": "Bạn muốn chúng tôi biết điều gì? (không bắt buộc)",
+      "confirm": "Tôi xác nhận thiết bị và phụ kiện đầy đủ, trong bao bì gốc.",
+      "refundPreview": "Số tiền hoàn dự kiến: {{amount}} (chỉ sản phẩm, không hoàn phí vận chuyển)",
+      "submit": "Gửi yêu cầu trả hàng",
+      "submitting": "Đang gửi…",
+      "chooseReason": "Vui lòng chọn lý do.",
+      "chooseItems": "Chọn ít nhất một sản phẩm để trả lại.",
+      "confirmRequired": "Vui lòng xác nhận tình trạng thiết bị.",
+      "errorTitle": "Không thể gửi yêu cầu trả hàng của bạn",
+      "resolution": "Bạn muốn gì?",
+      "resolutions": {
+        "refund": "Hoàn tiền",
+        "exchange": "Đổi sang thiết bị khác"
+      },
+      "replacement": "Thay thế",
+      "replacementPlaceholder": "Chọn thiết bị thay thế",
+      "chooseReplacement": "Chọn thiết bị thay thế cho mọi sản phẩm bạn đổi.",
+      "exchangePending": "Chọn thiết bị thay thế để xem chênh lệch giá.",
+      "exchangePay": "Thiết bị thay thế đắt hơn {{amount}}. Chúng tôi sẽ liên hệ để thống nhất thanh toán trước khi giao.",
+      "exchangeRefund": "Thiết bị thay thế rẻ hơn {{amount}}. Chúng tôi hoàn lại phần chênh lệch.",
+      "exchangeEven": "Giá trị bằng nhau. Không phải trả thêm và không hoàn lại."
+    },
+    "blocked": {
+      "unpaid": "Đơn hàng này chưa được thanh toán nên không thể trả lại.",
+      "cancelled": "Đơn hàng này đã bị hủy nên không có gì để trả lại."
+    },
+    "reason": {
+      "changed_mind": "Tôi đổi ý (dùng thử)",
+      "not_suitable": "Không phù hợp với tôi",
+      "defective": "Bị lỗi hoặc không hoạt động",
+      "wrong_item": "Nhận sai sản phẩm",
+      "other": "Khác"
+    },
+    "success": {
+      "title": "Đã nhận yêu cầu trả hàng",
+      "text": "Mã trả hàng của bạn là {{number}}. Số tiền hoàn dự kiến: {{amount}}.",
+      "next": "Chúng tôi sẽ xem xét yêu cầu. Khi được duyệt, bạn sẽ thấy hướng dẫn gửi hàng trên trang trả hàng. Hãy lưu mã trả hàng và địa chỉ email.",
+      "track": "Mở yêu cầu trả hàng",
+      "textExchange": "Mã trả hàng của bạn là {{number}}. Chúng tôi sẽ kiểm tra kiện hàng rồi chuẩn bị thiết bị thay thế."
+    },
+    "status": {
+      "requested": "Đã yêu cầu",
+      "approved": "Đã duyệt",
+      "received": "Đã nhận hàng",
+      "refunded": "Đã hoàn tiền",
+      "rejected": "Bị từ chối",
+      "cancelled": "Đã hủy"
+    },
+    "statusHint": {
+      "requested": "Chúng tôi đang xem xét yêu cầu của bạn.",
+      "approved": "Đã duyệt. Hãy gửi hàng như hướng dẫn bên dưới và thêm mã vận đơn.",
+      "received": "Chúng tôi đã nhận hàng trả và đang kiểm tra. Tiền hoàn sẽ được chuyển sau.",
+      "refunded": "Tiền hoàn đã được chuyển về phương thức thanh toán ban đầu của bạn.",
+      "rejected": "Chúng tôi không thể chấp nhận yêu cầu này. Xem tin nhắn bên dưới.",
+      "cancelled": "Yêu cầu trả hàng này đã bị hủy."
+    },
+    "track": {
+      "title": "Theo dõi yêu cầu trả hàng",
+      "intro": "Nhập mã trả hàng và địa chỉ email bạn đã dùng.",
+      "returnNumber": "Mã trả hàng",
+      "lookup": "Xem yêu cầu",
+      "notFound": "Không tìm thấy yêu cầu trả hàng với thông tin này. Hãy kiểm tra mã và email rồi thử lại.",
+      "another": "Tra cứu yêu cầu khác",
+      "startNew": "Tạo yêu cầu trả hàng mới",
+      "forOrder": "Đơn hàng {{order}}",
+      "requestedOn": "yêu cầu ngày {{date}}",
+      "messageFromUs": "Tin nhắn từ Spavio",
+      "refunded": "Đã hoàn tiền ngày {{date}}",
+      "expectedRefund": "Số tiền hoàn dự kiến",
+      "trackingLabel": "Mã vận đơn của kiện hàng trả lại",
+      "saveTracking": "Lưu",
+      "trackingHint": "Không bắt buộc. Giúp chúng tôi tìm kiện hàng của bạn.",
+      "trackingSaved": "Đã lưu mã vận đơn",
+      "cancel": "Hủy yêu cầu này",
+      "cancelConfirm": "Hủy yêu cầu trả hàng này?",
+      "labelError": "Không thể tải nhãn",
+      "labelTitle": "Nhãn trả hàng trả trước của bạn",
+      "labelDownload": "Tải nhãn (PDF)",
+      "labelHint": "In nhãn, dán lên kiện hàng và giao kiện hàng cho đơn vị vận chuyển.",
+      "replacedBy": "Thay thế",
+      "labelDeduction": "Chi phí nhãn trả hàng",
+      "replacementOrder": "Đơn hàng thay thế của bạn là {{number}}.",
+      "exchangeNote": "Sau khi kiểm tra kiện hàng, chúng tôi tạo đơn hàng thay thế và tính chênh lệch giá (nếu có).",
+      "settlementPay": "Bạn thanh toán phần chênh lệch {{amount}}. Chúng tôi sẽ liên hệ để thống nhất thanh toán trước khi giao.",
+      "settlementRefund": "Chúng tôi hoàn lại phần chênh lệch {{amount}}."
+    },
+    "statusExchange": {
+      "refunded": "Hoàn tất"
+    },
+    "statusHintExchange": {
+      "received": "Chúng tôi đã nhận kiện hàng và đang kiểm tra. Sau đó chúng tôi chuẩn bị thiết bị thay thế.",
+      "refunded": "Việc đổi hàng đã hoàn tất. Thiết bị thay thế đang được chuẩn bị; bạn sẽ nhận thông báo giao hàng."
     }
   }
 }

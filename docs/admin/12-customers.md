@@ -17,7 +17,7 @@ If the same email shows up again (a guest who later signs up, an order after a t
 ## The list
 - Search by name, email, phone or tag.
 - Columns: account or guest, marketing status, number of paid orders, total spent, last purchase, tags. A customer with open warranty tickets shows a note.
-- **Total spent** counts paid orders that were not cancelled, with shipping included. Refunded orders do not count.
+- **Total spent** counts paid orders that were not cancelled, with shipping included. Refunded orders do not count, and refunded returns are subtracted.
 
 ## Segments
 Pick a segment in the filter next to the search box. Segments update by themselves as orders change.

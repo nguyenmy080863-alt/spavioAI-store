@@ -398,6 +398,134 @@
       "notFound": "Wir haben zu diesen Angaben keine Bestellung gefunden. Prüfe Nummer und E-Mail und versuche es erneut.",
       "another": "Andere Bestellung suchen",
       "warrantyLink": "Hilfe zu Garantie oder Support?"
+    },
+    "returns": "Rücksendungen",
+    "returnItems": "Artikel zurückgeben",
+    "returnUntil": "Rückgabe möglich bis {{date}}."
+  },
+  "returns": {
+    "title": "Gerät zurückgeben",
+    "intro": "Teste dein Gerät {{days}} Tage lang. Wenn es nicht passt, starte hier die Rücksendung. Du brauchst kein Konto.",
+    "trackLink": "Rücksendung schon gestartet? Status ansehen",
+    "policy": {
+      "condition": "Sende Gerät und Zubehör vollständig und in der Originalverpackung zurück.",
+      "hygiene": "Gebrauchte Bürstenköpfe und Aufsätze werden aus Hygienegründen vor dem Weiterverkauf ersetzt.",
+      "refund": "Die Erstattung erfolgt auf deine ursprüngliche Zahlungsart innerhalb von 14 Tagen nach Eingang der Rücksendung.",
+      "withdrawal": "Dein gesetzliches 14-tägiges Widerrufsrecht bleibt unberührt.",
+      "labelFree": "Wenn wir dir ein vorfrankiertes Rücksendeetikett schicken, tragen wir die Kosten.",
+      "labelDeducted": "Die Kosten des vorfrankierten Rücksendeetiketts werden von deiner Erstattung abgezogen (nicht bei defekten Geräten oder falsch gelieferten Artikeln)."
+    },
+    "form": {
+      "orderNumber": "Bestellnummer",
+      "email": "E-Mail-Adresse",
+      "lookupHint": "Die E-Mail, mit der du bestellt hast. Die Bestellnummer steht in deiner Bestell-E-Mail und auf deiner Bestellübersicht.",
+      "lookup": "Bestellung suchen",
+      "looking": "Suche läuft…",
+      "notFound": "Wir haben zu diesen Angaben keine Bestellung gefunden. Prüfe Nummer und E-Mail und versuche es erneut.",
+      "back": "Zurück",
+      "itemsTitle": "Artikel der Bestellung {{number}}",
+      "notDelivered": "noch nicht geliefert",
+      "alreadyReturned": "bereits zurückgegeben",
+      "until": "Rückgabe möglich bis {{date}}",
+      "windowEnded": "Rückgabefrist abgelaufen am {{date}}",
+      "quantity": "Menge zur Rückgabe",
+      "nothingToReturn": "Aktuell kann kein Artikel dieser Bestellung zurückgegeben werden.",
+      "reason": "Warum gibst du es zurück?",
+      "reasonPlaceholder": "Grund wählen",
+      "defectiveHint": "Wenn das Gerät fehlerhaft ist, kannst du auch die Garantie nutzen.",
+      "defectiveLink": "Stattdessen ein Garantie-Ticket eröffnen",
+      "note": "Gibt es etwas, das wir wissen sollten? (optional)",
+      "confirm": "Ich bestätige, dass Gerät und Zubehör vollständig und in der Originalverpackung sind.",
+      "refundPreview": "Erwartete Erstattung: {{amount}} (nur Artikel, Versand wird nicht erstattet)",
+      "submit": "Rücksendung anfragen",
+      "submitting": "Wird gesendet…",
+      "chooseReason": "Bitte wähle einen Grund.",
+      "chooseItems": "Wähle mindestens einen Artikel zur Rückgabe.",
+      "confirmRequired": "Bitte bestätige den Zustand des Geräts.",
+      "errorTitle": "Wir konnten deine Rücksendeanfrage nicht senden",
+      "resolution": "Was möchtest du?",
+      "resolutions": {
+        "refund": "Erstattung",
+        "exchange": "Umtausch gegen ein anderes Gerät"
+      },
+      "replacement": "Ersatz",
+      "replacementPlaceholder": "Ersatzgerät wählen",
+      "chooseReplacement": "Wähle für jeden umgetauschten Artikel einen Ersatz.",
+      "exchangePending": "Wähle die Ersatzgeräte, um die Preisdifferenz zu sehen.",
+      "exchangePay": "Der Ersatz kostet {{amount}} mehr. Wir melden uns, um die Zahlung zu klären, bevor wir ihn versenden.",
+      "exchangeRefund": "Der Ersatz kostet {{amount}} weniger. Wir erstatten die Differenz.",
+      "exchangeEven": "Gleicher Wert. Nichts zu zahlen und nichts zu erstatten."
+    },
+    "blocked": {
+      "unpaid": "Diese Bestellung wurde noch nicht bezahlt und kann daher nicht zurückgegeben werden.",
+      "cancelled": "Diese Bestellung wurde storniert, es gibt nichts zurückzugeben."
+    },
+    "reason": {
+      "changed_mind": "Ich habe es mir anders überlegt (Testphase)",
+      "not_suitable": "Passt nicht zu mir",
+      "defective": "Defekt oder funktioniert nicht",
+      "wrong_item": "Falsches Produkt erhalten",
+      "other": "Sonstiges"
+    },
+    "success": {
+      "title": "Rücksendeanfrage erhalten",
+      "text": "Deine Rücksendenummer ist {{number}}. Erwartete Erstattung: {{amount}}.",
+      "next": "Wir prüfen deine Anfrage. Nach der Freigabe findest du die Rücksendeanleitung auf deiner Rücksendeseite. Bewahre Rücksendenummer und E-Mail-Adresse auf.",
+      "track": "Meine Rücksendung öffnen",
+      "textExchange": "Deine Rücksendenummer ist {{number}}. Wir prüfen das Paket und bereiten dann deinen Ersatz vor."
+    },
+    "status": {
+      "requested": "Angefragt",
+      "approved": "Freigegeben",
+      "received": "Eingegangen",
+      "refunded": "Erstattet",
+      "rejected": "Abgelehnt",
+      "cancelled": "Storniert"
+    },
+    "statusHint": {
+      "requested": "Wir prüfen deine Anfrage.",
+      "approved": "Freigegeben. Sende die Artikel wie unten beschrieben zurück und trage die Sendungsnummer ein.",
+      "received": "Wir haben deine Rücksendung erhalten und prüfen sie. Die Erstattung folgt.",
+      "refunded": "Deine Erstattung wurde auf deine ursprüngliche Zahlungsart ausgezahlt.",
+      "rejected": "Wir konnten diese Rücksendung nicht annehmen. Siehe unsere Nachricht unten.",
+      "cancelled": "Diese Rücksendung wurde storniert."
+    },
+    "track": {
+      "title": "Rücksendung verfolgen",
+      "intro": "Gib deine Rücksendenummer und die verwendete E-Mail-Adresse ein.",
+      "returnNumber": "Rücksendenummer",
+      "lookup": "Rücksendung anzeigen",
+      "notFound": "Wir haben zu diesen Angaben keine Rücksendung gefunden. Prüfe Nummer und E-Mail und versuche es erneut.",
+      "another": "Andere Rücksendung suchen",
+      "startNew": "Neue Rücksendung starten",
+      "forOrder": "Bestellung {{order}}",
+      "requestedOn": "angefragt am {{date}}",
+      "messageFromUs": "Nachricht von Spavio",
+      "refunded": "Erstattet am {{date}}",
+      "expectedRefund": "Erwartete Erstattung",
+      "trackingLabel": "Sendungsnummer deines Rücksendepakets",
+      "saveTracking": "Speichern",
+      "trackingHint": "Optional. Sie hilft uns, dein Paket zu finden.",
+      "trackingSaved": "Sendungsnummer gespeichert",
+      "cancel": "Rücksendung stornieren",
+      "cancelConfirm": "Diese Rücksendeanfrage stornieren?",
+      "labelError": "Wir konnten das Etikett nicht herunterladen",
+      "labelTitle": "Dein vorfrankiertes Rücksendeetikett",
+      "labelDownload": "Etikett herunterladen (PDF)",
+      "labelHint": "Ausdrucken, auf das Paket kleben und das Paket beim Versanddienstleister abgeben.",
+      "replacedBy": "Ersatz",
+      "labelDeduction": "Kosten Rücksendeetikett",
+      "replacementOrder": "Deine Ersatzbestellung ist {{number}}.",
+      "exchangeNote": "Nach der Prüfung deines Pakets legen wir die Ersatzbestellung an und berechnen eine mögliche Preisdifferenz.",
+      "settlementPay": "Du zahlst die Differenz von {{amount}}. Wir melden uns, um die Zahlung zu klären, bevor wir versenden.",
+      "settlementRefund": "Wir erstatten dir die Differenz von {{amount}}."
+    },
+    "statusExchange": {
+      "refunded": "Abgeschlossen"
+    },
+    "statusHintExchange": {
+      "received": "Wir haben dein Paket erhalten und prüfen es. Danach bereiten wir deinen Ersatz vor.",
+      "refunded": "Dein Umtausch ist abgeschlossen. Dein Ersatz wird vorbereitet; du erhältst eine Versandmitteilung."
     }
   }
 }

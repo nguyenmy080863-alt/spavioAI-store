@@ -398,6 +398,134 @@
       "notFound": "We could not find an order with these details. Check the number and email and try again.",
       "another": "Look up another order",
       "warrantyLink": "Need warranty or support help?"
+    },
+    "returns": "Returns",
+    "returnItems": "Return items",
+    "returnUntil": "Return possible until {{date}}."
+  },
+  "returns": {
+    "title": "Return a device",
+    "intro": "Try your device for {{days}} days. If it is not right for you, start a return here. You do not need an account.",
+    "trackLink": "Already started a return? Track it",
+    "policy": {
+      "condition": "Return the device and accessories complete and in the original packaging.",
+      "hygiene": "Used brush heads and attachments are replaced before resale for hygiene reasons.",
+      "refund": "Refunds go to your original payment method within 14 days of us receiving the return.",
+      "withdrawal": "Your statutory 14-day right of withdrawal remains unaffected.",
+      "labelFree": "If we send you a prepaid return label, we pay for it.",
+      "labelDeducted": "The cost of the prepaid return label is deducted from your refund (not for defective devices or wrong items)."
+    },
+    "form": {
+      "orderNumber": "Order number",
+      "email": "Email address",
+      "lookupHint": "The email you ordered with. Your order number is in your order email and on your orders page.",
+      "lookup": "Find my order",
+      "looking": "Looking…",
+      "notFound": "We could not find an order with these details. Check the number and email and try again.",
+      "back": "Back",
+      "itemsTitle": "Items in order {{number}}",
+      "notDelivered": "not delivered yet",
+      "alreadyReturned": "already returned",
+      "until": "return possible until {{date}}",
+      "windowEnded": "return period ended on {{date}}",
+      "quantity": "Quantity to return",
+      "nothingToReturn": "None of the items in this order can be returned right now.",
+      "reason": "Why are you returning it?",
+      "reasonPlaceholder": "Choose a reason",
+      "defectiveHint": "If the device is faulty you can also use the warranty.",
+      "defectiveLink": "Open a warranty ticket instead",
+      "note": "Anything we should know? (optional)",
+      "confirm": "I confirm that the device and accessories are complete and in their original packaging.",
+      "refundPreview": "Expected refund: {{amount}} (items only, shipping is not refunded)",
+      "submit": "Send return request",
+      "submitting": "Sending…",
+      "chooseReason": "Please choose a reason.",
+      "chooseItems": "Choose at least one item to return.",
+      "confirmRequired": "Please confirm the condition of the device.",
+      "errorTitle": "We could not send your return request",
+      "resolution": "What would you like?",
+      "resolutions": {
+        "refund": "Refund",
+        "exchange": "Exchange for another device"
+      },
+      "replacement": "Replacement",
+      "replacementPlaceholder": "Choose the replacement device",
+      "chooseReplacement": "Choose a replacement for every item you exchange.",
+      "exchangePending": "Choose the replacement devices to see the price difference.",
+      "exchangePay": "The replacement costs {{amount}} more. We contact you to arrange the payment before we ship it.",
+      "exchangeRefund": "The replacement costs {{amount}} less. We refund the difference.",
+      "exchangeEven": "Same value. Nothing to pay and nothing to refund."
+    },
+    "blocked": {
+      "unpaid": "This order has not been paid yet, so it cannot be returned.",
+      "cancelled": "This order was cancelled, so there is nothing to return."
+    },
+    "reason": {
+      "changed_mind": "I changed my mind (trial)",
+      "not_suitable": "Not suitable for me",
+      "defective": "Defective or not working",
+      "wrong_item": "Wrong item received",
+      "other": "Other"
+    },
+    "success": {
+      "title": "Return request received",
+      "text": "Your return number is {{number}}. Expected refund: {{amount}}.",
+      "next": "We review your request. Once approved, you will find the return instructions on your return page. Keep the return number and your email address.",
+      "track": "Open my return",
+      "textExchange": "Your return number is {{number}}. We will check the parcel and then prepare your replacement."
+    },
+    "status": {
+      "requested": "Requested",
+      "approved": "Approved",
+      "received": "Received",
+      "refunded": "Refunded",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled"
+    },
+    "statusHint": {
+      "requested": "We are reviewing your request.",
+      "approved": "Approved. Send the items back as described below and add the tracking number.",
+      "received": "We received your return and are checking it. The refund follows.",
+      "refunded": "Your refund has been issued to your original payment method.",
+      "rejected": "We could not accept this return. See our message below.",
+      "cancelled": "This return was cancelled."
+    },
+    "track": {
+      "title": "Track your return",
+      "intro": "Enter your return number and the email address you used.",
+      "returnNumber": "Return number",
+      "lookup": "Show return",
+      "notFound": "We could not find a return with these details. Check the number and email and try again.",
+      "another": "Look up another return",
+      "startNew": "Start a new return",
+      "forOrder": "Order {{order}}",
+      "requestedOn": "requested on {{date}}",
+      "messageFromUs": "Message from Spavio",
+      "refunded": "Refunded on {{date}}",
+      "expectedRefund": "Expected refund",
+      "trackingLabel": "Tracking number of your return parcel",
+      "saveTracking": "Save",
+      "trackingHint": "Optional. It helps us find your parcel.",
+      "trackingSaved": "Tracking number saved",
+      "cancel": "Cancel this return",
+      "cancelConfirm": "Cancel this return request?",
+      "labelError": "We could not download the label",
+      "labelTitle": "Your prepaid return label",
+      "labelDownload": "Download label (PDF)",
+      "labelHint": "Print it, stick it on the parcel and hand the parcel to the carrier.",
+      "replacedBy": "Replacement",
+      "labelDeduction": "Return label cost",
+      "replacementOrder": "Your replacement order is {{number}}.",
+      "exchangeNote": "After we check your parcel we create the replacement order and work out any price difference.",
+      "settlementPay": "You pay the difference of {{amount}}. We will contact you to arrange the payment before we ship.",
+      "settlementRefund": "We refund the difference of {{amount}}."
+    },
+    "statusExchange": {
+      "refunded": "Completed"
+    },
+    "statusHintExchange": {
+      "received": "We received your parcel and are checking it. Then we prepare your replacement.",
+      "refunded": "Your exchange is complete. Your replacement is being prepared; you will get a shipping notice."
     }
   }
 }

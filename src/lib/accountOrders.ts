@@ -32,6 +32,10 @@ export interface CustomerOrder {
   items: CustomerOrderItem[];
   deliveries: CustomerOrderDelivery[];
   warranty_expires_at: string | null;
+  /** True while at least one delivered item can still be returned within the trial window. */
+  can_return: boolean;
+  return_window_ends_at: string | null;
+  returns: { return_number: string; status: string; refund_amount: number; created_at: string }[];
 }
 
 export type OrderStage =

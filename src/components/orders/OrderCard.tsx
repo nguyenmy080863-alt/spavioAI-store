@@ -134,7 +134,38 @@ const OrderCard = ({ order, email }: OrderCardProps) => {
         </p>
       )}
 
+      {order.returns.length > 0 && (
+        <div className="space-y-2">
+          <h3 className="text-sm font-medium text-foreground">{t("orders.returns")}</h3>
+          {order.returns.map((entry) => (
+            <div key={entry.return_number} className="text-xs text-muted-foreground">
+              <Link
+                to={`/returns/track?return=${entry.return_number}${email ? `&email=${encodeURIComponent(email)}` : ""}`}
+                className="text-accent"
+              >
+                {entry.return_number}
+              </Link>
+              {" · "}
+              {t(`returns.status.${entry.status}`)}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {order.can_return && order.return_window_ends_at && (
+        <p className="text-xs text-muted-foreground">
+          {t("orders.returnUntil", { date: date(order.return_window_ends_at) })}
+        </p>
+      )}
+
       <div className="flex flex-wrap gap-3">
+        {order.can_return && (
+          <Button asChild size="sm">
+            <Link to={`/returns?order=${order.order_number}${email ? `&email=${encodeURIComponent(email)}` : ""}`}>
+              {t("orders.returnItems")}
+            </Link>
+          </Button>
+        )}
         <Button asChild size="sm" variant="outline">
           <Link to={warrantyLink()}>{t("orders.needHelp")}</Link>
         </Button>

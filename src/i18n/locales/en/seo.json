@@ -92,5 +92,13 @@
   "orderTrack": {
     "title": "Track your order",
     "description": "Look up your Spavio AI Store order with your order number and email."
+  },
+  "returnRequest": {
+    "title": "Return a device",
+    "description": "Start a return within the 30-day trial of your Spavio AI device."
+  },
+  "returnTrack": {
+    "title": "Track your return",
+    "description": "Follow the progress of your Spavio AI return and refund."
   }
 }

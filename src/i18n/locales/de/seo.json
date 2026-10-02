@@ -92,5 +92,13 @@
   "orderTrack": {
     "title": "Bestellung verfolgen",
     "description": "Rufe deine Spavio AI Store Bestellung mit Bestellnummer und E-Mail ab."
+  },
+  "returnRequest": {
+    "title": "Gerät zurückgeben",
+    "description": "Starte eine Rücksendung innerhalb der 30-tägigen Testphase deines Spavio AI Geräts."
+  },
+  "returnTrack": {
+    "title": "Rücksendung verfolgen",
+    "description": "Verfolge den Fortschritt deiner Spavio AI Rücksendung und Erstattung."
   }
 }

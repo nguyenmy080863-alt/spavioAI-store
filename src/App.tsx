@@ -27,6 +27,8 @@ import Signup from "./pages/Signup";
 import Account from "./pages/Account";
 import AccountOrders from "./pages/AccountOrders";
 import OrderTrack from "./pages/OrderTrack";
+import ReturnRequest from "./pages/returns/ReturnRequest";
+import ReturnTrack from "./pages/returns/ReturnTrack";
 import WarrantyRequest from "./pages/warranty/WarrantyRequest";
 import WarrantyTrack from "./pages/warranty/WarrantyTrack";
 import AdminOverview from "./pages/admin/AdminOverview";
@@ -43,6 +45,8 @@ import AdminSalesOrders from "./pages/admin/AdminSalesOrders";
 import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
 import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
+import AdminReturns from "./pages/admin/AdminReturns";
+import AdminReturnDetail from "./pages/admin/AdminReturnDetail";
 import AdminWarranty from "./pages/admin/AdminWarranty";
 import AdminWarrantyDetail from "./pages/admin/AdminWarrantyDetail";
 import AdminPlaceholder from "./pages/admin/AdminPlaceholder";
@@ -100,6 +104,8 @@ const storefrontRoutes = (
     <Route path="account" element={<Account />} />
     <Route path="account/orders" element={<AccountOrders />} />
     <Route path="orders/track" element={<OrderTrack />} />
+    <Route path="returns" element={<ReturnRequest />} />
+    <Route path="returns/track" element={<ReturnTrack />} />
     <Route path="warranty" element={<WarrantyRequest />} />
     <Route path="warranty/track" element={<WarrantyTrack />} />
     <Route path="*" element={<NotFound />} />
@@ -146,7 +152,8 @@ export const AppRoutes = () => (
       <Route path="discounts" element={<AdminPlaceholder />} />
       <Route path="warranty" element={<AdminWarranty />} />
       <Route path="warranty/:ticketId" element={<AdminWarrantyDetail />} />
-      <Route path="returns" element={<AdminPlaceholder />} />
+      <Route path="returns" element={<AdminReturns />} />
+      <Route path="returns/:returnId" element={<AdminReturnDetail />} />
       <Route path="finance" element={<AdminPlaceholder />} />
       <Route path="analytics" element={<AdminPlaceholder />} />
       <Route path="analytics/reports" element={<AdminPlaceholder />} />

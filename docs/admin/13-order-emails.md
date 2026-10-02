@@ -18,6 +18,20 @@ Rules:
 - Emails are written in the language the customer used at checkout (German, English or Vietnamese) and link to the order page and the warranty page. They contain no marketing, so the marketing consent checkbox does not apply.
 - Guests receive them as well. The link in the email opens the order page for that order and email, no account needed.
 
+## Return and exchange emails
+Sent for every return, in the language of the original order, with a link to the return page (`/returns/track`):
+
+| Email | Sent when |
+| --- | --- |
+| **Return request received** | The customer submits a return |
+| **Return approved** | You approve it (includes your message and label details if a label exists) |
+| **Return label ready** | A prepaid label was created |
+| **Return rejected** | You reject it (includes your reason) |
+| **Parcel received** | You mark the parcel received |
+| **Refund issued / exchange complete** | The return is refunded, or an exchange is completed (shows items value, label deduction and net refund or settlement) |
+
+Cancelled returns send no email. Each email is queued once per return. Replacement orders created by an exchange send the normal **shipped** email.
+
 ## See what was sent
 Open a checkout order: the **Customer emails** box lists each email with its status:
 - **Queued, not sent yet:** waiting for the sender (or about to be sent).
