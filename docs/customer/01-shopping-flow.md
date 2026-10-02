@@ -13,12 +13,12 @@
 
 ## Checkout
 1. Open the bag and go to **Checkout**.
-2. Enter your contact and delivery details.
+2. Enter your contact and delivery details. You do not need an account; signed-in customers get their email filled in. Tick the optional box if you want news about new devices and offers by email.
 3. Choose a **shipping method**. Methods and prices come from Sendcloud.
 4. Choose a **payment method** (PayPal, card or Klarna) and pay.
-5. On success the bag is cleared and a confirmation screen is shown.
+5. Your order is saved when you start paying, and prices are checked again on our side. On success the bag is cleared and the confirmation shows your **order number**. Keep it: you need it for support and warranty requests.
 
-> Status: checkout does not yet create an order record in the database. See the roadmap item "Orders".
+> Card and Klarna payments are still simulated. Order emails are prepared but not sent yet; follow your order under Orders and tracking.
 
 ## Help and policies
 Customer care, device guide, privacy policy, terms and impressum are linked in the footer. A WhatsApp button is available on every page.

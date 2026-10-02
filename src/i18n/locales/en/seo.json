@@ -84,5 +84,13 @@
   "warrantyTrack": {
     "title": "Track your ticket",
     "description": "Follow the progress of your Spavio AI warranty or support ticket."
+  },
+  "accountOrders": {
+    "title": "My orders",
+    "description": "Your Spavio AI Store orders, delivery tracking and warranty dates."
+  },
+  "orderTrack": {
+    "title": "Track your order",
+    "description": "Look up your Spavio AI Store order with your order number and email."
   }
 }

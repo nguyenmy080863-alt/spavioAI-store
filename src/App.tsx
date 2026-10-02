@@ -25,6 +25,8 @@ import AdminLayout from "./components/admin/AdminLayout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
+import AccountOrders from "./pages/AccountOrders";
+import OrderTrack from "./pages/OrderTrack";
 import WarrantyRequest from "./pages/warranty/WarrantyRequest";
 import WarrantyTrack from "./pages/warranty/WarrantyTrack";
 import AdminOverview from "./pages/admin/AdminOverview";
@@ -39,6 +41,8 @@ import AdminPurchaseOrders from "./pages/admin/AdminPurchaseOrders";
 import AdminPurchaseOrderDetail from "./pages/admin/AdminPurchaseOrderDetail";
 import AdminSalesOrders from "./pages/admin/AdminSalesOrders";
 import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
+import AdminCustomers from "./pages/admin/AdminCustomers";
+import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
 import AdminWarranty from "./pages/admin/AdminWarranty";
 import AdminWarrantyDetail from "./pages/admin/AdminWarrantyDetail";
 import AdminPlaceholder from "./pages/admin/AdminPlaceholder";
@@ -94,6 +98,8 @@ const storefrontRoutes = (
     <Route path="login" element={<Login />} />
     <Route path="signup" element={<Signup />} />
     <Route path="account" element={<Account />} />
+    <Route path="account/orders" element={<AccountOrders />} />
+    <Route path="orders/track" element={<OrderTrack />} />
     <Route path="warranty" element={<WarrantyRequest />} />
     <Route path="warranty/track" element={<WarrantyTrack />} />
     <Route path="*" element={<NotFound />} />
@@ -135,7 +141,8 @@ export const AppRoutes = () => (
       <Route path="products/purchase-orders/:poId" element={<AdminPurchaseOrderDetail />} />
       <Route path="products/transfers" element={<AdminPlaceholder />} />
       <Route path="products/gift-cards" element={<AdminPlaceholder />} />
-      <Route path="customers" element={<AdminPlaceholder />} />
+      <Route path="customers" element={<AdminCustomers />} />
+      <Route path="customers/:customerId" element={<AdminCustomerDetail />} />
       <Route path="discounts" element={<AdminPlaceholder />} />
       <Route path="warranty" element={<AdminWarranty />} />
       <Route path="warranty/:ticketId" element={<AdminWarrantyDetail />} />

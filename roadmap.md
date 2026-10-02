@@ -9,7 +9,7 @@
 ## 0b. Preorders — done
 - [x] Admin: per-product preorder switch, deposit (fixed EUR or %), expected shipping date
 - [x] Storefront: badges, deposit/balance on the product page, due-today vs due-at-shipping in bag and checkout
-- [ ] Charge the balance when a preorder ships (needs order records)
+- [ ] Charge the balance when a preorder ships (order records exist now; the balance is stored on the order)
 
 ## 1. Rebrand: LITALASH (lash products) — done (superseded)
 - [x] Logo SVG wordmark, index.html title/meta/og
@@ -46,8 +46,23 @@
 - [ ] v1.1: email notifications (ticket received, replies, visit scheduled; new-ticket alert for admins)
 - [ ] Photo/video attachments, link a ticket to a specific order line
 
+## 5c. Checkout orders & Customers v1 — done
+- [x] Checkout stores orders for guests and signed-in customers; prices recalculated on the server
+- [x] Customer records from orders, sign-ups and warranty tickets (one per email, guests get no account)
+- [x] Marketing consent checkbox at checkout and sign-up; admin customer list, tags, notes, CSV export
+- [x] Segments: high spenders, no purchase in 180 days
+- [x] Privacy: download customer data, anonymise customer
+- [ ] More segments (device owned, warranty ending, abandoned cart) — on request
+
+## 5d. Order emails & customer order pages — done except sending
+- [x] Email queue with rules: order received, payment confirmed, order shipped (checkout orders, guests included)
+- [x] Templates in DE/EN/VI and the sender function (`supabase/functions/send-order-emails`)
+- [ ] Connect an email provider and deploy the sender (pending, see docs/admin/13-order-emails.md)
+- [x] `/account/orders` for signed-in customers and `/orders/track` for guests: status, tracking, warranty date, buy again, report a problem
+- [ ] Emails for cancellation and refund
+
 ## 6. Next up
 
-- [ ] Orders: checkout writes orders, order dashboard, automatic stock deduction
+- [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically
 - [ ] Nested categories UI + product variants (size/colour with per-variant SKU/price)
 - [ ] Optional TOTP 2FA for privileged accounts

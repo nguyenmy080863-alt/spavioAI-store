@@ -202,7 +202,11 @@
         "deliveryTime": "Nächster Werktag"
       }
     },
-    "paypalCharge": "Schließe deine Bestellung direkt mit PayPal ab. Dein Konto wird mit {{total}} belastet."
+    "paypalCharge": "Schließe deine Bestellung direkt mit PayPal ab. Dein Konto wird mit {{total}} belastet.",
+    "marketingConsent": "Ja, haltet mich per E-Mail über neue Geräte, Angebote und Pflegetipps auf dem Laufenden. Ich kann das jederzeit widerrufen.",
+    "fillRequired": "Bitte gib zuerst E-Mail, Namen und Lieferadresse an.",
+    "priceChanged": "Die Preise in deiner Tasche haben sich geändert. Bitte lade die Seite neu und prüfe deine Tasche vor der Zahlung.",
+    "orderNumber": "Deine Bestellnummer ist {{number}}. Bewahre sie für Support- und Garantieanfragen auf."
   },
   "fomo": {
     "endsIn": "Endet in",
@@ -337,6 +341,63 @@
       "empty": "Du hast noch keine Tickets.",
       "open": "Ticket eröffnen",
       "view": "Ansehen"
+    }
+  },
+  "orders": {
+    "title": "Meine Bestellungen",
+    "intro": "Deine Bestellungen, Sendungsverfolgung und Garantiedaten an einem Ort.",
+    "empty": "Du hast noch keine Bestellungen.",
+    "loadError": "Wir konnten deine Bestellungen nicht laden. Bitte versuche es später erneut.",
+    "placedOn": "Bestellt am {{date}}",
+    "shipping": "Versand",
+    "balanceDue": "Restbetrag bei Versand (Vorbestellung)",
+    "deliveries": "Lieferung",
+    "tracking": "Sendungsnummer",
+    "deliveredOn": "geliefert am {{date}}",
+    "warrantyUntil": "2 Jahre Garantie bis {{date}}.",
+    "shipTo": "Lieferadresse",
+    "buyAgain": "Erneut kaufen",
+    "reportProblem": "Problem melden",
+    "needHelp": "Hilfe zu dieser Bestellung?",
+    "stage": {
+      "awaiting_payment": "Wartet auf Zahlung",
+      "payment_review": "Zahlung wird geprüft",
+      "preparing": "In Vorbereitung",
+      "shipped": "Versendet",
+      "delivered": "Geliefert",
+      "cancelled": "Storniert",
+      "refunded": "Erstattet"
+    },
+    "stageHint": {
+      "awaiting_payment": "Deine Zahlung ist noch nicht bei uns eingegangen.",
+      "payment_review": "Danke. Wir prüfen deine Zahlung und bestätigen sie in Kürze.",
+      "preparing": "Zahlung bestätigt. Wir machen deine Bestellung versandfertig.",
+      "shipped": "Deine Bestellung ist unterwegs.",
+      "delivered": "Deine Bestellung ist angekommen. Deine Garantie hat begonnen.",
+      "cancelled": "Diese Bestellung wurde storniert.",
+      "refunded": "Diese Bestellung wurde erstattet."
+    },
+    "deliveryStatus": {
+      "preparing": "In Vorbereitung",
+      "on_delivery": "Unterwegs",
+      "delivered": "Geliefert",
+      "cancelled": "Storniert"
+    },
+    "account": {
+      "title": "Bestellungen",
+      "text": "Sieh deine Bestellungen, Sendungen und Garantiedaten.",
+      "open": "Meine Bestellungen ansehen"
+    },
+    "track": {
+      "title": "Bestellung verfolgen",
+      "intro": "Gib deine Bestellnummer und die E-Mail-Adresse der Bestellung ein. Du brauchst kein Konto.",
+      "orderNumber": "Bestellnummer",
+      "email": "E-Mail-Adresse",
+      "lookup": "Bestellung anzeigen",
+      "looking": "Suche läuft…",
+      "notFound": "Wir haben zu diesen Angaben keine Bestellung gefunden. Prüfe Nummer und E-Mail und versuche es erneut.",
+      "another": "Andere Bestellung suchen",
+      "warrantyLink": "Hilfe zu Garantie oder Support?"
     }
   }
 }

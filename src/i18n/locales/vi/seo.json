@@ -84,5 +84,13 @@
   "warrantyTrack": {
     "title": "Theo dõi yêu cầu",
     "description": "Theo dõi tiến độ yêu cầu bảo hành hoặc hỗ trợ Spavio AI của bạn."
+  },
+  "accountOrders": {
+    "title": "Đơn hàng của tôi",
+    "description": "Đơn hàng Spavio AI Store, theo dõi vận chuyển và ngày bảo hành của bạn."
+  },
+  "orderTrack": {
+    "title": "Theo dõi đơn hàng",
+    "description": "Tra cứu đơn hàng Spavio AI Store bằng mã đơn hàng và email."
   }
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
@@ -34,11 +35,13 @@ const WarrantyRequest = () => {
   const { data: products = [] } = useStorefrontProducts();
   const { localize } = useProductText();
 
+  // The order page links here with the order, email and product already filled in.
+  const [prefill] = useSearchParams();
   const [type, setType] = useState<TicketType>("defect");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [orderNumber, setOrderNumber] = useState("");
-  const [product, setProduct] = useState("");
+  const [email, setEmail] = useState(prefill.get("email") ?? "");
+  const [orderNumber, setOrderNumber] = useState(prefill.get("order") ?? "");
+  const [product, setProduct] = useState(prefill.get("product") ?? "");
   const [serial, setSerial] = useState("");
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
@@ -165,6 +168,9 @@ const WarrantyRequest = () => {
                         {item.name}
                       </SelectItem>
                     ))}
+                    {product && product !== OTHER_PRODUCT && !products.map(localize).some((item) => item.name === product) && (
+                      <SelectItem value={product}>{product}</SelectItem>
+                    )}
                     <SelectItem value={OTHER_PRODUCT}>{t("warranty.form.productOther")}</SelectItem>
                   </SelectContent>
                 </Select>

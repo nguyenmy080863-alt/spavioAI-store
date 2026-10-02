@@ -9,6 +9,7 @@ import { useAdminAuth } from "@/context/AdminAuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { Eye, EyeOff } from "lucide-react";
 import heroImage from "@/assets/brand/hero-clinic.jpg";
@@ -53,6 +54,7 @@ const AuthForm = ({ mode }: { mode: "signin" | "signup" }) => {
   const [lockedUntil, setLockedUntil] = useState<number | null>(null);
   const [pendingConfirm, setPendingConfirm] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
 
   const redirectTo = (location.state as { from?: string } | null)?.from ?? null;
 
@@ -97,7 +99,10 @@ const AuthForm = ({ mode }: { mode: "signin" | "signup" }) => {
         const { data, error } = await supabase.auth.signUp({
           email: parsed.data.email,
           password: parsed.data.password,
-          options: { emailRedirectTo: `${window.location.origin}${localize("/login")}` },
+          options: {
+            emailRedirectTo: `${window.location.origin}${localize("/login")}`,
+            data: { marketing_consent: marketingConsent },
+          },
         });
         if (error) throw error;
         if (!data.session) {
@@ -253,6 +258,20 @@ const AuthForm = ({ mode }: { mode: "signin" | "signup" }) => {
                   </button>
                 </div>
               </div>
+
+              {mode === "signup" && (
+                <div className="flex items-start gap-3">
+                  <Checkbox
+                    id="marketingConsent"
+                    checked={marketingConsent}
+                    onCheckedChange={(checked) => setMarketingConsent(checked === true)}
+                    className="mt-0.5"
+                  />
+                  <Label htmlFor="marketingConsent" className="text-xs font-light text-muted-foreground leading-relaxed cursor-pointer">
+                    {t("auth.marketingConsent")}
+                  </Label>
+                </div>
+              )}
 
               {lockedUntil && (
                 <p className="text-xs text-destructive bg-destructive/5 px-3 py-2 border border-destructive/20 font-light rounded-sm">

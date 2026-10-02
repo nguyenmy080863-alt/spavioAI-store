@@ -83,6 +83,14 @@ const Account = () => {
         </div>
 
         <div className="border border-border p-6 mb-8">
+          <p className="text-sm text-foreground mb-1">{t("orders.account.title")}</p>
+          <p className="text-xs text-muted-foreground mb-4">{t("orders.account.text")}</p>
+          <Button size="sm" variant="outline" asChild>
+            <Link to="/account/orders">{t("orders.account.open")}</Link>
+          </Button>
+        </div>
+
+        <div className="border border-border p-6 mb-8">
           <p className="text-sm text-foreground mb-3">{t("warranty.account.title")}</p>
           {tickets.length === 0 ? (
             <p className="text-xs text-muted-foreground mb-4">{t("warranty.account.empty")}</p>

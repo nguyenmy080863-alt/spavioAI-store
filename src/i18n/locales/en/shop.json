@@ -202,7 +202,11 @@
         "deliveryTime": "Next business day"
       }
     },
-    "paypalCharge": "Complete your order with PayPal. Your account will be charged {{total}}."
+    "paypalCharge": "Complete your order with PayPal. Your account will be charged {{total}}.",
+    "marketingConsent": "Yes, keep me posted about new devices, offers and care tips by email. I can withdraw this at any time.",
+    "fillRequired": "Please fill in your email, name and shipping address first.",
+    "priceChanged": "Prices in your bag have changed. Please reload the page and check your bag before paying.",
+    "orderNumber": "Your order number is {{number}}. Keep it for support and warranty requests."
   },
   "fomo": {
     "endsIn": "Ends in",
@@ -337,6 +341,63 @@
       "empty": "You have no tickets yet.",
       "open": "Open a ticket",
       "view": "View"
+    }
+  },
+  "orders": {
+    "title": "My orders",
+    "intro": "Your orders, delivery tracking and warranty dates in one place.",
+    "empty": "You have no orders yet.",
+    "loadError": "We could not load your orders. Please try again later.",
+    "placedOn": "Placed on {{date}}",
+    "shipping": "Shipping",
+    "balanceDue": "Balance due at shipping (preorder)",
+    "deliveries": "Delivery",
+    "tracking": "Tracking",
+    "deliveredOn": "delivered on {{date}}",
+    "warrantyUntil": "2-year warranty until {{date}}.",
+    "shipTo": "Ship to",
+    "buyAgain": "Buy again",
+    "reportProblem": "Report a problem",
+    "needHelp": "Need help with this order?",
+    "stage": {
+      "awaiting_payment": "Awaiting payment",
+      "payment_review": "Payment being checked",
+      "preparing": "Preparing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded"
+    },
+    "stageHint": {
+      "awaiting_payment": "We have not received your payment yet.",
+      "payment_review": "Thank you. We are checking your payment and will confirm shortly.",
+      "preparing": "Payment confirmed. We are getting your order ready.",
+      "shipped": "Your order is on its way.",
+      "delivered": "Your order has arrived. Your warranty has started.",
+      "cancelled": "This order was cancelled.",
+      "refunded": "This order was refunded."
+    },
+    "deliveryStatus": {
+      "preparing": "Being prepared",
+      "on_delivery": "On its way",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "account": {
+      "title": "Orders",
+      "text": "See your orders, tracking and warranty dates.",
+      "open": "View my orders"
+    },
+    "track": {
+      "title": "Track your order",
+      "intro": "Enter your order number and the email address you ordered with. You do not need an account.",
+      "orderNumber": "Order number",
+      "email": "Email address",
+      "lookup": "Show order",
+      "looking": "Looking…",
+      "notFound": "We could not find an order with these details. Check the number and email and try again.",
+      "another": "Look up another order",
+      "warrantyLink": "Need warranty or support help?"
     }
   }
 }

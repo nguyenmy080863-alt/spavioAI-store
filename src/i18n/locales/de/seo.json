@@ -84,5 +84,13 @@
   "warrantyTrack": {
     "title": "Ticket verfolgen",
     "description": "Verfolge den Fortschritt deines Spavio AI Garantie- oder Support-Tickets."
+  },
+  "accountOrders": {
+    "title": "Meine Bestellungen",
+    "description": "Deine Spavio AI Store Bestellungen, Sendungsverfolgung und Garantiedaten."
+  },
+  "orderTrack": {
+    "title": "Bestellung verfolgen",
+    "description": "Rufe deine Spavio AI Store Bestellung mit Bestellnummer und E-Mail ab."
   }
 }

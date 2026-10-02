@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Minus, Plus, CreditCard, Check, Truck, ShieldCheck, ArrowRight, PackageCheck } from "lucide-react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import CheckoutHeader from "../components/header/CheckoutHeader";
@@ -19,11 +19,14 @@ import {
   type SendcloudShippingMethod
 } from "@/lib/sendcloud";
 import SEO from "@/components/SEO";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useAdminAuth } from "@/context/AdminAuthContext";
+import { canStoreOrders, placeOrder, recordOrderPayment, type PlacedOrder } from "@/lib/checkout";
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID || "";
 
 const Checkout = () => {
-  const { t } = useTranslation("shop");
+  const { t, i18n } = useTranslation("shop");
   const [showDiscountInput, setShowDiscountInput] = useState(false);
   const [discountCode, setDiscountCode] = useState("");
   const [customerDetails, setCustomerDetails] = useState({
@@ -56,11 +59,21 @@ const Checkout = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [paymentComplete, setPaymentComplete] = useState(false);
   const [paypalError, setPaypalError] = useState<string | null>(null);
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const [orderError, setOrderError] = useState<string | null>(null);
+  const [orderNumber, setOrderNumber] = useState<string | null>(null);
+  const { user } = useAdminAuth();
+  const orderNumberRef = useRef<string | null>(null);
+  const orderFailedRef = useRef(false);
 
   const { items: cartItems, updateQuantity, subtotal, dueNow, dueLater, hasPreorders, clearCart } = useCart();
   // Remember the preorder balance for the confirmation screen (the cart is cleared on success).
   const [confirmedBalance, setConfirmedBalance] = useState(0);
   const { localize: localizeProduct } = useProductText();
+
+  useEffect(() => {
+    if (user?.email) setCustomerDetails((prev) => (prev.email ? prev : { ...prev, email: user.email! }));
+  }, [user?.email]);
 
   // Load Sendcloud shipping methods on mount
   useEffect(() => {
@@ -130,7 +143,7 @@ const Checkout = () => {
           id: selectedShippingId,
           name: `${selectedShippingMethod.carrierName} ${selectedShippingMethod.name}`
         },
-        order_number: `ORD-${Math.floor(100000 + Math.random() * 900000)}`,
+        order_number: orderNumberRef.current ?? `ORD-${Math.floor(100000 + Math.random() * 900000)}`,
         total_order_value: total
       });
 
@@ -142,8 +155,46 @@ const Checkout = () => {
     }
   };
 
+  /** Stores the order (unpaid) before any payment is taken; returns null in demo mode (no Supabase). */
+  const createStoredOrder = async (method: "paypal" | "card" | "klarna"): Promise<PlacedOrder | null> => {
+    const missing =
+      !customerDetails.email.trim() ||
+      !customerDetails.firstName.trim() ||
+      !customerDetails.lastName.trim() ||
+      !shippingAddress.address.trim() ||
+      !shippingAddress.city.trim() ||
+      !shippingAddress.postalCode.trim();
+    if (missing) throw new Error(t("checkout.fillRequired"));
+    if (!canStoreOrders) return null;
+
+    const placed = await placeOrder({
+      name: `${customerDetails.firstName} ${customerDetails.lastName}`.trim(),
+      email: customerDetails.email.trim(),
+      phone: customerDetails.phone,
+      address: shippingAddress,
+      items: cartItems,
+      shippingCost,
+      paymentMethod: method,
+      marketingConsent,
+      language: i18n.language,
+    });
+    // Prices are checked on the server; never charge an amount the customer has not seen.
+    if (Math.abs(placed.amount_charged - total) > 0.009) throw new Error(t("checkout.priceChanged"));
+    orderNumberRef.current = placed.order_number;
+    setOrderNumber(placed.order_number);
+    return placed;
+  };
+
   const handleCompleteOrder = async () => {
+    setOrderError(null);
     setIsProcessing(true);
+    try {
+      await createStoredOrder(paymentMethod === "klarna" ? "klarna" : paymentMethod === "card" ? "card" : "paypal");
+    } catch (err) {
+      setOrderError(err instanceof Error ? err.message : String(err));
+      setIsProcessing(false);
+      return;
+    }
     // Simulate payment processing & Sendcloud parcel registration
     await new Promise(resolve => setTimeout(resolve, 1800));
     await handleRegisterSendcloudParcel();
@@ -435,6 +486,18 @@ const Checkout = () => {
                           className="mt-1.5 rounded-sm"
                         />
                       </div>
+
+                      <div className="flex items-start gap-3 pt-2">
+                        <Checkbox
+                          id="marketingConsent"
+                          checked={marketingConsent}
+                          onCheckedChange={(checked) => setMarketingConsent(checked === true)}
+                          className="mt-0.5"
+                        />
+                        <Label htmlFor="marketingConsent" className="text-xs font-light text-muted-foreground leading-relaxed cursor-pointer">
+                          {t("checkout.marketingConsent")}
+                        </Label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -492,6 +555,11 @@ const Checkout = () => {
 
                   {!paymentComplete ? (
                     <div className="space-y-6">
+                      {orderError && (
+                        <p role="alert" className="text-xs text-destructive bg-destructive/10 p-3 rounded-sm">
+                          {orderError}
+                        </p>
+                      )}
                       <RadioGroup
                         value={paymentMethod}
                         onValueChange={setPaymentMethod}
@@ -522,12 +590,24 @@ const Checkout = () => {
                                 <PayPalButtons
                                   style={{ layout: "vertical", color: "black", shape: "rect", label: "pay" }}
                                   disabled={cartItems.length === 0}
-                                  createOrder={(_data, actions) => {
+                                  createOrder={async (_data, actions) => {
+                                    setOrderError(null);
+                                    setPaypalError(null);
+                                    orderFailedRef.current = false;
+                                    let placed: PlacedOrder | null;
+                                    try {
+                                      placed = await createStoredOrder("paypal");
+                                    } catch (err) {
+                                      orderFailedRef.current = true;
+                                      setOrderError(err instanceof Error ? err.message : String(err));
+                                      throw err;
+                                    }
                                     return actions.order.create({
                                       intent: "CAPTURE",
                                       purchase_units: [
                                         {
                                           description: `Spavio AI Store Purchase (${selectedShippingMethod.carrierName} Delivery)`,
+                                          ...(placed ? { custom_id: placed.order_number, invoice_id: placed.order_number } : {}),
                                           amount: {
                                             currency_code: "EUR",
                                             value: total.toFixed(2),
@@ -540,6 +620,18 @@ const Checkout = () => {
                                     if (actions.order) {
                                       const details = await actions.order.capture();
                                       console.log("Live PayPal payment succeeded:", details);
+                                      if (orderNumberRef.current) {
+                                        try {
+                                          await recordOrderPayment(
+                                            orderNumberRef.current,
+                                            customerDetails.email.trim(),
+                                            String(details.id ?? ""),
+                                          );
+                                        } catch (err) {
+                                          // The payment went through; staff can match it by the PayPal invoice id.
+                                          console.error("Could not store the PayPal reference:", err);
+                                        }
+                                      }
                                       await handleRegisterSendcloudParcel();
                                       setConfirmedBalance(dueLater);
                                       setPaymentComplete(true);
@@ -548,6 +640,7 @@ const Checkout = () => {
                                   }}
                                   onError={(err) => {
                                     console.error("PayPal SDK error:", err);
+                                    if (orderFailedRef.current) return;
                                     const msg = String((err as any)?.message || err || "");
                                     if (msg.includes("popup")) {
                                       setPaypalError("PayPal popup window was closed before completing.");
@@ -727,6 +820,11 @@ const Checkout = () => {
                       <p className="text-muted-foreground text-sm max-w-md mx-auto leading-relaxed">
                         {t("checkout.thankYou", { carrier: `${selectedShippingMethod.carrierName} ${t(`checkout.methods.${selectedShippingMethod.id}.name`, { defaultValue: selectedShippingMethod.name })}`, email: customerDetails.email || t("checkout.yourEmail") })}
                       </p>
+                      {orderNumber && (
+                        <p className="text-sm text-foreground">
+                          {t("checkout.orderNumber", { number: orderNumber })}
+                        </p>
+                      )}
                       {confirmedBalance > 0 && (
                         <p className="text-sm text-foreground max-w-md mx-auto">
                           {t("preorder.confirmation", { amount: formatPrice(confirmedBalance) })}

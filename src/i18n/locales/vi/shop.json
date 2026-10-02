@@ -201,7 +201,11 @@
         "deliveryTime": "Ngày làm việc tiếp theo"
       }
     },
-    "paypalCharge": "Hoàn tất đơn hàng với PayPal. Tài khoản của bạn sẽ bị trừ {{total}}."
+    "paypalCharge": "Hoàn tất đơn hàng với PayPal. Tài khoản của bạn sẽ bị trừ {{total}}.",
+    "marketingConsent": "Có, hãy gửi email cho tôi về thiết bị mới, ưu đãi và mẹo chăm sóc. Tôi có thể rút lại bất cứ lúc nào.",
+    "fillRequired": "Vui lòng điền email, họ tên và địa chỉ giao hàng trước.",
+    "priceChanged": "Giá trong giỏ hàng đã thay đổi. Vui lòng tải lại trang và kiểm tra giỏ hàng trước khi thanh toán.",
+    "orderNumber": "Mã đơn hàng của bạn là {{number}}. Hãy lưu lại để được hỗ trợ và bảo hành."
   },
   "fomo": {
     "endsIn": "Kết thúc sau",
@@ -335,6 +339,63 @@
       "empty": "Bạn chưa có yêu cầu nào.",
       "open": "Tạo yêu cầu",
       "view": "Xem"
+    }
+  },
+  "orders": {
+    "title": "Đơn hàng của tôi",
+    "intro": "Đơn hàng, theo dõi vận chuyển và ngày bảo hành của bạn ở một nơi.",
+    "empty": "Bạn chưa có đơn hàng nào.",
+    "loadError": "Không thể tải đơn hàng của bạn. Vui lòng thử lại sau.",
+    "placedOn": "Đặt ngày {{date}}",
+    "shipping": "Phí vận chuyển",
+    "balanceDue": "Số dư thanh toán khi giao hàng (đặt trước)",
+    "deliveries": "Giao hàng",
+    "tracking": "Mã vận đơn",
+    "deliveredOn": "đã giao ngày {{date}}",
+    "warrantyUntil": "Bảo hành 2 năm đến {{date}}.",
+    "shipTo": "Giao đến",
+    "buyAgain": "Mua lại",
+    "reportProblem": "Báo lỗi",
+    "needHelp": "Cần hỗ trợ về đơn hàng này?",
+    "stage": {
+      "awaiting_payment": "Chờ thanh toán",
+      "payment_review": "Đang kiểm tra thanh toán",
+      "preparing": "Đang chuẩn bị",
+      "shipped": "Đã gửi hàng",
+      "delivered": "Đã giao",
+      "cancelled": "Đã hủy",
+      "refunded": "Đã hoàn tiền"
+    },
+    "stageHint": {
+      "awaiting_payment": "Chúng tôi chưa nhận được thanh toán của bạn.",
+      "payment_review": "Cảm ơn bạn. Chúng tôi đang kiểm tra thanh toán và sẽ xác nhận sớm.",
+      "preparing": "Đã xác nhận thanh toán. Chúng tôi đang chuẩn bị đơn hàng.",
+      "shipped": "Đơn hàng của bạn đang trên đường giao.",
+      "delivered": "Đơn hàng đã đến. Bảo hành của bạn đã bắt đầu.",
+      "cancelled": "Đơn hàng này đã bị hủy.",
+      "refunded": "Đơn hàng này đã được hoàn tiền."
+    },
+    "deliveryStatus": {
+      "preparing": "Đang chuẩn bị",
+      "on_delivery": "Đang giao",
+      "delivered": "Đã giao",
+      "cancelled": "Đã hủy"
+    },
+    "account": {
+      "title": "Đơn hàng",
+      "text": "Xem đơn hàng, vận chuyển và ngày bảo hành.",
+      "open": "Xem đơn hàng của tôi"
+    },
+    "track": {
+      "title": "Theo dõi đơn hàng",
+      "intro": "Nhập mã đơn hàng và địa chỉ email bạn đã dùng để đặt hàng. Bạn không cần tài khoản.",
+      "orderNumber": "Mã đơn hàng",
+      "email": "Địa chỉ email",
+      "lookup": "Xem đơn hàng",
+      "looking": "Đang tìm…",
+      "notFound": "Không tìm thấy đơn hàng với thông tin này. Hãy kiểm tra mã và email rồi thử lại.",
+      "another": "Tra cứu đơn hàng khác",
+      "warrantyLink": "Cần hỗ trợ bảo hành?"
     }
   }
 }

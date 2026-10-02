@@ -84,6 +84,15 @@ export interface SalesOrder {
   total: number;
   paid_at: string | null;
   created_at: string;
+  customer_phone: string;
+  source: "admin" | "checkout";
+  shipping_address: { address?: string; city?: string; postal_code?: string; country?: string };
+  shipping_cost: number;
+  amount_charged: number;
+  balance_due: number;
+  payment_method: string;
+  payment_reference: string;
+  payment_reported_at: string | null;
   sales_order_items: SalesOrderItem[];
   delivery_orders: DeliveryOrder[];
 }

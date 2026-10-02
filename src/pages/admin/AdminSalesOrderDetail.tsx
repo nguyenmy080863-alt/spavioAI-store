@@ -17,6 +17,7 @@ import { logAudit } from "@/lib/audit";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import StatusBadge from "@/components/admin/StatusBadge";
+import OrderEmails from "@/components/admin/OrderEmails";
 import LineItemsEditor, { parseLines, type Line } from "@/components/admin/LineItemsEditor";
 
 /** How much of each line is still not planned in an active delivery. */
@@ -269,6 +270,33 @@ const AdminSalesOrderDetail = () => {
           {order.paid_at ? ` · Paid ${formatDate(order.paid_at)}` : ""}
         </p>
       </div>
+
+      {order.source === "checkout" && (
+        <div className="border border-border p-4 text-sm space-y-2">
+          <p className="text-xs text-muted-foreground">Placed at checkout</p>
+          <p className="text-foreground">
+            {[order.shipping_address?.address, order.shipping_address?.postal_code, order.shipping_address?.city, order.shipping_address?.country]
+              .filter(Boolean)
+              .join(", ") || "No address"}
+            {order.customer_phone && ` · ${order.customer_phone}`}
+          </p>
+          <p className="text-muted-foreground">
+            Shipping {formatPrice(Number(order.shipping_cost))} · Charged at checkout{" "}
+            {formatPrice(Number(order.amount_charged))}
+            {Number(order.balance_due) > 0 && ` · Preorder balance due at shipping ${formatPrice(Number(order.balance_due))}`}
+            {order.payment_method && ` · ${order.payment_method}`}
+          </p>
+          {order.payment_status === "unpaid" && order.status === "open" && (
+            <p className="text-xs text-amber-700">
+              {order.payment_reference
+                ? `Payment reported by the customer's browser (reference ${order.payment_reference}). Check it in PayPal for ${formatPrice(Number(order.amount_charged))}, then mark the order as paid.`
+                : "No payment reported yet. Do not ship until the payment is confirmed."}
+            </p>
+          )}
+        </div>
+      )}
+
+      {order.source === "checkout" && <OrderEmails orderId={order.id} />}
 
       <div className="flex flex-wrap gap-3">
         {order.payment_status === "unpaid" && order.status === "open" && (

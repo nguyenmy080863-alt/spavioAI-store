@@ -83,7 +83,8 @@
     "privacyPolicy": "Chính sách bảo mật",
     "termsOfService": "Điều khoản dịch vụ",
     "cookieSettings": "Cài đặt cookie",
-    "journal": "Cẩm nang"
+    "journal": "Cẩm nang",
+    "trackOrder": "Theo dõi đơn hàng"
   },
   "usps": {
     "certified": {
@@ -142,7 +143,8 @@
     "continueAsGuest": "Tiếp tục mua sắm với tư cách khách",
     "legalPrefix": "Bảo lưu mọi quyền. Khi tiếp tục, bạn đồng ý với",
     "terms": "Điều khoản",
-    "privacy": "Chính sách bảo mật"
+    "privacy": "Chính sách bảo mật",
+    "marketingConsent": "Gửi cho tôi tin về thiết bị mới và ưu đãi (không bắt buộc)"
   },
   "cookies": {
     "title": "Chúng tôi tôn trọng quyền riêng tư của bạn",

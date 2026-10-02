@@ -18,7 +18,7 @@ const dist = path.join(root, "dist");
 const serverEntry = path.join(root, "dist-server", "entry-server.js");
 
 /** Pages rendered as HTML but kept out of search results (they carry noindex). */
-const NOINDEX_PATHS = ["/checkout", "/login", "/signup", "/account", "/warranty", "/warranty/track"];
+const NOINDEX_PATHS = ["/checkout", "/login", "/signup", "/account", "/warranty", "/warranty/track", "/account/orders", "/orders/track"];
 
 const { render, getIndexablePaths, languages, localizePath, DEFAULT_LANGUAGE } = await import(pathToFileURL(serverEntry).href);
 
