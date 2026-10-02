@@ -56,7 +56,7 @@ const Footer = () => {
               <ul className="space-y-2.5 text-xs sm:text-sm">
                 <li><Link to="/about/device-guide" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.deviceGuide")}</Link></li>
                 <li><Link to="/journal" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.journal")}</Link></li>
-                <li><Link to="/about/customer-care" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.warranty")}</Link></li>
+                <li><Link to="/warranty" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.warranty")}</Link></li>
                 <li><Link to="/about/customer-care" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.returns")}</Link></li>
                 <li><Link to="/about/customer-care" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.shipping")}</Link></li>
                 <li><Link to="/about/customer-care" className="font-light text-muted-foreground hover:text-accent transition-colors duration-200">{t("footer.contact")}</Link></li>

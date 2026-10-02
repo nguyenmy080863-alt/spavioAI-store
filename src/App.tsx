@@ -25,6 +25,8 @@ import AdminLayout from "./components/admin/AdminLayout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
+import WarrantyRequest from "./pages/warranty/WarrantyRequest";
+import WarrantyTrack from "./pages/warranty/WarrantyTrack";
 import AdminOverview from "./pages/admin/AdminOverview";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
@@ -37,6 +39,8 @@ import AdminPurchaseOrders from "./pages/admin/AdminPurchaseOrders";
 import AdminPurchaseOrderDetail from "./pages/admin/AdminPurchaseOrderDetail";
 import AdminSalesOrders from "./pages/admin/AdminSalesOrders";
 import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
+import AdminWarranty from "./pages/admin/AdminWarranty";
+import AdminWarrantyDetail from "./pages/admin/AdminWarrantyDetail";
 import AdminPlaceholder from "./pages/admin/AdminPlaceholder";
 import AdminAuditLog from "./pages/admin/AdminAuditLog";
 import AdminFomo from "./pages/admin/AdminFomo";
@@ -90,6 +94,8 @@ const storefrontRoutes = (
     <Route path="login" element={<Login />} />
     <Route path="signup" element={<Signup />} />
     <Route path="account" element={<Account />} />
+    <Route path="warranty" element={<WarrantyRequest />} />
+    <Route path="warranty/track" element={<WarrantyTrack />} />
     <Route path="*" element={<NotFound />} />
   </>
 );
@@ -131,7 +137,8 @@ export const AppRoutes = () => (
       <Route path="products/gift-cards" element={<AdminPlaceholder />} />
       <Route path="customers" element={<AdminPlaceholder />} />
       <Route path="discounts" element={<AdminPlaceholder />} />
-      <Route path="warranty" element={<AdminPlaceholder />} />
+      <Route path="warranty" element={<AdminWarranty />} />
+      <Route path="warranty/:ticketId" element={<AdminWarrantyDetail />} />
       <Route path="returns" element={<AdminPlaceholder />} />
       <Route path="finance" element={<AdminPlaceholder />} />
       <Route path="analytics" element={<AdminPlaceholder />} />

@@ -12,6 +12,11 @@ const STYLE: Record<string, string> = {
   paid: "bg-emerald-500/10 text-emerald-700",
   completed: "bg-emerald-500/10 text-emerald-700",
   delivered: "bg-emerald-500/10 text-emerald-700",
+  in_review: "bg-violet-500/10 text-violet-700",
+  awaiting_customer: "bg-amber-500/10 text-amber-700",
+  visit_scheduled: "bg-blue-500/10 text-blue-700",
+  resolved: "bg-emerald-500/10 text-emerald-700",
+  closed: "bg-muted text-muted-foreground",
   cancelled: "bg-destructive/10 text-destructive",
   refunded: "bg-destructive/10 text-destructive",
 };

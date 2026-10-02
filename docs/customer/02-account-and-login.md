@@ -12,6 +12,7 @@ Use **Login** (`/login`) with your email and password. After several failed atte
 `/account` shows:
 - your email,
 - your **saved bag** with a shortcut to checkout,
+- your **warranty and support tickets** (see Warranty and support),
 - a **sign out** button,
 - for staff only, a card with a link to the admin panel.
 

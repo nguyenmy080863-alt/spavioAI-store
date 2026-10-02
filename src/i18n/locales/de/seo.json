@@ -76,5 +76,13 @@
   "journal": {
     "title": "Beauty-Tech Ratgeber – Anleitungen für Beauty-Geräte zu Hause",
     "description": "Praktische Ratgeber zu LED-Lichttherapie, IPL-Haarentfernung, Mikrostrom, RF-Hautstraffung, Ionen-Föhn und Massagepistole – wie sie wirken und wie du sie zu Hause sicher anwendest."
+  },
+  "warrantyRequest": {
+    "title": "Garantie & Support",
+    "description": "Eröffne ein Support-Ticket für Beratung oder einen Produktdefekt. Jedes Spavio AI Gerät hat 2 Jahre Garantie."
+  },
+  "warrantyTrack": {
+    "title": "Ticket verfolgen",
+    "description": "Verfolge den Fortschritt deines Spavio AI Garantie- oder Support-Tickets."
   }
 }

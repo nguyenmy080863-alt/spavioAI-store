@@ -137,6 +137,11 @@ export const STATUS_LABEL: Record<string, string> = {
   preparing: "Preparing",
   on_delivery: "On delivery",
   delivered: "Delivered",
+  in_review: "In review",
+  awaiting_customer: "Awaiting customer",
+  visit_scheduled: "Visit scheduled",
+  resolved: "Resolved",
+  closed: "Closed",
 };
 
 export const formatDate = (value: string | null) => (value ? new Date(value).toLocaleDateString() : "—");

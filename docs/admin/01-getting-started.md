@@ -2,7 +2,7 @@
 
 ## Connect Supabase
 1. Copy `.env.example` to `.env` and fill in `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`.
-2. Run the SQL files in `drizzle/migrations/` in order in the Supabase SQL editor. `0011_inventory_orders.sql` creates the inventory, purchase order, sales order and delivery tables; without it the Orders, Purchase orders and Overview pages show an error.
+2. Run the SQL files in `drizzle/migrations/` in order in the Supabase SQL editor. `0011_inventory_orders.sql` creates the inventory, purchase order, sales order and delivery tables; without it the Orders, Purchase orders and Overview pages show an error. `0012_warranty_tickets.sql` creates the warranty ticket tables and functions; without it the Warranty page shows an error.
 3. Restart `npm run dev` (Vite reads `.env` only at startup).
 
 Without a `.env` the store runs on the bundled catalog and login/admin are disabled.
@@ -18,7 +18,8 @@ The sidebar has these sections. Clicking a section opens its main page; its sub-
 | Overview | — | Built: needs attention, sales summary, recent orders |
 | Orders | Drafts, Shipping labels | Orders and deliveries built |
 | Products | Collections, Inventory, Purchase orders, Transfers, Gift cards | Products, Collections (draft), Inventory, Purchase orders built; Transfers and Gift cards planned |
-| Customers, Warranty, Returns, Finance | — | Planned |
+| Warranty | — | Built: support tickets from customers and guests (no emails yet) |
+| Customers, Returns, Finance | — | Planned |
 | Discounts | Flash sale | Flash sale built |
 | Analytics | Reports, Live View | Live View built (the former dashboard); Reports planned |
 | Store settings | Hero banner, Team & roles, Audit log | Built (Flash sale moved to Discounts) |

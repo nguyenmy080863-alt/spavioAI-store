@@ -249,5 +249,94 @@
     "depositsLabel": "Due later (preorders)",
     "checkoutNote": "Your order includes preorders. Today we only charge the deposit; the remaining {{amount}} is due when those items ship.",
     "confirmation": "A balance of {{amount}} for your preorder is due when it ships. We'll contact you by email in good time."
+  },
+  "warranty": {
+    "title": "Warranty & support",
+    "intro": "Need help setting up your device, or something is not working as it should? Open a ticket and our team will get back to you. Every device has a 2-year warranty against manufacturing defects.",
+    "trackLink": "Already have a ticket? Track it",
+    "newLink": "Open a new ticket",
+    "form": {
+      "type": "What do you need?",
+      "types": {
+        "guidance": "Guidance (setup, usage, care)",
+        "defect": "Product error or defect",
+        "other": "Something else"
+      },
+      "name": "Your name",
+      "email": "Email address",
+      "emailHint": "You need this email and your ticket number to follow your ticket.",
+      "orderNumber": "Order number (optional)",
+      "orderHint": "From your order confirmation, e.g. SO-00042. It lets us confirm your warranty.",
+      "product": "Product",
+      "productPlaceholder": "Choose your device",
+      "productOther": "Other / not listed",
+      "serial": "Serial number (optional)",
+      "serialHint": "Printed on the device or its packaging.",
+      "subject": "Subject",
+      "description": "Describe your request",
+      "descriptionHint": "What happens, since when, and what you already tried.",
+      "submit": "Send ticket",
+      "submitting": "Sending…",
+      "errorTitle": "We could not send your ticket"
+    },
+    "success": {
+      "title": "Ticket received",
+      "text": "Your ticket number is {{number}}. Keep it together with your email address to follow the progress.",
+      "verified": "We matched your order, so your warranty can be checked.",
+      "unverified": "We could not match your order number and email yet. Our team will check your purchase manually.",
+      "track": "Open my ticket",
+      "another": "Open another ticket"
+    },
+    "track": {
+      "title": "Track your ticket",
+      "intro": "Enter your ticket number and the email address you used. Signed-in customers can also find their tickets in their account.",
+      "ticketNumber": "Ticket number",
+      "email": "Email address",
+      "lookup": "Show ticket",
+      "looking": "Looking…",
+      "notFound": "We could not find a ticket with these details. Check the number and email and try again.",
+      "another": "Look up another ticket"
+    },
+    "ticket": {
+      "status": {
+        "open": "Open",
+        "in_review": "In review",
+        "awaiting_customer": "Waiting for your reply",
+        "visit_scheduled": "Visit scheduled",
+        "resolved": "Resolved",
+        "closed": "Closed"
+      },
+      "types": {
+        "guidance": "Guidance",
+        "defect": "Defect",
+        "other": "Other"
+      },
+      "warranty": {
+        "verified_active": "In warranty until {{date}}",
+        "verified_expired": "Warranty expired on {{date}}",
+        "not_started": "Warranty starts when your order is delivered",
+        "unverified": "Purchase not verified yet"
+      },
+      "product": "Product",
+      "serial": "Serial number",
+      "opened": "Opened",
+      "visit": "Visit scheduled for",
+      "resolution": "Resolution",
+      "conversation": "Conversation",
+      "you": "You",
+      "support": "Spavio support",
+      "reply": "Your reply",
+      "replyPlaceholder": "Write a message to our team",
+      "send": "Send reply",
+      "sending": "Sending…",
+      "closed": "This ticket is closed. If you still need help, please open a new ticket.",
+      "replyError": "We could not send your reply"
+    },
+    "account": {
+      "title": "Warranty & support tickets",
+      "empty": "You have no tickets yet.",
+      "open": "Open a ticket",
+      "view": "View"
+    }
   }
 }

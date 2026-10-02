@@ -39,6 +39,13 @@
 - [x] Session countdown widget (localStorage T_end, seamless reload, auto reset) + dynamic progress bar
 - [x] Checkout prices unchanged — widget is client-side UI only
 
+## 5b. Warranty & support tickets — v1 done
+- [x] Customer and guest ticket form (guidance / defect), ticket lookup by number + email, tickets in the account page
+- [x] Admin queue and ticket page: status flow, internal notes, visit scheduling, resolution, audit log
+- [x] Warranty check from the matched order's delivery date (2 years)
+- [ ] v1.1: email notifications (ticket received, replies, visit scheduled; new-ticket alert for admins)
+- [ ] Photo/video attachments, link a ticket to a specific order line
+
 ## 6. Next up
 
 - [ ] Orders: checkout writes orders, order dashboard, automatic stock deduction

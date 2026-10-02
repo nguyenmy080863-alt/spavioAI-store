@@ -76,5 +76,13 @@
   "journal": {
     "title": "Beauty Tech Journal – Guides to At-Home Beauty Devices",
     "description": "Practical guides to LED light therapy, IPL hair removal, microcurrent, RF skin tightening, ionic hair dryers and massage guns — how they work and how to use them safely at home."
+  },
+  "warrantyRequest": {
+    "title": "Warranty & Support",
+    "description": "Open a support ticket for setup guidance or a product defect. Every Spavio AI device has a 2-year warranty."
+  },
+  "warrantyTrack": {
+    "title": "Track your ticket",
+    "description": "Follow the progress of your Spavio AI warranty or support ticket."
   }
 }

@@ -247,5 +247,94 @@
     "depositsLabel": "Thanh toán sau (đặt trước)",
     "checkoutNote": "Đơn hàng của bạn có sản phẩm đặt trước. Hôm nay chúng tôi chỉ thu tiền cọc; số tiền còn lại {{amount}} sẽ được thanh toán khi giao các sản phẩm đó.",
     "confirmation": "Số tiền còn lại {{amount}} cho sản phẩm đặt trước sẽ được thanh toán khi giao hàng. Chúng tôi sẽ liên hệ với bạn qua email."
+  },
+  "warranty": {
+    "title": "Bảo hành & hỗ trợ",
+    "intro": "Bạn cần hướng dẫn sử dụng hoặc thiết bị gặp lỗi? Hãy tạo yêu cầu, đội ngũ của chúng tôi sẽ phản hồi. Mọi thiết bị đều được bảo hành 2 năm cho lỗi sản xuất.",
+    "trackLink": "Đã có yêu cầu? Theo dõi tại đây",
+    "newLink": "Tạo yêu cầu mới",
+    "form": {
+      "type": "Bạn cần gì?",
+      "types": {
+        "guidance": "Hướng dẫn (cài đặt, sử dụng, bảo quản)",
+        "defect": "Sản phẩm lỗi hoặc hỏng",
+        "other": "Vấn đề khác"
+      },
+      "name": "Họ tên",
+      "email": "Địa chỉ email",
+      "emailHint": "Bạn cần email này và mã yêu cầu để theo dõi.",
+      "orderNumber": "Mã đơn hàng (không bắt buộc)",
+      "orderHint": "Có trong email xác nhận đơn hàng, ví dụ SO-00042. Giúp chúng tôi xác nhận bảo hành.",
+      "product": "Sản phẩm",
+      "productPlaceholder": "Chọn thiết bị của bạn",
+      "productOther": "Khác / không có trong danh sách",
+      "serial": "Số sê-ri (không bắt buộc)",
+      "serialHint": "In trên thiết bị hoặc hộp đựng.",
+      "subject": "Tiêu đề",
+      "description": "Mô tả yêu cầu của bạn",
+      "descriptionHint": "Điều gì xảy ra, từ khi nào và bạn đã thử những gì.",
+      "submit": "Gửi yêu cầu",
+      "submitting": "Đang gửi…",
+      "errorTitle": "Không thể gửi yêu cầu của bạn"
+    },
+    "success": {
+      "title": "Đã nhận yêu cầu",
+      "text": "Mã yêu cầu của bạn là {{number}}. Hãy lưu lại cùng địa chỉ email để theo dõi tiến độ.",
+      "verified": "Chúng tôi đã khớp đơn hàng của bạn nên có thể kiểm tra bảo hành.",
+      "unverified": "Chúng tôi chưa khớp được mã đơn hàng và email. Đội ngũ sẽ kiểm tra thủ công giao dịch mua của bạn.",
+      "track": "Mở yêu cầu của tôi",
+      "another": "Tạo yêu cầu khác"
+    },
+    "track": {
+      "title": "Theo dõi yêu cầu",
+      "intro": "Nhập mã yêu cầu và địa chỉ email bạn đã dùng. Khách hàng đã đăng nhập cũng thấy yêu cầu trong tài khoản.",
+      "ticketNumber": "Mã yêu cầu",
+      "email": "Địa chỉ email",
+      "lookup": "Xem yêu cầu",
+      "looking": "Đang tìm…",
+      "notFound": "Không tìm thấy yêu cầu với thông tin này. Hãy kiểm tra mã và email rồi thử lại.",
+      "another": "Tra cứu yêu cầu khác"
+    },
+    "ticket": {
+      "status": {
+        "open": "Đang mở",
+        "in_review": "Đang xem xét",
+        "awaiting_customer": "Chờ phản hồi của bạn",
+        "visit_scheduled": "Đã hẹn lịch",
+        "resolved": "Đã giải quyết",
+        "closed": "Đã đóng"
+      },
+      "types": {
+        "guidance": "Hướng dẫn",
+        "defect": "Lỗi sản phẩm",
+        "other": "Khác"
+      },
+      "warranty": {
+        "verified_active": "Còn bảo hành đến {{date}}",
+        "verified_expired": "Hết bảo hành vào {{date}}",
+        "not_started": "Bảo hành bắt đầu khi đơn hàng được giao",
+        "unverified": "Chưa xác nhận giao dịch mua"
+      },
+      "product": "Sản phẩm",
+      "serial": "Số sê-ri",
+      "opened": "Ngày tạo",
+      "visit": "Lịch hẹn",
+      "resolution": "Cách giải quyết",
+      "conversation": "Trao đổi",
+      "you": "Bạn",
+      "support": "Hỗ trợ Spavio",
+      "reply": "Phản hồi của bạn",
+      "replyPlaceholder": "Viết tin nhắn cho đội ngũ của chúng tôi",
+      "send": "Gửi phản hồi",
+      "sending": "Đang gửi…",
+      "closed": "Yêu cầu này đã đóng. Nếu bạn vẫn cần hỗ trợ, vui lòng tạo yêu cầu mới.",
+      "replyError": "Không thể gửi phản hồi của bạn"
+    },
+    "account": {
+      "title": "Yêu cầu bảo hành & hỗ trợ",
+      "empty": "Bạn chưa có yêu cầu nào.",
+      "open": "Tạo yêu cầu",
+      "view": "Xem"
+    }
   }
 }

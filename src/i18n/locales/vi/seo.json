@@ -76,5 +76,13 @@
   "journal": {
     "title": "Cẩm nang công nghệ làm đẹp – Hướng dẫn dùng thiết bị tại nhà",
     "description": "Hướng dẫn thực tế về liệu pháp ánh sáng LED, triệt lông IPL, vi dòng điện, săn chắc da RF, máy sấy tóc ion và súng massage – cơ chế hoạt động và cách dùng an toàn tại nhà."
+  },
+  "warrantyRequest": {
+    "title": "Bảo hành & hỗ trợ",
+    "description": "Tạo yêu cầu hỗ trợ để được hướng dẫn hoặc báo lỗi sản phẩm. Mọi thiết bị Spavio AI đều được bảo hành 2 năm."
+  },
+  "warrantyTrack": {
+    "title": "Theo dõi yêu cầu",
+    "description": "Theo dõi tiến độ yêu cầu bảo hành hoặc hỗ trợ Spavio AI của bạn."
   }
 }

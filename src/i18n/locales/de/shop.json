@@ -249,5 +249,94 @@
     "depositsLabel": "Später fällig (Vorbestellungen)",
     "checkoutNote": "Deine Bestellung enthält Vorbestellungen. Heute berechnen wir nur die Anzahlung; der Restbetrag von {{amount}} wird fällig, sobald die Artikel versandt werden.",
     "confirmation": "Für deine Vorbestellung ist bei Versand noch ein Restbetrag von {{amount}} fällig. Wir melden uns rechtzeitig per E-Mail."
+  },
+  "warranty": {
+    "title": "Garantie & Support",
+    "intro": "Du brauchst Hilfe bei der Einrichtung oder etwas funktioniert nicht richtig? Eröffne ein Ticket, unser Team meldet sich bei dir. Auf jedes Gerät gibt es 2 Jahre Garantie auf Herstellungsfehler.",
+    "trackLink": "Du hast schon ein Ticket? Status ansehen",
+    "newLink": "Neues Ticket eröffnen",
+    "form": {
+      "type": "Worum geht es?",
+      "types": {
+        "guidance": "Beratung (Einrichtung, Anwendung, Pflege)",
+        "defect": "Produktfehler oder Defekt",
+        "other": "Etwas anderes"
+      },
+      "name": "Dein Name",
+      "email": "E-Mail-Adresse",
+      "emailHint": "Mit dieser E-Mail und deiner Ticketnummer kannst du dein Ticket verfolgen.",
+      "orderNumber": "Bestellnummer (optional)",
+      "orderHint": "Aus deiner Bestellbestätigung, z. B. SO-00042. So können wir deine Garantie prüfen.",
+      "product": "Produkt",
+      "productPlaceholder": "Wähle dein Gerät",
+      "productOther": "Anderes / nicht aufgeführt",
+      "serial": "Seriennummer (optional)",
+      "serialHint": "Steht auf dem Gerät oder der Verpackung.",
+      "subject": "Betreff",
+      "description": "Beschreibe dein Anliegen",
+      "descriptionHint": "Was passiert, seit wann und was du schon versucht hast.",
+      "submit": "Ticket senden",
+      "submitting": "Wird gesendet…",
+      "errorTitle": "Wir konnten dein Ticket nicht senden"
+    },
+    "success": {
+      "title": "Ticket erhalten",
+      "text": "Deine Ticketnummer ist {{number}}. Bewahre sie zusammen mit deiner E-Mail-Adresse auf, um den Fortschritt zu verfolgen.",
+      "verified": "Wir haben deine Bestellung gefunden, daher können wir deine Garantie prüfen.",
+      "unverified": "Wir konnten Bestellnummer und E-Mail noch nicht zuordnen. Unser Team prüft deinen Kauf manuell.",
+      "track": "Mein Ticket öffnen",
+      "another": "Weiteres Ticket eröffnen"
+    },
+    "track": {
+      "title": "Ticket verfolgen",
+      "intro": "Gib deine Ticketnummer und die verwendete E-Mail-Adresse ein. Angemeldete Kunden finden ihre Tickets auch im Konto.",
+      "ticketNumber": "Ticketnummer",
+      "email": "E-Mail-Adresse",
+      "lookup": "Ticket anzeigen",
+      "looking": "Suche läuft…",
+      "notFound": "Wir haben zu diesen Angaben kein Ticket gefunden. Prüfe Nummer und E-Mail und versuche es erneut.",
+      "another": "Anderes Ticket suchen"
+    },
+    "ticket": {
+      "status": {
+        "open": "Offen",
+        "in_review": "In Prüfung",
+        "awaiting_customer": "Wartet auf deine Antwort",
+        "visit_scheduled": "Termin geplant",
+        "resolved": "Gelöst",
+        "closed": "Geschlossen"
+      },
+      "types": {
+        "guidance": "Beratung",
+        "defect": "Defekt",
+        "other": "Sonstiges"
+      },
+      "warranty": {
+        "verified_active": "Garantie bis {{date}}",
+        "verified_expired": "Garantie abgelaufen am {{date}}",
+        "not_started": "Die Garantie beginnt mit der Lieferung deiner Bestellung",
+        "unverified": "Kauf noch nicht bestätigt"
+      },
+      "product": "Produkt",
+      "serial": "Seriennummer",
+      "opened": "Eröffnet",
+      "visit": "Termin geplant für",
+      "resolution": "Lösung",
+      "conversation": "Verlauf",
+      "you": "Du",
+      "support": "Spavio Support",
+      "reply": "Deine Antwort",
+      "replyPlaceholder": "Schreibe unserem Team eine Nachricht",
+      "send": "Antwort senden",
+      "sending": "Wird gesendet…",
+      "closed": "Dieses Ticket ist geschlossen. Brauchst du weiterhin Hilfe, eröffne bitte ein neues Ticket.",
+      "replyError": "Wir konnten deine Antwort nicht senden"
+    },
+    "account": {
+      "title": "Garantie- & Support-Tickets",
+      "empty": "Du hast noch keine Tickets.",
+      "open": "Ticket eröffnen",
+      "view": "Ansehen"
+    }
   }
 }

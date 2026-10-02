@@ -8,12 +8,27 @@ Spavio AI "Violet Glam" identity:
 - Playfair Display for headings, Manrope for body text
 - Pill-shaped gradient CTAs, rounded cards, and the Spavio AI lotus wordmark (`src/components/SpavioLogo.tsx`)
 
+## Tech stack
+
+Vite, React 18 and TypeScript, Tailwind CSS with shadcn/ui (Radix), React Router, TanStack Query, i18next, and Supabase (Postgres, auth, storage) with Drizzle for the schema and migrations. PayPal handles payments at checkout. Pages are prerendered to static HTML at build time.
+
 ## Getting started
+
+Requires Node.js 18+.
 
 ```sh
 npm install
 npm run dev
 ```
+
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Dev server with hot reload |
+| `npm run build` | Production build: client bundle, SSR bundle, then prerender of all pages, sitemap and 404 (output in `dist/`) |
+| `npm run build:spa` | Client-only build, without prerendering |
+| `npm run build:dev` | Build in development mode |
+| `npm run preview` | Serve the built `dist/` locally |
+| `npm run lint` | Run ESLint |
 
 With no `.env`, the store runs on the bundled catalog in `src/data/products.ts` and includes a demo "Glow Week" flash sale. Admin, login and saved carts need Supabase.
 
@@ -48,12 +63,22 @@ A live preview shows what the customer pays at checkout and when the product shi
 
 In the store, preorder products get a "Vorbestellung / Preorder" badge. The product page shows the deposit, the balance and the expected shipping date, and the bag and checkout split the total into **due today** (regular items plus deposits plus shipping) and **due at shipping**. Only the amount due today is charged. Search engines see the product as `PreOrder`. Database columns: migration `0010_add_product_preorders.sql`.
 
-Charging the remaining balance when a preorder ships is not automated yet (the store has no order records, see the roadmap).
+Charging the remaining balance when a preorder ships is not automated yet. See the [roadmap](roadmap.md).
+
+## Admin panel
+
+Available at `/admin` once Supabase is connected (the first user can claim Super Admin). It covers products and media, collections, the hero banner, flash sales, inventory, purchase orders, sales orders and deliveries, warranty tickets, team and roles, an audit log, and a live-view dashboard. Role-based access is enforced with row-level security.
+
+Step-by-step guides for admins and descriptions of the customer flows live in [docs/](docs/README.md). They are also shown inside the admin panel under **Docs**.
+
+## Journal
+
+The Journal (Ratgeber) at `/journal` has beauty-tech guides in German, English and Vietnamese (`src/pages/journal/`). Articles are prerendered and included in the sitemap.
 
 ## Connecting Supabase (optional)
 
 1. Copy `.env.example` to `.env` and fill in your project URL and publishable key.
-2. Apply the migrations in `drizzle/migrations/`. `0008_seed_spavioai_catalog.sql` seeds the four device categories, all 14 products, and the hero banner copy.
+2. Apply the migrations in `drizzle/migrations/` in order (`0000` to `0012`; the schema is in `drizzle/schema.ts`). `0008_seed_spavioai_catalog.sql` seeds the four device categories, all 14 products, and the hero banner copy.
 3. Sign up. The first user can claim Super Admin at `/admin`.
 4. Rebuild after catalog changes (`npm run build`), so new products get prerendered pages and sitemap entries.
 
@@ -70,5 +95,11 @@ Once Supabase is configured, the storefront reads products, the hero banner and 
 | Homepage sections | `src/components/content/` |
 | Translations (EN / DE / VI) and SEO copy | `src/i18n/locales/` |
 | Device guide | `src/pages/about/DeviceGuide.tsx` |
+| Storefront pages | `src/pages/` |
+| Admin pages | `src/pages/admin/` |
+| Journal articles | `src/pages/journal/` |
+| Database schema and migrations | `drizzle/` |
+| Prerender script | `scripts/prerender.mjs` |
+| Docs and roadmap | `docs/`, `roadmap.md` |
 
 Category routes: `/category/skincare-devices`, `/category/hair-removal`, `/category/hair-styling-and-care`, `/category/body-and-wellness`. Collections: `new-in`, `sale`, `best-sellers`, `anti-aging`, `under-100`.
