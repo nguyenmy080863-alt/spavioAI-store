@@ -48,6 +48,8 @@ import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
 import AdminDiscounts from "./pages/admin/AdminDiscounts";
 import AdminDiscountForm from "./pages/admin/AdminDiscountForm";
+import AdminAnalytics from "./pages/admin/AdminAnalytics";
+import AdminReports from "./pages/admin/AdminReports";
 import AdminFinance from "./pages/admin/AdminFinance";
 import AdminReturns from "./pages/admin/AdminReturns";
 import AdminReturnDetail from "./pages/admin/AdminReturnDetail";
@@ -162,8 +164,8 @@ export const AppRoutes = () => (
       <Route path="returns" element={<AdminReturns />} />
       <Route path="returns/:returnId" element={<AdminReturnDetail />} />
       <Route path="finance" element={<AdminFinance />} />
-      <Route path="analytics" element={<AdminPlaceholder />} />
-      <Route path="analytics/reports" element={<AdminPlaceholder />} />
+      <Route path="analytics" element={<AdminAnalytics />} />
+      <Route path="analytics/reports" element={<AdminReports />} />
       <Route path="analytics/live-view" element={<AdminDashboard />} />
     </Route>
   </Routes>

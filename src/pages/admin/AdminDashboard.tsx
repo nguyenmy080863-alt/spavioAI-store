@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { fetchAdminProducts } from "@/lib/catalog";
 import { supabase } from "@/integrations/supabase/client";
 import { formatPrice } from "@/data/products";
+import LiveMetrics from "@/components/admin/analytics/LiveMetrics";
 
 const AdminDashboard = () => {
   const { data: products = [], isLoading } = useQuery({
@@ -40,9 +41,15 @@ const AdminDashboard = () => {
       <div className="flex items-end justify-between">
         <div>
           <h1 className="text-xl font-light text-foreground">Live view</h1>
-          <p className="text-sm text-muted-foreground mt-1">Catalogue health at a glance.</p>
+          <p className="text-sm text-muted-foreground mt-1">
+            Today's sales and what needs attention, refreshed every 30 seconds. Catalogue health is below.
+          </p>
         </div>
       </div>
+
+      <LiveMetrics />
+
+      <h2 className="text-sm font-medium text-foreground border-t border-border pt-8">Catalogue health</h2>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat) => (

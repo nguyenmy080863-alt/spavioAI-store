@@ -80,6 +80,12 @@
 - [x] Rough margin estimate from purchase order costs; CSV transaction export for the accountant
 - [ ] VAT and invoices (needs tax advisor input), PayPal fees and payout reconciliation, printable monthly summary
 
+## 5h. Analytics — done (without visitor tracking)
+- [x] KPI dashboard: sales summary with change vs previous period, sales over time, products, categories, new vs returning customers, discounts, returns, geography, payment methods, warranty
+- [x] Reports: choose KPIs and a period, preview, export CSV or print / save as PDF
+- [x] Live view: today vs yesterday, orders per hour, needs-attention counters, latest orders (30 s refresh)
+- [ ] Visitor tracking (sessions, conversion, traffic sources, cart events) — needs a consent decision
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically
