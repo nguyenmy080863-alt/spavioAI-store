@@ -48,6 +48,7 @@ import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
 import AdminDiscounts from "./pages/admin/AdminDiscounts";
 import AdminDiscountForm from "./pages/admin/AdminDiscountForm";
+import AdminFinance from "./pages/admin/AdminFinance";
 import AdminReturns from "./pages/admin/AdminReturns";
 import AdminReturnDetail from "./pages/admin/AdminReturnDetail";
 import AdminWarranty from "./pages/admin/AdminWarranty";
@@ -160,7 +161,7 @@ export const AppRoutes = () => (
       <Route path="warranty/:ticketId" element={<AdminWarrantyDetail />} />
       <Route path="returns" element={<AdminReturns />} />
       <Route path="returns/:returnId" element={<AdminReturnDetail />} />
-      <Route path="finance" element={<AdminPlaceholder />} />
+      <Route path="finance" element={<AdminFinance />} />
       <Route path="analytics" element={<AdminPlaceholder />} />
       <Route path="analytics/reports" element={<AdminPlaceholder />} />
       <Route path="analytics/live-view" element={<AdminDashboard />} />

@@ -135,7 +135,7 @@ export const anonymiseCustomer = (id: string) => run(db.rpc("anonymise_customer"
 export const parseTags = (value: string) =>
   Array.from(new Set(value.split(",").map((tag) => tag.trim().toLowerCase()).filter(Boolean))).slice(0, 20);
 
-const csvCell = (value: string | number) => {
+export const csvCell = (value: string | number) => {
   const text = String(value);
   // Prefix formula characters so spreadsheets do not run customer-supplied text.
   const safe = /^[=+\-@]/.test(text) ? `'${text}` : text;

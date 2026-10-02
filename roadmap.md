@@ -74,6 +74,12 @@
 - [x] Phase 2: Buy X Get Y, eligibility by customer segment, combinations matrix (product / order / shipping classes), personal codes
 - [ ] 30-day lowest-price tracking for "was / now" prices; review the flash sale fake stock (see legal notes in docs/admin/15-discounts.md)
 
+## 5g. Finance (simple) — done
+- [x] Overview for a period: gross / net sales, discounts, returns, refunds, label costs, average order value
+- [x] Money to check: unconfirmed payments, refunds waiting, exchange differences, preorder balances; open purchase orders
+- [x] Rough margin estimate from purchase order costs; CSV transaction export for the accountant
+- [ ] VAT and invoices (needs tax advisor input), PayPal fees and payout reconciliation, printable monthly summary
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically

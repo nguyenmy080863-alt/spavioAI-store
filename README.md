@@ -67,7 +67,7 @@ Charging the remaining balance when a preorder ships is not automated yet. See t
 
 ## Admin panel
 
-Available at `/admin` once Supabase is connected (the first user can claim Super Admin). It covers products and media, collections, the hero banner, flash sales, inventory, purchase orders, sales orders and deliveries, warranty tickets, returns, discounts, customers and segments, team and roles, an audit log, and a live-view dashboard. Role-based access is enforced with row-level security.
+Available at `/admin` once Supabase is connected (the first user can claim Super Admin). It covers products and media, collections, the hero banner, flash sales, inventory, purchase orders, sales orders and deliveries, warranty tickets, returns, discounts, finance overview and CSV export, customers and segments, team and roles, an audit log, and a live-view dashboard. Role-based access is enforced with row-level security.
 
 Step-by-step guides for admins and descriptions of the customer flows live in [docs/](docs/README.md). They are also shown inside the admin panel under **Docs**.
 
@@ -78,7 +78,7 @@ The Journal (Ratgeber) at `/journal` has beauty-tech guides in German, English a
 ## Connecting Supabase (optional)
 
 1. Copy `.env.example` to `.env` and fill in your project URL and publishable key.
-2. Apply the migrations in `drizzle/migrations/` in order (`0000` to `0018`; the schema is in `drizzle/schema.ts`). `0008_seed_spavioai_catalog.sql` seeds the four device categories, all 14 products, and the hero banner copy.
+2. Apply the migrations in `drizzle/migrations/` in order (`0000` to `0019`; the schema is in `drizzle/schema.ts`). `0008_seed_spavioai_catalog.sql` seeds the four device categories, all 14 products, and the hero banner copy.
 3. Sign up. The first user can claim Super Admin at `/admin`.
 4. Rebuild after catalog changes (`npm run build`), so new products get prerendered pages and sitemap entries.
 
