@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { fetchAdminProducts } from "@/lib/catalog";
 import {
   db,
   fetchSalesOrder,
@@ -18,7 +17,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import StatusBadge from "@/components/admin/StatusBadge";
 import OrderEmails from "@/components/admin/OrderEmails";
-import LineItemsEditor, { parseLines, type Line } from "@/components/admin/LineItemsEditor";
 
 /** How much of each line is still not planned in an active delivery. */
 const remainingByItem = (order: SalesOrder) =>
@@ -32,81 +30,6 @@ const remainingByItem = (order: SalesOrder) =>
       return [item.id, item.quantity - planned];
     }),
   );
-
-const NewOrderForm = () => {
-  const navigate = useNavigate();
-  const queryClient = useQueryClient();
-  const { data: products = [] } = useQuery({ queryKey: ["admin-products"], queryFn: fetchAdminProducts });
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [lines, setLines] = useState<Line[]>([{ product_id: "", quantity: "1", price: "0" }]);
-
-  const total = lines.reduce((sum, line) => sum + (Number(line.quantity) || 0) * (Number(line.price) || 0), 0);
-
-  const create = useMutation({
-    mutationFn: async () => {
-      if (!name.trim() && !email.trim()) throw new Error("Enter a customer name or email");
-      const result = parseLines(lines);
-      if ("error" in result) throw new Error(result.error);
-      const { data, error } = await db
-        .from("sales_orders")
-        .insert({ customer_name: name.trim(), customer_email: email.trim(), total })
-        .select("id")
-        .single();
-      if (error) throw new Error(error.message);
-      await run(
-        db.from("sales_order_items").insert(
-          result.lines.map((line) => ({
-            sales_order_id: data.id,
-            product_id: line.product_id,
-            quantity: line.quantity,
-            unit_price: line.price,
-          })),
-        ),
-      );
-      await logAudit("create", "sales_order", data.id, { customer: name || email });
-      return data.id as string;
-    },
-    onSuccess: (id) => {
-      toast.success("Order created");
-      void queryClient.invalidateQueries({ queryKey: ["sales-orders"] });
-      navigate(`/admin/orders/${id}`, { replace: true });
-    },
-    onError: (e: Error) => toast.error(e.message),
-  });
-
-  return (
-    <div className="space-y-8 max-w-4xl">
-      <div>
-        <p className="text-xs text-muted-foreground mb-1">
-          <Link to="/admin/orders">Orders</Link>
-        </p>
-        <h1 className="text-xl font-light text-foreground">New order</h1>
-      </div>
-      <section className="space-y-3">
-        <h2 className="text-sm text-foreground">Customer</h2>
-        <div className="flex flex-wrap gap-3">
-          <Input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="max-w-xs" maxLength={120} />
-          <Input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="max-w-xs" maxLength={255} />
-        </div>
-      </section>
-      <section className="space-y-3">
-        <h2 className="text-sm text-foreground">Products</h2>
-        <LineItemsEditor
-          products={products.filter((p) => !p.archived_at)}
-          lines={lines}
-          onChange={setLines}
-          priceLabel="Unit price"
-          defaultPrice={(p) => Number(p.sale_price ?? p.price)}
-        />
-        <p className="text-xs text-muted-foreground">Total: {formatPrice(total)}</p>
-      </section>
-      <Button size="sm" disabled={create.isPending} onClick={() => create.mutate()}>
-        Create order
-      </Button>
-    </div>
-  );
-};
 
 const DeliveryCard = ({
   delivery,
@@ -168,11 +91,9 @@ const AdminSalesOrderDetail = () => {
   const [tracking, setTracking] = useState("");
   const [qty, setQty] = useState<Record<string, string>>({});
 
-  const isNew = orderId === "new";
   const { data: order, isLoading, error } = useQuery({
     queryKey: ["sales-order", orderId],
     queryFn: () => fetchSalesOrder(orderId),
-    enabled: !isNew,
   });
 
   const refresh = () => {
@@ -244,7 +165,6 @@ const AdminSalesOrderDetail = () => {
     onError: (e: Error) => toast.error(e.message),
   });
 
-  if (isNew) return <NewOrderForm />;
   if (isLoading) return <p className="text-sm text-muted-foreground">Loading…</p>;
   if (error || !order) return <p className="text-sm text-destructive">{error?.message ?? "Order not found"}</p>;
 
@@ -271,9 +191,11 @@ const AdminSalesOrderDetail = () => {
         </p>
       </div>
 
-      {order.source === "checkout" && (
+      {(order.source === "checkout" || order.source === "draft") && (
         <div className="border border-border p-4 text-sm space-y-2">
-          <p className="text-xs text-muted-foreground">Placed at checkout</p>
+          <p className="text-xs text-muted-foreground">
+            {order.source === "draft" ? "Created from a draft order" : "Placed at checkout"}
+          </p>
           <p className="text-foreground">
             {[order.shipping_address?.address, order.shipping_address?.postal_code, order.shipping_address?.city, order.shipping_address?.country]
               .filter(Boolean)
@@ -305,7 +227,9 @@ const AdminSalesOrderDetail = () => {
         </div>
       )}
 
-      {order.source === "checkout" && <OrderEmails orderId={order.id} />}
+      {(order.source === "checkout" || order.source === "draft" || order.source === "exchange") && (
+        <OrderEmails orderId={order.id} />
+      )}
 
       <div className="flex flex-wrap gap-3">
         {order.payment_status === "unpaid" && order.status === "open" && (

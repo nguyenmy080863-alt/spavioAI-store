@@ -550,5 +550,24 @@
       "received": "We received your parcel and are checking it. Then we prepare your replacement.",
       "refunded": "Your exchange is complete. Your replacement is being prepared; you will get a shipping notice."
     }
+  },
+  "pay": {
+    "title": "Complete your order",
+    "intro": "{{name}}, here is your order from Spavio AI Store. Check it, confirm your delivery address and pay securely with PayPal.",
+    "notFound": "This payment link is not valid. Please ask us for a new one.",
+    "expired": "This payment link has expired. Please ask us for a new one.",
+    "cancelled": "This order was cancelled. Please contact us.",
+    "alreadyPaid": "This order has already been paid ({{number}}). Thank you!",
+    "awaiting": "Your order {{number}} is waiting for payment ({{amount}}).",
+    "vat": "Prices include VAT.",
+    "addressTitle": "Delivery address",
+    "fillAddress": "Please fill in your street, postal code and city.",
+    "paypalMissing": "Online payment is not available right now. Please contact us.",
+    "paypalError": "The payment could not be completed. Nothing was charged. Please try again.",
+    "cancelledPayment": "The payment was cancelled.",
+    "validUntil": "This link is valid until {{date}}.",
+    "thanksTitle": "Thank you!",
+    "thanks": "Your payment is on its way to us. Your order number is {{number}}. We will confirm it shortly.",
+    "trackOrder": "Follow my order"
   }
 }

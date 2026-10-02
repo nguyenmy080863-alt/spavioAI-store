@@ -46,6 +46,9 @@ import AdminSalesOrders from "./pages/admin/AdminSalesOrders";
 import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
 import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
+import AdminDrafts from "./pages/admin/AdminDrafts";
+import AdminDraftDetail from "./pages/admin/AdminDraftDetail";
+import PayDraft from "./pages/PayDraft";
 import AdminDiscounts from "./pages/admin/AdminDiscounts";
 import AdminDiscountForm from "./pages/admin/AdminDiscountForm";
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
@@ -109,6 +112,7 @@ const storefrontRoutes = (
     <Route path="signup" element={<Signup />} />
     <Route path="account" element={<Account />} />
     <Route path="discount/:code" element={<DiscountLink />} />
+    <Route path="pay/:token" element={<PayDraft />} />
     <Route path="account/orders" element={<AccountOrders />} />
     <Route path="orders/track" element={<OrderTrack />} />
     <Route path="returns" element={<ReturnRequest />} />
@@ -146,7 +150,8 @@ export const AppRoutes = () => (
       <Route path="docs/:group/:slug" element={<AdminDocs />} />
       <Route path="orders" element={<AdminSalesOrders />} />
       <Route path="orders/:orderId" element={<AdminSalesOrderDetail />} />
-      <Route path="orders/drafts" element={<AdminPlaceholder />} />
+      <Route path="orders/drafts" element={<AdminDrafts />} />
+      <Route path="orders/drafts/:draftId" element={<AdminDraftDetail />} />
       <Route path="orders/shipping-labels" element={<AdminPlaceholder />} />
       <Route path="products/categories" element={<AdminCollections />} />
       <Route path="products/inventory" element={<AdminInventory />} />

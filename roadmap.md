@@ -86,6 +86,12 @@
 - [x] Live view: today vs yesterday, orders per hour, needs-attention counters, latest orders (30 s refresh)
 - [ ] Visitor tracking (sessions, conversion, traffic sources, cart events) — needs a consent decision
 
+## 5i. Draft orders — done
+- [x] Drafts: customer, locked item prices, custom price / discount (with reason, Super Admin and Order Processor only), codes and automatic discounts via the checkout engine, shipping, tags and notes
+- [x] Create order unpaid or already paid; payment link `/pay/<token>` with PayPal (sent by hand until emails are connected)
+- [x] Replaces the old New order form
+- [ ] Stock reservation for drafts, preorders in drafts, emailing the payment link, invoices (needs tax advisor input)
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically

@@ -550,5 +550,24 @@
       "received": "Wir haben dein Paket erhalten und prüfen es. Danach bereiten wir deinen Ersatz vor.",
       "refunded": "Dein Umtausch ist abgeschlossen. Dein Ersatz wird vorbereitet; du erhältst eine Versandmitteilung."
     }
+  },
+  "pay": {
+    "title": "Bestellung abschließen",
+    "intro": "{{name}}, hier ist deine Bestellung beim Spavio AI Store. Prüfe sie, bestätige deine Lieferadresse und zahle sicher mit PayPal.",
+    "notFound": "Dieser Zahlungslink ist ungültig. Bitte fordere einen neuen an.",
+    "expired": "Dieser Zahlungslink ist abgelaufen. Bitte fordere einen neuen an.",
+    "cancelled": "Diese Bestellung wurde storniert. Bitte kontaktiere uns.",
+    "alreadyPaid": "Diese Bestellung wurde bereits bezahlt ({{number}}). Danke!",
+    "awaiting": "Deine Bestellung {{number}} wartet auf die Zahlung ({{amount}}).",
+    "vat": "Preise inkl. MwSt.",
+    "addressTitle": "Lieferadresse",
+    "fillAddress": "Bitte gib Straße, Postleitzahl und Ort an.",
+    "paypalMissing": "Die Online-Zahlung ist gerade nicht verfügbar. Bitte kontaktiere uns.",
+    "paypalError": "Die Zahlung konnte nicht abgeschlossen werden. Es wurde nichts abgebucht. Bitte versuche es erneut.",
+    "cancelledPayment": "Die Zahlung wurde abgebrochen.",
+    "validUntil": "Dieser Link ist gültig bis {{date}}.",
+    "thanksTitle": "Danke!",
+    "thanks": "Deine Zahlung ist auf dem Weg zu uns. Deine Bestellnummer ist {{number}}. Wir bestätigen sie in Kürze.",
+    "trackOrder": "Meine Bestellung verfolgen"
   }
 }

@@ -548,5 +548,24 @@
       "received": "Chúng tôi đã nhận kiện hàng và đang kiểm tra. Sau đó chúng tôi chuẩn bị thiết bị thay thế.",
       "refunded": "Việc đổi hàng đã hoàn tất. Thiết bị thay thế đang được chuẩn bị; bạn sẽ nhận thông báo giao hàng."
     }
+  },
+  "pay": {
+    "title": "Hoàn tất đơn hàng",
+    "intro": "{{name}}, đây là đơn hàng của bạn tại Spavio AI Store. Hãy kiểm tra, xác nhận địa chỉ giao hàng và thanh toán an toàn bằng PayPal.",
+    "notFound": "Liên kết thanh toán này không hợp lệ. Vui lòng yêu cầu liên kết mới.",
+    "expired": "Liên kết thanh toán này đã hết hạn. Vui lòng yêu cầu liên kết mới.",
+    "cancelled": "Đơn hàng này đã bị hủy. Vui lòng liên hệ chúng tôi.",
+    "alreadyPaid": "Đơn hàng này đã được thanh toán ({{number}}). Cảm ơn bạn!",
+    "awaiting": "Đơn hàng {{number}} của bạn đang chờ thanh toán ({{amount}}).",
+    "vat": "Giá đã bao gồm VAT.",
+    "addressTitle": "Địa chỉ giao hàng",
+    "fillAddress": "Vui lòng điền đường, mã bưu chính và thành phố.",
+    "paypalMissing": "Hiện chưa thể thanh toán trực tuyến. Vui lòng liên hệ chúng tôi.",
+    "paypalError": "Không thể hoàn tất thanh toán. Chưa có khoản tiền nào bị trừ. Vui lòng thử lại.",
+    "cancelledPayment": "Thanh toán đã bị hủy.",
+    "validUntil": "Liên kết này có hiệu lực đến {{date}}.",
+    "thanksTitle": "Cảm ơn bạn!",
+    "thanks": "Khoản thanh toán của bạn đang được chuyển đến chúng tôi. Mã đơn hàng của bạn là {{number}}. Chúng tôi sẽ sớm xác nhận.",
+    "trackOrder": "Theo dõi đơn hàng"
   }
 }

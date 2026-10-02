@@ -47,11 +47,11 @@ const AdminSalesOrders = () => {
         <div>
           <h1 className="text-xl font-light text-foreground">Orders</h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Paid orders reserve stock; stock leaves when a delivery is picked up.
+            Paid orders reserve stock; stock leaves when a delivery is picked up. To create an order by hand, start from a draft.
           </p>
         </div>
         <Button asChild size="sm">
-          <Link to="/admin/orders/new">New order</Link>
+          <Link to="/admin/orders/drafts/new">Create draft</Link>
         </Button>
       </div>
 
