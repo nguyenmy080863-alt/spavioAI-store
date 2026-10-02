@@ -44,7 +44,6 @@ export const adminNav: AdminNavSection[] = [
       { title: "Collections", to: "/admin/products/categories" },
       { title: "Inventory", to: "/admin/products/inventory" },
       { title: "Purchase orders", to: "/admin/products/purchase-orders" },
-      { title: "Transfers", to: "/admin/products/transfers" },
       { title: "Gift cards", to: "/admin/products/gift-cards" },
     ],
   },

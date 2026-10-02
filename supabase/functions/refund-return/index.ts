@@ -10,6 +10,7 @@
 // Amount refunded:
 //   refund return   items value - deduction (the prepaid label cost, if we deduct it)
 //   exchange        the difference owed to the customer (-settlement_amount), if negative
+// minus the part credited back to a gift card (return_requests.gift_card_refund).
 // PayPal is called with PayPal-Request-Id = the return id, so pressing the button twice, or a retry
 // after a timeout, can never refund the customer twice.
 
@@ -45,7 +46,7 @@ Deno.serve(async (request) => {
   const supabase = serviceClient();
   const { data: ret, error } = await supabase
     .from("return_requests")
-    .select("*, sales_orders!return_requests_sales_order_id_fkey(order_number, payment_method, payment_reference)")
+    .select("*, sales_orders!return_requests_sales_order_id_fkey(order_number, payment_method, payment_reference, gift_card_amount)")
     .eq("id", return_id)
     .single();
   if (error || !ret) return json({ error: "Return not found" }, 404);
@@ -61,6 +62,14 @@ Deno.serve(async (request) => {
   } else {
     amount = Math.round((Number(ret.refund_amount) - Number(ret.refund_deduction)) * 100) / 100;
   }
+
+  // A gift card may have paid part of the order. That part goes back to the card (done in the admin
+  // first, see credit_gift_card_for_return); PayPal only refunds the rest.
+  const giftPaid = Number(ret.sales_orders?.gift_card_amount ?? 0);
+  if (giftPaid > 0 && ret.gift_card_refund === null) {
+    return json({ error: "This order was partly paid with a gift card. Decide the gift card part of the refund first." }, 409);
+  }
+  amount = Math.round((amount - Number(ret.gift_card_refund ?? 0)) * 100) / 100;
 
   // Nothing to pay back (for example the deduction equals the item value): just record it.
   if (!(amount > 0)) {

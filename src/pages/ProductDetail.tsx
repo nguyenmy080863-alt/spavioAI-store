@@ -1,4 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { fetchPreviewProducts } from "@/lib/catalog";
+import { useAdminAuth } from "@/context/AdminAuthContext";
 import { Link } from "@/i18n/LocaleLink";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -31,7 +34,20 @@ const ProductDetail = () => {
   const lang = useLocale();
   const { localize } = useProductText();
   const { productId } = useParams();
-  const { product, data: products = [], isLoading } = useStorefrontProduct(productId);
+  const { product: liveProduct, data: products = [], isLoading: liveLoading } = useStorefrontProduct(productId);
+
+  // Team members can open a draft with ?preview=1 (customers never see unpublished products).
+  const [searchParams] = useSearchParams();
+  const { isAdmin } = useAdminAuth();
+  const previewing = searchParams.get("preview") === "1" && isAdmin && !liveProduct;
+  const { data: previewProducts, isLoading: previewLoading } = useQuery({
+    queryKey: ["preview-products"],
+    queryFn: fetchPreviewProducts,
+    enabled: previewing,
+  });
+  const product = liveProduct ?? (previewing ? previewProducts?.find((p) => p.slug === productId) : undefined);
+  const isLoading = liveLoading || (previewing && previewLoading);
+  const isPreview = !liveProduct && !!product;
 
   if (isLoading) {
     return (
@@ -113,8 +129,14 @@ const ProductDetail = () => {
         ogImage={productOgImage}
         ogType="product"
         jsonLd={productJsonLd}
+        noindex={isPreview}
       />
       <Header />
+      {isPreview && (
+        <p className="bg-amber-500/10 text-amber-700 text-xs text-center py-2 px-6">
+          Preview: this product is not published, so customers cannot see it.
+        </p>
+      )}
 
 
       <main className="pt-6">

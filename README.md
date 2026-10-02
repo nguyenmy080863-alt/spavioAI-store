@@ -78,7 +78,7 @@ The Journal (Ratgeber) at `/journal` has beauty-tech guides in German, English a
 ## Connecting Supabase (optional)
 
 1. Copy `.env.example` to `.env` and fill in your project URL and publishable key.
-2. Apply the migrations in `drizzle/migrations/` in order (`0000` to `0022`; the schema is in `drizzle/schema.ts`). `0008_seed_spavioai_catalog.sql` seeds the four device categories, all 14 products, and the hero banner copy.
+2. Apply the migrations in `drizzle/migrations/` in order (`0000` to `0024`; the schema is in `drizzle/schema.ts`). `0008_seed_spavioai_catalog.sql` seeds the four device categories, all 14 products, and the hero banner copy.
 3. Sign up. The first user can claim Super Admin at `/admin`.
 4. Rebuild after catalog changes (`npm run build`), so new products get prerendered pages and sitemap entries.
 

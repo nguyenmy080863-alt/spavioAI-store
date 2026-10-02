@@ -32,6 +32,9 @@ These are not tied to the period; they show what needs attention today, each wit
 - **Exchange differences owed:** replacement orders waiting for the customer to pay the difference.
 - **Preorder balances to collect:** paid deposits where the balance is charged when the items ship.
 
+## Gift cards
+Outstanding balance (money you still owe in goods), cards issued in the period, value used on orders, and value credited back to cards (cancelled orders and returns). Gift cards are not revenue when issued; the revenue is the order they pay for. Orders paid with a card show a lower "collected" amount, because that part is not cash. See *Gift cards*. Needs migration `0024_gift_cards.sql`.
+
 ## Suppliers
 **Open purchase orders**: how many, and the cost of goods ordered but not received yet.
 
@@ -47,7 +50,7 @@ Estimated cost of goods = items sold × the **average unit cost** from your purc
 - **Refund** or **Exchange credit** (negative, dated when refunded),
 - **Return label cost** (negative, dated when the label was created).
 
-Columns: date, type, reference, order, customer name, payment method and reference, items gross, discount, shipping, order total, cash received, return value, cash refunded, return label cost, discount code. Amounts use a dot as decimal separator, refunds and costs are negative. Customer emails are not included. The file opens correctly in Excel. Every export is written to the audit log.
+Columns: date, type, reference, order, customer name, payment method and reference, items gross, discount, shipping, order total, cash received, return value, cash refunded, return label cost, gift card amount, discount code. Gift card lines (issued, used, credited back) are included with the card code masked to its last 4 characters. Amounts use a dot as decimal separator, refunds and costs are negative. Customer emails are not included. The file opens correctly in Excel. Every export is written to the audit log.
 
 ## Not built yet
 - VAT calculation, invoices and tax reports.

@@ -12,6 +12,7 @@ import {
   type ReturnRequest,
 } from "@/lib/returns";
 import { db, formatDate, run } from "@/lib/orders";
+import { creditGiftCardForReturn } from "@/lib/giftCards";
 import { formatDateTime } from "@/lib/warranty";
 import { formatPrice } from "@/data/products";
 import { logAudit } from "@/lib/audit";
@@ -44,6 +45,27 @@ const Controls = ({ ret, onSaved }: { ret: ReturnRequest; onSaved: () => void })
   const net = Math.max((Number(amount) || 0) - (Number(deduction) || 0), 0);
   const canDeductLabel = ret.label_cost > 0 && !NO_DEDUCTION_REASONS.includes(ret.reason);
   const refundDue = exchange ? Math.max(-Number(ret.settlement_amount), 0) : net;
+
+  // A gift card may have paid part of the order (migration 0024; ignored if it is not applied yet).
+  const { data: gift } = useQuery({
+    queryKey: ["return-gift", ret.id, ret.status],
+    queryFn: async () => {
+      const order = await db.from("sales_orders").select("gift_card_amount, amount_charged").eq("id", ret.sales_order_id).maybeSingle();
+      const returnRow = await db.from("return_requests").select("gift_card_refund").eq("id", ret.id).maybeSingle();
+      return {
+        paidByCard: Number(order.data?.gift_card_amount ?? 0),
+        paidOtherwise: Number(order.data?.amount_charged ?? 0),
+        credited: (returnRow.data?.gift_card_refund ?? null) as number | null,
+      };
+    },
+    retry: false,
+  });
+  const cardPaid = gift?.paidByCard ?? 0;
+  const cardCredit = gift?.credited ?? 0;
+  const cardPending = cardPaid > 0 && gift?.credited === null;
+  const suggestedCredit = cardPaid > 0 ? Math.round(refundDue * (cardPaid / (cardPaid + (gift?.paidOtherwise ?? 0))) * 100) / 100 : 0;
+  const [creditAmount, setCreditAmount] = useState<string>();
+  const payPalAmount = Math.max(Math.round((refundDue - cardCredit) * 100) / 100, 0);
 
   const update = useMutation({
     mutationFn: async ({ status, label }: { status?: ReturnRequest["status"]; label: string }) => {
@@ -146,6 +168,20 @@ const Controls = ({ ret, onSaved }: { ret: ReturnRequest; onSaved: () => void })
     onError: (e: Error) => toast.error(e.message),
   });
 
+  const creditCard = useMutation({
+    mutationFn: async () => {
+      const value = Number(creditAmount ?? suggestedCredit);
+      if (!(value >= 0)) throw new Error("Enter an amount of 0 or more");
+      await creditGiftCardForReturn(ret.id, value);
+      await logAudit("credit_gift_card", "return_request", ret.id, { return_number: ret.return_number, amount: value });
+    },
+    onSuccess: () => {
+      toast.success("Gift card part of the refund decided");
+      onSaved();
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
   const restock = useMutation({
     mutationFn: async () => {
       for (const item of ret.return_items) {
@@ -164,7 +200,12 @@ const Controls = ({ ret, onSaved }: { ret: ReturnRequest; onSaved: () => void })
   });
 
   const busy =
-    update.isPending || restock.isPending || label.isPending || payPalRefund.isPending || exchangeDone.isPending;
+    update.isPending ||
+    restock.isPending ||
+    label.isPending ||
+    payPalRefund.isPending ||
+    exchangeDone.isPending ||
+    creditCard.isPending;
 
   return (
     <div className="border border-border p-5 space-y-4">
@@ -245,6 +286,40 @@ const Controls = ({ ret, onSaved }: { ret: ReturnRequest; onSaved: () => void })
         <p className="text-xs text-muted-foreground">Filled in automatically by the PayPal refund. Enter it by hand otherwise.</p>
       </div>
 
+      {cardPaid > 0 && (
+        <div className="border border-border p-3 space-y-2 text-sm">
+          <p className="text-foreground">Partly paid with a gift card ({formatPrice(cardPaid)})</p>
+          {ret.status === "received" && cardPending ? (
+            <>
+              <p className="text-xs text-muted-foreground">
+                Decide how much of this refund goes back to the gift card. PayPal then refunds only the rest
+                ({formatPrice(Math.max(refundDue - Number(creditAmount ?? suggestedCredit), 0))}). The suggestion follows
+                how the order was paid.
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="number"
+                  min={0}
+                  step="0.01"
+                  value={creditAmount ?? String(suggestedCredit)}
+                  onChange={(e) => setCreditAmount(e.target.value)}
+                  aria-label="Amount to credit to the gift card"
+                />
+                <Button type="button" size="sm" variant="outline" disabled={busy} onClick={() => creditCard.mutate()}>
+                  Credit gift card
+                </Button>
+              </div>
+            </>
+          ) : (
+            <p className="text-xs text-muted-foreground">
+              {gift?.credited === null
+                ? "Mark the parcel as received first, then decide the gift card part of the refund."
+                : `${formatPrice(cardCredit)} was credited back to the gift card.`}
+            </p>
+          )}
+        </div>
+      )}
+
       <div className="flex flex-wrap gap-2">
         {ret.status === "requested" && (
           <>
@@ -282,19 +357,19 @@ const Controls = ({ ret, onSaved }: { ret: ReturnRequest; onSaved: () => void })
           <>
             <Button
               size="sm"
-              disabled={busy || net <= 0}
+              disabled={busy || cardPending || (cardPaid === 0 && net <= 0)}
               onClick={() => {
-                if (window.confirm(`Refund ${formatPrice(net)} to the customer's PayPal now?`)) payPalRefund.mutate();
+                if (window.confirm(`Refund ${formatPrice(payPalAmount)} to the customer's PayPal now?`)) payPalRefund.mutate();
               }}
             >
-              Refund {formatPrice(net)} via PayPal
+              Refund {formatPrice(payPalAmount)} via PayPal
             </Button>
             <Button
               size="sm"
               variant="outline"
-              disabled={busy}
+              disabled={busy || cardPending}
               onClick={() => {
-                if (window.confirm(`Have you already refunded ${formatPrice(net)} in PayPal by hand? This only records it.`)) {
+                if (window.confirm(`Have you already refunded ${formatPrice(payPalAmount)} in PayPal by hand? This only records it.`)) {
                   update.mutate({ status: "refunded", label: "refund" });
                 }
               }}
@@ -318,12 +393,12 @@ const Controls = ({ ret, onSaved }: { ret: ReturnRequest; onSaved: () => void })
           <>
             <Button
               size="sm"
-              disabled={busy}
+              disabled={busy || cardPending}
               onClick={() => {
-                if (window.confirm(`Refund the difference of ${formatPrice(refundDue)} via PayPal now?`)) payPalRefund.mutate();
+                if (window.confirm(`Refund the difference of ${formatPrice(payPalAmount)} via PayPal now?`)) payPalRefund.mutate();
               }}
             >
-              Refund difference {formatPrice(refundDue)} via PayPal
+              Refund difference {formatPrice(payPalAmount)} via PayPal
             </Button>
             <Button
               size="sm"

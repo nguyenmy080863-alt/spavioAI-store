@@ -10,6 +10,15 @@ import { depositPerUnit, validatePreorder, type DepositType } from "@/lib/preord
 import { logAudit } from "@/lib/audit";
 import { fetchProductWeights } from "@/lib/shipping";
 import { db } from "@/lib/orders";
+import { duplicateProduct, productErrorMessage } from "@/lib/productAdmin";
+import {
+  CONTENT_LANGS,
+  emptyTexts,
+  fetchTranslationsOf,
+  saveTranslations,
+  type ContentLang,
+  type ProductTexts,
+} from "@/lib/productContent";
 import { useAdminAuth } from "@/context/AdminAuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -75,6 +84,21 @@ const AdminProductForm = () => {
   // Parcel weight is kept apart from the main product query so the form still works before migration 0022.
   const [weight, setWeight] = useState("");
   const [weightTouched, setWeightTouched] = useState(false);
+  // The storefront address is chosen when the product is created and then stays fixed: changing it
+  // would break links and the translations stored for it.
+  const [slugInput, setSlugInput] = useState("");
+  const [slugTouched, setSlugTouched] = useState(false);
+  const [translations, setTranslations] = useState<Record<ContentLang, ProductTexts>>({
+    de: emptyTexts(),
+    en: emptyTexts(),
+    vi: emptyTexts(),
+  });
+  const [translationsTouched, setTranslationsTouched] = useState(false);
+  const [textLang, setTextLang] = useState<ContentLang>("de");
+  const [imagesReady, setImagesReady] = useState(false);
+  const [translationsLoaded, setTranslationsLoaded] = useState(false);
+  const [weightLoaded, setWeightLoaded] = useState(false);
+  const [baseline, setBaseline] = useState<string | null>(null);
 
   const { data: product, isLoading } = useQuery({
     queryKey: ["admin-product", productId],
@@ -87,6 +111,15 @@ const AdminProductForm = () => {
     void fetchProductWeights([product.id]).then((weights) => {
       const value = weights[product.id];
       setWeight(value ? String(value) : "");
+      setWeightLoaded(true);
+    });
+    void fetchTranslationsOf(product.id).then((found) => {
+      setTranslations({
+        de: found.de ?? emptyTexts(),
+        en: found.en ?? emptyTexts(),
+        vi: found.vi ?? emptyTexts(),
+      });
+      setTranslationsLoaded(true);
     });
     setForm({
       name: product.name,
@@ -122,10 +155,52 @@ const AdminProductForm = () => {
             url: img.url,
           })),
       );
+      setImagesReady(true);
     })();
   }, [product]);
 
-  const slug = useMemo(() => slugify(form.name), [form.name]);
+  // An existing product keeps its address; a new one follows the title until you edit it.
+  const slug = isNewProduct ? (slugTouched ? slugify(slugInput) : slugify(form.name)) : (product?.slug ?? "");
+
+  // Stock breakdown (read-only here; changes are made in Inventory).
+  const { data: stockLevels } = useQuery({
+    queryKey: ["product-stock-levels", productId],
+    queryFn: async () => {
+      const { data } = await db.from("inventory").select("on_hand, in_transit, committed").eq("product_id", productId).maybeSingle();
+      return (data ?? null) as { on_hand: number; in_transit: number; committed: number } | null;
+    },
+    enabled: !isNewProduct,
+    retry: false,
+  });
+
+  // Unsaved-changes tracking: compare the form with what was loaded (or the empty new form).
+  const snapshot = JSON.stringify({
+    form,
+    weight,
+    translations,
+    slugInput,
+    images: images.map((image) => image.id ?? image.storagePath ?? image.assetKey ?? image.url),
+  });
+  const loaded = isNewProduct || (!!product && imagesReady && translationsLoaded && weightLoaded);
+  useEffect(() => {
+    if (loaded && baseline === null) setBaseline(snapshot);
+  }, [loaded, baseline, snapshot]);
+  const dirty = baseline !== null && snapshot !== baseline;
+
+  useEffect(() => {
+    if (!dirty) return;
+    const warn = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [dirty]);
+
+  const leave = () => {
+    if (dirty && !window.confirm("You have unsaved changes. Leave without saving?")) return;
+    navigate("/admin/products");
+  };
 
   const save = useMutation({
     mutationFn: async () => {
@@ -156,6 +231,7 @@ const AdminProductForm = () => {
         if (preorderError) throw new Error(preorderError);
       }
 
+      if (isNewProduct && !(slug || slugify(values.sku))) throw new Error("Enter a storefront address");
       const payload = {
         name: values.name,
         slug: slug || slugify(values.sku),
@@ -181,11 +257,21 @@ const AdminProductForm = () => {
       let id = productId as string;
       if (isNewProduct) {
         const { data, error } = await supabase.from("products").insert(payload).select("id").single();
-        if (error) throw error;
+        if (error) throw new Error(productErrorMessage(error));
         id = data.id;
       } else {
-        const { error } = await supabase.from("products").update(payload).eq("id", id);
-        if (error) throw error;
+        // The address and the available stock are not changed here (stock is changed in Inventory).
+        const { slug: _slug, stock: _stock, ...changes } = payload;
+        void _slug;
+        void _stock;
+        const { error } = await supabase.from("products").update(changes).eq("id", id);
+        if (error) throw new Error(productErrorMessage(error));
+      }
+
+      if (translationsTouched) {
+        await saveTranslations(id, translations).catch((e: Error) => {
+          throw new Error(`Translations not saved: ${e.message}. Has migration 0023 been applied?`);
+        });
       }
 
       if (weightTouched) {
@@ -195,20 +281,34 @@ const AdminProductForm = () => {
         if (weightError) throw new Error(`Weight not saved: ${weightError.message}. Has migration 0022 been applied?`);
       }
 
-      // Replace the image set with the current draft order.
-      const { error: deleteError } = await supabase.from("product_images").delete().eq("product_id", id);
-      if (deleteError) throw deleteError;
-      if (images.length > 0) {
-        const { error: insertError } = await supabase.from("product_images").insert(
-          images.map((image, index) => ({
-            product_id: id,
-            position: index,
-            storage_path: image.storagePath ?? null,
-            asset_key: image.assetKey ?? null,
-            url: image.url ?? null,
-          })),
-        );
+      // Update the image set without ever deleting before the new rows are safely written:
+      // add new images, move the existing ones, and only then remove the ones taken away.
+      const keptIds = images.flatMap((image) => (image.id ? [image.id] : []));
+      const fresh = images
+        .map((image, index) => ({ image, index }))
+        .filter(({ image }) => !image.id)
+        .map(({ image, index }) => ({
+          product_id: id,
+          position: index,
+          storage_path: image.storagePath ?? null,
+          asset_key: image.assetKey ?? null,
+          url: image.url ?? null,
+        }));
+      if (fresh.length > 0) {
+        const { error: insertError } = await supabase.from("product_images").insert(fresh);
         if (insertError) throw insertError;
+      }
+      for (const [index, image] of images.entries()) {
+        if (!image.id) continue;
+        const { error: moveError } = await supabase.from("product_images").update({ position: index }).eq("id", image.id);
+        if (moveError) throw moveError;
+      }
+      if (!isNewProduct) {
+        const removed = (product?.product_images ?? []).map((image) => image.id).filter((imageId) => !keptIds.includes(imageId));
+        if (removed.length > 0) {
+          const { error: deleteError } = await supabase.from("product_images").delete().in("id", removed);
+          if (deleteError) throw deleteError;
+        }
       }
 
       await logAudit(isNewProduct ? "create" : "update", "product", id, {
@@ -225,9 +325,23 @@ const AdminProductForm = () => {
     },
     onSuccess: () => {
       toast.success(isNewProduct ? "Product created" : "Product updated");
+      setBaseline(snapshot);
       void queryClient.invalidateQueries({ queryKey: ["admin-products"] });
+      void queryClient.invalidateQueries({ queryKey: ["admin-product", productId] });
       void queryClient.invalidateQueries({ queryKey: ["storefront-products"] });
+      void queryClient.invalidateQueries({ queryKey: ["product-translations"] });
+      void queryClient.invalidateQueries({ queryKey: ["product-stock-levels"] });
       navigate("/admin/products");
+    },
+    onError: (error: Error) => toast.error(error.message),
+  });
+
+  const copy = useMutation({
+    mutationFn: () => duplicateProduct(productId as string),
+    onSuccess: (id) => {
+      toast.success("Product duplicated as a draft (without images and with stock 0)");
+      void queryClient.invalidateQueries({ queryKey: ["admin-products"] });
+      navigate(`/admin/products/${id}`);
     },
     onError: (error: Error) => toast.error(error.message),
   });
@@ -264,18 +378,48 @@ const AdminProductForm = () => {
         save.mutate();
       }}
     >
-      <div className="flex items-end justify-between">
+      <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-xl font-light text-foreground">
             {isNewProduct ? "New product" : form.name || "Edit product"}
           </h1>
           {!isNewProduct && (
-            <p className="text-sm text-muted-foreground mt-1">Storefront URL: /product/{slug}</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              Storefront address: /product/{slug} (it stays fixed so links and translations keep working)
+            </p>
           )}
+          {dirty && <p className="text-xs text-amber-700 mt-1">You have unsaved changes.</p>}
         </div>
-        <Button asChild size="sm" variant="outline">
-          <Link to="/admin/products">Back</Link>
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          {!isNewProduct && product && (
+            <>
+              <Button asChild size="sm" variant="outline">
+                <a
+                  href={product.status === "published" ? `/product/${slug}` : `/product/${slug}?preview=1`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {product.status === "published" ? "View on storefront" : "Preview draft"}
+                </a>
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                disabled={copy.isPending}
+                onClick={() => {
+                  if (dirty && !window.confirm("Unsaved changes are not copied. Duplicate the saved version?")) return;
+                  copy.mutate();
+                }}
+              >
+                Duplicate
+              </Button>
+            </>
+          )}
+          <Button type="button" size="sm" variant="outline" onClick={leave}>
+            Back
+          </Button>
+        </div>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-6">
@@ -287,6 +431,23 @@ const AdminProductForm = () => {
           <Label htmlFor="sku">SKU</Label>
           <Input id="sku" maxLength={40} required {...field("sku")} />
         </div>
+        {isNewProduct && (
+          <div className="space-y-2 sm:col-span-2">
+            <Label htmlFor="slug">Storefront address</Label>
+            <Input
+              id="slug"
+              maxLength={80}
+              value={slugTouched ? slugInput : slug}
+              onChange={(e) => {
+                setSlugTouched(true);
+                setSlugInput(e.target.value);
+              }}
+            />
+            <p className="text-xs text-muted-foreground">
+              The product page will be /product/{slug || "…"}. It cannot be changed after the product is created.
+            </p>
+          </div>
+        )}
         <div className="space-y-2">
           <Label htmlFor="category">Category</Label>
           <Select
@@ -317,10 +478,29 @@ const AdminProductForm = () => {
           <Label htmlFor="salePrice">Sale price (optional)</Label>
           <Input id="salePrice" type="number" min="0" step="0.01" {...field("salePrice")} />
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="stock">Stock quantity</Label>
-          <Input id="stock" type="number" min="0" step="1" required {...field("stock")} />
-        </div>
+        {isNewProduct ? (
+          <div className="space-y-2">
+            <Label htmlFor="stock">Starting stock</Label>
+            <Input id="stock" type="number" min="0" step="1" required {...field("stock")} />
+          </div>
+        ) : (
+          <div className="space-y-2">
+            <Label>Stock</Label>
+            <div className="border border-border p-3 text-sm space-y-1">
+              <p className="text-foreground">
+                {product?.stock ?? 0} available to sell
+                {stockLevels && (
+                  <span className="block text-xs text-muted-foreground">
+                    {stockLevels.on_hand} on hand · {stockLevels.in_transit} incoming · {stockLevels.committed} reserved
+                  </span>
+                )}
+              </p>
+              <Link to="/admin/products/inventory" className="text-xs text-accent">
+                Change stock in Inventory (with a reason) →
+              </Link>
+            </div>
+          </div>
+        )}
         <div className="space-y-2">
           <Label htmlFor="weightGrams">Weight with packaging (grams, optional)</Label>
           <Input
@@ -458,6 +638,69 @@ const AdminProductForm = () => {
         </div>
       </div>
 
+      <section className="space-y-4 rounded-lg border border-border p-5" aria-labelledby="translations-heading">
+        <div>
+          <h2 id="translations-heading" className="text-sm font-medium text-foreground">Translations</h2>
+          <p className="text-xs text-muted-foreground">
+            Name, tag and texts per language. An empty field falls back to the text above (and, for the first
+            products, to the translation stored in code).
+          </p>
+        </div>
+        <div className="flex gap-2">
+          {CONTENT_LANGS.map((entry) => (
+            <Button
+              key={entry.code}
+              type="button"
+              size="sm"
+              variant={textLang === entry.code ? "default" : "outline"}
+              onClick={() => setTextLang(entry.code)}
+            >
+              {entry.label}
+            </Button>
+          ))}
+        </div>
+        <div className="grid gap-4">
+          {(
+            [
+              ["name", "Name", 120],
+              ["effect", "Effect / style tag", 60],
+            ] as const
+          ).map(([key, label, max]) => (
+            <div key={key} className="space-y-2">
+              <Label htmlFor={`tr-${key}`}>{label}</Label>
+              <Input
+                id={`tr-${key}`}
+                maxLength={max}
+                value={translations[textLang][key]}
+                onChange={(e) => {
+                  setTranslationsTouched(true);
+                  setTranslations((prev) => ({ ...prev, [textLang]: { ...prev[textLang], [key]: e.target.value } }));
+                }}
+              />
+            </div>
+          ))}
+          {(
+            [
+              ["description", "Description"],
+              ["editors_notes", "Editor's notes"],
+            ] as const
+          ).map(([key, label]) => (
+            <div key={key} className="space-y-2">
+              <Label htmlFor={`tr-${key}`}>{label}</Label>
+              <Textarea
+                id={`tr-${key}`}
+                rows={4}
+                value={translations[textLang][key]}
+                onChange={(e) => {
+                  setTranslationsTouched(true);
+                  setTranslations((prev) => ({ ...prev, [textLang]: { ...prev[textLang], [key]: e.target.value } }));
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className="space-y-3">
         <Label>Media</Label>
         <ProductImageUploader
@@ -471,7 +714,7 @@ const AdminProductForm = () => {
         <Button type="submit" disabled={save.isPending}>
           {save.isPending ? "Saving…" : isNewProduct ? "Create product" : "Save changes"}
         </Button>
-        <Button type="button" variant="outline" onClick={() => navigate("/admin/products")}>
+        <Button type="button" variant="outline" onClick={leave}>
           Cancel
         </Button>
       </div>

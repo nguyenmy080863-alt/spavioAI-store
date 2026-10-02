@@ -33,7 +33,7 @@ export interface FinanceSummary {
 
 export interface FinanceTransaction {
   date: string;
-  type: "sale" | "refund" | "exchange_credit" | "return_label_cost";
+  type: "sale" | "refund" | "exchange_credit" | "return_label_cost" | "gift_card";
   reference: string;
   order: string;
   customer: string;
@@ -48,6 +48,9 @@ export interface FinanceTransaction {
   cash_out: number;
   label_cost: number;
   discount_code: string;
+  /** Gift card movement (issued +, used on an order -, credited back +); only on gift card rows. */
+  gift_card?: number;
+  gift_card_type?: string;
 }
 
 export type PeriodId = "this_month" | "last_month" | "last_30" | "this_year" | "custom";
@@ -101,6 +104,7 @@ const TYPE_LABEL: Record<FinanceTransaction["type"], string> = {
   refund: "Refund",
   exchange_credit: "Exchange credit",
   return_label_cost: "Return label cost",
+  gift_card: "Gift card",
 };
 
 const money = (value: number) => Number(value).toFixed(2);
@@ -126,12 +130,13 @@ export const transactionsToCsv = (rows: FinanceTransaction[]) => {
     "Return value",
     "Cash refunded",
     "Return label cost",
+    "Gift card amount",
     "Discount code",
   ];
   const lines = rows.map((row) =>
     [
       row.date.slice(0, 19).replace("T", " "),
-      TYPE_LABEL[row.type] ?? row.type,
+      row.type === "gift_card" ? `Gift card ${row.gift_card_type ?? ""}`.trim() : (TYPE_LABEL[row.type] ?? row.type),
       row.reference,
       row.order,
       row.customer,
@@ -145,6 +150,7 @@ export const transactionsToCsv = (rows: FinanceTransaction[]) => {
       money(row.return_value),
       money(row.cash_out),
       money(row.label_cost),
+      money(row.gift_card ?? 0),
       row.discount_code,
     ]
       .map(csvCell)

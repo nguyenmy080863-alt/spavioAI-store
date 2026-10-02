@@ -99,6 +99,19 @@
 - [ ] Connect Sendcloud (account, keys, deploy `shipping-labels`)
 - [ ] Carrier webhook to set On delivery / Delivered automatically; customs and non-EU shipping; live rates at checkout
 
+## 5k. Products — fixes and quick wins done
+- [x] Storefront address locked after creation; translations (DE/EN/VI) editable per product in the admin; hand-picked collections managed in the admin
+- [x] Safe image saving; stock shown read-only in the form (changed in Inventory); duplicate SKU messages; unsaved-changes warning; draft preview; duplicate product
+- [x] Product list: filters, sorting, 25/50/100 rows, bulk publish/unpublish, page check, last updated
+- [x] Invented customer reviews and fixed 4.8 rating removed from the product page
+- [ ] Next: tags, beauty-device information fields (box contents, usage, safety, certificates), cost price and barcode, SEO and image alt text, related products and consumables, variants and bundles, real reviews from verified buyers
+
+## 5l. Gift cards (phase 1) — done
+- [x] Staff issue cards (max 200 EUR, no expiry by default), list, history, switch off, correct balance
+- [x] Use at checkout including part payment; a card that covers the order marks it paid; balance restored on cancel or after 3 hours unpaid
+- [x] Returns: gift card part of a refund goes back to the card; outstanding balance and ledger in Finance
+- [ ] Phase 2: sell gift cards online, email delivery, cards in drafts and payment links, public balance check (not wanted for now)
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically

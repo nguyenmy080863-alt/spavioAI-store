@@ -227,6 +227,18 @@
       "not_eligible": "Mã này không dành cho tài khoản của bạn.",
       "wrong_customer": "Mã này được cấp cho khách hàng khác.",
       "bxgy_not_met": "Hãy thêm các sản phẩm cần thiết vào giỏ hàng để dùng ưu đãi này."
+    },
+    "giftCard": "Bạn có thẻ quà tặng?",
+    "giftCardPlaceholder": "GC-XXXX-XXXX-XXXX-XXXX",
+    "giftCardApplied": "Thẻ quà tặng: {{amount}} sẽ được dùng cho đơn hàng này",
+    "giftCardLine": "Thẻ quà tặng",
+    "giftCardCovers": "Thẻ quà tặng của bạn đủ trả toàn bộ đơn hàng. Không cần thanh toán thêm.",
+    "payWithGiftCard": "Thanh toán bằng thẻ quà tặng",
+    "giftCardErrors": {
+      "invalid": "Mã thẻ quà tặng này không hợp lệ.",
+      "disabled": "Thẻ quà tặng này chưa được kích hoạt.",
+      "expired": "Thẻ quà tặng này đã hết hạn.",
+      "empty": "Thẻ quà tặng này đã hết số dư."
     }
   },
   "fomo": {

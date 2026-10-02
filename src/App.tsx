@@ -47,6 +47,7 @@ import AdminSalesOrderDetail from "./pages/admin/AdminSalesOrderDetail";
 import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminCustomerDetail from "./pages/admin/AdminCustomerDetail";
 import AdminShippingLabels from "./pages/admin/AdminShippingLabels";
+import AdminGiftCards from "./pages/admin/AdminGiftCards";
 import AdminDrafts from "./pages/admin/AdminDrafts";
 import AdminDraftDetail from "./pages/admin/AdminDraftDetail";
 import PayDraft from "./pages/PayDraft";
@@ -159,7 +160,7 @@ export const AppRoutes = () => (
       <Route path="products/purchase-orders" element={<AdminPurchaseOrders />} />
       <Route path="products/purchase-orders/:poId" element={<AdminPurchaseOrderDetail />} />
       <Route path="products/transfers" element={<AdminPlaceholder />} />
-      <Route path="products/gift-cards" element={<AdminPlaceholder />} />
+      <Route path="products/gift-cards" element={<AdminGiftCards />} />
       <Route path="customers" element={<AdminCustomers />} />
       <Route path="customers/:customerId" element={<AdminCustomerDetail />} />
       <Route path="discounts" element={<AdminDiscounts />} />

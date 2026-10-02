@@ -228,6 +228,18 @@
       "not_eligible": "Dieser Code ist für dein Konto nicht verfügbar.",
       "wrong_customer": "Dieser Code wurde für einen anderen Kunden ausgestellt.",
       "bxgy_not_met": "Lege die erforderlichen Artikel in die Tasche, um dieses Angebot zu nutzen."
+    },
+    "giftCard": "Du hast einen Geschenkgutschein?",
+    "giftCardPlaceholder": "GC-XXXX-XXXX-XXXX-XXXX",
+    "giftCardApplied": "Geschenkgutschein: {{amount}} werden für diese Bestellung verwendet",
+    "giftCardLine": "Geschenkgutschein",
+    "giftCardCovers": "Dein Geschenkgutschein deckt die gesamte Bestellung. Es ist keine weitere Zahlung nötig.",
+    "payWithGiftCard": "Mit Geschenkgutschein bezahlen",
+    "giftCardErrors": {
+      "invalid": "Dieser Gutscheincode ist ungültig.",
+      "disabled": "Dieser Geschenkgutschein ist nicht aktiv.",
+      "expired": "Dieser Geschenkgutschein ist abgelaufen.",
+      "empty": "Auf diesem Geschenkgutschein ist kein Guthaben mehr."
     }
   },
   "fomo": {

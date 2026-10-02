@@ -49,6 +49,9 @@ Open **Returns**. Customers (with or without an account) can send back a device 
 - After the parcel is received press **Create replacement order**. It checks stock, creates a new order (source *exchange*, shipping free, same address), and, if nothing is owed, marks it paid so stock is reserved. Ship it from **Orders** like any order; the customer gets the normal shipping email.
 - Return label rules and deduction apply to exchanges in the same way.
 
+## Gift card payments
+If a gift card paid part of the order, the return page asks you to decide how much of the refund goes **back to the gift card** before you can refund; PayPal then refunds only the rest. See *Gift cards*.
+
 ## Effects elsewhere
 - Anonymising a customer also wipes the contact details on their returns.
 - Preorders: if the order still had a balance due at shipping, the page warns you. Check what was actually paid before refunding the full item value.

@@ -9,9 +9,11 @@ import {
   periodRange,
   transactionsToCsv,
   type FinanceSummary,
+  type FinanceTransaction,
   type PeriodId,
 } from "@/lib/finance";
 import { downloadFile } from "@/lib/customers";
+import { fetchGiftCardLedger, fetchGiftCardSummary, type GiftCardSummary } from "@/lib/giftCards";
 import { logAudit } from "@/lib/audit";
 import { formatPrice } from "@/data/products";
 import { Button } from "@/components/ui/button";
@@ -56,7 +58,7 @@ const CheckRow = ({
   </li>
 );
 
-const Overview = ({ data }: { data: FinanceSummary }) => {
+const Overview = ({ data, gift }: { data: FinanceSummary; gift?: GiftCardSummary }) => {
   const cost = data.cost_estimate;
   const coverage = cost.units > 0 ? Math.round((cost.units_with_cost / cost.units) * 100) : 0;
 
@@ -127,6 +129,22 @@ const Overview = ({ data }: { data: FinanceSummary }) => {
         </ul>
       </section>
 
+      {gift && (
+        <section className="space-y-3">
+          <h2 className="text-sm font-medium text-foreground">Gift cards</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <Card label="Outstanding balance" value={formatPrice(gift.outstanding_balance)} hint={`${gift.cards_with_balance} card(s) with balance. Money you still owe in goods`} />
+            <Card label="Issued in this period" value={formatPrice(gift.issued)} />
+            <Card label="Used on orders" value={formatPrice(gift.redeemed)} hint="Part of the order total, paid with a gift card" />
+            <Card label="Credited back to cards" value={formatPrice(gift.returned_to_cards)} hint="Cancelled orders and returns" />
+          </div>
+          <p className="text-xs text-muted-foreground">
+            A gift card is not revenue when it is issued or sold: it is a debt to the customer. The revenue is the order it
+            pays for. Orders paid by gift card show a lower "collected" amount because that part is not cash.
+          </p>
+        </section>
+      )}
+
       <section className="space-y-3">
         <h2 className="text-sm font-medium text-foreground">Suppliers</h2>
         <ul className="border border-border divide-y divide-border">
@@ -186,9 +204,41 @@ const AdminFinance = () => {
     retry: false,
   });
 
+  const { data: giftSummary } = useQuery({
+    queryKey: ["gift-card-summary", range.from.toISOString(), range.to.toISOString()],
+    queryFn: () => fetchGiftCardSummary(range.from, range.to),
+    enabled: !invalid,
+    retry: false,
+  });
+
   const exportCsv = useMutation({
     mutationFn: async () => {
-      const rows = await fetchFinanceTransactions(range.from, range.to);
+      const sales = await fetchFinanceTransactions(range.from, range.to);
+      // Gift card movements are optional (migration 0024); the export still works without them.
+      const cards = await fetchGiftCardLedger(range.from, range.to).catch(() => []);
+      const rows: FinanceTransaction[] = [
+        ...sales,
+        ...cards.map((line) => ({
+          date: line.date,
+          type: "gift_card" as const,
+          reference: line.card,
+          order: line.order ?? line.return ?? "",
+          customer: "",
+          payment_method: "gift_card",
+          payment_reference: "",
+          items_gross: 0,
+          discount: 0,
+          shipping: 0,
+          order_total: 0,
+          cash_in: 0,
+          return_value: 0,
+          cash_out: 0,
+          label_cost: 0,
+          discount_code: "",
+          gift_card: Number(line.amount),
+          gift_card_type: line.type.replace(/_/g, " "),
+        })),
+      ].sort((a, b) => a.date.localeCompare(b.date));
       const day = (date: Date) => date.toLocaleDateString("sv-SE");
       downloadFile(`transactions-${day(range.from)}-to-${day(range.to)}.csv`, transactionsToCsv(rows), "text/csv;charset=utf-8");
       await logAudit("export", "finance", null, { rows: rows.length, from: range.from.toISOString(), to: range.to.toISOString() });
@@ -253,7 +303,7 @@ const AdminFinance = () => {
         </p>
       )}
       {isLoading && <p className="text-sm text-muted-foreground">Loading…</p>}
-      {data && <Overview data={data} />}
+      {data && <Overview data={data} gift={giftSummary} />}
 
       <div className="border border-border p-4 text-xs text-muted-foreground space-y-1">
         <p className="text-foreground text-sm">About the CSV</p>

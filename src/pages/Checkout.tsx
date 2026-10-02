@@ -23,6 +23,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useAdminAuth } from "@/context/AdminAuthContext";
 import { canStoreOrders, placeOrder, recordOrderPayment, type PlacedOrder } from "@/lib/checkout";
 import { clearStoredCode, getStoredCode, previewCart } from "@/lib/discounts";
+import { applyGiftCardToOrder, checkGiftCard } from "@/lib/giftCards";
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID || "";
 
@@ -33,6 +34,11 @@ const Checkout = () => {
   const [appliedCode, setAppliedCode] = useState(getStoredCode);
   const [showDiscountInput, setShowDiscountInput] = useState(() => getStoredCode() !== "");
   const queryClient = useQueryClient();
+  // Gift card: checked on the server when applied, used up when the order is placed.
+  const [showGiftCard, setShowGiftCard] = useState(false);
+  const [giftCodeInput, setGiftCodeInput] = useState("");
+  const [giftCard, setGiftCard] = useState<{ code: string; balance: number } | null>(null);
+  const [giftError, setGiftError] = useState<string | null>(null);
   const [customerDetails, setCustomerDetails] = useState({
     email: "",
     firstName: "",
@@ -138,6 +144,29 @@ const Checkout = () => {
   const discountTotal = preview ? preview.discount_total : 0;
   const total = preview ? preview.amount_charged : dueNow + fallbackShipping;
   const codeStatus = appliedCode && preview ? preview.code_status : null;
+  // The gift card pays first; PayPal only charges what is left.
+  const giftApplied = giftCard ? Math.min(giftCard.balance, total) : 0;
+  const payNow = Math.max(Math.round((total - giftApplied) * 100) / 100, 0);
+  const giftCovers = !!giftCard && giftApplied > 0 && payNow === 0;
+
+  const applyGiftCode = async () => {
+    setGiftError(null);
+    const code = giftCodeInput.trim();
+    if (!code) return;
+    try {
+      const result = await checkGiftCard(code);
+      if (result.status === "ok") setGiftCard({ code, balance: result.balance });
+      else setGiftError(t(`checkout.giftCardErrors.${result.status}`));
+    } catch {
+      setGiftError(t("checkout.giftCardErrors.invalid"));
+    }
+  };
+
+  const removeGiftCard = () => {
+    setGiftCard(null);
+    setGiftCodeInput("");
+    setGiftError(null);
+  };
 
   const handleDiscountSubmit = () => {
     setAppliedCode(discountCode.trim());
@@ -169,7 +198,9 @@ const Checkout = () => {
   };
 
   /** Stores the order (unpaid) before any payment is taken; returns null in demo mode (no Supabase). */
-  const createStoredOrder = async (method: "paypal" | "card" | "klarna"): Promise<PlacedOrder | null> => {
+  const createStoredOrder = async (
+    method: "paypal" | "card" | "klarna",
+  ): Promise<{ placed: PlacedOrder; due: number; paid: boolean } | null> => {
     const missing =
       !customerDetails.email.trim() ||
       !customerDetails.firstName.trim() ||
@@ -207,7 +238,41 @@ const Checkout = () => {
     if (Math.abs(placed.amount_charged - total) > 0.009) throw new Error(t("checkout.priceChanged"));
     orderNumberRef.current = placed.order_number;
     setOrderNumber(placed.order_number);
-    return placed;
+
+    // Use the gift card on the order. If it covers everything, the server marks the order paid.
+    if (giftCard && giftApplied > 0) {
+      try {
+        const used = await applyGiftCardToOrder(placed.order_number, customerDetails.email.trim(), giftCard.code);
+        if (Math.abs(used.amount_due - payNow) > 0.009) throw new Error(t("checkout.priceChanged"));
+        return { placed, due: used.amount_due, paid: used.paid };
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        if (message.startsWith("gift_card:")) {
+          throw new Error(t(`checkout.giftCardErrors.${message.slice("gift_card:".length)}`, { defaultValue: t("checkout.giftCardErrors.invalid") }));
+        }
+        throw err;
+      }
+    }
+    return { placed, due: placed.amount_charged, paid: false };
+  };
+
+  // Gift card covers the whole order: no payment provider needed.
+  const handlePayWithGiftCard = async () => {
+    setOrderError(null);
+    setIsProcessing(true);
+    try {
+      const result = await createStoredOrder("paypal");
+      if (!result?.paid) throw new Error(t("checkout.priceChanged"));
+    } catch (err) {
+      setOrderError(err instanceof Error ? err.message : String(err));
+      setIsProcessing(false);
+      return;
+    }
+    setIsProcessing(false);
+    setConfirmedBalance(dueLater);
+    setPaymentComplete(true);
+    clearCart();
+    clearStoredCode();
   };
 
   const handleCompleteOrder = async () => {
@@ -370,6 +435,49 @@ const Checkout = () => {
                     </div>
                   )}
 
+                  {/* Gift card */}
+                  {canStoreOrders && (
+                    <div className="space-y-2">
+                      {!showGiftCard && !giftCard ? (
+                        <button
+                          onClick={() => setShowGiftCard(true)}
+                          className="text-xs text-accent font-medium underline hover:no-underline transition-all"
+                        >
+                          {t("checkout.giftCard")}
+                        </button>
+                      ) : !giftCard ? (
+                        <form
+                          className="flex gap-2"
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            void applyGiftCode();
+                          }}
+                        >
+                          <Input
+                            type="text"
+                            value={giftCodeInput}
+                            onChange={(e) => setGiftCodeInput(e.target.value)}
+                            placeholder={t("checkout.giftCardPlaceholder")}
+                            className="flex-1 rounded-sm text-xs font-mono"
+                            maxLength={30}
+                            aria-label={t("checkout.giftCard")}
+                          />
+                          <Button type="submit" size="sm" className="text-xs rounded-sm px-3">
+                            {t("checkout.apply")}
+                          </Button>
+                        </form>
+                      ) : (
+                        <p className="text-xs text-emerald-700 flex items-center gap-2">
+                          {t("checkout.giftCardApplied", { amount: formatPrice(giftApplied) })}
+                          <button type="button" onClick={removeGiftCard} className="underline text-muted-foreground">
+                            {t("checkout.discountRemove")}
+                          </button>
+                        </p>
+                      )}
+                      {giftError && <p className="text-xs text-destructive">{giftError}</p>}
+                    </div>
+                  )}
+
                   {/* Pricing Totals */}
                   <div className="border-t border-border pt-4 space-y-2 text-sm">
                     <div className="flex justify-between">
@@ -399,9 +507,15 @@ const Checkout = () => {
                         <span className="text-foreground font-medium">−{formatPrice(dueLater)}</span>
                       </div>
                     )}
+                    {giftApplied > 0 && (
+                      <div className="flex justify-between text-emerald-700">
+                        <span>{t("checkout.giftCardLine")}</span>
+                        <span className="font-medium">−{formatPrice(giftApplied)}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between text-base font-semibold border-t border-border pt-3">
                       <span className="text-foreground">{hasPreorders ? t("preorder.dueNow") : t("checkout.total") || "Total"}</span>
-                      <span className="text-foreground">{formatPrice(total)}</span>
+                      <span className="text-foreground">{formatPrice(payNow)}</span>
                     </div>
                     {hasPreorders && (
                       <>
@@ -620,10 +734,22 @@ const Checkout = () => {
                           {orderError}
                         </p>
                       )}
+                      {giftCovers && (
+                        <div className="space-y-3">
+                          <p className="text-sm text-muted-foreground">{t("checkout.giftCardCovers")}</p>
+                          <Button
+                            onClick={handlePayWithGiftCard}
+                            disabled={isProcessing || cartItems.length === 0}
+                            className="w-full rounded-full bg-brand-gradient text-white shadow-glow hover:brightness-110 transition-[filter] h-12 text-sm font-semibold uppercase tracking-[0.15em]"
+                          >
+                            {isProcessing ? t("checkout.processingOrder") : t("checkout.payWithGiftCard")}
+                          </Button>
+                        </div>
+                      )}
                       <RadioGroup
                         value={paymentMethod}
                         onValueChange={setPaymentMethod}
-                        className="space-y-4"
+                        className={giftCovers ? "hidden" : "space-y-4"}
                       >
                         {/* Live PayPal Option */}
                         <div className={`p-4 border rounded-sm transition-colors ${paymentMethod === "paypal" ? "border-accent bg-accent/5" : "border-border"}`}>
@@ -639,7 +765,7 @@ const Checkout = () => {
                           {paymentMethod === "paypal" && (
                             <div className="mt-4 pt-4 border-t border-border/40 space-y-3">
                               <p className="text-xs text-muted-foreground leading-relaxed">
-                                {t("checkout.paypalCharge", { total: formatPrice(total) })}
+                                {t("checkout.paypalCharge", { total: formatPrice(payNow) })}
                               </p>
                               {paypalError && (
                                 <p className="text-xs text-destructive bg-destructive/10 p-2 rounded-sm">
@@ -655,8 +781,11 @@ const Checkout = () => {
                                     setPaypalError(null);
                                     orderFailedRef.current = false;
                                     let placed: PlacedOrder | null;
+                                    let due = payNow;
                                     try {
-                                      placed = await createStoredOrder("paypal");
+                                      const created = await createStoredOrder("paypal");
+                                      placed = created?.placed ?? null;
+                                      if (created) due = created.due;
                                     } catch (err) {
                                       orderFailedRef.current = true;
                                       setOrderError(err instanceof Error ? err.message : String(err));
@@ -670,7 +799,7 @@ const Checkout = () => {
                                           ...(placed ? { custom_id: placed.order_number, invoice_id: placed.order_number } : {}),
                                           amount: {
                                             currency_code: "EUR",
-                                            value: total.toFixed(2),
+                                            value: due.toFixed(2),
                                           },
                                         },
                                       ],
@@ -835,7 +964,7 @@ const Checkout = () => {
                                   <span>{t("checkout.processingOrder")}</span>
                                 ) : (
                                   <>
-                                    <span>{t("checkout.completeOrder", { total: formatPrice(total) })}</span>
+                                    <span>{t("checkout.completeOrder", { total: formatPrice(payNow) })}</span>
                                     <ArrowRight size={16} />
                                   </>
                                 )}
@@ -862,7 +991,7 @@ const Checkout = () => {
                                 disabled={isProcessing || cartItems.length === 0}
                                 className="w-full bg-pink-600 text-white hover:bg-pink-700 rounded-sm h-12 text-sm font-semibold uppercase tracking-[0.15em]"
                               >
-                                {t("checkout.payWithKlarna", { total: formatPrice(total) })}
+                                {t("checkout.payWithKlarna", { total: formatPrice(payNow) })}
                               </Button>
                             </div>
                           )}

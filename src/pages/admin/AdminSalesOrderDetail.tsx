@@ -218,6 +218,13 @@ const AdminSalesOrderDetail = () => {
             {Number(order.balance_due) > 0 && ` · Preorder balance due at shipping ${formatPrice(Number(order.balance_due))}`}
             {order.payment_method && ` · ${order.payment_method}`}
           </p>
+          {Number((order as { gift_card_amount?: number }).gift_card_amount ?? 0) > 0 && (
+            <p className="text-muted-foreground">
+              Paid partly with a gift card: {formatPrice(Number((order as { gift_card_amount?: number }).gift_card_amount))}
+              {(order as { gift_card_hint?: string }).gift_card_hint && ` (${(order as { gift_card_hint?: string }).gift_card_hint})`}
+              . The rest is {formatPrice(Number(order.amount_charged))}.
+            </p>
+          )}
           {(Number(order.discount_amount) > 0 || Number(order.shipping_discount) > 0) && (
             <p className="text-muted-foreground">
               Discount {order.discount_code && `(${order.discount_code})`}:{" "}

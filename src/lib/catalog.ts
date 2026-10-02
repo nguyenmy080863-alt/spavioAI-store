@@ -124,19 +124,22 @@ export const localCatalog = (): CatalogProduct[] =>
   }));
 
 /** Published, non-archived products for the storefront. */
-export const fetchStorefrontProducts = async (): Promise<CatalogProduct[]> => {
+const loadStorefrontProducts = async (includeUnpublished: boolean): Promise<CatalogProduct[]> => {
   if (!isSupabaseConfigured) return localCatalog();
-  const { data, error } = await supabase
-    .from("products")
-    .select(PRODUCT_SELECT)
-    .eq("status", "published")
-    .is("archived_at", null)
-    .order("position", { ascending: true });
+  // includeUnpublished is the admin preview of a draft: only team members can read those rows (RLS).
+  let query = supabase.from("products").select(PRODUCT_SELECT);
+  if (!includeUnpublished) query = query.eq("status", "published");
+  const { data, error } = await query.is("archived_at", null).order("position", { ascending: true });
   if (error) throw error;
   const rows = (data ?? []) as unknown as ProductRow[];
   const images = await resolveImages(rows);
   return rows.map((row) => toCatalogProduct(row, images.get(row.id) ?? []));
 };
+
+export const fetchStorefrontProducts = (): Promise<CatalogProduct[]> => loadStorefrontProducts(false);
+
+/** Published and draft products, for the admin preview of a draft. */
+export const fetchPreviewProducts = (): Promise<CatalogProduct[]> => loadStorefrontProducts(true);
 
 /** Every product, including drafts and archived rows (admin only). */
 export const fetchAdminProducts = async (): Promise<ProductRow[]> => {

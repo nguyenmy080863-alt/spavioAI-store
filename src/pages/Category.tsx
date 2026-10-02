@@ -10,7 +10,7 @@ import { useProductText } from "@/i18n/useProductText";
 import { useLocale } from "@/i18n/LocaleLink";
 import { absoluteUrl } from "../components/SEO";
 import NotFound from "./NotFound";
-import { useStorefrontProducts } from "@/hooks/useCatalog";
+import { useCollections, useStorefrontProducts } from "@/hooks/useCatalog";
 import { useTranslation } from "react-i18next";
 import SEO from "../components/SEO";
 
@@ -32,6 +32,8 @@ const Category = () => {
   const [sortBy, setSortBy] = useState("featured");
 
   const { data: products = [], isLoading } = useStorefrontProducts();
+  const { data: collections = [], isLoading: collectionsLoading } = useCollections();
+  const dbCollection = collections.find((entry) => entry.slug === category);
 
   // Determine base products from route parameter
   const categoryName = slugToCategory(category || "shop");
@@ -55,6 +57,9 @@ const Category = () => {
       // Route category filtering, or a curated collection (new-in, sale, ...)
       if (categoryName) {
         items = localizedProducts.filter((p) => p.category === categoryName);
+      } else if (dbCollection) {
+        // Hand-picked collection from the admin panel, in the order set there.
+        items = dbCollection.productSlugs.flatMap((slug) => localizedProducts.filter((p) => p.id === slug));
       } else if (category && COLLECTIONS[category]) {
         items = localizedProducts.filter(COLLECTIONS[category]);
       }
@@ -112,6 +117,7 @@ const Category = () => {
     searchQuery,
     categoryName,
     category,
+    dbCollection,
     selectedCategories,
     selectedPriceRanges,
     selectedStyles,
@@ -126,14 +132,16 @@ const Category = () => {
   };
 
   const slug = category ?? "shop";
-  const isKnownPage = slug === "shop" || Boolean(categoryName) || Boolean(COLLECTIONS[slug]);
+  const isKnownPage = slug === "shop" || Boolean(categoryName) || Boolean(dbCollection) || Boolean(COLLECTIONS[slug]);
   const isSearch = Boolean(searchQuery.trim());
 
   const title = isSearch
     ? t("category.searchResults", { query: searchQuery })
     : categoryName
       ? categoryLabel(categoryName)
-      : COLLECTIONS[slug]
+      : dbCollection
+        ? dbCollection.titles[lang] || t(`category.collections.${slug}`, { defaultValue: dbCollection.titles.en || slug })
+        : COLLECTIONS[slug]
         ? t(`category.collections.${slug}`)
         : t("category.allProducts");
 
@@ -178,7 +186,7 @@ const Category = () => {
     },
   ];
 
-  if (!isKnownPage && !isSearch) return <NotFound />;
+  if (!isKnownPage && !isSearch) return collectionsLoading ? null : <NotFound />;
 
   return (
     <div className="min-h-screen bg-background font-sans">

@@ -228,6 +228,18 @@
       "not_eligible": "This code is not available for your account.",
       "wrong_customer": "This code was issued for another customer.",
       "bxgy_not_met": "Add the required items to your bag to use this offer."
+    },
+    "giftCard": "Have a gift card?",
+    "giftCardPlaceholder": "GC-XXXX-XXXX-XXXX-XXXX",
+    "giftCardApplied": "Gift card: {{amount}} will be used for this order",
+    "giftCardLine": "Gift card",
+    "giftCardCovers": "Your gift card covers the whole order. No further payment is needed.",
+    "payWithGiftCard": "Pay with gift card",
+    "giftCardErrors": {
+      "invalid": "This gift card code is not valid.",
+      "disabled": "This gift card is not active.",
+      "expired": "This gift card has expired.",
+      "empty": "This gift card has no balance left."
     }
   },
   "fomo": {
