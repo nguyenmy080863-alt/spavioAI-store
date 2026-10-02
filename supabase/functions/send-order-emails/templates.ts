@@ -10,6 +10,9 @@ export interface EmailOrder {
   shipping_cost: number;
   amount_charged: number;
   balance_due: number;
+  discount_code?: string;
+  discount_amount?: number;
+  shipping_discount?: number;
   shipping_address: { address?: string; city?: string; postal_code?: string; country?: string };
   items: { name: string; quantity: number; unit_price: number }[];
 }
@@ -27,6 +30,8 @@ interface Copy {
   items: string;
   shipping: string;
   total: string;
+  discountIncluded: string;
+  free: string;
   charged: string;
   balance: string;
   address: string;
@@ -59,6 +64,8 @@ const COPY: Record<Lang, Copy> = {
     items: "Artikel",
     shipping: "Versand",
     total: "Gesamt",
+    discountIncluded: "Rabatt (bereits in den Preisen enthalten)",
+    free: "Kostenlos",
     charged: "Heute bezahlt",
     balance: "Restbetrag bei Versand (Vorbestellung)",
     address: "Lieferadresse",
@@ -89,6 +96,8 @@ const COPY: Record<Lang, Copy> = {
     items: "Items",
     shipping: "Shipping",
     total: "Total",
+    discountIncluded: "Discount (already included in the prices)",
+    free: "Free",
     charged: "Paid today",
     balance: "Balance due at shipping (preorder)",
     address: "Delivery address",
@@ -119,6 +128,8 @@ const COPY: Record<Lang, Copy> = {
     items: "Sản phẩm",
     shipping: "Phí vận chuyển",
     total: "Tổng cộng",
+    discountIncluded: "Giảm giá (đã tính trong giá)",
+    free: "Miễn phí",
     charged: "Đã thanh toán hôm nay",
     balance: "Số dư thanh toán khi giao hàng (đặt trước)",
     address: "Địa chỉ giao hàng",
@@ -167,10 +178,15 @@ export const renderEmail = ({ kind, lang, order, delivery, siteUrl, to }: Render
   const subject = fill(c.subject[kind], { n: order.order_number });
 
   const lines = order.items.map((i) => ({ text: `${i.quantity} × ${i.name}`, price: money(i.quantity * i.unit_price) }));
-  const totals: [string, string][] = [
-    [c.shipping, money(order.shipping_cost)],
+  const totals: [string, string][] = [];
+  if (Number(order.discount_amount) > 0) {
+    const label = order.discount_code ? `${c.discountIncluded}: ${order.discount_code}` : c.discountIncluded;
+    totals.push([label, `− ${money(Number(order.discount_amount))}`]);
+  }
+  totals.push(
+    [c.shipping, Number(order.shipping_discount) > 0 && Number(order.shipping_cost) === 0 ? c.free : money(order.shipping_cost)],
     [c.total, money(order.total)],
-  ];
+  );
   if (Number(order.balance_due) > 0) {
     totals.push([c.charged, money(order.amount_charged)], [c.balance, money(order.balance_due)]);
   }

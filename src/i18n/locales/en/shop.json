@@ -206,7 +206,29 @@
     "marketingConsent": "Yes, keep me posted about new devices, offers and care tips by email. I can withdraw this at any time.",
     "fillRequired": "Please fill in your email, name and shipping address first.",
     "priceChanged": "Prices in your bag have changed. Please reload the page and check your bag before paying.",
-    "orderNumber": "Your order number is {{number}}. Keep it for support and warranty requests."
+    "orderNumber": "Your order number is {{number}}. Keep it for support and warranty requests.",
+    "discountApplied": "Code {{code}} applied",
+    "discountRemove": "Remove",
+    "discountLine": "Discount",
+    "discountSaved": "Code {{code}} saved. It is applied at checkout.",
+    "discountErrors": {
+      "invalid": "This code is not valid.",
+      "inactive": "This code is not active.",
+      "expired": "This code has expired.",
+      "not_started": "This code is not valid yet.",
+      "usage_limit": "This code has been used up.",
+      "already_used": "You have already used this code.",
+      "new_customers_only": "This code is for first orders only.",
+      "no_eligible_items": "This code does not apply to the items in your bag.",
+      "min_subtotal": "Spend at least {{amount}} on eligible items to use this code.",
+      "min_quantity": "Add at least {{count}} eligible items to use this code.",
+      "better_discount_applied": "A better discount is already applied to your bag, so this code was not added.",
+      "not_applicable": "This code cannot be used on this order.",
+      "not_combinable": "This code cannot be combined with the discount already applied to your bag.",
+      "not_eligible": "This code is not available for your account.",
+      "wrong_customer": "This code was issued for another customer.",
+      "bxgy_not_met": "Add the required items to your bag to use this offer."
+    }
   },
   "fomo": {
     "endsIn": "Ends in",
@@ -401,7 +423,8 @@
     },
     "returns": "Returns",
     "returnItems": "Return items",
-    "returnUntil": "Return possible until {{date}}."
+    "returnUntil": "Return possible until {{date}}.",
+    "discountIncluded": "Discount (already in the prices)"
   },
   "returns": {
     "title": "Return a device",

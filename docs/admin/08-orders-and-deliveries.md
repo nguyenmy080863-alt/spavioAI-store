@@ -18,6 +18,7 @@ Orders can only be edited while unpaid. Any admin role can work with orders and 
 ## Orders from checkout
 Customers (with or without an account) create an order when they pay at checkout. The order appears in **Orders** with the shipping address, phone, shipping cost, the amount charged at checkout and any preorder balance due at shipping.
 
+- Discounts (codes and automatic ones, see Discounts) are applied by the same server calculation. The order stores the code and the amount saved, and item prices on the order are after the discount.
 - Prices are recalculated on the server from the product list, so a customer cannot change what an order costs. If the price in the bag differs from the server price, checkout stops and asks the customer to reload.
 - The order starts **unpaid**. After PayPal approves the payment, the PayPal reference is stored on the order, and the PayPal payment carries the order number as its invoice ID. The order **stays unpaid** until you check the payment in PayPal (right amount, right order) and press **Mark as paid**, which reserves the stock. Do not ship an unpaid order.
 - Card and Klarna are still simulated in checkout: those orders are created unpaid and no money is taken.

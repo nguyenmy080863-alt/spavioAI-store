@@ -68,6 +68,12 @@
 - [ ] Connect PayPal refunds, Sendcloud labels and the email provider (pending, see docs/admin/14-returns.md)
 - [ ] Collect exchange price differences automatically; move outgoing Sendcloud calls to the server
 
+## 5f. Discounts (phase 1) — done
+- [x] Discount codes and automatic discounts: percent / fixed off the order, categories or products; free shipping; minimum spend and quantity; dates; usage limits; once per customer; new customers only; exclude sale items
+- [x] Server-side pricing shared by the checkout preview and the order; share links `/discount/CODE`; refund-safe item prices; per-discount reporting
+- [x] Phase 2: Buy X Get Y, eligibility by customer segment, combinations matrix (product / order / shipping classes), personal codes
+- [ ] 30-day lowest-price tracking for "was / now" prices; review the flash sale fake stock (see legal notes in docs/admin/15-discounts.md)
+
 ## 6. Next up
 
 - [ ] Verify PayPal captures on the server (edge function) and mark orders paid automatically

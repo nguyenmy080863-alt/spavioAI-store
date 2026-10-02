@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { keepPreviousData, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Minus, Plus, CreditCard, Check, Truck, ShieldCheck, ArrowRight, PackageCheck } from "lucide-react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import CheckoutHeader from "../components/header/CheckoutHeader";
@@ -22,13 +23,17 @@ import SEO from "@/components/SEO";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useAdminAuth } from "@/context/AdminAuthContext";
 import { canStoreOrders, placeOrder, recordOrderPayment, type PlacedOrder } from "@/lib/checkout";
+import { clearStoredCode, getStoredCode, previewCart } from "@/lib/discounts";
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID || "";
 
 const Checkout = () => {
   const { t, i18n } = useTranslation("shop");
-  const [showDiscountInput, setShowDiscountInput] = useState(false);
-  const [discountCode, setDiscountCode] = useState("");
+  // A code from a share link (/discount/CODE) is applied straight away.
+  const [discountCode, setDiscountCode] = useState(getStoredCode);
+  const [appliedCode, setAppliedCode] = useState(getStoredCode);
+  const [showDiscountInput, setShowDiscountInput] = useState(() => getStoredCode() !== "");
+  const queryClient = useQueryClient();
   const [customerDetails, setCustomerDetails] = useState({
     email: "",
     firstName: "",
@@ -101,21 +106,57 @@ const Checkout = () => {
     return collectionImage;
   };
 
-  const getShippingCost = () => {
-    if (!selectedShippingMethod) return 3.90;
-    if (selectedShippingMethod.freeThreshold && subtotal >= selectedShippingMethod.freeThreshold) {
-      return 0;
-    }
-    return selectedShippingMethod.price;
-  };
+  const baseShipping = selectedShippingMethod ? selectedShippingMethod.price : 3.9;
 
-  const shippingCost = getShippingCost();
-  const total = dueNow + shippingCost;
+  // Used only when the server cannot price the bag (no Supabase, or before migration 0017).
+  const fallbackShipping = (() => {
+    if (!selectedShippingMethod) return 3.9;
+    if (selectedShippingMethod.freeThreshold && subtotal >= selectedShippingMethod.freeThreshold) return 0;
+    return selectedShippingMethod.price;
+  })();
+
+  // The server prices the bag (discounts, free shipping); the page only shows its answer.
+  const [debouncedEmail, setDebouncedEmail] = useState("");
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedEmail(customerDetails.email.trim().toLowerCase()), 500);
+    return () => clearTimeout(timer);
+  }, [customerDetails.email]);
+
+  const { data: preview } = useQuery({
+    queryKey: [
+      "cart-preview",
+      cartItems.map((item) => `${item.id}:${item.quantity}`).join(","),
+      appliedCode,
+      debouncedEmail,
+      baseShipping,
+    ],
+    queryFn: () => previewCart(cartItems, appliedCode, debouncedEmail, baseShipping),
+    enabled: canStoreOrders && cartItems.length > 0,
+    placeholderData: keepPreviousData,
+    retry: false,
+  });
+
+  const shippingCost = preview ? preview.shipping_cost : fallbackShipping;
+  const discountTotal = preview ? preview.discount_total : 0;
+  const total = preview ? preview.amount_charged : dueNow + fallbackShipping;
+  const codeStatus = appliedCode && preview ? preview.code_status : null;
 
   const handleDiscountSubmit = () => {
-    console.log("Discount code submitted:", discountCode);
-    setShowDiscountInput(false);
+    setAppliedCode(discountCode.trim());
   };
+
+  const removeDiscount = () => {
+    setAppliedCode("");
+    setDiscountCode("");
+    clearStoredCode();
+  };
+
+  const codeMessage = (status: string) =>
+    t(`checkout.discountErrors.${status}`, {
+      defaultValue: t("checkout.discountErrors.not_applicable"),
+      amount: formatPrice(preview?.code_min ?? 0),
+      count: preview?.code_min ?? 0,
+    });
 
   const handleCustomerDetailsChange = (field: string, value: string) => {
     setCustomerDetails(prev => ({ ...prev, [field]: value }));
@@ -167,17 +208,29 @@ const Checkout = () => {
     if (missing) throw new Error(t("checkout.fillRequired"));
     if (!canStoreOrders) return null;
 
-    const placed = await placeOrder({
-      name: `${customerDetails.firstName} ${customerDetails.lastName}`.trim(),
-      email: customerDetails.email.trim(),
-      phone: customerDetails.phone,
-      address: shippingAddress,
-      items: cartItems,
-      shippingCost,
-      paymentMethod: method,
-      marketingConsent,
-      language: i18n.language,
-    });
+    let placed: PlacedOrder;
+    try {
+      placed = await placeOrder({
+        name: `${customerDetails.firstName} ${customerDetails.lastName}`.trim(),
+        email: customerDetails.email.trim(),
+        phone: customerDetails.phone,
+        address: shippingAddress,
+        items: cartItems,
+        // The server applies free shipping itself, so it needs the method's base price.
+        shippingCost: baseShipping,
+        paymentMethod: method,
+        marketingConsent,
+        language: i18n.language,
+        discountCode: appliedCode || undefined,
+      });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      if (message.startsWith("discount:")) {
+        void queryClient.invalidateQueries({ queryKey: ["cart-preview"] });
+        throw new Error(codeMessage(message.slice("discount:".length)));
+      }
+      throw err;
+    }
     // Prices are checked on the server; never charge an amount the customer has not seen.
     if (Math.abs(placed.amount_charged - total) > 0.009) throw new Error(t("checkout.priceChanged"));
     orderNumberRef.current = placed.order_number;
@@ -202,6 +255,7 @@ const Checkout = () => {
     setConfirmedBalance(dueLater);
     setPaymentComplete(true);
     clearCart();
+    clearStoredCode();
   };
 
   return (
@@ -294,34 +348,56 @@ const Checkout = () => {
                     ))}
                   </div>
 
-                  {/* Discount Code Section */}
-                  <div className="pt-2">
-                    {!showDiscountInput ? (
-                      <button
-                        onClick={() => setShowDiscountInput(true)}
-                        className="text-xs text-accent font-medium underline hover:no-underline transition-all"
-                      >
-                        {t("checkout.discountCode") || "Have a promo code?"}
-                      </button>
-                    ) : (
-                      <div className="flex gap-2">
-                        <Input
-                          type="text"
-                          value={discountCode}
-                          onChange={(e) => setDiscountCode(e.target.value)}
-                          placeholder={t("checkout.enterDiscountCode") || "PROMO CODE"}
-                          className="flex-1 rounded-sm text-xs"
-                        />
-                        <Button
-                          onClick={handleDiscountSubmit}
-                          size="sm"
-                          className="text-xs rounded-sm px-3"
+                  {/* Discount Code Section (server-priced, so only with a connected store) */}
+                  {canStoreOrders && (
+                    <div className="pt-2 space-y-2">
+                      {!showDiscountInput ? (
+                        <button
+                          onClick={() => setShowDiscountInput(true)}
+                          className="text-xs text-accent font-medium underline hover:no-underline transition-all"
                         >
-                          {t("checkout.apply") || "Apply"}
-                        </Button>
-                      </div>
-                    )}
-                  </div>
+                          {t("checkout.discountCode") || "Have a promo code?"}
+                        </button>
+                      ) : (
+                        <form
+                          className="flex gap-2"
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            handleDiscountSubmit();
+                          }}
+                        >
+                          <Input
+                            type="text"
+                            value={discountCode}
+                            onChange={(e) => setDiscountCode(e.target.value)}
+                            placeholder={t("checkout.enterDiscountCode") || "PROMO CODE"}
+                            className="flex-1 rounded-sm text-xs"
+                            maxLength={40}
+                            aria-label={t("checkout.discountCode")}
+                          />
+                          <Button type="submit" size="sm" className="text-xs rounded-sm px-3">
+                            {t("checkout.apply") || "Apply"}
+                          </Button>
+                        </form>
+                      )}
+                      {appliedCode && codeStatus === "applied" && (
+                        <p className="text-xs text-emerald-700 flex items-center gap-2">
+                          {t("checkout.discountApplied", { code: appliedCode })}
+                          <button type="button" onClick={removeDiscount} className="underline text-muted-foreground">
+                            {t("checkout.discountRemove")}
+                          </button>
+                        </p>
+                      )}
+                      {appliedCode && codeStatus && codeStatus !== "applied" && (
+                        <p className="text-xs text-destructive flex items-center gap-2">
+                          {codeMessage(codeStatus)}
+                          <button type="button" onClick={removeDiscount} className="underline text-muted-foreground">
+                            {t("checkout.discountRemove")}
+                          </button>
+                        </p>
+                      )}
+                    </div>
+                  )}
 
                   {/* Pricing Totals */}
                   <div className="border-t border-border pt-4 space-y-2 text-sm">
@@ -329,6 +405,17 @@ const Checkout = () => {
                       <span className="text-muted-foreground">{t("checkout.subtotal") || "Subtotal"}</span>
                       <span className="text-foreground font-medium">{formatPrice(subtotal)}</span>
                     </div>
+                    {(preview?.applied ?? [])
+                      .filter((discount) => discount.class !== "shipping" && Number(discount.amount) > 0)
+                      .map((discount) => (
+                        <div key={discount.id} className="flex justify-between text-emerald-700">
+                          <span>
+                            {t("checkout.discountLine")}
+                            <span className="text-xs text-muted-foreground"> ({discount.code ?? discount.name})</span>
+                          </span>
+                          <span className="font-medium">−{formatPrice(Number(discount.amount))}</span>
+                        </div>
+                      ))}
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">{t("checkout.shipping") || "Shipping"} ({selectedShippingMethod.carrierName})</span>
                       <span className="text-foreground font-medium">
@@ -521,7 +608,9 @@ const Checkout = () => {
                     className="space-y-4"
                   >
                     {shippingMethods.map((method) => {
-                      const cost = (method.freeThreshold && subtotal >= method.freeThreshold) ? 0 : method.price;
+                      const cost = preview
+                        ? (preview.free_shipping && String(method.id) === String(selectedShippingId) ? 0 : method.price)
+                        : (method.freeThreshold && subtotal >= method.freeThreshold) ? 0 : method.price;
                       return (
                         <div key={String(method.id)} className="flex items-center justify-between p-4 border border-border rounded-sm hover:border-accent/40 transition-colors">
                           <div className="flex items-center space-x-3">
@@ -636,6 +725,7 @@ const Checkout = () => {
                                       setConfirmedBalance(dueLater);
                                       setPaymentComplete(true);
                                       clearCart();
+    clearStoredCode();
                                     }
                                   }}
                                   onError={(err) => {

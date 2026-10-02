@@ -206,7 +206,29 @@
     "marketingConsent": "Ja, haltet mich per E-Mail über neue Geräte, Angebote und Pflegetipps auf dem Laufenden. Ich kann das jederzeit widerrufen.",
     "fillRequired": "Bitte gib zuerst E-Mail, Namen und Lieferadresse an.",
     "priceChanged": "Die Preise in deiner Tasche haben sich geändert. Bitte lade die Seite neu und prüfe deine Tasche vor der Zahlung.",
-    "orderNumber": "Deine Bestellnummer ist {{number}}. Bewahre sie für Support- und Garantieanfragen auf."
+    "orderNumber": "Deine Bestellnummer ist {{number}}. Bewahre sie für Support- und Garantieanfragen auf.",
+    "discountApplied": "Code {{code}} angewendet",
+    "discountRemove": "Entfernen",
+    "discountLine": "Rabatt",
+    "discountSaved": "Code {{code}} gespeichert. Er wird an der Kasse angewendet.",
+    "discountErrors": {
+      "invalid": "Dieser Code ist nicht gültig.",
+      "inactive": "Dieser Code ist nicht aktiv.",
+      "expired": "Dieser Code ist abgelaufen.",
+      "not_started": "Dieser Code ist noch nicht gültig.",
+      "usage_limit": "Dieser Code wurde bereits aufgebraucht.",
+      "already_used": "Du hast diesen Code bereits verwendet.",
+      "new_customers_only": "Dieser Code gilt nur für Erstbestellungen.",
+      "no_eligible_items": "Dieser Code gilt nicht für die Artikel in deiner Tasche.",
+      "min_subtotal": "Bestelle förderfähige Artikel für mindestens {{amount}}, um diesen Code zu nutzen.",
+      "min_quantity": "Lege mindestens {{count}} förderfähige Artikel in die Tasche, um diesen Code zu nutzen.",
+      "better_discount_applied": "Auf deine Tasche wird bereits ein besserer Rabatt angewendet, daher wurde dieser Code nicht hinzugefügt.",
+      "not_applicable": "Dieser Code kann für diese Bestellung nicht genutzt werden.",
+      "not_combinable": "Dieser Code lässt sich nicht mit dem bereits angewendeten Rabatt kombinieren.",
+      "not_eligible": "Dieser Code ist für dein Konto nicht verfügbar.",
+      "wrong_customer": "Dieser Code wurde für einen anderen Kunden ausgestellt.",
+      "bxgy_not_met": "Lege die erforderlichen Artikel in die Tasche, um dieses Angebot zu nutzen."
+    }
   },
   "fomo": {
     "endsIn": "Endet in",
@@ -401,7 +423,8 @@
     },
     "returns": "Rücksendungen",
     "returnItems": "Artikel zurückgeben",
-    "returnUntil": "Rückgabe möglich bis {{date}}."
+    "returnUntil": "Rückgabe möglich bis {{date}}.",
+    "discountIncluded": "Rabatt (bereits in den Preisen)"
   },
   "returns": {
     "title": "Gerät zurückgeben",

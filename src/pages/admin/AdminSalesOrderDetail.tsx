@@ -286,6 +286,15 @@ const AdminSalesOrderDetail = () => {
             {Number(order.balance_due) > 0 && ` · Preorder balance due at shipping ${formatPrice(Number(order.balance_due))}`}
             {order.payment_method && ` · ${order.payment_method}`}
           </p>
+          {(Number(order.discount_amount) > 0 || Number(order.shipping_discount) > 0) && (
+            <p className="text-muted-foreground">
+              Discount {order.discount_code && `(${order.discount_code})`}:{" "}
+              {Number(order.discount_amount) > 0 && `${formatPrice(Number(order.discount_amount))} off the items`}
+              {Number(order.discount_amount) > 0 && Number(order.shipping_discount) > 0 && ", "}
+              {Number(order.shipping_discount) > 0 && `${formatPrice(Number(order.shipping_discount))} shipping waived`}
+              . Item prices below are after the discount.
+            </p>
+          )}
           {order.payment_status === "unpaid" && order.status === "open" && (
             <p className="text-xs text-amber-700">
               {order.payment_reference

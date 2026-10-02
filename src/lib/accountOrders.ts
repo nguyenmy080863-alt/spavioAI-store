@@ -26,6 +26,9 @@ export interface CustomerOrder {
   shipping_cost: number;
   amount_charged: number;
   balance_due: number;
+  discount_code: string;
+  discount_amount: number;
+  shipping_discount: number;
   shipping_address: { address?: string; city?: string; postal_code?: string; country?: string };
   created_at: string;
   paid_at: string | null;

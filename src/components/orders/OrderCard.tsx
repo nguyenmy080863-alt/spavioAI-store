@@ -91,9 +91,22 @@ const OrderCard = ({ order, email }: OrderCardProps) => {
             </span>
           </li>
         ))}
+        {Number(order.discount_amount) > 0 && (
+          <li className="flex justify-between py-2 text-xs text-emerald-700">
+            <span>
+              {t("orders.discountIncluded")}
+              {order.discount_code && ` (${order.discount_code})`}
+            </span>
+            <span>−{formatPrice(Number(order.discount_amount))}</span>
+          </li>
+        )}
         <li className="flex justify-between py-2 text-xs text-muted-foreground">
           <span>{t("orders.shipping")}</span>
-          <span>{formatPrice(Number(order.shipping_cost))}</span>
+          <span>
+            {Number(order.shipping_discount) > 0 && Number(order.shipping_cost) === 0
+              ? t("checkout.free")
+              : formatPrice(Number(order.shipping_cost))}
+          </span>
         </li>
         {Number(order.balance_due) > 0 && (
           <li className="flex justify-between py-2 text-xs text-muted-foreground">

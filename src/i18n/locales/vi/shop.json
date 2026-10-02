@@ -205,7 +205,29 @@
     "marketingConsent": "Có, hãy gửi email cho tôi về thiết bị mới, ưu đãi và mẹo chăm sóc. Tôi có thể rút lại bất cứ lúc nào.",
     "fillRequired": "Vui lòng điền email, họ tên và địa chỉ giao hàng trước.",
     "priceChanged": "Giá trong giỏ hàng đã thay đổi. Vui lòng tải lại trang và kiểm tra giỏ hàng trước khi thanh toán.",
-    "orderNumber": "Mã đơn hàng của bạn là {{number}}. Hãy lưu lại để được hỗ trợ và bảo hành."
+    "orderNumber": "Mã đơn hàng của bạn là {{number}}. Hãy lưu lại để được hỗ trợ và bảo hành.",
+    "discountApplied": "Đã áp dụng mã {{code}}",
+    "discountRemove": "Xóa",
+    "discountLine": "Giảm giá",
+    "discountSaved": "Đã lưu mã {{code}}. Mã sẽ được áp dụng khi thanh toán.",
+    "discountErrors": {
+      "invalid": "Mã này không hợp lệ.",
+      "inactive": "Mã này chưa được kích hoạt.",
+      "expired": "Mã này đã hết hạn.",
+      "not_started": "Mã này chưa có hiệu lực.",
+      "usage_limit": "Mã này đã được dùng hết.",
+      "already_used": "Bạn đã dùng mã này rồi.",
+      "new_customers_only": "Mã này chỉ dành cho đơn hàng đầu tiên.",
+      "no_eligible_items": "Mã này không áp dụng cho sản phẩm trong giỏ hàng của bạn.",
+      "min_subtotal": "Hãy mua sản phẩm đủ điều kiện từ {{amount}} để dùng mã này.",
+      "min_quantity": "Hãy thêm ít nhất {{count}} sản phẩm đủ điều kiện để dùng mã này.",
+      "better_discount_applied": "Giỏ hàng của bạn đã được áp dụng ưu đãi tốt hơn nên mã này không được thêm.",
+      "not_applicable": "Không thể dùng mã này cho đơn hàng này.",
+      "not_combinable": "Mã này không thể kết hợp với ưu đãi đã áp dụng cho giỏ hàng của bạn.",
+      "not_eligible": "Mã này không dành cho tài khoản của bạn.",
+      "wrong_customer": "Mã này được cấp cho khách hàng khác.",
+      "bxgy_not_met": "Hãy thêm các sản phẩm cần thiết vào giỏ hàng để dùng ưu đãi này."
+    }
   },
   "fomo": {
     "endsIn": "Kết thúc sau",
@@ -399,7 +421,8 @@
     },
     "returns": "Trả hàng",
     "returnItems": "Trả lại sản phẩm",
-    "returnUntil": "Có thể trả hàng đến {{date}}."
+    "returnUntil": "Có thể trả hàng đến {{date}}.",
+    "discountIncluded": "Giảm giá (đã tính trong giá)"
   },
   "returns": {
     "title": "Trả lại thiết bị",

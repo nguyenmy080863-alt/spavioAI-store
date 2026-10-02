@@ -14,9 +14,10 @@
 ## Checkout
 1. Open the bag and go to **Checkout**.
 2. Enter your contact and delivery details. You do not need an account; signed-in customers get their email filled in. Tick the optional box if you want news about new devices and offers by email.
-3. Choose a **shipping method**. Methods and prices come from Sendcloud.
-4. Choose a **payment method** (PayPal, card or Klarna) and pay.
-5. Your order is saved when you start paying, and prices are checked again on our side. On success the bag is cleared and the confirmation shows your **order number**. Keep it: you need it for support and warranty requests.
+3. Have a promo code? Enter it in the order summary (see Discount codes and offers). Free shipping and other automatic offers apply by themselves.
+4. Choose a **shipping method**. Methods and prices come from Sendcloud.
+5. Choose a **payment method** (PayPal, card or Klarna) and pay.
+6. Your order is saved when you start paying, and prices are checked again on our side. On success the bag is cleared and the confirmation shows your **order number**. Keep it: you need it for support and warranty requests.
 
 > Card and Klarna payments are still simulated. Order emails are prepared but not sent yet; follow your order under Orders and tracking.
 

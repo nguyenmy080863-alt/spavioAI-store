@@ -93,6 +93,9 @@ export interface SalesOrder {
   payment_method: string;
   payment_reference: string;
   payment_reported_at: string | null;
+  discount_code: string;
+  discount_amount: number;
+  shipping_discount: number;
   sales_order_items: SalesOrderItem[];
   delivery_orders: DeliveryOrder[];
 }

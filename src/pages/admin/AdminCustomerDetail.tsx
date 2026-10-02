@@ -267,6 +267,21 @@ const AdminCustomerDetail = () => {
           </div>
 
           <div className="border border-border p-5 space-y-3">
+            <h2 className="text-sm font-medium text-foreground">Personal discount code</h2>
+            <p className="text-xs text-muted-foreground">
+              Create a code that only this customer can use (for example an apology or a thank-you). Nothing is
+              emailed from the store; send the code yourself.
+            </p>
+            <Button size="sm" variant="outline" asChild>
+              <Link
+                to={`/admin/discounts/new?email=${encodeURIComponent(customer.email)}&name=${encodeURIComponent(customer.full_name)}`}
+              >
+                Create personal code
+              </Link>
+            </Button>
+          </div>
+
+          <div className="border border-border p-5 space-y-3">
             <h2 className="text-sm font-medium text-foreground">Privacy</h2>
             <p className="text-xs text-muted-foreground">
               Download everything stored about this customer, or remove their personal data on request. Anonymising

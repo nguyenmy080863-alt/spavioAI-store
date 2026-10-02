@@ -20,6 +20,8 @@ export interface PlaceOrderInput {
   marketingConsent: boolean;
   /** Storefront language, used for the order emails. */
   language: string;
+  /** Discount code the customer applied (the server re-checks it). */
+  discountCode?: string;
 }
 
 /** Orders are only stored when a Supabase project is connected; otherwise checkout stays a demo. */
@@ -45,6 +47,8 @@ export const placeOrder = async (input: PlaceOrderInput): Promise<PlacedOrder> =
     p_payment_method: input.paymentMethod,
     p_marketing_consent: input.marketingConsent,
     p_language: ["de", "en", "vi"].includes(input.language) ? input.language : "de",
+    // Only sent when used, so checkout keeps working before migration 0017 is applied.
+    ...(input.discountCode ? { p_discount_code: input.discountCode } : {}),
   });
   if (error) throw new Error(error.message);
   return data as PlacedOrder;
